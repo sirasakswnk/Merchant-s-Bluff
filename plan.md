@@ -526,6 +526,8 @@ M0 เพิ่มการตั้ง Firebase SDK/Admin SDK + emulators; M2 �
 
 เอกสารทางการสำหรับ Codex ตรวจ API ณ วันพัฒนา:
 
+ขั้นถัดจากVercelPreview — 12ตุลาคม2026: ตามตัวเลือกของผู้ใช้ เตรียมshareable linkสำหรับกลุ่มเพื่อนเฉพาะdeploymentที่ทดสอบแล้ว อายุ7วันถึง19ตุลาคม14:37ไทย ตรวจfresh browsersไม่ล็อกอินVercel4ชุด เล่นครบหนึ่งรอบ/ขน5แลก3/manualadvance/reloadพร้อมconservation360และลิงก์อื่นยังprotected ล้างข้อมูลทดสอบครบ เตรียมfeedback templateในdocs/friend-playtest.md ลิงก์เต็มไม่ใส่repo รอhuman/โทรศัพท์จริง feedback ไม่เปลี่ยนกติกา ราคา หรือขอบเขตM4 ดูwork/verification/friend-playtest/report.md
+
 - https://firebase.google.com/docs/database/admin/save-data
 - https://firebase.google.com/docs/database/security
 - https://firebase.google.com/docs/database/web/read-and-write

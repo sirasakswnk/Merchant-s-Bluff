@@ -6,6 +6,8 @@
 
 [เปิด Preview ที่ทดสอบแล้ว](https://merchant-s-bluff-buombdlfv-mingmings-projects-c4169f4b.vercel.app) — Deployment Protectionเปิดอยู่ ต้องใช้บัญชีVercelที่เข้าถึงprojectได้ Sourceอยู่ใน [GitHub](https://github.com/sirasakswnk/Merchant-s-Bluff) branch `preview`; commitที่ทดสอบ `77e9660` ยังไม่มีProduction release
 
+เตรียมshareable linkสำหรับกลุ่มเพื่อนแล้ว อายุ7วันถึง19ตุลาคม2026 14:37ไทย ลิงก์เต็มส่งในแชท/ไฟล์ส่วนตัวเพื่อไม่ให้tokenเข้าrepo ใช้ [วิธีเริ่มเล่นและfeedback template](docs/friend-playtest.md) ตรวจfresh browsersไม่ล็อกอินVercel4ชุดผ่านหนึ่งรอบจริง/reload และลิงก์อื่นยังถูกป้องกัน ดู [ผลตรวจ](work/verification/friend-playtest/report.md)
+
 > ผู้ใช้อนุมัติสำรับ **360 ใบ**: แอปเปิล84 ขนมปัง72 ชีส60 ผ้า54 เหล้าเถื่อน36 หน้าไม้30 ใบกัญชา24 เปลี่ยนเฉพาะจำนวนและ rulesVersion เป็น0.2 ราคา ค่าปรับ ค่าชดเชย และกติกาอื่นคงเดิม ใช้เมื่อเริ่มเกมใหม่เท่านั้น เกมที่เริ่มแล้วคง rules snapshot เดิม ไม่มีการเติมไพ่เข้าเกมเก่า
 
 หน้าแรกใช้ layout/สี/SVG จาก `home.html` ฟอร์มเชื่อมระบบจริงแล้ว หน้าเกมใช้ UI ชั่วคราวเรียบง่าย `merchant-gate.html` ยังไม่ใช่ดีไซน์ที่อนุมัติ M4 ทำ responsive/accessibility/safe area/reduced-motion งานภาพขั้นสุดท้ายของหน้าที่ยังไม่ได้เลือกพักไว้

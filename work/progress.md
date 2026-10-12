@@ -1,6 +1,16 @@
 # Progress — 12 ตุลาคม 2026
 
-## ขั้นตอนล่าสุด — GitHub และ Vercel Preview ผ่าน
+## ขั้นตอนล่าสุด — ลิงก์ทดลองกับกลุ่มเพื่อนพร้อม
+
+ผู้ใช้เลือกเตรียมลิงก์ทดสอบเฉพาะกลุ่ม สร้างdeployment shareable linkสำหรับ `dpl_HgG5ifxnEs71eB7Xg5tZRw6aAnh2` ที่ตรวจเกมครบแล้ว อายุ7วัน หมดอายุ19ตุลาคม2026 14:37ไทย ใครมีลิงก์เข้าได้ ลิงก์/tokenอยู่ในแชทและignoredruntimeเท่านั้น ไม่ได้ส่งให้เพื่อนแทนผู้ใช้
+
+Fresh Chromium contexts4ชุด 360/390/430/1280px ไม่มีVercel login/cookies/customauthheaders เปิดsharedentryแล้วสร้าง/เข้าห้องผ่านFirebaseจริงครบ4คน เล่นหนึ่งรอบโดยแลก3ขน5PASS3คน แล้วกดmanualadvanceไปรอบ2และreloadกลับUID/ที่นั่งเดิมได้ ไพ่total/unique360/IDเดิมครบ ไม่มีoverflow/pageerror BareURLก่อนshare302, createที่ไม่มีFirebasetoken401แม้ผ่านshareแล้ว, deploymentอื่น302 ล้างเฉพาะห้องทดสอบ1ห้อง/4usersครบ
+
+เตรียม `docs/friend-playtest.md` พร้อมวิธีชวนกลุ่ม/ทุกขั้นตอน/feedback templateและวิธีrevoke ลิงก์เต็มอยู่ `work/runtime/firebase-preview/friend-invite.md` ไม่เข้าGit เก็บผลและmetadataที่ไม่ติดtokenใน `work/verification/friend-playtest/` ไม่เปลี่ยนsource/UI/game/Rules/ราคา ไม่claimว่าbrowsermobileเป็นโทรศัพท์จริงหรือhuman balance playtest
+
+ขั้นนี้เสร็จแล้ว รอผู้ใช้ลองกับเพื่อนและส่งfeedback หรือสั่งขั้นถัดไป M4ภาพสุดท้ายยังพัก Productionยังเป็นขั้นแยก
+
+## ประวัติ — GitHub และ Vercel Preview ผ่าน
 
 ส่งinitial commit `77e9660` ขึ้นrepo https://github.com/sirasakswnk/Merchant-s-Bluff ทั้งmain/preview แล้วเชื่อมVercel project `merchant-s-bluff` ใน `mingmings-projects-c4169f4b` ตั้งFirebase10ค่าและNODE_OPTIONSเฉพาะPreview, private keyเป็นSecret Credentials/env/runtime/ภาพ/raw logsกันออกจากGitและCLIuploadแล้ว
 

@@ -1,0 +1,11 @@
+{
+  "createdAt": "2026-10-12T07:37:54.825Z",
+  "deploymentId": "dpl_HgG5ifxnEs71eB7Xg5tZRw6aAnh2",
+  "scope": "shareable-link",
+  "expiresAt": "2026-10-19T07:37:54.000Z",
+  "ttlSeconds": 604800,
+  "creationResponseVerified": true,
+  "browserSharedEntryVerified": true,
+  "projectProtectionUnchanged": true,
+  "tokenExcluded": true
+}

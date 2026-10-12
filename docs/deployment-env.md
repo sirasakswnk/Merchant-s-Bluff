@@ -8,7 +8,9 @@ Project `merchant-s-bluff` ใน `mingmings-projects-c4169f4b` เชื่อ�
 
 URLที่ตรวจ: https://merchant-s-bluff-buombdlfv-mingmings-projects-c4169f4b.vercel.app sourcebranch `preview`/commit `77e9660` READY/Preview (REST target `staging`) เกม4/5/6คนจบ8/10/12รอบ conservation311จุด ไพ่360ไม่ซ้ำหาย privacy51กรณีผ่าน ตรวจdeployedJS9responsesไม่มีkey/email และล้างข้อมูลทดสอบแล้ว ดู [รายงาน](../work/verification/vercel-preview/report.md)
 
-Deployment Protectionเปิดอยู่ ใช้บัญชีVercelที่เข้าถึงprojectได้ระหว่างรับงาน ไม่ได้เปิดให้คนทั่วไปหรือปล่อยProduction Automation bypassที่CLIสร้างเพื่อทดสอบถูกrevokeแล้ว ตัวOIDCdevelopmentเข้าถึงdeploymentนี้ไม่ได้ด้วยenvironment mismatch จึงไม่เปลี่ยนTrusted Sources/protectionเพื่อทดสอบ
+Deployment Protectionเปิดอยู่ ลิงก์ปกติต้องใช้บัญชีVercelที่เข้าถึงprojectได้ ตามตัวเลือกของผู้ใช้เพิ่มshareable linkเฉพาะdeploymentที่ทดสอบแล้วสำหรับกลุ่มเพื่อน อายุ7วันถึง19ตุลาคม2026 14:37ไทย ผู้มีลิงก์เข้าได้โดยไม่ล็อกอินVercel ลิงก์/tokenเก็บในแชทและignoredruntimeเท่านั้น ดู [วิธีทดลอง](friend-playtest.md) ไม่เปิดprojectทั้งชุดหรือปล่อยProduction
+
+Automation bypassที่CLIสร้างในรอบก่อนถูกrevokeแล้ว ไม่ใช้กับการทดลองเพื่อน ตัวOIDCdevelopmentเข้าถึงdeploymentนี้ไม่ได้ด้วยenvironment mismatch จึงไม่เปลี่ยนTrusted Sources/protectionเพื่อทดสอบ
 
 Git push ไปbranch `preview` ใช้buildตามปกติ ไม่ตั้งIgnored Build Step รอบส่งเอกสารพบว่าcommandที่ต้องใช้Git checkoutล้มด้วย `git_invalid_command` จึงเอาoverrideออกแล้ว ไม่เปลี่ยนapp sourceจากcommitที่เล่นครบ หากแก้environmentให้redeployใหม่ตามworkflowของVercel
 
