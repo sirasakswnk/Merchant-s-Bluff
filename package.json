@@ -21,7 +21,8 @@
     "test:m0": "node scripts/emulators.mjs m0",
     "test:local": "node scripts/emulators.mjs acceptance",
     "check:deployment": "node scripts/check-deployment-env.mjs",
-    "test:deployment": "node --test tests/scripts/deployment-env.test.mjs"
+    "test:deployment": "node --test tests/scripts/deployment-env.test.mjs",
+    "retention": "node --conditions=react-server scripts/retention.mjs"
   },
   "dependencies": {
     "firebase": "13.0.0",

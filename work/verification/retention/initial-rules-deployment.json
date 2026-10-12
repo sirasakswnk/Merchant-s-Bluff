@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-10-12T08:40:32.544Z",
+  "projectId": "merchant-s-bluff",
+  "status": 200,
+  "previousHash": "0a4e3438dc1889ab4697a4b6caf0e7860466caad28f0b29520da9d419c43b648",
+  "publishedHash": "fb75eeb572abeec675d6de70228a4fbc09ee331949afc6f7a25087cba1a7854c",
+  "sourceMatches": true,
+  "onlyPresenceFenceChanged": true,
+  "rootDenied": true,
+  "gameWrites": 0
+}

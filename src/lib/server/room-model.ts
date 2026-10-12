@@ -1,6 +1,7 @@
 import 'server-only';
 import type { GameState } from '../game/types';
 import type { CommandReceipt } from '../shared/rooms';
+import type { RoomRetention } from '../maintenance/retention-policy';
 
 export interface RoomMember {
   displayName: string; avatarId: number; ready: boolean; joinedAt: number;
@@ -18,6 +19,7 @@ export interface StoredRoom {
   authoritative: { snapshot: string };
   members: Record<string, true>;
   views: { public: string; private: Record<string, string> };
+  retention?: RoomRetention;
 }
 export interface RoomReservation {
   roomId: string; code: string; ownerId: string; commandId: string; clientId: string;

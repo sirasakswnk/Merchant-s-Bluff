@@ -115,7 +115,7 @@ Dev ปิด Turbopack filesystem cache เพื่อให้การรั
 
 Unknown resultเก็บ commandId/payload เดิมและต้องกดลองใหม่ก่อนส่งคำสั่งอื่น การกลับหน้าแรกไม่เขียน pending ทับ ออฟไลน์แก้ draft ส่วนตัวได้แต่ปุ่มส่งปิด ไม่มี queueตรวจ/ให้ผ่าน แท็บใหม่ต้องกดรับการควบคุม แท็บเดิมอ่านอย่างเดียว Anonymous UIDอยู่ใน browser/storage เดิม การล้าง storage/เปลี่ยนเครื่องไม่รับประกันคืนที่นั่ง
 
-MVPยังไม่มีระบบลบห้องเก่าตามอายุอัตโนมัติ History จำกัดหนึ่งเกม (สูงสุด60ผลสำหรับ6คน), command records จำกัด4096ต่อเกมและล้างพร้อม generationใหม่เมื่อ rematch ก่อนเปิด productionให้ตรวจ retention/usageตาม environment จริง ไม่มีการรับประกันค่าใช้จ่ายฟรี
+ระบบretentionตามอนุมัติ1วันพร้อมแล้ว:ห้องจบ/ยุติ/ล็อบบี้ร้างไม่มีการใช้งาน24ชั่วโมงและไม่มีคนออนไลน์เข้าเกณฑ์ล้าง ส่วนPLAYINGและlegacyที่ไม่มีmetadataถูกข้าม Default CLIเป็นdry-run พร้อมtransaction/presence fenceและdailyCronที่รอเปิดProduction ดู [วิธีใช้และข้อจำกัด](docs/retention.md) Historyจำกัดหนึ่งเกม/command records4096ตามเดิม ยังต้องตรวจusage/costก่อนเปิดจริง
 
 Dependency audit: override `@grpc/grpc-js` เป็น1.14.6เพื่อแก้ transitive advisory; `npm audit --omit=dev` ผ่าน0รายการ Full dev-tool auditยังมี15รายการ (4 moderate/11 high) ไม่ใช้ `audit fix --force` ที่อาจเปลี่ยน majorของเครื่องมือ รายงานอยู่ work/verification/m5/
 

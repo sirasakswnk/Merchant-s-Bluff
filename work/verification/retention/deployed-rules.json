@@ -1,0 +1,40 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "rooms": {
+      "$roomId": {
+        "views": {
+          "public": {
+            ".read": "auth != null && root.child('rooms').child($roomId).child('members').child(auth.uid).val() === true"
+          },
+          "private": {
+            "$uid": {
+              ".read": "auth != null && auth.uid === $uid && root.child('rooms').child($roomId).child('members').child(auth.uid).val() === true"
+            }
+          }
+        }
+      }
+    },
+    "presence": {
+      "$roomId": {
+        ".read": "auth != null && root.child('rooms').child($roomId).child('members').child(auth.uid).val() === true",
+        "$uid": {
+          "$connectionId": {
+            ".write": "auth != null && auth.uid === $uid && root.child('rooms').child($roomId).child('members').child(auth.uid).val() === true && $connectionId.matches(/^[A-Za-z0-9_-]{1,64}$/) && (!newData.exists() || !root.child('rooms').child($roomId).child('retention').child('cleanupLease').exists())",
+            ".validate": "newData.hasChildren(['online', 'connectedAt'])",
+            "online": {
+              ".validate": "newData.isBoolean() && newData.val() === true"
+            },
+            "connectedAt": {
+              ".validate": "newData.isNumber() && newData.val() <= now && newData.val() >= now - 60000"
+            },
+            "$other": {
+              ".validate": false
+            }
+          }
+        }
+      }
+    }
+  }
+}

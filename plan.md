@@ -517,7 +517,8 @@ Definition of Done นี้ผ่านการทวนใน local/Emulators
 - [ ] Presence ไม่ขับ phase; การ claim lobby host เมื่อ host หลุดต้องผ่าน server-verified policy/transaction และไม่เปลี่ยนนายด่าน
 - [ ] ทดสอบหลาย API instances เขียนห้องเดียวกัน, callback retry, request timeout หลัง commit, listener reconnect และ cold start
 - [ ] ทดสอบสมาชิกอ่าน private ของเพื่อน/authoritative/root ไม่ได้; non-member อ่าน public ไม่ได้; client แก้เงิน/ไพ่/roles ไม่ได้
-- [ ] จำกัด subscriptions ที่จำเป็น ถอด listener เมื่อออกห้อง ตั้งขอบเขต history/retention และตรวจ usage จริงก่อนเลือก plan ไม่รับประกันค่าใช้จ่ายเป็นศูนย์
+- [x] Retentionตามอนุมัติ1วัน:metadataแยกเกม, dry-run/applyกับproject guard,online/PLAYING/legacy guards,transactions/presence fenceและworker recovery ตรวจ89unit/28integration/17E2E/livefixturesผ่าน เตรียมCronรอProduction ดูdocs/retention.md
+- [ ] ตรวจusageจริง/ข้อจำกัดบริการก่อนเลือกplanและเปิดProduction ไม่รับประกันค่าใช้จ่ายเป็นศูนย์ ขอบเขตhistory/subscriptionsและการถอดlistenerใช้ตามimplementationเดิม
 - [x] ทดสอบlocalproductionและVercelPreview browser/API→Firebaseจริงครบ4/5/6คนจนจบ8/10/12รอบ conservation311จุด/360ใบไม่ซ้ำหาย, privacy51assertionsผ่าน มีURLที่ตรวจแล้ว ดูwork/verification/vercel-preview/report.md
 
 M0 เพิ่มการตั้ง Firebase SDK/Admin SDK + emulators; M2 เพิ่ม Rules และ transactions; M5 เพิ่ม deployment checklist นี้ กติกาและตัวเลขสินค้าทุกส่วนคงเดิม

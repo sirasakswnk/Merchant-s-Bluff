@@ -1,6 +1,16 @@
 # Progress — 12 ตุลาคม 2026
 
-## ขั้นตอนล่าสุด — ลิงก์ทดลองกับกลุ่มเพื่อนพร้อม
+## ขั้นตอนล่าสุด — Retention 24 ชั่วโมงพร้อมทดสอบและเปิดบนPreview
+
+ผู้ใช้แจ้งว่าเล่นหลายคนกับเพื่อนผ่านแล้วและให้เริ่มงานretention พร้อมเลือกเก็บ1วันทั้งหมด จึงเพิ่มmetadataนอกgame snapshotสำหรับLOBBY/FINISHED/ABORTED เมื่อไม่มีAPIที่ถูกต้องมาใช้24ชั่วโมงและไม่มีคนออนไลน์ ส่วนPLAYINGไม่ล้างและlegacyไม่มีmetadataถูกข้าม เกม0.1/0.2/rulesVersion/ราคา/สำรับไม่เปลี่ยน M4ภาพสุดท้ายยังพัก
+
+Default CLIเป็นdry-run มีmanifestprivateอายุ1ชั่วโมง project/URL/version checks และRules preflight เพิ่มpresence fenceระหว่างcleanup, revalidate lifecycle/revision/activityในtransactions, expired markerกันrecreate, คืนcodeเฉพาะห้องเดิม, กู้worker crash/rematch/resume/create-retry racesได้ ไม่ลบบัญชีAuthหรือrate limitsของผู้เล่น
+
+ตรวจtypecheck/lint/buildผ่าน Unit89, integration28, E2E17ผ่าน รวมmatrix4/5/6คนขน5/PASSตลอดไม่แลก/แลก3 (conservation360), recovery/accessibility/restart จากนั้นทวนintegrationหลังเพิ่มcreate-retryและfenceไม่หมดอายุในRulesผ่านอีกครั้ง เผยแพร่เฉพาะpresence predicateที่เข้มขึ้นไปFirebasePreviewและreadbackตรงsource ทดสอบlivefixture8ชุดผ่าน ล้างfixtureออกครบ ไม่มีห้องผู้เล่นถูกแก้ CLIจริงdry-run/applycandidate0 ข้ามlegacy2
+
+เตรียมVercel maintenance endpointพร้อมBearer secret/explicitProduction opt-inและdailyCron03:00ไทย Runnerมีbatch/cursor/lease ยังไม่มีProduction configหรือเปิดautomatic deletion Previewendpointไม่เปิดapply คู่มือ `docs/retention.md` หลักฐาน `work/verification/retention/` ขั้นถัดไปตรวจusage/ข้อจำกัดก่อนเตรียมFirebaseProductionและdeploymentจริง
+
+## ประวัติ — ลิงก์ทดลองกับกลุ่มเพื่อนพร้อม
 
 ผู้ใช้เลือกเตรียมลิงก์ทดสอบเฉพาะกลุ่ม สร้างdeployment shareable linkสำหรับ `dpl_HgG5ifxnEs71eB7Xg5tZRw6aAnh2` ที่ตรวจเกมครบแล้ว อายุ7วัน หมดอายุ19ตุลาคม2026 14:37ไทย ใครมีลิงก์เข้าได้ ลิงก์/tokenอยู่ในแชทและignoredruntimeเท่านั้น ไม่ได้ส่งให้เพื่อนแทนผู้ใช้
 

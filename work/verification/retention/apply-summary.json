@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-10-12T08:44:27.362Z",
+  "mode": "apply",
+  "projectId": "merchant-s-bluff",
+  "retentionHours": 24,
+  "candidates": 0,
+  "skipped": {
+    "legacy-or-invalid": 2
+  },
+  "result": {},
+  "hasMoreRooms": false,
+  "hasMoreCodes": false,
+  "planExpiresAt": "2026-10-12T09:36:51.432Z"
+}

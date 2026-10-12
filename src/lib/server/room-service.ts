@@ -70,7 +70,11 @@ export function roomService(database: Database) {
       const fingerprint = hash({ uid, operation: 'create', request });
       const roomId = hash({ uid, commandId: request.commandId }).slice(0, 32);
       const existing = await repository.read(roomId);
-      if (existing) return previouslyProcessed(existing.creation, uid, fingerprint)!;
+      if (existing) {
+        const result = previouslyProcessed(existing.creation, uid, fingerprint)!;
+        await repository.touch(roomId, uid);
+        return result;
+      }
       const createdAt = Date.now();
       for (let attempt = 0; attempt < 32; attempt++) {
         const bytes = createHash('sha256').update(`${roomId}:${attempt}`).digest();
@@ -144,7 +148,7 @@ export function roomService(database: Database) {
       });
     },
     async resume(uid: string, roomId: string): Promise<CommandReceipt> {
-      const room = await repository.read(roomId);
+      const room = await repository.touch(roomId, uid);
       requireRule(room !== null, 'ROOM_NOT_FOUND', 'ไม่พบห้อง');
       requireRule(Object.hasOwn(room.members, uid), 'NOT_MEMBER', 'ไม่ได้อยู่ในห้อง');
       return receipt(room, room.creation.receipt.commandId);

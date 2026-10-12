@@ -3,27 +3,49 @@ import type { Database } from 'firebase-admin/database';
 import type { RoomCore, RoomReservation, StoredRoom } from '../room-model';
 import { loadRoom, storeRoom } from '../projections';
 import { GameRuleError } from '../../game/errors';
+import { touchRetention, type RetiredRoom } from '../../maintenance/retention-policy';
+
+function active(value: StoredRoom | RetiredRoom | null): StoredRoom | null {
+  if (value?.retention?.kind === 'retired') throw new GameRuleError('ROOM_NOT_FOUND', 'ห้องหมดอายุแล้ว กรุณาสร้างห้องใหม่');
+  return value as StoredRoom | null;
+}
 
 export function roomRepository(database: Database) {
   return {
     async read(roomId: string): Promise<RoomCore | null> {
-      const value = (await database.ref(`rooms/${roomId}`).get()).val() as StoredRoom | null;
+      const value = active((await database.ref(`rooms/${roomId}`).get()).val());
       return value ? loadRoom(value) : null;
     },
     async mutate(roomId: string, update: (room: RoomCore) => RoomCore): Promise<RoomCore> {
-      const { snapshot } = await database.ref(`rooms/${roomId}`).transaction((value: StoredRoom | null) => {
+      const { snapshot } = await database.ref(`rooms/${roomId}`).transaction((record: StoredRoom | RetiredRoom | null) => {
         // A first callback may see local null. Commit a no-op so server data can trigger retry.
-        if (!value) return null;
-        try { return storeRoom(update(loadRoom(value))); }
-        catch (error) { if (error instanceof GameRuleError) return value; throw error; }
+        if (!record) return null;
+        try {
+          const value = active(record)!; const room = update(loadRoom(value));
+          return { ...storeRoom(room), retention: touchRetention(room, value.retention, Date.now()) };
+        } catch (error) { if (error instanceof GameRuleError) return record; throw error; }
       });
-      const value = snapshot.val() as StoredRoom | null;
+      const value = active(snapshot.val());
       if (!value) throw new GameRuleError('ROOM_NOT_FOUND', 'ไม่พบห้อง');
       return loadRoom(value);
     },
     async ensure(reservation: RoomReservation, create: () => RoomCore): Promise<RoomCore> {
-      const { snapshot } = await database.ref(`rooms/${reservation.roomId}`).transaction((value: StoredRoom | null) => value ?? storeRoom(create()));
-      return loadRoom(snapshot.val() as StoredRoom);
+      const { snapshot } = await database.ref(`rooms/${reservation.roomId}`).transaction((value: StoredRoom | RetiredRoom | null) => {
+        if (value) return value;
+        const room = create(); return { ...storeRoom(room), retention: touchRetention(room, undefined, Date.now()) };
+      });
+      return loadRoom(active(snapshot.val())!);
+    },
+    async touch(roomId: string, uid: string): Promise<RoomCore> {
+      const { snapshot } = await database.ref(`rooms/${roomId}`).transaction((record: StoredRoom | RetiredRoom | null) => {
+        if (!record || record.retention?.kind === 'retired') return record;
+        const value = record as StoredRoom; const room = loadRoom(value);
+        if (!Object.hasOwn(room.members, uid)) return record;
+        return { ...value, retention: touchRetention(room, value.retention, Date.now()) };
+      });
+      const value = active(snapshot.val());
+      if (!value) throw new GameRuleError('ROOM_NOT_FOUND', 'ไม่พบห้อง');
+      return loadRoom(value);
     },
     async reserve(reservation: RoomReservation): Promise<RoomReservation> {
       const { snapshot } = await database.ref(`roomCodes/${reservation.code}`).transaction((value: RoomReservation | null) => value ?? reservation);
