@@ -10,7 +10,7 @@ URLที่ตรวจ: https://merchant-s-bluff-buombdlfv-mingmings-projects-
 
 Deployment Protectionเปิดอยู่ ใช้บัญชีVercelที่เข้าถึงprojectได้ระหว่างรับงาน ไม่ได้เปิดให้คนทั่วไปหรือปล่อยProduction Automation bypassที่CLIสร้างเพื่อทดสอบถูกrevokeแล้ว ตัวOIDCdevelopmentเข้าถึงdeploymentนี้ไม่ได้ด้วยenvironment mismatch จึงไม่เปลี่ยนTrusted Sources/protectionเพื่อทดสอบ
 
-Ignored Build Step ใช้ `git diff --quiet HEAD^ HEAD -- src public scripts package.json package-lock.json next.config.ts tsconfig.json vercel.json` เพื่อข้ามbuildเมื่อเปลี่ยนเฉพาะเอกสาร/หลักฐาน ไม่กระทบartifactที่ทดสอบแล้ว หากแก้environmentต้องสั่งredeployที่ข้ามignore checkตาม workflow ของVercel
+Git push ไปbranch `preview` ใช้buildตามปกติ ไม่ตั้งIgnored Build Step รอบส่งเอกสารพบว่าcommandที่ต้องใช้Git checkoutล้มด้วย `git_invalid_command` จึงเอาoverrideออกแล้ว ไม่เปลี่ยนapp sourceจากcommitที่เล่นครบ หากแก้environmentให้redeployใหม่ตามworkflowของVercel
 
 ใช้ `.env.example` สำหรับ local Emulator ใช้ `.env.production.example` เป็นแม่แบบว่างสำหรับ Preview/Production โดยกรอกค่าแยกกันตาม Firebase project ของ environment นั้น Preview ต้องไม่ใช้ฐานข้อมูลเกมจริงของ Production
 

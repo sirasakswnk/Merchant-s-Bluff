@@ -25,7 +25,7 @@
 
 หลักฐาน: `deployment-report.json`, `env-metadata.json`, `live-flow-report.json`, `game-live-4/5/6.json`, `protection-cleanup.json` ภาพอยู่ใน workspace และกันออกจาก Git ส่วน credentials/raw logs/runtime files อยู่ใน ignore patterns
 
-ตั้งIgnored Build Stepให้ข้ามbuildเมื่อเปลี่ยนเฉพาะเอกสาร/หลักฐาน Commitส่งมอบจึงไม่เปลี่ยนartifactที่ทดสอบแล้ว หากsource/build configเปลี่ยนจะbuildตามปกติ ดูdocs/deployment-env.md
+Commitส่งมอบเปลี่ยนเฉพาะเอกสาร/หลักฐาน App sourceเท่ากับcommitที่ทดสอบครบ รอบGit pushแรกพบ `git_invalid_command` ในIgnored Build Stepเพราะไม่มีGit checkout จึงเอาoverrideออกและใช้buildตามปกติ ไม่ถือbuildใหม่เป็นการทวนเกมใหม่ ดูdocs/deployment-env.md
 
 เก็บผลเริ่มต้นที่ไม่ผ่านแยกไว้: OIDC development tokenถูกปฏิเสธด้วย environment mismatch; runtime Firebase Admin `jwks-rsa → jose` เกิด ERR_REQUIRE_ESM จึงเพิ่ม NODE_OPTIONS แล้ว redeploy; checkpoint เดิมอ่าน authoritative/public แยกกันข้ามจังหวะ GAME_OVER จึงแก้เฉพาะ harness ให้อ่าน envelope เดียวและ assert revisionตรงกันก่อนรันทวนครบ3เกม ไม่มีการลด privacy assertion หรือแก้กติกา
 
