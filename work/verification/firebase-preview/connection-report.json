@@ -1,0 +1,42 @@
+{
+  "projectId": "merchant-s-bluff",
+  "checkedAt": "2026-10-12T06:38:33.603Z",
+  "stage": "rules-deployed-live-firebase-flow-passed",
+  "configReady": true,
+  "rulesDeploymentApproved": true,
+  "rulesActive": true,
+  "rulesHash": "099b6d6bc06fbb979ef35a152a8fb1aad1d2cf4c31bed5d4aa1ee4080abbfa45",
+  "browserApiFlowPassed": true,
+  "productionServer": "local",
+  "firebaseAuthRtdb": "live Preview",
+  "games": [
+    {
+      "players": 4,
+      "rounds": 8,
+      "phase": "GAME_OVER"
+    },
+    {
+      "players": 5,
+      "rounds": 10,
+      "phase": "GAME_OVER"
+    },
+    {
+      "players": 6,
+      "rounds": 12,
+      "phase": "GAME_OVER"
+    }
+  ],
+  "inventoryCheckpoints": 311.0,
+  "liveRulesChecks": 51,
+  "clientBundleSafe": true,
+  "cleanup": {
+    "createdRooms": 3,
+    "removedRooms": 3,
+    "createdUsers": 16,
+    "removedUsers": 16,
+    "errors": []
+  },
+  "serverStopped": true,
+  "vercelDeployed": false,
+  "report": "report.md"
+}

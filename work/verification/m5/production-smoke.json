@@ -1,0 +1,8 @@
+{
+  "layer": "production HTTP smoke; no live Firebase production credentials",
+  "unauthenticatedCreate": 401,
+  "health": 200,
+  "titleRendered": true,
+  "home": 200,
+  "devEndpoint": 404
+}

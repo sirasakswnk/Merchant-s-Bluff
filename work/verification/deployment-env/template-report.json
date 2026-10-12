@@ -1,0 +1,43 @@
+{
+  "ready": false,
+  "required": 10,
+  "present": 1,
+  "issues": [
+    {
+      "name": "NEXT_PUBLIC_FIREBASE_API_KEY",
+      "reason": "missing"
+    },
+    {
+      "name": "NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN",
+      "reason": "missing"
+    },
+    {
+      "name": "NEXT_PUBLIC_FIREBASE_PROJECT_ID",
+      "reason": "missing"
+    },
+    {
+      "name": "NEXT_PUBLIC_FIREBASE_DATABASE_URL",
+      "reason": "missing"
+    },
+    {
+      "name": "NEXT_PUBLIC_FIREBASE_APP_ID",
+      "reason": "missing"
+    },
+    {
+      "name": "FIREBASE_PROJECT_ID",
+      "reason": "missing"
+    },
+    {
+      "name": "FIREBASE_DATABASE_URL",
+      "reason": "missing"
+    },
+    {
+      "name": "FIREBASE_CLIENT_EMAIL",
+      "reason": "missing"
+    },
+    {
+      "name": "FIREBASE_PRIVATE_KEY",
+      "reason": "missing"
+    }
+  ]
+}

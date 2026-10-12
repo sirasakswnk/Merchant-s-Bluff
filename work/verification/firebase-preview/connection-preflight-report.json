@@ -1,0 +1,27 @@
+{
+  "projectId": "merchant-s-bluff",
+  "checkedAt": "2026-10-11T15:38:34.39Z",
+  "stage": "sdk-auth-connected-awaiting-rules-approval",
+  "config": {
+    "ready": true,
+    "required": 10,
+    "present": 10,
+    "issues": []
+  },
+  "serviceAccountOAuth": true,
+  "adminSdkRtdbRead": true,
+  "anonymousAuthAndAdminTokenVerification": true,
+  "testUserCleaned": true,
+  "liveRulesReadStatus": 200,
+  "liveRulesMatchRepository": false,
+  "rulesDeploymentRequired": true,
+  "browserApiFlowTested": false,
+  "gameDatabaseWritten": false,
+  "rulesDeployed": false,
+  "vercelDeployed": false,
+  "currentRulesArtifact": "live-database.rules.json",
+  "proposedRulesArtifact": "proposed-database.rules.json",
+  "reviewArtifact": "rules-review.md",
+  "sourcePreflight": "preflight-report.json",
+  "sourceRules": "rules-report.json"
+}

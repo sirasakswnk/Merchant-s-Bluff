@@ -1,0 +1,15 @@
+{
+  "projectId": "merchant-s-bluff",
+  "checkedAt": "2026-10-11T15:38:34.390Z",
+  "stage": "live-database-rules",
+  "httpStatus": 200,
+  "contentType": "application/json; charset=utf-8",
+  "etag": null,
+  "responseBytes": 123,
+  "format": "json-with-comments",
+  "matchesRepository": false,
+  "rootRead": "now < 1794243600000",
+  "rootWrite": "now < 1794243600000",
+  "rulesDeploymentRequired": true,
+  "passed": false
+}

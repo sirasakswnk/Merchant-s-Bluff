@@ -1,0 +1,3370 @@
+{
+  "players": 6,
+  "exchange": 3,
+  "rounds": 12,
+  "phase": "GAME_OVER",
+  "sheriffTurns": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "pageErrors": [],
+  "finalInventory": {
+    "total": 360,
+    "unique": 360,
+    "deck": 3,
+    "discard": 51,
+    "hand": 6,
+    "bag": 0,
+    "stash": 300,
+    "products": {
+      "apple": 84,
+      "bread": 72,
+      "cheese": 60,
+      "cloth": 54,
+      "moonshine": 36,
+      "crossbow": 30,
+      "cannabis_leaf": 24
+    }
+  },
+  "checkpoints": [
+    {
+      "round": 1,
+      "phase": "PREPARE",
+      "revision": 1,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 324,
+        "discard": 0,
+        "hand": 36,
+        "bag": 0,
+        "stash": 0,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 1,
+      "phase": "NEGOTIATE",
+      "revision": 16,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 309,
+        "discard": 15,
+        "hand": 11,
+        "bag": 25,
+        "stash": 0,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 1,
+      "phase": "RESOLUTION",
+      "revision": 18,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 309,
+        "discard": 15,
+        "hand": 11,
+        "bag": 20,
+        "stash": 5,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 1,
+      "phase": "RESOLUTION",
+      "revision": 18,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 309,
+        "discard": 15,
+        "hand": 11,
+        "bag": 20,
+        "stash": 5,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 1,
+      "phase": "RESOLUTION",
+      "revision": 21,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 309,
+        "discard": 15,
+        "hand": 11,
+        "bag": 15,
+        "stash": 10,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 1,
+      "phase": "RESOLUTION",
+      "revision": 21,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 309,
+        "discard": 15,
+        "hand": 11,
+        "bag": 15,
+        "stash": 10,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 1,
+      "phase": "RESOLUTION",
+      "revision": 24,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 309,
+        "discard": 15,
+        "hand": 11,
+        "bag": 10,
+        "stash": 15,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 1,
+      "phase": "RESOLUTION",
+      "revision": 24,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 309,
+        "discard": 15,
+        "hand": 11,
+        "bag": 10,
+        "stash": 15,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 1,
+      "phase": "RESOLUTION",
+      "revision": 27,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 309,
+        "discard": 15,
+        "hand": 11,
+        "bag": 5,
+        "stash": 20,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 1,
+      "phase": "RESOLUTION",
+      "revision": 27,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 309,
+        "discard": 15,
+        "hand": 11,
+        "bag": 5,
+        "stash": 20,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 1,
+      "phase": "RESOLUTION",
+      "revision": 30,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 309,
+        "discard": 15,
+        "hand": 11,
+        "bag": 0,
+        "stash": 25,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 1,
+      "phase": "RESOLUTION",
+      "revision": 30,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 309,
+        "discard": 15,
+        "hand": 11,
+        "bag": 0,
+        "stash": 25,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 1,
+      "phase": "ROUND_SUMMARY",
+      "revision": 31,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 309,
+        "discard": 15,
+        "hand": 11,
+        "bag": 0,
+        "stash": 25,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 2,
+      "phase": "NEGOTIATE",
+      "revision": 47,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 274,
+        "discard": 30,
+        "hand": 6,
+        "bag": 25,
+        "stash": 25,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 2,
+      "phase": "RESOLUTION",
+      "revision": 49,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 274,
+        "discard": 30,
+        "hand": 6,
+        "bag": 20,
+        "stash": 30,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 2,
+      "phase": "RESOLUTION",
+      "revision": 49,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 274,
+        "discard": 30,
+        "hand": 6,
+        "bag": 20,
+        "stash": 30,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 2,
+      "phase": "RESOLUTION",
+      "revision": 52,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 274,
+        "discard": 30,
+        "hand": 6,
+        "bag": 15,
+        "stash": 35,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 2,
+      "phase": "RESOLUTION",
+      "revision": 52,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 274,
+        "discard": 30,
+        "hand": 6,
+        "bag": 15,
+        "stash": 35,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 2,
+      "phase": "RESOLUTION",
+      "revision": 55,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 274,
+        "discard": 30,
+        "hand": 6,
+        "bag": 10,
+        "stash": 40,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 2,
+      "phase": "RESOLUTION",
+      "revision": 55,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 274,
+        "discard": 30,
+        "hand": 6,
+        "bag": 10,
+        "stash": 40,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 2,
+      "phase": "RESOLUTION",
+      "revision": 58,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 274,
+        "discard": 30,
+        "hand": 6,
+        "bag": 5,
+        "stash": 45,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 2,
+      "phase": "RESOLUTION",
+      "revision": 58,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 274,
+        "discard": 30,
+        "hand": 6,
+        "bag": 5,
+        "stash": 45,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 2,
+      "phase": "RESOLUTION",
+      "revision": 61,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 274,
+        "discard": 30,
+        "hand": 6,
+        "bag": 0,
+        "stash": 50,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 2,
+      "phase": "RESOLUTION",
+      "revision": 61,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 274,
+        "discard": 30,
+        "hand": 6,
+        "bag": 0,
+        "stash": 50,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 2,
+      "phase": "ROUND_SUMMARY",
+      "revision": 62,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 274,
+        "discard": 30,
+        "hand": 6,
+        "bag": 0,
+        "stash": 50,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 3,
+      "phase": "NEGOTIATE",
+      "revision": 78,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 234,
+        "discard": 45,
+        "hand": 6,
+        "bag": 25,
+        "stash": 50,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 3,
+      "phase": "RESOLUTION",
+      "revision": 80,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 234,
+        "discard": 45,
+        "hand": 6,
+        "bag": 20,
+        "stash": 55,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 3,
+      "phase": "RESOLUTION",
+      "revision": 80,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 234,
+        "discard": 45,
+        "hand": 6,
+        "bag": 20,
+        "stash": 55,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 3,
+      "phase": "RESOLUTION",
+      "revision": 83,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 234,
+        "discard": 45,
+        "hand": 6,
+        "bag": 15,
+        "stash": 60,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 3,
+      "phase": "RESOLUTION",
+      "revision": 83,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 234,
+        "discard": 45,
+        "hand": 6,
+        "bag": 15,
+        "stash": 60,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 3,
+      "phase": "RESOLUTION",
+      "revision": 86,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 234,
+        "discard": 45,
+        "hand": 6,
+        "bag": 10,
+        "stash": 65,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 3,
+      "phase": "RESOLUTION",
+      "revision": 86,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 234,
+        "discard": 45,
+        "hand": 6,
+        "bag": 10,
+        "stash": 65,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 3,
+      "phase": "RESOLUTION",
+      "revision": 89,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 234,
+        "discard": 45,
+        "hand": 6,
+        "bag": 5,
+        "stash": 70,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 3,
+      "phase": "RESOLUTION",
+      "revision": 89,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 234,
+        "discard": 45,
+        "hand": 6,
+        "bag": 5,
+        "stash": 70,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 3,
+      "phase": "RESOLUTION",
+      "revision": 92,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 234,
+        "discard": 45,
+        "hand": 6,
+        "bag": 0,
+        "stash": 75,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 3,
+      "phase": "RESOLUTION",
+      "revision": 92,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 234,
+        "discard": 45,
+        "hand": 6,
+        "bag": 0,
+        "stash": 75,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 3,
+      "phase": "ROUND_SUMMARY",
+      "revision": 93,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 234,
+        "discard": 45,
+        "hand": 6,
+        "bag": 0,
+        "stash": 75,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 4,
+      "phase": "NEGOTIATE",
+      "revision": 109,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 194,
+        "discard": 60,
+        "hand": 6,
+        "bag": 25,
+        "stash": 75,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 4,
+      "phase": "RESOLUTION",
+      "revision": 111,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 194,
+        "discard": 60,
+        "hand": 6,
+        "bag": 20,
+        "stash": 80,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 4,
+      "phase": "RESOLUTION",
+      "revision": 111,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 194,
+        "discard": 60,
+        "hand": 6,
+        "bag": 20,
+        "stash": 80,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 4,
+      "phase": "RESOLUTION",
+      "revision": 114,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 194,
+        "discard": 60,
+        "hand": 6,
+        "bag": 15,
+        "stash": 85,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 4,
+      "phase": "RESOLUTION",
+      "revision": 114,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 194,
+        "discard": 60,
+        "hand": 6,
+        "bag": 15,
+        "stash": 85,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 4,
+      "phase": "RESOLUTION",
+      "revision": 117,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 194,
+        "discard": 60,
+        "hand": 6,
+        "bag": 10,
+        "stash": 90,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 4,
+      "phase": "RESOLUTION",
+      "revision": 117,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 194,
+        "discard": 60,
+        "hand": 6,
+        "bag": 10,
+        "stash": 90,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 4,
+      "phase": "RESOLUTION",
+      "revision": 120,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 194,
+        "discard": 60,
+        "hand": 6,
+        "bag": 5,
+        "stash": 95,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 4,
+      "phase": "RESOLUTION",
+      "revision": 120,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 194,
+        "discard": 60,
+        "hand": 6,
+        "bag": 5,
+        "stash": 95,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 4,
+      "phase": "RESOLUTION",
+      "revision": 123,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 194,
+        "discard": 60,
+        "hand": 6,
+        "bag": 0,
+        "stash": 100,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 4,
+      "phase": "RESOLUTION",
+      "revision": 123,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 194,
+        "discard": 60,
+        "hand": 6,
+        "bag": 0,
+        "stash": 100,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 4,
+      "phase": "ROUND_SUMMARY",
+      "revision": 124,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 194,
+        "discard": 60,
+        "hand": 6,
+        "bag": 0,
+        "stash": 100,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 5,
+      "phase": "NEGOTIATE",
+      "revision": 140,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 154,
+        "discard": 75,
+        "hand": 6,
+        "bag": 25,
+        "stash": 100,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 5,
+      "phase": "RESOLUTION",
+      "revision": 142,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 154,
+        "discard": 75,
+        "hand": 6,
+        "bag": 20,
+        "stash": 105,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 5,
+      "phase": "RESOLUTION",
+      "revision": 142,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 154,
+        "discard": 75,
+        "hand": 6,
+        "bag": 20,
+        "stash": 105,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 5,
+      "phase": "RESOLUTION",
+      "revision": 145,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 154,
+        "discard": 75,
+        "hand": 6,
+        "bag": 15,
+        "stash": 110,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 5,
+      "phase": "RESOLUTION",
+      "revision": 145,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 154,
+        "discard": 75,
+        "hand": 6,
+        "bag": 15,
+        "stash": 110,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 5,
+      "phase": "RESOLUTION",
+      "revision": 148,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 154,
+        "discard": 75,
+        "hand": 6,
+        "bag": 10,
+        "stash": 115,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 5,
+      "phase": "RESOLUTION",
+      "revision": 148,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 154,
+        "discard": 75,
+        "hand": 6,
+        "bag": 10,
+        "stash": 115,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 5,
+      "phase": "RESOLUTION",
+      "revision": 151,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 154,
+        "discard": 75,
+        "hand": 6,
+        "bag": 5,
+        "stash": 120,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 5,
+      "phase": "RESOLUTION",
+      "revision": 151,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 154,
+        "discard": 75,
+        "hand": 6,
+        "bag": 5,
+        "stash": 120,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 5,
+      "phase": "RESOLUTION",
+      "revision": 154,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 154,
+        "discard": 75,
+        "hand": 6,
+        "bag": 0,
+        "stash": 125,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 5,
+      "phase": "RESOLUTION",
+      "revision": 154,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 154,
+        "discard": 75,
+        "hand": 6,
+        "bag": 0,
+        "stash": 125,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 5,
+      "phase": "ROUND_SUMMARY",
+      "revision": 155,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 154,
+        "discard": 75,
+        "hand": 6,
+        "bag": 0,
+        "stash": 125,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 6,
+      "phase": "NEGOTIATE",
+      "revision": 171,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 114,
+        "discard": 90,
+        "hand": 6,
+        "bag": 25,
+        "stash": 125,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 6,
+      "phase": "RESOLUTION",
+      "revision": 173,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 114,
+        "discard": 90,
+        "hand": 6,
+        "bag": 20,
+        "stash": 130,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 6,
+      "phase": "RESOLUTION",
+      "revision": 173,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 114,
+        "discard": 90,
+        "hand": 6,
+        "bag": 20,
+        "stash": 130,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 6,
+      "phase": "RESOLUTION",
+      "revision": 176,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 114,
+        "discard": 90,
+        "hand": 6,
+        "bag": 15,
+        "stash": 135,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 6,
+      "phase": "RESOLUTION",
+      "revision": 176,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 114,
+        "discard": 90,
+        "hand": 6,
+        "bag": 15,
+        "stash": 135,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 6,
+      "phase": "RESOLUTION",
+      "revision": 179,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 114,
+        "discard": 90,
+        "hand": 6,
+        "bag": 10,
+        "stash": 140,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 6,
+      "phase": "RESOLUTION",
+      "revision": 179,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 114,
+        "discard": 90,
+        "hand": 6,
+        "bag": 10,
+        "stash": 140,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 6,
+      "phase": "RESOLUTION",
+      "revision": 182,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 114,
+        "discard": 90,
+        "hand": 6,
+        "bag": 5,
+        "stash": 145,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 6,
+      "phase": "RESOLUTION",
+      "revision": 182,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 114,
+        "discard": 90,
+        "hand": 6,
+        "bag": 5,
+        "stash": 145,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 6,
+      "phase": "RESOLUTION",
+      "revision": 185,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 114,
+        "discard": 90,
+        "hand": 6,
+        "bag": 0,
+        "stash": 150,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 6,
+      "phase": "RESOLUTION",
+      "revision": 185,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 114,
+        "discard": 90,
+        "hand": 6,
+        "bag": 0,
+        "stash": 150,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 6,
+      "phase": "ROUND_SUMMARY",
+      "revision": 186,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 114,
+        "discard": 90,
+        "hand": 6,
+        "bag": 0,
+        "stash": 150,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 7,
+      "phase": "NEGOTIATE",
+      "revision": 202,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 74,
+        "discard": 105,
+        "hand": 6,
+        "bag": 25,
+        "stash": 150,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 7,
+      "phase": "RESOLUTION",
+      "revision": 204,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 74,
+        "discard": 105,
+        "hand": 6,
+        "bag": 20,
+        "stash": 155,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 7,
+      "phase": "RESOLUTION",
+      "revision": 204,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 74,
+        "discard": 105,
+        "hand": 6,
+        "bag": 20,
+        "stash": 155,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 7,
+      "phase": "RESOLUTION",
+      "revision": 207,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 74,
+        "discard": 105,
+        "hand": 6,
+        "bag": 15,
+        "stash": 160,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 7,
+      "phase": "RESOLUTION",
+      "revision": 207,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 74,
+        "discard": 105,
+        "hand": 6,
+        "bag": 15,
+        "stash": 160,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 7,
+      "phase": "RESOLUTION",
+      "revision": 210,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 74,
+        "discard": 105,
+        "hand": 6,
+        "bag": 10,
+        "stash": 165,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 7,
+      "phase": "RESOLUTION",
+      "revision": 210,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 74,
+        "discard": 105,
+        "hand": 6,
+        "bag": 10,
+        "stash": 165,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 7,
+      "phase": "RESOLUTION",
+      "revision": 213,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 74,
+        "discard": 105,
+        "hand": 6,
+        "bag": 5,
+        "stash": 170,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 7,
+      "phase": "RESOLUTION",
+      "revision": 213,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 74,
+        "discard": 105,
+        "hand": 6,
+        "bag": 5,
+        "stash": 170,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 7,
+      "phase": "RESOLUTION",
+      "revision": 216,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 74,
+        "discard": 105,
+        "hand": 6,
+        "bag": 0,
+        "stash": 175,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 7,
+      "phase": "RESOLUTION",
+      "revision": 216,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 74,
+        "discard": 105,
+        "hand": 6,
+        "bag": 0,
+        "stash": 175,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 7,
+      "phase": "ROUND_SUMMARY",
+      "revision": 217,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 74,
+        "discard": 105,
+        "hand": 6,
+        "bag": 0,
+        "stash": 175,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 8,
+      "phase": "NEGOTIATE",
+      "revision": 233,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 34,
+        "discard": 120,
+        "hand": 6,
+        "bag": 25,
+        "stash": 175,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 8,
+      "phase": "RESOLUTION",
+      "revision": 235,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 34,
+        "discard": 120,
+        "hand": 6,
+        "bag": 20,
+        "stash": 180,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 8,
+      "phase": "RESOLUTION",
+      "revision": 235,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 34,
+        "discard": 120,
+        "hand": 6,
+        "bag": 20,
+        "stash": 180,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 8,
+      "phase": "RESOLUTION",
+      "revision": 238,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 34,
+        "discard": 120,
+        "hand": 6,
+        "bag": 15,
+        "stash": 185,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 8,
+      "phase": "RESOLUTION",
+      "revision": 238,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 34,
+        "discard": 120,
+        "hand": 6,
+        "bag": 15,
+        "stash": 185,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 8,
+      "phase": "RESOLUTION",
+      "revision": 241,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 34,
+        "discard": 120,
+        "hand": 6,
+        "bag": 10,
+        "stash": 190,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 8,
+      "phase": "RESOLUTION",
+      "revision": 241,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 34,
+        "discard": 120,
+        "hand": 6,
+        "bag": 10,
+        "stash": 190,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 8,
+      "phase": "RESOLUTION",
+      "revision": 244,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 34,
+        "discard": 120,
+        "hand": 6,
+        "bag": 5,
+        "stash": 195,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 8,
+      "phase": "RESOLUTION",
+      "revision": 244,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 34,
+        "discard": 120,
+        "hand": 6,
+        "bag": 5,
+        "stash": 195,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 8,
+      "phase": "RESOLUTION",
+      "revision": 247,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 34,
+        "discard": 120,
+        "hand": 6,
+        "bag": 0,
+        "stash": 200,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 8,
+      "phase": "RESOLUTION",
+      "revision": 247,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 34,
+        "discard": 120,
+        "hand": 6,
+        "bag": 0,
+        "stash": 200,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 8,
+      "phase": "ROUND_SUMMARY",
+      "revision": 248,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 34,
+        "discard": 120,
+        "hand": 6,
+        "bag": 0,
+        "stash": 200,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 9,
+      "phase": "NEGOTIATE",
+      "revision": 264,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 123,
+        "discard": 6,
+        "hand": 6,
+        "bag": 25,
+        "stash": 200,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 9,
+      "phase": "RESOLUTION",
+      "revision": 266,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 123,
+        "discard": 6,
+        "hand": 6,
+        "bag": 20,
+        "stash": 205,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 9,
+      "phase": "RESOLUTION",
+      "revision": 266,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 123,
+        "discard": 6,
+        "hand": 6,
+        "bag": 20,
+        "stash": 205,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 9,
+      "phase": "RESOLUTION",
+      "revision": 269,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 123,
+        "discard": 6,
+        "hand": 6,
+        "bag": 15,
+        "stash": 210,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 9,
+      "phase": "RESOLUTION",
+      "revision": 269,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 123,
+        "discard": 6,
+        "hand": 6,
+        "bag": 15,
+        "stash": 210,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 9,
+      "phase": "RESOLUTION",
+      "revision": 272,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 123,
+        "discard": 6,
+        "hand": 6,
+        "bag": 10,
+        "stash": 215,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 9,
+      "phase": "RESOLUTION",
+      "revision": 272,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 123,
+        "discard": 6,
+        "hand": 6,
+        "bag": 10,
+        "stash": 215,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 9,
+      "phase": "RESOLUTION",
+      "revision": 275,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 123,
+        "discard": 6,
+        "hand": 6,
+        "bag": 5,
+        "stash": 220,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 9,
+      "phase": "RESOLUTION",
+      "revision": 275,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 123,
+        "discard": 6,
+        "hand": 6,
+        "bag": 5,
+        "stash": 220,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 9,
+      "phase": "RESOLUTION",
+      "revision": 278,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 123,
+        "discard": 6,
+        "hand": 6,
+        "bag": 0,
+        "stash": 225,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 9,
+      "phase": "RESOLUTION",
+      "revision": 278,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 123,
+        "discard": 6,
+        "hand": 6,
+        "bag": 0,
+        "stash": 225,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 9,
+      "phase": "ROUND_SUMMARY",
+      "revision": 279,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 123,
+        "discard": 6,
+        "hand": 6,
+        "bag": 0,
+        "stash": 225,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 10,
+      "phase": "NEGOTIATE",
+      "revision": 295,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 83,
+        "discard": 21,
+        "hand": 6,
+        "bag": 25,
+        "stash": 225,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 10,
+      "phase": "RESOLUTION",
+      "revision": 297,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 83,
+        "discard": 21,
+        "hand": 6,
+        "bag": 20,
+        "stash": 230,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 10,
+      "phase": "RESOLUTION",
+      "revision": 297,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 83,
+        "discard": 21,
+        "hand": 6,
+        "bag": 20,
+        "stash": 230,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 10,
+      "phase": "RESOLUTION",
+      "revision": 300,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 83,
+        "discard": 21,
+        "hand": 6,
+        "bag": 15,
+        "stash": 235,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 10,
+      "phase": "RESOLUTION",
+      "revision": 300,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 83,
+        "discard": 21,
+        "hand": 6,
+        "bag": 15,
+        "stash": 235,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 10,
+      "phase": "RESOLUTION",
+      "revision": 303,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 83,
+        "discard": 21,
+        "hand": 6,
+        "bag": 10,
+        "stash": 240,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 10,
+      "phase": "RESOLUTION",
+      "revision": 303,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 83,
+        "discard": 21,
+        "hand": 6,
+        "bag": 10,
+        "stash": 240,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 10,
+      "phase": "RESOLUTION",
+      "revision": 306,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 83,
+        "discard": 21,
+        "hand": 6,
+        "bag": 5,
+        "stash": 245,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 10,
+      "phase": "RESOLUTION",
+      "revision": 306,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 83,
+        "discard": 21,
+        "hand": 6,
+        "bag": 5,
+        "stash": 245,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 10,
+      "phase": "RESOLUTION",
+      "revision": 309,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 83,
+        "discard": 21,
+        "hand": 6,
+        "bag": 0,
+        "stash": 250,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 10,
+      "phase": "RESOLUTION",
+      "revision": 309,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 83,
+        "discard": 21,
+        "hand": 6,
+        "bag": 0,
+        "stash": 250,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 10,
+      "phase": "ROUND_SUMMARY",
+      "revision": 310,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 83,
+        "discard": 21,
+        "hand": 6,
+        "bag": 0,
+        "stash": 250,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 11,
+      "phase": "NEGOTIATE",
+      "revision": 326,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 43,
+        "discard": 36,
+        "hand": 6,
+        "bag": 25,
+        "stash": 250,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 11,
+      "phase": "RESOLUTION",
+      "revision": 328,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 43,
+        "discard": 36,
+        "hand": 6,
+        "bag": 20,
+        "stash": 255,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 11,
+      "phase": "RESOLUTION",
+      "revision": 328,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 43,
+        "discard": 36,
+        "hand": 6,
+        "bag": 20,
+        "stash": 255,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 11,
+      "phase": "RESOLUTION",
+      "revision": 331,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 43,
+        "discard": 36,
+        "hand": 6,
+        "bag": 15,
+        "stash": 260,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 11,
+      "phase": "RESOLUTION",
+      "revision": 331,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 43,
+        "discard": 36,
+        "hand": 6,
+        "bag": 15,
+        "stash": 260,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 11,
+      "phase": "RESOLUTION",
+      "revision": 334,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 43,
+        "discard": 36,
+        "hand": 6,
+        "bag": 10,
+        "stash": 265,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 11,
+      "phase": "RESOLUTION",
+      "revision": 334,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 43,
+        "discard": 36,
+        "hand": 6,
+        "bag": 10,
+        "stash": 265,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 11,
+      "phase": "RESOLUTION",
+      "revision": 337,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 43,
+        "discard": 36,
+        "hand": 6,
+        "bag": 5,
+        "stash": 270,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 11,
+      "phase": "RESOLUTION",
+      "revision": 337,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 43,
+        "discard": 36,
+        "hand": 6,
+        "bag": 5,
+        "stash": 270,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 11,
+      "phase": "RESOLUTION",
+      "revision": 340,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 43,
+        "discard": 36,
+        "hand": 6,
+        "bag": 0,
+        "stash": 275,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 11,
+      "phase": "RESOLUTION",
+      "revision": 340,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 43,
+        "discard": 36,
+        "hand": 6,
+        "bag": 0,
+        "stash": 275,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 11,
+      "phase": "ROUND_SUMMARY",
+      "revision": 341,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 43,
+        "discard": 36,
+        "hand": 6,
+        "bag": 0,
+        "stash": 275,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 12,
+      "phase": "NEGOTIATE",
+      "revision": 357,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 3,
+        "discard": 51,
+        "hand": 6,
+        "bag": 25,
+        "stash": 275,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 12,
+      "phase": "RESOLUTION",
+      "revision": 359,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 3,
+        "discard": 51,
+        "hand": 6,
+        "bag": 20,
+        "stash": 280,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 12,
+      "phase": "RESOLUTION",
+      "revision": 359,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 3,
+        "discard": 51,
+        "hand": 6,
+        "bag": 20,
+        "stash": 280,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 12,
+      "phase": "RESOLUTION",
+      "revision": 362,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 3,
+        "discard": 51,
+        "hand": 6,
+        "bag": 15,
+        "stash": 285,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 12,
+      "phase": "RESOLUTION",
+      "revision": 362,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 3,
+        "discard": 51,
+        "hand": 6,
+        "bag": 15,
+        "stash": 285,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 12,
+      "phase": "RESOLUTION",
+      "revision": 365,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 3,
+        "discard": 51,
+        "hand": 6,
+        "bag": 10,
+        "stash": 290,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 12,
+      "phase": "RESOLUTION",
+      "revision": 365,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 3,
+        "discard": 51,
+        "hand": 6,
+        "bag": 10,
+        "stash": 290,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 12,
+      "phase": "RESOLUTION",
+      "revision": 368,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 3,
+        "discard": 51,
+        "hand": 6,
+        "bag": 5,
+        "stash": 295,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 12,
+      "phase": "RESOLUTION",
+      "revision": 368,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 3,
+        "discard": 51,
+        "hand": 6,
+        "bag": 5,
+        "stash": 295,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 12,
+      "phase": "RESOLUTION",
+      "revision": 371,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 3,
+        "discard": 51,
+        "hand": 6,
+        "bag": 0,
+        "stash": 300,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 12,
+      "phase": "RESOLUTION",
+      "revision": 371,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 3,
+        "discard": 51,
+        "hand": 6,
+        "bag": 0,
+        "stash": 300,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "round": 12,
+      "phase": "ROUND_SUMMARY",
+      "revision": 372,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 3,
+        "discard": 51,
+        "hand": 6,
+        "bag": 0,
+        "stash": 300,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    }
+  ]
+}

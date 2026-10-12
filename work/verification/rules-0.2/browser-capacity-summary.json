@@ -1,0 +1,206 @@
+[
+  {
+    "file": "browser-4-exchange-0.json",
+    "players": 4,
+    "exchange": 0,
+    "rounds": 8,
+    "phase": "GAME_OVER",
+    "sheriffTurns": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "checkpoints": 65,
+    "finalInventory": {
+      "total": 360,
+      "unique": 360,
+      "deck": 236,
+      "discard": 0,
+      "hand": 4,
+      "bag": 0,
+      "stash": 120,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    },
+    "pageErrors": 0
+  },
+  {
+    "file": "browser-4-exchange-3.json",
+    "players": 4,
+    "exchange": 3,
+    "rounds": 8,
+    "phase": "GAME_OVER",
+    "sheriffTurns": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "checkpoints": 65,
+    "finalInventory": {
+      "total": 360,
+      "unique": 360,
+      "deck": 164,
+      "discard": 72,
+      "hand": 4,
+      "bag": 0,
+      "stash": 120,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    },
+    "pageErrors": 0
+  },
+  {
+    "file": "browser-5-exchange-0.json",
+    "players": 5,
+    "exchange": 0,
+    "rounds": 10,
+    "phase": "GAME_OVER",
+    "sheriffTurns": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "checkpoints": 101,
+    "finalInventory": {
+      "total": 360,
+      "unique": 360,
+      "deck": 155,
+      "discard": 0,
+      "hand": 5,
+      "bag": 0,
+      "stash": 200,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    },
+    "pageErrors": 0
+  },
+  {
+    "file": "browser-5-exchange-3.json",
+    "players": 5,
+    "exchange": 3,
+    "rounds": 10,
+    "phase": "GAME_OVER",
+    "sheriffTurns": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "checkpoints": 101,
+    "finalInventory": {
+      "total": 360,
+      "unique": 360,
+      "deck": 35,
+      "discard": 120,
+      "hand": 5,
+      "bag": 0,
+      "stash": 200,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    },
+    "pageErrors": 0
+  },
+  {
+    "file": "browser-6-exchange-0.json",
+    "players": 6,
+    "exchange": 0,
+    "rounds": 12,
+    "phase": "GAME_OVER",
+    "sheriffTurns": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "checkpoints": 145,
+    "finalInventory": {
+      "total": 360,
+      "unique": 360,
+      "deck": 54,
+      "discard": 0,
+      "hand": 6,
+      "bag": 0,
+      "stash": 300,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    },
+    "pageErrors": 0
+  },
+  {
+    "file": "browser-6-exchange-3.json",
+    "players": 6,
+    "exchange": 3,
+    "rounds": 12,
+    "phase": "GAME_OVER",
+    "sheriffTurns": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "checkpoints": 145,
+    "finalInventory": {
+      "total": 360,
+      "unique": 360,
+      "deck": 3,
+      "discard": 51,
+      "hand": 6,
+      "bag": 0,
+      "stash": 300,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    },
+    "pageErrors": 0
+  }
+]

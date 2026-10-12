@@ -1,0 +1,11 @@
+{
+  "emulatorFixture": "cash-zero legal inspector",
+  "compensatedDebts": [
+    2,
+    2
+  ],
+  "incomingBribe": 3,
+  "remainingSecondDebt": 1,
+  "cashTotal": 200,
+  "allViewsMatch": true
+}

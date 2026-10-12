@@ -1,0 +1,128 @@
+[
+  {
+    "players": 4,
+    "rounds": 8,
+    "phase": "GAME_OVER",
+    "checkpoints": 65,
+    "sheriffTurns": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "features": {
+      "inspectCompensation": true,
+      "inspectFine": true,
+      "bribePass": true,
+      "noOfferPass": true,
+      "duplicateRetry": true,
+      "offlineDraftReload": true,
+      "controlTakeover": true,
+      "rematch": true
+    },
+    "reshuffles": 0,
+    "finalInventory": {
+      "total": 360,
+      "unique": 360,
+      "deck": 166,
+      "discard": 73,
+      "hand": 4,
+      "bag": 0,
+      "stash": 117,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    }
+  },
+  {
+    "players": 5,
+    "rounds": 10,
+    "phase": "GAME_OVER",
+    "checkpoints": 101,
+    "sheriffTurns": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "features": {
+      "inspectCompensation": false,
+      "inspectFine": false,
+      "bribePass": false,
+      "noOfferPass": true,
+      "duplicateRetry": false,
+      "offlineDraftReload": false,
+      "controlTakeover": false,
+      "rematch": false
+    },
+    "reshuffles": 0,
+    "finalInventory": {
+      "total": 360,
+      "unique": 360,
+      "deck": 35,
+      "discard": 120,
+      "hand": 5,
+      "bag": 0,
+      "stash": 200,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    }
+  },
+  {
+    "players": 6,
+    "rounds": 12,
+    "phase": "GAME_OVER",
+    "checkpoints": 145,
+    "sheriffTurns": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "features": {
+      "inspectCompensation": false,
+      "inspectFine": false,
+      "bribePass": false,
+      "noOfferPass": true,
+      "duplicateRetry": false,
+      "offlineDraftReload": false,
+      "controlTakeover": false,
+      "rematch": false
+    },
+    "reshuffles": 1,
+    "finalInventory": {
+      "total": 360,
+      "unique": 360,
+      "deck": 3,
+      "discard": 51,
+      "hand": 6,
+      "bag": 0,
+      "stash": 300,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    }
+  }
+]

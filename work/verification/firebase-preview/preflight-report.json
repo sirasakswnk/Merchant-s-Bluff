@@ -1,0 +1,35 @@
+{
+  "projectId": "merchant-s-bluff",
+  "checkedAt": "2026-10-11T15:37:23.095Z",
+  "environment": {
+    "ready": true,
+    "required": 10,
+    "present": 10,
+    "issues": []
+  },
+  "stages": [
+    {
+      "stage": "service-account-oauth",
+      "passed": true,
+      "tokenExpiresInSeconds": 3598
+    },
+    {
+      "stage": "admin-sdk-rtdb-read",
+      "passed": true,
+      "wroteDatabaseData": false
+    },
+    {
+      "stage": "anonymous-auth",
+      "passed": true,
+      "adminVerifiedIdToken": true
+    },
+    {
+      "stage": "live-database-rules",
+      "passed": false
+    }
+  ],
+  "cleanup": {
+    "newAnonymousTestUserDeleted": true
+  },
+  "failedAt": "live-database-rules"
+}

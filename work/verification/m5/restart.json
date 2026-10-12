@@ -1,0 +1,12 @@
+{
+  "origin": "http://192.168.56.1:3200",
+  "lanHttp": true,
+  "apiPids": [
+    33000,
+    42692
+  ],
+  "restoredPhase": "RESOLUTION",
+  "resultId": "4989761b-d240-46d2-a268-b4223c92a744",
+  "moneyUnchanged": true,
+  "manualAdvance": true
+}

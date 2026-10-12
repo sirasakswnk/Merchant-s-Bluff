@@ -1,0 +1,163 @@
+{
+  "projectId": "merchant-s-bluff",
+  "startedAt": "2026-10-12T06:29:45.652Z",
+  "server": "local production build",
+  "firebase": "live Auth and Realtime Database",
+  "games": [],
+  "rulesChecks": [
+    {
+      "label": "4 players: member public",
+      "method": "GET",
+      "status": 200,
+      "expectedAllowed": true,
+      "passed": true
+    },
+    {
+      "label": "4 players: own private",
+      "method": "GET",
+      "status": 200,
+      "expectedAllowed": true,
+      "passed": true
+    },
+    {
+      "label": "4 players: friend private denied",
+      "method": "GET",
+      "status": 401,
+      "expectedAllowed": false,
+      "passed": true
+    },
+    {
+      "label": "4 players: nonmember public denied",
+      "method": "GET",
+      "status": 401,
+      "expectedAllowed": false,
+      "passed": true
+    },
+    {
+      "label": "4 players: guest public denied",
+      "method": "GET",
+      "status": 401,
+      "expectedAllowed": false,
+      "passed": true
+    },
+    {
+      "label": "4 players: ancestor room denied",
+      "method": "GET",
+      "status": 401,
+      "expectedAllowed": false,
+      "passed": true
+    },
+    {
+      "label": "4 players: ancestor /authoritative denied",
+      "method": "GET",
+      "status": 401,
+      "expectedAllowed": false,
+      "passed": true
+    },
+    {
+      "label": "4 players: ancestor /views denied",
+      "method": "GET",
+      "status": 401,
+      "expectedAllowed": false,
+      "passed": true
+    },
+    {
+      "label": "4 players: ancestor /views/private denied",
+      "method": "GET",
+      "status": 401,
+      "expectedAllowed": false,
+      "passed": true
+    },
+    {
+      "label": "4 players: root denied",
+      "method": "GET",
+      "status": 401,
+      "expectedAllowed": false,
+      "passed": true
+    },
+    {
+      "label": "4 players: authoritative write denied",
+      "method": "PUT",
+      "status": 401,
+      "expectedAllowed": false,
+      "passed": true
+    },
+    {
+      "label": "4 players: public write denied",
+      "method": "PUT",
+      "status": 401,
+      "expectedAllowed": false,
+      "passed": true
+    },
+    {
+      "label": "4 players: private write denied",
+      "method": "PUT",
+      "status": 401,
+      "expectedAllowed": false,
+      "passed": true
+    },
+    {
+      "label": "4 players: own presence allowed",
+      "method": "PUT",
+      "status": 200,
+      "expectedAllowed": true,
+      "passed": true
+    },
+    {
+      "label": "4 players: friend presence write denied",
+      "method": "PUT",
+      "status": 401,
+      "expectedAllowed": false,
+      "passed": true
+    },
+    {
+      "label": "4 players: forged presence fields denied",
+      "method": "PUT",
+      "status": 401,
+      "expectedAllowed": false,
+      "passed": true
+    },
+    {
+      "label": "4 players: own presence removal allowed",
+      "method": "DELETE",
+      "status": 200,
+      "expectedAllowed": true,
+      "passed": true
+    }
+  ],
+  "apiRequests": {
+    "POST /api/rooms/create 200": 1,
+    "GET /api/rooms/:roomId 200": 5,
+    "POST /api/rooms/join 200": 3,
+    "POST /api/rooms/command 200": 5
+  },
+  "network": {
+    "emulatorRequests": 0,
+    "authHosts": [
+      "identitytoolkit.googleapis.com"
+    ],
+    "databaseNamespaces": [
+      "merchant-s-bluff-default-rtdb"
+    ]
+  },
+  "cleanup": {
+    "createdRooms": 1,
+    "removedRooms": 1,
+    "createdUsers": 5,
+    "removedUsers": 5,
+    "errors": []
+  },
+  "httpSmoke": {
+    "health": 200,
+    "unauthenticatedCreate": 401,
+    "productionDiagnostics": 404
+  },
+  "passed": false,
+  "failedAt": "4: live privacy",
+  "failure": {
+    "type": "Error",
+    "message": "expect(locator).toContainText(expected) failed\n\nLocator: getByRole('status')\nExpected substring: \"แท็บนี้อ่านอย่างเดียว\"\nReceived string:    \"กำลังรอข้อมูลล่าสุด\"\nTimeout: 5000ms\n\nCall log:\n  - Expect \"toContainText\" getByRole('status') with timeout 5000ms\n  - waiting for getByRole('status')\n    14 × locator resolved to <p role=\"status\" class=\"connection-state\">กำลังรอข้อมูลล่าสุด</p>\n       - unexpected value \"กำลังรอข้อมูลล่าสุด\"\n"
+  },
+  "pageErrors": [],
+  "finishedAt": "2026-10-12T06:30:16.114Z"
+}

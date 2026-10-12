@@ -1,0 +1,407 @@
+{
+  "snapshots": 40,
+  "violations": 0,
+  "incomplete": 0,
+  "audits": [
+    {
+      "file": "final-score-1280.json",
+      "modified": "2026-10-11T21:11:13.6501903+07:00",
+      "size": {
+        "width": 1280,
+        "height": 900
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "final-score-360.json",
+      "modified": "2026-10-11T21:11:09.9325055+07:00",
+      "size": {
+        "width": 360,
+        "height": 740
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "final-score-390.json",
+      "modified": "2026-10-11T21:11:10.839431+07:00",
+      "size": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "final-score-430.json",
+      "modified": "2026-10-11T21:11:11.797344+07:00",
+      "size": {
+        "width": 430,
+        "height": 932
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "final-score-740.json",
+      "modified": "2026-10-11T21:11:12.729244+07:00",
+      "size": {
+        "width": 740,
+        "height": 360
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "glow-result-1280.json",
+      "modified": "2026-10-11T21:10:28.1074929+07:00",
+      "size": {
+        "width": 1280,
+        "height": 900
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "glow-result-360.json",
+      "modified": "2026-10-11T21:10:25.280291+07:00",
+      "size": {
+        "width": 360,
+        "height": 740
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "glow-result-390.json",
+      "modified": "2026-10-11T21:10:26.0080723+07:00",
+      "size": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "glow-result-430.json",
+      "modified": "2026-10-11T21:10:26.6923384+07:00",
+      "size": {
+        "width": 430,
+        "height": 932
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "glow-result-740.json",
+      "modified": "2026-10-11T21:10:27.3813218+07:00",
+      "size": {
+        "width": 740,
+        "height": 360
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "home-1280.json",
+      "modified": "2026-10-11T21:03:42.1160962+07:00",
+      "size": {
+        "width": 1280,
+        "height": 900
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "home-360.json",
+      "modified": "2026-10-11T21:03:38.4000177+07:00",
+      "size": {
+        "width": 360,
+        "height": 740
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "home-390.json",
+      "modified": "2026-10-11T21:03:39.2555267+07:00",
+      "size": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "home-430.json",
+      "modified": "2026-10-11T21:03:40.238024+07:00",
+      "size": {
+        "width": 430,
+        "height": 932
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "home-740.json",
+      "modified": "2026-10-11T21:03:41.1678829+07:00",
+      "size": {
+        "width": 740,
+        "height": 360
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "inspect-result-1280.json",
+      "modified": "2026-10-11T21:10:33.541654+07:00",
+      "size": {
+        "width": 1280,
+        "height": 900
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "inspect-result-360.json",
+      "modified": "2026-10-11T21:10:30.580788+07:00",
+      "size": {
+        "width": 360,
+        "height": 740
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "inspect-result-390.json",
+      "modified": "2026-10-11T21:10:31.3056088+07:00",
+      "size": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "inspect-result-430.json",
+      "modified": "2026-10-11T21:10:32.0790829+07:00",
+      "size": {
+        "width": 430,
+        "height": 932
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "inspect-result-740.json",
+      "modified": "2026-10-11T21:10:32.7923881+07:00",
+      "size": {
+        "width": 740,
+        "height": 360
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "lobby-1280.json",
+      "modified": "2026-10-11T21:10:07.7674614+07:00",
+      "size": {
+        "width": 1280,
+        "height": 900
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "lobby-360.json",
+      "modified": "2026-10-11T21:10:04.5697473+07:00",
+      "size": {
+        "width": 360,
+        "height": 740
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "lobby-390.json",
+      "modified": "2026-10-11T21:10:05.3391108+07:00",
+      "size": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "lobby-430.json",
+      "modified": "2026-10-11T21:10:06.0652501+07:00",
+      "size": {
+        "width": 430,
+        "height": 932
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "lobby-740.json",
+      "modified": "2026-10-11T21:10:06.9533311+07:00",
+      "size": {
+        "width": 740,
+        "height": 360
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "lobby-rules-1280.json",
+      "modified": "2026-10-11T21:03:47.3111853+07:00",
+      "size": {
+        "width": 1280,
+        "height": 900
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "lobby-rules-360.json",
+      "modified": "2026-10-11T21:03:44.5444843+07:00",
+      "size": {
+        "width": 360,
+        "height": 740
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "lobby-rules-390.json",
+      "modified": "2026-10-11T21:03:45.2530808+07:00",
+      "size": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "lobby-rules-430.json",
+      "modified": "2026-10-11T21:03:45.9451383+07:00",
+      "size": {
+        "width": 430,
+        "height": 932
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "lobby-rules-740.json",
+      "modified": "2026-10-11T21:03:46.6259724+07:00",
+      "size": {
+        "width": 740,
+        "height": 360
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "pack-1280.json",
+      "modified": "2026-10-11T21:10:13.7373742+07:00",
+      "size": {
+        "width": 1280,
+        "height": 900
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "pack-360.json",
+      "modified": "2026-10-11T21:10:09.9173886+07:00",
+      "size": {
+        "width": 360,
+        "height": 740
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "pack-390.json",
+      "modified": "2026-10-11T21:10:10.8958512+07:00",
+      "size": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "pack-430.json",
+      "modified": "2026-10-11T21:10:11.8652452+07:00",
+      "size": {
+        "width": 430,
+        "height": 932
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "pack-740.json",
+      "modified": "2026-10-11T21:10:12.8147639+07:00",
+      "size": {
+        "width": 740,
+        "height": 360
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "sheriff-1280.json",
+      "modified": "2026-10-11T21:10:22.083577+07:00",
+      "size": {
+        "width": 1280,
+        "height": 900
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "sheriff-360.json",
+      "modified": "2026-10-11T21:10:19.0664086+07:00",
+      "size": {
+        "width": 360,
+        "height": 740
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "sheriff-390.json",
+      "modified": "2026-10-11T21:10:19.8291614+07:00",
+      "size": {
+        "width": 390,
+        "height": 844
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "sheriff-430.json",
+      "modified": "2026-10-11T21:10:20.6072714+07:00",
+      "size": {
+        "width": 430,
+        "height": 932
+      },
+      "violations": 0,
+      "incomplete": 0
+    },
+    {
+      "file": "sheriff-740.json",
+      "modified": "2026-10-11T21:10:21.3482774+07:00",
+      "size": {
+        "width": 740,
+        "height": 360
+      },
+      "violations": 0,
+      "incomplete": 0
+    }
+  ]
+}

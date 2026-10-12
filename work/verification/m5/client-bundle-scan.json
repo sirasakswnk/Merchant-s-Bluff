@@ -1,0 +1,6 @@
+{
+  "scanExit": 1,
+  "zeroSensitiveMatches": true,
+  "note": "Bare firebase-admin appears only in a Firebase Web SDK diagnostic string; no Admin module paths.",
+  "path": ".next/static/chunks"
+}

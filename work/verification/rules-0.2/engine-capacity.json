@@ -1,0 +1,614 @@
+[
+  {
+    "players": 4,
+    "exchange": 0,
+    "seed": 7,
+    "rounds": 8,
+    "phase": "GAME_OVER",
+    "checkedTransitions": 152,
+    "sheriffTurns": {
+      "p0": 2,
+      "p1": 2,
+      "p2": 2,
+      "p3": 2
+    },
+    "reshuffles": 0,
+    "inventory": {
+      "total": 360,
+      "unique": 360,
+      "deck": 236,
+      "discard": 0,
+      "hand": 4,
+      "bag": 0,
+      "stash": 120,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    }
+  },
+  {
+    "players": 4,
+    "exchange": 0,
+    "seed": 42,
+    "rounds": 8,
+    "phase": "GAME_OVER",
+    "checkedTransitions": 152,
+    "sheriffTurns": {
+      "p0": 2,
+      "p1": 2,
+      "p2": 2,
+      "p3": 2
+    },
+    "reshuffles": 0,
+    "inventory": {
+      "total": 360,
+      "unique": 360,
+      "deck": 236,
+      "discard": 0,
+      "hand": 4,
+      "bag": 0,
+      "stash": 120,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    }
+  },
+  {
+    "players": 4,
+    "exchange": 0,
+    "seed": 73,
+    "rounds": 8,
+    "phase": "GAME_OVER",
+    "checkedTransitions": 152,
+    "sheriffTurns": {
+      "p0": 2,
+      "p1": 2,
+      "p2": 2,
+      "p3": 2
+    },
+    "reshuffles": 0,
+    "inventory": {
+      "total": 360,
+      "unique": 360,
+      "deck": 236,
+      "discard": 0,
+      "hand": 4,
+      "bag": 0,
+      "stash": 120,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    }
+  },
+  {
+    "players": 4,
+    "exchange": 3,
+    "seed": 7,
+    "rounds": 8,
+    "phase": "GAME_OVER",
+    "checkedTransitions": 152,
+    "sheriffTurns": {
+      "p0": 2,
+      "p1": 2,
+      "p2": 2,
+      "p3": 2
+    },
+    "reshuffles": 0,
+    "inventory": {
+      "total": 360,
+      "unique": 360,
+      "deck": 164,
+      "discard": 72,
+      "hand": 4,
+      "bag": 0,
+      "stash": 120,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    }
+  },
+  {
+    "players": 4,
+    "exchange": 3,
+    "seed": 42,
+    "rounds": 8,
+    "phase": "GAME_OVER",
+    "checkedTransitions": 152,
+    "sheriffTurns": {
+      "p0": 2,
+      "p1": 2,
+      "p2": 2,
+      "p3": 2
+    },
+    "reshuffles": 0,
+    "inventory": {
+      "total": 360,
+      "unique": 360,
+      "deck": 164,
+      "discard": 72,
+      "hand": 4,
+      "bag": 0,
+      "stash": 120,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    }
+  },
+  {
+    "players": 4,
+    "exchange": 3,
+    "seed": 73,
+    "rounds": 8,
+    "phase": "GAME_OVER",
+    "checkedTransitions": 152,
+    "sheriffTurns": {
+      "p0": 2,
+      "p1": 2,
+      "p2": 2,
+      "p3": 2
+    },
+    "reshuffles": 0,
+    "inventory": {
+      "total": 360,
+      "unique": 360,
+      "deck": 164,
+      "discard": 72,
+      "hand": 4,
+      "bag": 0,
+      "stash": 120,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    }
+  },
+  {
+    "players": 5,
+    "exchange": 0,
+    "seed": 7,
+    "rounds": 10,
+    "phase": "GAME_OVER",
+    "checkedTransitions": 250,
+    "sheriffTurns": {
+      "p0": 2,
+      "p1": 2,
+      "p2": 2,
+      "p3": 2,
+      "p4": 2
+    },
+    "reshuffles": 0,
+    "inventory": {
+      "total": 360,
+      "unique": 360,
+      "deck": 155,
+      "discard": 0,
+      "hand": 5,
+      "bag": 0,
+      "stash": 200,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    }
+  },
+  {
+    "players": 5,
+    "exchange": 0,
+    "seed": 42,
+    "rounds": 10,
+    "phase": "GAME_OVER",
+    "checkedTransitions": 250,
+    "sheriffTurns": {
+      "p0": 2,
+      "p1": 2,
+      "p2": 2,
+      "p3": 2,
+      "p4": 2
+    },
+    "reshuffles": 0,
+    "inventory": {
+      "total": 360,
+      "unique": 360,
+      "deck": 155,
+      "discard": 0,
+      "hand": 5,
+      "bag": 0,
+      "stash": 200,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    }
+  },
+  {
+    "players": 5,
+    "exchange": 0,
+    "seed": 73,
+    "rounds": 10,
+    "phase": "GAME_OVER",
+    "checkedTransitions": 250,
+    "sheriffTurns": {
+      "p0": 2,
+      "p1": 2,
+      "p2": 2,
+      "p3": 2,
+      "p4": 2
+    },
+    "reshuffles": 0,
+    "inventory": {
+      "total": 360,
+      "unique": 360,
+      "deck": 155,
+      "discard": 0,
+      "hand": 5,
+      "bag": 0,
+      "stash": 200,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    }
+  },
+  {
+    "players": 5,
+    "exchange": 3,
+    "seed": 7,
+    "rounds": 10,
+    "phase": "GAME_OVER",
+    "checkedTransitions": 250,
+    "sheriffTurns": {
+      "p0": 2,
+      "p1": 2,
+      "p2": 2,
+      "p3": 2,
+      "p4": 2
+    },
+    "reshuffles": 0,
+    "inventory": {
+      "total": 360,
+      "unique": 360,
+      "deck": 35,
+      "discard": 120,
+      "hand": 5,
+      "bag": 0,
+      "stash": 200,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    }
+  },
+  {
+    "players": 5,
+    "exchange": 3,
+    "seed": 42,
+    "rounds": 10,
+    "phase": "GAME_OVER",
+    "checkedTransitions": 250,
+    "sheriffTurns": {
+      "p0": 2,
+      "p1": 2,
+      "p2": 2,
+      "p3": 2,
+      "p4": 2
+    },
+    "reshuffles": 0,
+    "inventory": {
+      "total": 360,
+      "unique": 360,
+      "deck": 35,
+      "discard": 120,
+      "hand": 5,
+      "bag": 0,
+      "stash": 200,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    }
+  },
+  {
+    "players": 5,
+    "exchange": 3,
+    "seed": 73,
+    "rounds": 10,
+    "phase": "GAME_OVER",
+    "checkedTransitions": 250,
+    "sheriffTurns": {
+      "p0": 2,
+      "p1": 2,
+      "p2": 2,
+      "p3": 2,
+      "p4": 2
+    },
+    "reshuffles": 0,
+    "inventory": {
+      "total": 360,
+      "unique": 360,
+      "deck": 35,
+      "discard": 120,
+      "hand": 5,
+      "bag": 0,
+      "stash": 200,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    }
+  },
+  {
+    "players": 6,
+    "exchange": 0,
+    "seed": 7,
+    "rounds": 12,
+    "phase": "GAME_OVER",
+    "checkedTransitions": 372,
+    "sheriffTurns": {
+      "p0": 2,
+      "p1": 2,
+      "p2": 2,
+      "p3": 2,
+      "p4": 2,
+      "p5": 2
+    },
+    "reshuffles": 0,
+    "inventory": {
+      "total": 360,
+      "unique": 360,
+      "deck": 54,
+      "discard": 0,
+      "hand": 6,
+      "bag": 0,
+      "stash": 300,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    }
+  },
+  {
+    "players": 6,
+    "exchange": 0,
+    "seed": 42,
+    "rounds": 12,
+    "phase": "GAME_OVER",
+    "checkedTransitions": 372,
+    "sheriffTurns": {
+      "p0": 2,
+      "p1": 2,
+      "p2": 2,
+      "p3": 2,
+      "p4": 2,
+      "p5": 2
+    },
+    "reshuffles": 0,
+    "inventory": {
+      "total": 360,
+      "unique": 360,
+      "deck": 54,
+      "discard": 0,
+      "hand": 6,
+      "bag": 0,
+      "stash": 300,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    }
+  },
+  {
+    "players": 6,
+    "exchange": 0,
+    "seed": 73,
+    "rounds": 12,
+    "phase": "GAME_OVER",
+    "checkedTransitions": 372,
+    "sheriffTurns": {
+      "p0": 2,
+      "p1": 2,
+      "p2": 2,
+      "p3": 2,
+      "p4": 2,
+      "p5": 2
+    },
+    "reshuffles": 0,
+    "inventory": {
+      "total": 360,
+      "unique": 360,
+      "deck": 54,
+      "discard": 0,
+      "hand": 6,
+      "bag": 0,
+      "stash": 300,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    }
+  },
+  {
+    "players": 6,
+    "exchange": 3,
+    "seed": 7,
+    "rounds": 12,
+    "phase": "GAME_OVER",
+    "checkedTransitions": 372,
+    "sheriffTurns": {
+      "p0": 2,
+      "p1": 2,
+      "p2": 2,
+      "p3": 2,
+      "p4": 2,
+      "p5": 2
+    },
+    "reshuffles": 1,
+    "inventory": {
+      "total": 360,
+      "unique": 360,
+      "deck": 3,
+      "discard": 51,
+      "hand": 6,
+      "bag": 0,
+      "stash": 300,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    }
+  },
+  {
+    "players": 6,
+    "exchange": 3,
+    "seed": 42,
+    "rounds": 12,
+    "phase": "GAME_OVER",
+    "checkedTransitions": 372,
+    "sheriffTurns": {
+      "p0": 2,
+      "p1": 2,
+      "p2": 2,
+      "p3": 2,
+      "p4": 2,
+      "p5": 2
+    },
+    "reshuffles": 1,
+    "inventory": {
+      "total": 360,
+      "unique": 360,
+      "deck": 3,
+      "discard": 51,
+      "hand": 6,
+      "bag": 0,
+      "stash": 300,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    }
+  },
+  {
+    "players": 6,
+    "exchange": 3,
+    "seed": 73,
+    "rounds": 12,
+    "phase": "GAME_OVER",
+    "checkedTransitions": 372,
+    "sheriffTurns": {
+      "p0": 2,
+      "p1": 2,
+      "p2": 2,
+      "p3": 2,
+      "p4": 2,
+      "p5": 2
+    },
+    "reshuffles": 1,
+    "inventory": {
+      "total": 360,
+      "unique": 360,
+      "deck": 3,
+      "discard": 51,
+      "hand": 6,
+      "bag": 0,
+      "stash": 300,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    }
+  }
+]

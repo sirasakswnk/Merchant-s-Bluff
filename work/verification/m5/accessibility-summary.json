@@ -1,0 +1,286 @@
+{
+  "violationTotal": 0.0,
+  "reports": [
+    {
+      "height": 900,
+      "width": 1280,
+      "incomplete": [],
+      "file": "final-score-1280.json",
+      "violations": 0
+    },
+    {
+      "height": 740,
+      "width": 360,
+      "incomplete": [],
+      "file": "final-score-360.json",
+      "violations": 0
+    },
+    {
+      "height": 844,
+      "width": 390,
+      "incomplete": [],
+      "file": "final-score-390.json",
+      "violations": 0
+    },
+    {
+      "height": 932,
+      "width": 430,
+      "incomplete": [],
+      "file": "final-score-430.json",
+      "violations": 0
+    },
+    {
+      "height": 360,
+      "width": 740,
+      "incomplete": [],
+      "file": "final-score-740.json",
+      "violations": 0
+    },
+    {
+      "height": 900,
+      "width": 1280,
+      "incomplete": [],
+      "file": "glow-result-1280.json",
+      "violations": 0
+    },
+    {
+      "height": 740,
+      "width": 360,
+      "incomplete": [],
+      "file": "glow-result-360.json",
+      "violations": 0
+    },
+    {
+      "height": 844,
+      "width": 390,
+      "incomplete": [],
+      "file": "glow-result-390.json",
+      "violations": 0
+    },
+    {
+      "height": 932,
+      "width": 430,
+      "incomplete": [],
+      "file": "glow-result-430.json",
+      "violations": 0
+    },
+    {
+      "height": 360,
+      "width": 740,
+      "incomplete": [],
+      "file": "glow-result-740.json",
+      "violations": 0
+    },
+    {
+      "height": 900,
+      "width": 1280,
+      "incomplete": [],
+      "file": "home-1280.json",
+      "violations": 0
+    },
+    {
+      "height": 740,
+      "width": 360,
+      "incomplete": [],
+      "file": "home-360.json",
+      "violations": 0
+    },
+    {
+      "height": 844,
+      "width": 390,
+      "incomplete": [],
+      "file": "home-390.json",
+      "violations": 0
+    },
+    {
+      "height": 932,
+      "width": 430,
+      "incomplete": [],
+      "file": "home-430.json",
+      "violations": 0
+    },
+    {
+      "height": 360,
+      "width": 740,
+      "incomplete": [],
+      "file": "home-740.json",
+      "violations": 0
+    },
+    {
+      "height": 900,
+      "width": 1280,
+      "incomplete": [],
+      "file": "inspect-result-1280.json",
+      "violations": 0
+    },
+    {
+      "height": 740,
+      "width": 360,
+      "incomplete": [],
+      "file": "inspect-result-360.json",
+      "violations": 0
+    },
+    {
+      "height": 844,
+      "width": 390,
+      "incomplete": [],
+      "file": "inspect-result-390.json",
+      "violations": 0
+    },
+    {
+      "height": 932,
+      "width": 430,
+      "incomplete": [],
+      "file": "inspect-result-430.json",
+      "violations": 0
+    },
+    {
+      "height": 360,
+      "width": 740,
+      "incomplete": [],
+      "file": "inspect-result-740.json",
+      "violations": 0
+    },
+    {
+      "height": 900,
+      "width": 1280,
+      "incomplete": [],
+      "file": "lobby-1280.json",
+      "violations": 0
+    },
+    {
+      "height": 740,
+      "width": 360,
+      "incomplete": [],
+      "file": "lobby-360.json",
+      "violations": 0
+    },
+    {
+      "height": 844,
+      "width": 390,
+      "incomplete": [],
+      "file": "lobby-390.json",
+      "violations": 0
+    },
+    {
+      "height": 932,
+      "width": 430,
+      "incomplete": [],
+      "file": "lobby-430.json",
+      "violations": 0
+    },
+    {
+      "height": 360,
+      "width": 740,
+      "incomplete": [],
+      "file": "lobby-740.json",
+      "violations": 0
+    },
+    {
+      "height": 900,
+      "width": 1280,
+      "incomplete": [],
+      "file": "lobby-rules-1280.json",
+      "violations": 0
+    },
+    {
+      "height": 740,
+      "width": 360,
+      "incomplete": [],
+      "file": "lobby-rules-360.json",
+      "violations": 0
+    },
+    {
+      "height": 844,
+      "width": 390,
+      "incomplete": [],
+      "file": "lobby-rules-390.json",
+      "violations": 0
+    },
+    {
+      "height": 932,
+      "width": 430,
+      "incomplete": [],
+      "file": "lobby-rules-430.json",
+      "violations": 0
+    },
+    {
+      "height": 360,
+      "width": 740,
+      "incomplete": [],
+      "file": "lobby-rules-740.json",
+      "violations": 0
+    },
+    {
+      "height": 900,
+      "width": 1280,
+      "incomplete": [],
+      "file": "pack-1280.json",
+      "violations": 0
+    },
+    {
+      "height": 740,
+      "width": 360,
+      "incomplete": [],
+      "file": "pack-360.json",
+      "violations": 0
+    },
+    {
+      "height": 844,
+      "width": 390,
+      "incomplete": [],
+      "file": "pack-390.json",
+      "violations": 0
+    },
+    {
+      "height": 932,
+      "width": 430,
+      "incomplete": [],
+      "file": "pack-430.json",
+      "violations": 0
+    },
+    {
+      "height": 360,
+      "width": 740,
+      "incomplete": [],
+      "file": "pack-740.json",
+      "violations": 0
+    },
+    {
+      "height": 900,
+      "width": 1280,
+      "incomplete": [],
+      "file": "sheriff-1280.json",
+      "violations": 0
+    },
+    {
+      "height": 740,
+      "width": 360,
+      "incomplete": [],
+      "file": "sheriff-360.json",
+      "violations": 0
+    },
+    {
+      "height": 844,
+      "width": 390,
+      "incomplete": [],
+      "file": "sheriff-390.json",
+      "violations": 0
+    },
+    {
+      "height": 932,
+      "width": 430,
+      "incomplete": [],
+      "file": "sheriff-430.json",
+      "violations": 0
+    },
+    {
+      "height": 360,
+      "width": 740,
+      "incomplete": [],
+      "file": "sheriff-740.json",
+      "violations": 0
+    }
+  ],
+  "snapshots": 40
+}

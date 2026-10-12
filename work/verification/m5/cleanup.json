@@ -1,0 +1,10 @@
+{
+  "checkedPorts": [
+    19000,
+    19099,
+    3100,
+    3200,
+    3300
+  ],
+  "remainingListeners": 0
+}

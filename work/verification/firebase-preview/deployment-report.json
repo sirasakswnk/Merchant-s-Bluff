@@ -1,0 +1,17 @@
+{
+  "projectId": "merchant-s-bluff",
+  "instance": "merchant-s-bluff-default-rtdb",
+  "approvedOn": "2026-10-12",
+  "startedAt": "2026-10-12T06:20:15.585Z",
+  "published": true,
+  "verified": true,
+  "rulesHash": "099b6d6bc06fbb979ef35a152a8fb1aad1d2cf4c31bed5d4aa1ee4080abbfa45",
+  "alreadyApplied": false,
+  "beforeMatchesReview": true,
+  "putStatus": 200,
+  "deployedRulesHash": "099b6d6bc06fbb979ef35a152a8fb1aad1d2cf4c31bed5d4aa1ee4080abbfa45",
+  "rootRead": false,
+  "rootWrite": false,
+  "rulesActive": true,
+  "finishedAt": "2026-10-12T06:20:16.781Z"
+}

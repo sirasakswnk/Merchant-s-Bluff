@@ -1,0 +1,23 @@
+node_modules/
+.next/
+out/
+coverage/
+playwright-report/
+test-results/
+.env*
+!.env.example
+!.env.production.example
+*.tsbuildinfo
+*-debug.log
+*-debug.*.log
+.firebase/
+.vercel/
+work/runtime/
+.next-e2e/
+.next-restart/
+# Verification summaries stay in source; bulky captures and raw logs stay local.
+work/verification/**/*.png
+work/verification/**/*.jpg
+work/verification/**/*.zip
+work/verification/**/*.log
+work/verification/**/*-context.md
