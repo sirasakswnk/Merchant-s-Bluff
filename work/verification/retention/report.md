@@ -22,4 +22,12 @@
 
 Vercel Cron และ endpoint เตรียมไว้สำหรับขั้น Production โดยต้องมี secret และ explicit opt-in ที่ตรง project ก่อนล้างข้อมูล ตอนนี้ยังไม่เปิด automatic deletion และยังไม่ deploy Production งานภาพสุดท้าย M4 ยังพัก
 
-ผล deployment Preview และ smoke test จะบันทึกเพิ่มหลัง build ของ Git integration เสร็จ
+Git integration สร้าง Preview จาก commit `034a2c7899c8f8dd01bef517b79fcb492ece28c5` สำเร็จ: `dpl_6Kprgk2BRkBkTCAarCQYaCarYJxz`, READY, environment preview, Node 24.x, region sin1, build 28.4 วินาที ดู `deployment.json`
+
+[Preview ที่ตรวจแล้ว](https://merchant-s-bluff-mw353kn6x-mingmings-projects-c4169f4b.vercel.app) ใช้ Vercel Authentication ตามเดิม ทดสอบผ่าน development OIDC ของ project เดียวกัน ไม่สร้าง temporary bypass หรือเปลี่ยนการป้องกัน ลิงก์กลุ่มเพื่อนเดิมยังชี้ deployment ก่อนเพิ่ม retention และยังคงไว้ให้กลุ่มเดิมเล่นต่อได้
+
+`preview-smoke.json`: Chromium ใหม่ 4 contexts ที่ 360/390/430/1280px สร้าง/เข้าห้อง พร้อม เริ่มเกม แลก 3 ขน 5 และให้ผ่านครบหนึ่งรอบ เข้า PREPARE รอบ 2 และ reload กลับที่นั่งเดิม ผ่านทั้งหมด ตรวจ conservation 360 และ game snapshot ไม่เปลี่ยนจาก resume ไม่มี page error หรือ horizontal overflow
+
+metadata ของ LOBBY มี deadline 24 ชั่วโมง, PLAYING ไม่มี deadline, public view ไม่มี retention, resume เพิ่ม activity ถูกต้อง; maintenance endpoint ยัง 404 เพราะไม่มี secret ส่วน API สร้างห้องโดยไม่มี Firebase identity ได้ 401 ล้างห้องทดสอบ 1 ห้องและ anonymous account 4 บัญชีที่สร้างในรอบนี้ครบ
+
+`deployed-bundle-report.json`: อ่าน client JavaScript จาก deployment จริง 9 ไฟล์ ไม่พบ private key หรือ service-account email และพบ Firebase project ที่ถูกต้อง ไม่ใช่การทดสอบด้วย bundle local อย่างเดียว

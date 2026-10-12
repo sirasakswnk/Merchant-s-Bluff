@@ -1,6 +1,6 @@
 # Progress — 12 ตุลาคม 2026
 
-## ขั้นตอนล่าสุด — Retention 24 ชั่วโมงพร้อมทดสอบและเปิดบนPreview
+## ขั้นตอนล่าสุด — Retention 24 ชั่วโมงผ่านการตรวจบน Preview
 
 ผู้ใช้แจ้งว่าเล่นหลายคนกับเพื่อนผ่านแล้วและให้เริ่มงานretention พร้อมเลือกเก็บ1วันทั้งหมด จึงเพิ่มmetadataนอกgame snapshotสำหรับLOBBY/FINISHED/ABORTED เมื่อไม่มีAPIที่ถูกต้องมาใช้24ชั่วโมงและไม่มีคนออนไลน์ ส่วนPLAYINGไม่ล้างและlegacyไม่มีmetadataถูกข้าม เกม0.1/0.2/rulesVersion/ราคา/สำรับไม่เปลี่ยน M4ภาพสุดท้ายยังพัก
 
@@ -9,6 +9,8 @@ Default CLIเป็นdry-run มีmanifestprivateอายุ1ชั่วโ
 ตรวจtypecheck/lint/buildผ่าน Unit89, integration28, E2E17ผ่าน รวมmatrix4/5/6คนขน5/PASSตลอดไม่แลก/แลก3 (conservation360), recovery/accessibility/restart จากนั้นทวนintegrationหลังเพิ่มcreate-retryและfenceไม่หมดอายุในRulesผ่านอีกครั้ง เผยแพร่เฉพาะpresence predicateที่เข้มขึ้นไปFirebasePreviewและreadbackตรงsource ทดสอบlivefixture8ชุดผ่าน ล้างfixtureออกครบ ไม่มีห้องผู้เล่นถูกแก้ CLIจริงdry-run/applycandidate0 ข้ามlegacy2
 
 เตรียมVercel maintenance endpointพร้อมBearer secret/explicitProduction opt-inและdailyCron03:00ไทย Runnerมีbatch/cursor/lease ยังไม่มีProduction configหรือเปิดautomatic deletion Previewendpointไม่เปิดapply คู่มือ `docs/retention.md` หลักฐาน `work/verification/retention/` ขั้นถัดไปตรวจusage/ข้อจำกัดก่อนเตรียมFirebaseProductionและdeploymentจริง
+
+Git integration deploy commit `034a2c7` ผ่าน READY บน Preview `dpl_6Kprgk2BRkBkTCAarCQYaCarYJxz` (Node 24.x / sin1) ตรวจ browser→Vercel API→Firebase จริง 4 คน แลก3/ขน5/ให้ผ่านครบหนึ่งรอบและ reload ผ่าน conservation360, LOBBY deadline24h / PLAYINGไม่มีdeadline / resumeต่ออายุโดยgameไม่เปลี่ยน / publicไม่มีmetadata ผ่าน ล้างห้องและAuth4บัญชีที่สร้างเพื่อทดสอบครบ Bundleจริง9ไฟล์ไม่มีserver credential ไม่มีtemporary bypassใหม่ ลิงก์เพื่อนเดิมยังอยู่และชี้deploymentก่อนretention ดู `verification/retention/preview-smoke.json` และ `deployment.json`
 
 ## ประวัติ — ลิงก์ทดลองกับกลุ่มเพื่อนพร้อม
 

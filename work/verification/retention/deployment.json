@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-10-12T09:19:11.509Z",
+  "id": "dpl_6Kprgk2BRkBkTCAarCQYaCarYJxz",
+  "url": "merchant-s-bluff-mw353kn6x-mingmings-projects-c4169f4b.vercel.app",
+  "state": "READY",
+  "target": null,
+  "commit": "034a2c7899c8f8dd01bef517b79fcb492ece28c5",
+  "branch": "preview",
+  "triggeredBy": "Git integration",
+  "projectId": "prj_sHBgyJCUNYQYl3mIfGgNYUWStx7I",
+  "teamId": "team_7r4uc6GwzzgfmnkaHkYgs5QL",
+  "nodeVersion": "24.x",
+  "functionsRegion": "sin1",
+  "environment": "preview",
+  "buildDurationMs": 28365,
+  "automaticRetentionEnabled": false,
+  "maintenanceEnvKeysConfigured": [],
+  "access": "same-project development OIDC",
+  "temporaryBypassCreated": false
+}
