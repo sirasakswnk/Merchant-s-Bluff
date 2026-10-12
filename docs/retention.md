@@ -34,9 +34,9 @@ Manifestเก็บใน `work/runtime/retention/plan.json` เท่านั
 
 ## Vercel Cron สำหรับขั้นProduction
 
-สถานะล่าสุด 12 ตุลาคม 2026: เตรียม Production environment โดยใช้ Firebase ร่วมกับ Preview ตามคำอนุมัติผู้ใช้แล้ว มี `CRON_SECRET` เป็น Secret, `RETENTION_FIREBASE_PROJECT_ID=merchant-s-bluff` และ `RETENTION_APPLY_ENABLED=false` ตรวจ readback/local HTTP dry-run ผ่าน ยังไม่ deploy เว็บไซต์ Production หรือเปิดการล้างอัตโนมัติ ดู [Production setup](production-setup.md)
+สถานะล่าสุด 12 ตุลาคม 2026: Productionเปิดให้เข้า[URLหลัก](https://merchant-s-bluff.vercel.app)ได้โดยไม่ล็อกอินVercelแล้ว ใช้Firebaseร่วมกับPreviewตามคำอนุมัติ มี `CRON_SECRET` เป็นSecret, `RETENTION_FIREBASE_PROJECT_ID=merchant-s-bluff` และ `RETENTION_APPLY_ENABLED=false` ตรวจmaintenanceบนURLจริงได้200 dry-run/ไม่มีsecret401 DailyCronยังทำเฉพาะdry-run การล้างอัตโนมัติรอขั้นถัดไป ดู [Production setup](production-setup.md) และ [ผลHTTPจริง](../work/verification/production-release/public-http.json)
 
-เตรียม `GET /api/maintenance/retention` และdaily cronในvercel.json เวลา20:00UTC (03:00ไทย) ต้องมี `CRON_SECRET` ความยาวอย่างน้อย32ตัวและBearerตรงกัน มิฉะนั้น404/401ก่อนเปิดdatabase
+เผยแพร่ `GET /api/maintenance/retention` และdaily cronในvercel.json เวลา20:00UTC (03:00ไทย) ต้องมี `CRON_SECRET` ความยาวอย่างน้อย32ตัวและBearerตรงกัน มิฉะนั้น404/401ก่อนเปิดdatabase
 
 การล้างอัตโนมัติต้องตั้งครบทั้ง `RETENTION_APPLY_ENABLED=true`, `VERCEL_ENV=production` และ `RETENTION_FIREBASE_PROJECT_ID` ตรง `FIREBASE_PROJECT_ID` ที่ตรวจไว้ ตั้งSecretอย่างเดียวไม่เปิดการล้าง Previewไม่สามารถเปิดapplyผ่านHTTPได้ ตั้งenvเมื่อProduction project/configพร้อมและตรวจRulesแล้ว ไม่ใช้secretในNEXT_PUBLIC_หรือส่งในแชท
 
@@ -48,6 +48,6 @@ Runnerจำกัด5batches/เวลาทำงาน มีjob leaseแล�
 - E2E17ผ่าน รวม4/5/6คนPASSขน5ตลอดทั้งไม่แลกและแลก3, เกมเต็ม, offline/retry/control takeover, accessibilityและprocess restart
 - FirebasePreviewจริง:เผยแพร่presence fenceและอ่านกลับตรงsource ทดสอบfixture8ชุด ล้างexpired3ห้อง+orphan1 รายการและข้ามPLAYING/online/recent/legacyครบ ล้างfixtureทั้ง8ออกแล้ว ไม่แก้ห้องของผู้เล่น
 - CLIกับข้อมูลจริงได้candidate0และข้ามlegacy2 ไม่มีการลบห้องผู้เล่น
-- ยังไม่เปิดProduction/automatic deletion ตั้งCronactivationเมื่อถึงขั้นProductionต่อไป งานภาพสุดท้ายM4ยังพัก
+- Productionเผยแพร่แล้วแต่ยังไม่เปิดautomatic deletion (`RETENTION_APPLY_ENABLED=false`) ขั้นถัดไปเมื่อผู้ใช้สั่งคือเปิดและตรวจapply งานภาพสุดท้ายM4ยังพัก
 
 ดูหลักฐาน `work/verification/retention/` และสถานะล่าสุดใน `work/progress.md`

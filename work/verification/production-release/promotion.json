@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-12T14:00:23.552Z",
+  "id": "dpl_79birapraqG3C2ks5BKYMS4HYE54",
+  "sourceCommit": "b4b68d2ad20941e4abb598f1497c96e63274abff",
+  "target": "production",
+  "state": "READY",
+  "url": "https://merchant-s-bluff.vercel.app",
+  "testBeforePromotion": true,
+  "protectionBefore": {
+    "deploymentType": "all_except_custom_domains"
+  },
+  "protectionAfter": {
+    "deploymentType": "all_except_custom_domains"
+  },
+  "automaticDeletionEnabled": false,
+  "stagedTestedId": "dpl_G322moM1bDSobZFR2kTVcdxccTe3",
+  "currentState": "READY"
+}

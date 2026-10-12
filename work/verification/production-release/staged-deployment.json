@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-10-12T13:47:07.057Z",
+  "id": "dpl_G322moM1bDSobZFR2kTVcdxccTe3",
+  "url": "https://merchant-s-bluff-3i3r37owv-mingmings-projects-c4169f4b.vercel.app",
+  "target": "production",
+  "state": "READY",
+  "readySubstate": "STAGED",
+  "aliasAssigned": true,
+  "aliases": [
+    "merchant-s-bluff-mingmings-projects-c4169f4b.vercel.app"
+  ],
+  "sourceCommit": "b4b68d2ad20941e4abb598f1497c96e63274abff",
+  "environment": "production",
+  "nodeVersion": "24.x",
+  "regions": [
+    "sin1"
+  ],
+  "buildDurationMs": 74107
+}

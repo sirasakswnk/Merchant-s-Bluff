@@ -1,0 +1,198 @@
+{
+  "startedAt": "2026-10-12T14:00:31.075Z",
+  "deploymentId": "dpl_79birapraqG3C2ks5BKYMS4HYE54",
+  "sourceCommit": "b4b68d2ad20941e4abb598f1497c96e63274abff",
+  "origin": "https://merchant-s-bluff.vercel.app",
+  "access": "public Production domain",
+  "freshContexts": [
+    {
+      "width": 360,
+      "vercelLogin": false,
+      "customAuthHeaders": false
+    },
+    {
+      "width": 390,
+      "vercelLogin": false,
+      "customAuthHeaders": false
+    },
+    {
+      "width": 430,
+      "vercelLogin": false,
+      "customAuthHeaders": false
+    },
+    {
+      "width": 1280,
+      "vercelLogin": false,
+      "customAuthHeaders": false
+    }
+  ],
+  "checkpoints": [
+    {
+      "phase": "PREPARE",
+      "round": 1,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 336,
+        "discard": 0,
+        "hand": 24,
+        "bag": 0,
+        "stash": 0,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "phase": "NEGOTIATE",
+      "round": 1,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 327,
+        "discard": 9,
+        "hand": 9,
+        "bag": 15,
+        "stash": 0,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "phase": "RESOLUTION",
+      "round": 1,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 327,
+        "discard": 9,
+        "hand": 9,
+        "bag": 10,
+        "stash": 5,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "phase": "RESOLUTION",
+      "round": 1,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 327,
+        "discard": 9,
+        "hand": 9,
+        "bag": 5,
+        "stash": 10,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "phase": "RESOLUTION",
+      "round": 1,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 327,
+        "discard": 9,
+        "hand": 9,
+        "bag": 0,
+        "stash": 15,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    },
+    {
+      "phase": "PREPARE",
+      "round": 2,
+      "inventory": {
+        "total": 360,
+        "unique": 360,
+        "deck": 317,
+        "discard": 9,
+        "hand": 19,
+        "bag": 0,
+        "stash": 15,
+        "products": {
+          "apple": 84,
+          "bread": 72,
+          "cheese": 60,
+          "cloth": 54,
+          "moonshine": 36,
+          "crossbow": 30,
+          "cannabis_leaf": 24
+        }
+      }
+    }
+  ],
+  "pageErrors": [],
+  "api": {
+    "POST /api/rooms/create 200": 1,
+    "GET /api/rooms/:roomId 200": 5,
+    "POST /api/rooms/join 200": 3,
+    "POST /api/rooms/command 200": 24
+  },
+  "checks": {
+    "publicDomainWithoutCredentials": 200,
+    "publicEntryWithoutVercelLogin": true,
+    "noVercelCookieOrCustomHeaders": true,
+    "applicationIdentityStillRequired": 401,
+    "previewRemainsProtected": 302,
+    "lobbyRetention24h": true,
+    "playingHasNoDeadline": true,
+    "resumeOnlyExtendsMetadata": true,
+    "reloadAndSameSeat": true,
+    "mobileFullRound": {
+      "players": 4,
+      "cargo": 5,
+      "exchange": 3,
+      "resolutions": 3,
+      "manualNextRound": true
+    },
+    "noHorizontalOverflow": true
+  },
+  "cleanup": {
+    "createdRooms": 1,
+    "removedRooms": 1,
+    "createdUsers": 4,
+    "removedUsers": 4,
+    "errors": []
+  },
+  "passed": true,
+  "finishedAt": "2026-10-12T14:01:03.870Z"
+}

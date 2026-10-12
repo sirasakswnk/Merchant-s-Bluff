@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-10-12T14:04:08.169Z",
+  "deploymentId": "dpl_79birapraqG3C2ks5BKYMS4HYE54",
+  "query": {
+    "level": "error",
+    "since": "30m",
+    "limit": 20
+  },
+  "querySucceeded": true,
+  "returnedRecords": 0,
+  "scope": "bounded runtime query after public smoke; not a guarantee of no future errors"
+}

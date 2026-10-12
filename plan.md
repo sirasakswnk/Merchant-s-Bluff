@@ -2,6 +2,7 @@
 
 สถานะ: กติกาฉบับทดลอง 0.2 ที่ผู้ใช้ยอมรับ — เพิ่มจำนวนสำรับเป็น360ใบสำหรับเกมใหม่
 วันที่อัปเดต: 12 ตุลาคม 2026
+สถานะเผยแพร่: [Production พร้อมเล่น](https://merchant-s-bluff.vercel.app) รุ่น `b4b68d2` บน `main` เข้าได้โดยไม่ล็อกอินVercelตามอนุมัติ Previewยังป้องกัน การล้างห้องอัตโนมัติยังปิด ดูwork/verification/production-release/report.md
 สถาปัตยกรรม revision 0.2: Vercel + Firebase Realtime Database ตามข้อกำหนดผู้ใช้; rulesVersion0.2เปลี่ยนเฉพาะจำนวนสำรับ ไม่เปลี่ยนราคา/ค่าปรับ/ชดเชยหรือกติกาอื่น
 ภาษา UI: ไทย | แพลตฟอร์ม: เว็บบนมือถือและเดสก์ท็อป | ผู้เล่น: 4–6 คน
 
@@ -494,7 +495,7 @@ README ต้องระบุ prerequisites, install, dev, emulator startup, t
 - [x] รันตรวจที่กำหนดและบันทึกผลจริง สิ่งที่ไม่ได้ตรวจระบุชัด
 - [x] มีวิธีรันและข้อจำกัดให้ผู้ใช้รับงานต่อได้
 
-Definition of Done นี้ผ่านการทวนใน local/Emulators และ browser automation สำหรับ 0.2/360 ใบ รวม matrix PASS5 ทั้ง 6 กรณีตามที่ผู้ใช้อนุมัติ ดู work/verification/rules-0.2/report.md ยังไม่ใช่ production deployment หรือ human balance playtest เกม 0.1 เดิมยังมีข้อจำกัดสำรับตาม snapshot ดู docs/rules.md งานภาพสุดท้ายของ M4 ยังพักตามคำสั่งผู้ใช้
+Definition of Done นี้ผ่านการทวนใน local/Emulators และ browser automation สำหรับ 0.2/360 ใบ รวม matrix PASS5 ทั้ง 6 กรณีตามที่ผู้ใช้อนุมัติ ดู work/verification/rules-0.2/report.md จากนั้นตรวจเกมเต็ม4/5/6คนบนProductionแบบstagedและpublicURLของGitartifactcommitเดียวกันผ่านตามwork/verification/production-release/report.md ไม่ใช่หลักฐานhuman balance playtest เกม0.1เดิมคงข้อจำกัดสำรับตามsnapshot ดูdocs/rules.md งานภาพสุดท้ายM4ยังพักตามคำสั่งผู้ใช้
 
 หมายเหตุ: ตัวเลขทั้งหมดเป็นค่าตั้งต้นที่ผู้ใช้อนุมัติสำหรับ prototype ยังไม่มีผล playtest ยืนยันสมดุล ห้ามปรับราคาเงียบ ๆ หากพบว่าคนไม่ลักลอบ/นายด่านไม่ตรวจ ให้รายงานพร้อมข้อมูลจาก playtest และเสนอการปรับแยกจาก implementation นี้
 
@@ -502,24 +503,26 @@ Definition of Done นี้ผ่านการทวนใน local/Emulators
 ## 11. Vercel / Firebase deployment checklist (revision 0.2)
 
 - [x] Firebase project `merchant-s-bluff` มี Realtime Databaseที่SingaporeและAnonymous Auth พร้อมทดสอบจริงแล้ว 12ตุลาคมผู้ใช้อนุมัติให้ใช้ร่วมกับProductionสำหรับเว็บเล่นกับเพื่อน
-- [x] ยืนยันนโยบาย environment ตามผู้ใช้:ใช้ Firebase Auth/RTDB ชุดเดียวกันสำหรับ Preview/Production เป็นข้อยกเว้นจากแผนแยกprojectเดิม แยกเฉพาะVercel variable scopes; Production14ตัวพร้อมและlocalchecksผ่าน ยังไม่deployเว็บไซต์Production ดูdocs/production-setup.md
-- [x] Public Firebase web config ใช้NEXT_PUBLIC_ในPreview; privacyจริง51assertionsผ่าน สิทธิ์ข้อมูลคุ้มครองด้วย Auth/Rules/API
-- [x] Admin credentials เก็บVercelPreview/Production server-only variables, private keyเป็นSecret; ProductionCron secretเป็นSecret; Preview valuesเดิม ConfigProduction readbackตรง BundlelocalProduction14filesไม่มีkey/email/Cron secret ดูwork/verification/firebase-production/ ส่วนdeployedJS9responsesที่ผ่านเป็นผลPreviewเดิม
-- [x] Document env เช่น NEXT_PUBLIC_FIREBASE_API_KEY, AUTH_DOMAIN, DATABASE_URL, PROJECT_ID, APP_ID (ทุก client key ใช้ prefix ตาม framework) และ server FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY, FIREBASE_DATABASE_URL — docs/deployment-env.md และ .env.production.example; ตรวจ script 7 tests/lint/typecheck ผ่าน ขั้นนี้ยังไม่ตั้งค่าบริการจริง
+- [x] ยืนยันนโยบาย environment ตามผู้ใช้:ใช้ Firebase Auth/RTDB ชุดเดียวกันสำหรับ Preview/Production เป็นข้อยกเว้นจากแผนแยกprojectเดิม แยกเฉพาะVercel variable scopes; Production14ตัวพร้อมและdeploy/publicURLผ่านแล้ว ดูdocs/production-setup.md
+- [x] Public Firebase web config ใช้NEXT_PUBLIC_ในPreview/Production; privacyจริง54assertionsผ่านบนstagedProduction สิทธิ์ข้อมูลคุ้มครองด้วย Auth/Rules/API
+- [x] Admin credentials เก็บVercelPreview/Production server-only variables, private keyเป็นSecret; ProductionCron secretเป็นSecret; Preview valuesเดิม ConfigProduction readbackตรง BundlelocalProduction14filesและstagedProduction9deployedJSresponsesไม่มีkey/email/Cron secret/bypass token ดูwork/verification/firebase-production/ และproduction-release/
+- [x] Document env เช่น NEXT_PUBLIC_FIREBASE_API_KEY, AUTH_DOMAIN, DATABASE_URL, PROJECT_ID, APP_ID (ทุก client key ใช้ prefix ตาม framework) และ server FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY, FIREBASE_DATABASE_URL — docs/deployment-env.md และ .env.production.example; ตรวจ script7tests/lint/typecheckผ่านและตั้งค่าบริการจริงแล้ว
 - [x] แยก Admin SDK module ด้วย server-only import และตรวจ client bundle14filesไม่มีprivate key/email/Admin markers พร้อมpublicconfigจริง
-- [x] Deploy database.rules.json ไปยังFirebasePreviewตามอนุมัติและอ่านกลับตรงsource พร้อมliveprivacy51assertionsผ่าน แยกจากdeployVercel Production Rulesของprojectแยกยังต้องตรวจภายหลัง
-- [ ] เพิ่ม domains ที่ใช้ตาม Firebase Auth settings ที่เกี่ยวข้อง; ไม่อนุญาต origins แบบกว้างโดยไม่จำเป็น
-- [ ] Emulator tests ใช้ dummy project/credentials โดยตั้ง emulator flags เฉพาะ local/test ห้ามเปิดใน production
-- [ ] Presence ใช้ .info/connected และ onDisconnect โดยลงทะเบียน disconnect operation ก่อน set online; reconnect ต้องลงทะเบียนใหม่ ใช้ per-connection ID ไม่ทับทุกแท็บด้วย boolean เดียว
-- [ ] Presence ใช้แสดงสถานะเท่านั้น ไม่เปิดไพ่ ไม่ตัดสินผล/auto-pass และไม่ใช้เป็น authentication
-- [ ] ออฟไลน์ปิดปุ่มส่ง gameplay command เก็บ draft ได้แต่ไม่ queue คำสั่งตรวจ/ให้ผ่านให้ทำงานเงียบ ๆ ตอนออนไลน์; unknown result retry commandId เดิมก่อนส่งใหม่
-- [ ] Anonymous Auth persistence รองรับ reload ใน browser เดิม การล้าง storage/เปลี่ยนอุปกรณ์ไม่รับประกันคืน UID เดิม แจ้งข้อจำกัด ไม่ให้ยึดที่นั่งเดิมด้วยชื่อเหมือนกัน
-- [ ] Presence ไม่ขับ phase; การ claim lobby host เมื่อ host หลุดต้องผ่าน server-verified policy/transaction และไม่เปลี่ยนนายด่าน
-- [ ] ทดสอบหลาย API instances เขียนห้องเดียวกัน, callback retry, request timeout หลัง commit, listener reconnect และ cold start
-- [ ] ทดสอบสมาชิกอ่าน private ของเพื่อน/authoritative/root ไม่ได้; non-member อ่าน public ไม่ได้; client แก้เงิน/ไพ่/roles ไม่ได้
-- [x] Retentionตามอนุมัติ1วัน:metadataแยกเกม, dry-run/applyกับproject guard,online/PLAYING/legacy guards,transactions/presence fenceและworker recovery ตรวจ89unit/28integration/17E2E/livefixturesผ่าน เตรียมCronรอProduction ดูdocs/retention.md
+- [x] Deploy database.rules.json ไปยังFirebaseตามอนุมัติและอ่านกลับตรงsource Preview/Productionใช้projectร่วมกันตามอนุมัติ ไม่deployRulesซ้ำในขั้นrelease liveprivacy54assertionsผ่าน
+- [x] ตรวจAuthบนURLหลักProductionจริง:Anonymous sign-in/create/join/reloadผ่าน ไม่มีOAuthredirectในscopeนี้และไม่ได้เพิ่มoriginsแบบกว้าง
+- [x] Emulator tests ใช้ dummy project/credentials โดยตั้ง emulator flags เฉพาะ local/test; Productionbundleใช้Firebaseจริงและliveflowไม่มีEmulatorrequests
+- [x] Presence ใช้ .info/connected และ onDisconnect โดยลงทะเบียน disconnect operation ก่อน set online; reconnectลงทะเบียนใหม่ ใช้per-connection ID ตรวจsourceและrecoveryเดิม
+- [x] Presence ใช้แสดงสถานะเท่านั้น ไม่เปิดไพ่ ไม่ตัดสินผล/auto-pass และไม่ใช้เป็นauthentication ผลเกมทุกroundยังmanual
+- [x] ออฟไลน์ปิดปุ่มส่งgameplay command เก็บdraftได้แต่ไม่queueตรวจ/ให้ผ่าน unknownresult retrycommandIdเดิม ผลrecoveryบนstagedProductionผ่าน
+- [x] Anonymous Auth persistence รองรับreloadในbrowserเดิม ตรวจpublicProductionผ่าน แจ้งข้อจำกัดstorage/browseroriginและไม่ยึดที่นั่งด้วยชื่อในdocs/friend-playtest.md
+- [x] Presenceไม่ขับphase การclaimlobbyhostผ่านserver-verified policy/transactionโดยไม่เปลี่ยนนายด่าน ผลintegrationrooms.test.tsและเกมmanualadvanceเดิมผ่าน
+- [x] ทดสอบduplicatecommandsจาก2AdminSDKinstancesและretry/restartในintegration/Emulators; stagedProductionตรวจrequesttimeoutหลังcommit/listenerreconnect/retryผ่าน
+- [ ] ตรวจcold startและระบุหลายFunctioninstancesจริงบนProductionโดยตรง ยังไม่มีหลักฐานแยกสำหรับข้อนี้ ไม่ถือ2SDKinstancesในEmulatorsเป็นผลProduction
+- [x] สมาชิกอ่านprivateของเพื่อน/authoritative/rootไม่ได้ non-memberอ่านpublicไม่ได้ clientแก้เงิน/ไพ่/rolesไม่ได้ LiveRules54assertionsบนstagedProductionผ่าน
+- [x] Retentionตามอนุมัติ1วัน:metadataแยกเกม, dry-run/applyกับproject guard,online/PLAYING/legacy guards,transactions/presence fenceและworker recovery ตรวจ89unit/28integration/17E2E/livefixturesผ่าน ProductionCronเผยแพร่แต่ยังdry-run `RETENTION_APPLY_ENABLED=false` ดูdocs/retention.md
 - [x] บันทึกการเลือกแผนฟรีสำหรับเล่นกับเพื่อน: 12ตุลาคมผู้ใช้เลือกข้ามการคำนวณค่าใช้จ่ายและการเปรียบเทียบแพ็กเกจ ตรวจVercelเป็นHobby/active; Firebase free planผู้ใช้ยืนยัน ไม่ถือว่าตรวจยอดusageจริงผ่านหรือรับประกันยอดศูนย์ ดูdocs/free-plan-decision.md ขอบเขตhistory/subscriptionsและการถอดlistenerใช้ตามimplementationเดิม
 - [x] ทดสอบlocalproductionและVercelPreview browser/API→Firebaseจริงครบ4/5/6คนจนจบ8/10/12รอบ conservation311จุด/360ใบไม่ซ้ำหาย, privacy51assertionsผ่าน มีURLที่ตรวจแล้ว ดูwork/verification/vercel-preview/report.md
+- [x] Productionrelease:stagedเกมเต็ม4/5/6คนจบ8/10/12รอบ conservation311จุด/privacy54ผ่าน promoteและส่งsourcecommitเดียวกันไปmain GitartifactREADY/publicURLเข้าได้โดยไม่ล็อกอินVercel fresh4contextsเล่นครบหนึ่งรอบ/reloadผ่าน ถอนtemporarybypassและล้างfixture4ห้อง/20usersครบ Previewยังprotected ดูwork/verification/production-release/report.md
 
 M0 เพิ่มการตั้ง Firebase SDK/Admin SDK + emulators; M2 เพิ่ม Rules และ transactions; M5 เพิ่ม deployment checklist นี้ กติกาและตัวเลขสินค้าทุกส่วนคงเดิม
 

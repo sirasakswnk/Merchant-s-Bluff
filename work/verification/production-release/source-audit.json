@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-10-12T13:39:31.321Z",
+  "sourceCommit": "b4b68d2ad20941e4abb598f1497c96e63274abff",
+  "files": 124,
+  "emptyDirectoryMarkers": [
+    ".next-e2e",
+    ".next-restart",
+    "playwright-report",
+    "test-results",
+    "work"
+  ],
+  "lineEndingNormalization": [
+    "tsconfig.json"
+  ],
+  "bytes": 1433102,
+  "allUploadedFilesMatchGit": true,
+  "secretHits": [],
+  "excludedEnvAndRuntime": true
+}

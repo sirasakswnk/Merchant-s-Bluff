@@ -1,0 +1,102 @@
+{
+  "checkedAt": "2026-10-12T14:04:08.178Z",
+  "releaseCommit": "b4b68d2ad20941e4abb598f1497c96e63274abff",
+  "productionBranch": "main",
+  "mainRemoteCommit": "b4b68d2ad20941e4abb598f1497c96e63274abff",
+  "currentPublicDeploymentId": "dpl_79birapraqG3C2ks5BKYMS4HYE54",
+  "testedStagedDeploymentId": "dpl_G322moM1bDSobZFR2kTVcdxccTe3",
+  "url": "https://merchant-s-bluff.vercel.app",
+  "games": [
+    {
+      "players": 4,
+      "rounds": 8,
+      "phase": "GAME_OVER",
+      "exchange": 3,
+      "checkpoints": 65,
+      "totalCards": 360,
+      "uniqueCards": 360,
+      "sheriffTurns": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "features": {
+        "inspectCompensation": true,
+        "inspectFine": true,
+        "bribePass": true,
+        "noOfferPass": true,
+        "duplicateRetry": true,
+        "offlineDraftReload": true,
+        "controlTakeover": true,
+        "rematch": true
+      }
+    },
+    {
+      "players": 5,
+      "rounds": 10,
+      "phase": "GAME_OVER",
+      "exchange": 3,
+      "checkpoints": 101,
+      "totalCards": 360,
+      "uniqueCards": 360,
+      "sheriffTurns": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "features": {
+        "inspectCompensation": false,
+        "inspectFine": false,
+        "bribePass": false,
+        "noOfferPass": true,
+        "duplicateRetry": false,
+        "offlineDraftReload": false,
+        "controlTakeover": false,
+        "rematch": false
+      }
+    },
+    {
+      "players": 6,
+      "rounds": 12,
+      "phase": "GAME_OVER",
+      "exchange": 3,
+      "checkpoints": 145,
+      "totalCards": 360,
+      "uniqueCards": 360,
+      "sheriffTurns": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "features": {
+        "inspectCompensation": false,
+        "inspectFine": false,
+        "bribePass": false,
+        "noOfferPass": true,
+        "duplicateRetry": false,
+        "offlineDraftReload": false,
+        "controlTakeover": false,
+        "rematch": false
+      }
+    }
+  ],
+  "conservationCheckpoints": 311,
+  "privacyChecks": 54,
+  "privacyPassed": true,
+  "publicSmokeCheckpoints": 6,
+  "publicSmoke": true,
+  "fixturesCleanup": {
+    "createdRooms": 4,
+    "removedRooms": 4,
+    "createdUsers": 20,
+    "removedUsers": 20,
+    "errors": []
+  },
+  "automaticDeletionEnabled": false
+}

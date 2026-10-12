@@ -1,10 +1,12 @@
 # เตรียม environment สำหรับ Vercel / Firebase
 
-## สถานะล่าสุด — เตรียม Production แล้ว
+## สถานะล่าสุด — Production พร้อมเล่น
 
-12 ตุลาคม 2026 ผู้ใช้อนุมัติให้ใช้ Firebase `merchant-s-bluff` ร่วมกันสำหรับ Preview/Production เป็นข้อยกเว้นจากแผนเดิม เพิ่ม Production-only variables 14 ชื่อบน Vercelแล้ว private key และ Cron secret เป็น Secret, Config readback ตรง, Preview variables เดิม ตรวจ credentials/Rules/Auth/build/local HTTP ผ่าน ระบบล้างอัตโนมัติยังปิดและยังไม่ deploy เว็บไซต์ Production ดู [รายละเอียดและผลตรวจ](production-setup.md)
+12 ตุลาคม 2026 เปิด [URLหลักProduction](https://merchant-s-bluff.vercel.app) ตามที่ผู้ใช้เลือกให้เข้าได้โดยไม่ล็อกอินVercel Git `main` รุ่น `b4b68d2` READY / Node24.x / sin1 ทดสอบเกมเต็ม4/5/6คนบนstaged Productionก่อนpromote จากนั้นตรวจURLหลักของGit artifact commitเดียวกันด้วย4browser contextsครบหนึ่งรอบ/reload Previewยังป้องกัน ดู [หลักฐานrelease](../work/verification/production-release/report.md)
 
-ใช้ `.env.production.local` สำหรับการตรวจ Production ในเครื่อง ไฟล์จริงถูก ignore และไม่แทนที่ `.env.local` ของ Emulator หรือ `.env.preview.local` ทุก environment ใช้ข้อมูล Firebase ชุดเดียวกันตามคำอนุมัติล่าสุด ข้อความเรื่องแยก Firebase ในประวัติด้านล่างเป็นแผนก่อนอนุมัติข้อยกเว้น
+ผู้ใช้อนุมัติให้ใช้ Firebase `merchant-s-bluff` ร่วมกันสำหรับ Preview/Production เป็นข้อยกเว้นจากแผนเดิม Production-only variables14ชื่อ private keyและCron secretเป็นSecret Config readbackตรง ค่าPreviewเดิม ระบบล้างอัตโนมัติยังปิดและmaintenanceจริงทำเฉพาะdry-run ดู [รายละเอียด](production-setup.md)
+
+ใช้ `.env.production.local` สำหรับการตรวจ Production ในเครื่อง ไฟล์จริงถูก ignore และไม่แทนที่ `.env.local` ของ Emulator หรือ `.env.preview.local` Preview/Productionใช้ข้อมูลFirebaseชุดเดียวกันตามคำอนุมัติล่าสุด ส่วนlocal/testใช้Emulatorsตามเดิม ข้อความเรื่องแยกFirebaseในประวัติด้านล่างเป็นแผนก่อนอนุมัติข้อยกเว้น
 
 Firebase Preview project `merchant-s-bluff` พร้อม credentials และเผยแพร่ RTDB Rules ตามอนุมัติแล้ว ทดสอบ browser/API multiplayer บน Vercel Preview กับ Firebase Auth/RTDB จริงครบ4/5/6คนจนจบเกม และ live privacy51กรณีผ่าน ปัจจุบันเกมใหม่ใช้สำรับ360ใบ/rulesVersion0.2ตามการอนุมัติ ส่วนเกมที่เริ่มแล้วคง snapshot เดิม
 
@@ -43,7 +45,7 @@ node work/runtime/firebase-preview/next-preview.mjs start --hostname 127.0.0.1 -
 
 ผู้ใช้วาง JSON ชื่อเดิมจาก Firebase ไว้ใน `work/runtime/firebase-preview/` แล้ว ตรวจตัวตนของ service account/key และนำ `client_email`/`private_key` เข้า server env ในเครื่องโดยไม่พิมพ์ค่าออก log หรือแชท ไม่สร้าง key เพิ่มหรือเปลี่ยนชื่อไฟล์ ไม่รวม JSON/env ที่มี key กับ source หากต้องเตรียมเครื่องใหม่ใช้ key ที่ผู้ใช้จัดเตรียมในเครื่องตามแนวทางเดียวกัน
 
-ผลlocalproductionfrontend/backendกับFirebasePreviewเป็นประวัติคนละรอบกับผลVercel ทั้งสองรอบมีหลักฐานแยกกัน Production config ชุดปัจจุบันเตรียมแล้วโดยใช้ Firebase ร่วมตามคำอนุมัติ ยังต้องตรวจ URL Production หลัง deploy
+ผลlocalproductionfrontend/backendกับFirebasePreviewเป็นประวัติคนละรอบกับผลVercelและreleaseProductionล่าสุด แต่ละรอบมีหลักฐานแยกกัน Productionใช้Firebaseร่วมตามคำอนุมัติและตรวจURLจริงแล้ว
 
 ## ค่าที่ต้องตั้ง
 

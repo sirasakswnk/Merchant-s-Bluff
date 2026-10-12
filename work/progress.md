@@ -1,6 +1,18 @@
 # Progress — 12 ตุลาคม 2026
 
-## ขั้นตอนล่าสุด — เตรียม Production environment โดยใช้ Firebase ร่วมตามอนุมัติ
+## ขั้นตอนล่าสุด — Production พร้อมเล่นผ่าน URL หลัก
+
+ผู้ใช้อนุมัติให้ URLหลักเข้าได้โดยไม่ต้องล็อกอินVercel เปิด [merchant-s-bluff.vercel.app](https://merchant-s-bluff.vercel.app) แล้ว Preview/URLของแต่ละdeploymentยังป้องกันตามเดิม ไม่เปลี่ยนprotectionทั้งproject ลิงก์เพื่อนเดิมยังอยู่ ใช้Firebase `merchant-s-bluff` ร่วมตามอนุมัติและคงแผนฟรี
+
+Release source `b4b68d2` สร้างstaged Production `dpl_G322moM1bDSobZFR2kTVcdxccTe3` และทดสอบbrowser→API→Firebaseจริง4/5/6คนจบ8/10/12รอบก่อนpromote: conservation311จุด/360ใบไม่ซ้ำหายรายชนิดและIDเดิมครบ/privacy54assertions/retryหลังcommit/offline/reload/controltakeover/rematchผ่าน นายด่านคนละ2ครั้ง เกม4คนผสมINSPECT/PASS ส่วน5/6แลก3ขน5PASSตลอด Bundle9deployedJSไม่มีkey/email/Cron secret/bypass token ไม่มีEmulator requests/pageerrors ไม่อ้างว่ารันmatrixไม่แลก/แลก3ทั้ง6กรณีบนProductionซ้ำ
+
+หลังpromoteส่งcommitเดียวกันไปGitHub main Git integrationสร้าง `dpl_79birapraqG3C2ks5BKYMS4HYE54` READY / Production / Node24.x / sin1 ตรวจURLหลักด้วยfreshChromium4contexts360/390/430/1280px ไม่มีVercelcookies/sharetoken/customauthheaders สร้าง/เข้าห้องเล่นครบหนึ่งรอบแลก3ขน5PASS แล้วmanualadvanceไปรอบ2และreloadที่นั่งเดิมผ่าน ไม่มีoverflow/pageerror APIไม่มีFirebaseidentityได้401 Previewได้302 ผลเกมเต็มเป็นstagedartifactและpublicsmokeเป็นGitartifactcommitเดียวกัน
+
+Health200/diagnostics404/maintenanceไม่มีsecret401/มีsecret200dry-runจริงผ่าน LOBBYdeadline24h/PLAYINGไม่มีdeadline/resumeต่ออายุmetadataโดยgameไม่เปลี่ยนผ่าน `RETENTION_APPLY_ENABLED=false` คงปิดการล้างอัตโนมัติ Cronที่เผยแพร่ยังdry-run Errorlogqueryหลังpublicsmokeย้อนหลัง30นาที/limit20ไม่พบรายการ ล้างเฉพาะข้อมูลทดสอบ4ห้อง/20Anonymoususersครบ และถอนautomationbypassที่งานนี้สร้าง1รายการแล้ว MainURLยัง200/PreviewและstagedURLยัง302
+
+เอกสารและหลักฐาน [verification/production-release/report.md](verification/production-release/report.md) ไม่เปลี่ยนengine/backend/data access/UI/rulesVersion/ราคา/สำรับหรือFirebaseRules M0–M5ขอบเขตเดิมคงผลตรวจที่ผ่านมา M4ภาพสุดท้ายยังพัก ผู้ใช้แจ้งhumanmultiplayerก่อนหน้านี้ผ่าน ผลProductionรอบนี้เป็นbrowserautomationไม่ใช่โทรศัพท์จริง ขั้นdeployเสร็จแล้ว หยุดรอคำสั่งตามงานทีละขั้น ขั้นถัดไปคือเปิดและตรวจretentionapplyตามนโยบาย24ชั่วโมง
+
+## ประวัติ — เตรียม Production environment โดยใช้ Firebase ร่วมตามอนุมัติ
 
 ผู้ใช้ระบุ `merchant-s-bluff` และยืนยันให้ใช้ Firebase ร่วมกันสำหรับเว็บเล่นกับเพื่อน จึงบันทึกข้อยกเว้นจากแผนแยก project เดิม: Preview/Production ใช้ Auth/RTDB ชุดเดียวกัน แต่ตัวแปร Vercel แยก scope คงแผนฟรี ไม่คำนวณค่าใช้จ่าย ไม่สร้าง project หรือเปลี่ยน Rules ในขั้นนี้
 

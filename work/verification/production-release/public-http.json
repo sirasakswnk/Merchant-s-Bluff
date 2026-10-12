@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-12T14:02:52.562Z",
+  "origin": "https://merchant-s-bluff.vercel.app",
+  "health": 200,
+  "rulesVersion": "0.2",
+  "unauthenticatedCreate": 401,
+  "productionDiagnostics": 404,
+  "maintenanceWithoutSecret": 401,
+  "authenticatedMaintenance": 200,
+  "maintenance": {
+    "mode": "dry-run",
+    "busy": false,
+    "batches": 1,
+    "candidates": 0,
+    "counts": {
+      "legacy-or-invalid": 2
+    },
+    "hasMore": false
+  },
+  "automaticDeletionEnabled": false
+}

@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-10-12T14:00:23.552Z",
+  "id": "dpl_79birapraqG3C2ks5BKYMS4HYE54",
+  "state": "READY",
+  "url": "https://merchant-s-bluff.vercel.app",
+  "deploymentUrl": "https://merchant-s-bluff-i3zrbph67-mingmings-projects-c4169f4b.vercel.app",
+  "sourceCommit": "b4b68d2ad20941e4abb598f1497c96e63274abff",
+  "gitBranch": "main",
+  "target": "production",
+  "environment": "production",
+  "nodeVersion": "24.x",
+  "regions": [
+    "sin1"
+  ],
+  "aliases": [
+    "merchant-s-bluff.vercel.app",
+    "merchant-s-bluff-mingmings-projects-c4169f4b.vercel.app",
+    "merchant-s-bluff-git-main-mingmings-projects-c4169f4b.vercel.app"
+  ],
+  "protection": {
+    "deploymentType": "all_except_custom_domains"
+  },
+  "automaticDeletionEnabled": false,
+  "stagedTestedId": "dpl_G322moM1bDSobZFR2kTVcdxccTe3"
+}
