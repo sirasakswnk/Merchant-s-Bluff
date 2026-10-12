@@ -1,10 +1,20 @@
 # เตรียม environment สำหรับ Vercel / Firebase
 
-Firebase Preview project `merchant-s-bluff` พร้อม credentials และเผยแพร่ RTDB Rules ตามอนุมัติแล้ว ทดสอบ browser/API multiplayer ผ่าน local production build กับ Firebase Auth/RTDB จริงครบ4/5/6คนจนจบเกม และ live privacy51กรณีผ่าน ยังไม่ได้เผยแพร่เว็บ/APIขึ้น Vercel ปัจจุบันเกมใหม่ใช้สำรับ360ใบ/rulesVersion0.2ตามการอนุมัติ ส่วนเกมที่เริ่มแล้วคง snapshot เดิม
+Firebase Preview project `merchant-s-bluff` พร้อม credentials และเผยแพร่ RTDB Rules ตามอนุมัติแล้ว ทดสอบ browser/API multiplayer บน Vercel Preview กับ Firebase Auth/RTDB จริงครบ4/5/6คนจนจบเกม และ live privacy51กรณีผ่าน ปัจจุบันเกมใหม่ใช้สำรับ360ใบ/rulesVersion0.2ตามการอนุมัติ ส่วนเกมที่เริ่มแล้วคง snapshot เดิม
+
+## Vercel Preview ที่ตรวจจริง — 12 ตุลาคม 2026
+
+Project `merchant-s-bluff` ใน `mingmings-projects-c4169f4b` เชื่อม GitHub `sirasakswnk/Merchant-s-Bluff` แล้ว ใช้ Next.js preset, Node24.x และ Functions sin1 ตั้ง10ค่าด้านล่างเฉพาะPreview พร้อม `NODE_OPTIONS=--experimental-require-module` หลังruntimeจริงพบERR_REQUIRE_ESMจากFirebase Admin/jwks-rsa/jose Private keyเป็นSecret ไม่มีProduction application variablesหรือEmulator variablesบนบริการ
+
+URLที่ตรวจ: https://merchant-s-bluff-buombdlfv-mingmings-projects-c4169f4b.vercel.app sourcebranch `preview`/commit `77e9660` READY/Preview (REST target `staging`) เกม4/5/6คนจบ8/10/12รอบ conservation311จุด ไพ่360ไม่ซ้ำหาย privacy51กรณีผ่าน ตรวจdeployedJS9responsesไม่มีkey/email และล้างข้อมูลทดสอบแล้ว ดู [รายงาน](../work/verification/vercel-preview/report.md)
+
+Deployment Protectionเปิดอยู่ ใช้บัญชีVercelที่เข้าถึงprojectได้ระหว่างรับงาน ไม่ได้เปิดให้คนทั่วไปหรือปล่อยProduction Automation bypassที่CLIสร้างเพื่อทดสอบถูกrevokeแล้ว ตัวOIDCdevelopmentเข้าถึงdeploymentนี้ไม่ได้ด้วยenvironment mismatch จึงไม่เปลี่ยนTrusted Sources/protectionเพื่อทดสอบ
+
+Ignored Build Step ใช้ `git diff --quiet HEAD^ HEAD -- src public scripts package.json package-lock.json next.config.ts tsconfig.json vercel.json` เพื่อข้ามbuildเมื่อเปลี่ยนเฉพาะเอกสาร/หลักฐาน ไม่กระทบartifactที่ทดสอบแล้ว หากแก้environmentต้องสั่งredeployที่ข้ามignore checkตาม workflow ของVercel
 
 ใช้ `.env.example` สำหรับ local Emulator ใช้ `.env.production.example` เป็นแม่แบบว่างสำหรับ Preview/Production โดยกรอกค่าแยกกันตาม Firebase project ของ environment นั้น Preview ต้องไม่ใช้ฐานข้อมูลเกมจริงของ Production
 
-## Preview ที่ตรวจแล้ว — 12 ตุลาคม 2026
+## ประวัติ Firebase และ local build — 12 ตุลาคม 2026
 
 - Project `merchant-s-bluff`, Web app `Merchants-Bluff`, RTDB instance `merchant-s-bluff-default-rtdb` ที่ Singapore (`asia-southeast1`) ตรวจจาก Console ที่ผู้ใช้เปิดอยู่
 - `.env.preview.local` กรอก Web app config และ credentials จาก service account JSON ที่ผู้ใช้วางแล้ว ปิด Emulator และมี empty process overrides ของ host ไม่แก้ `.env.local` เดิม ไฟล์นี้และ `work/runtime/` อยู่ใน ignore patterns
@@ -21,11 +31,11 @@ node work/runtime/firebase-preview/next-preview.mjs build
 node work/runtime/firebase-preview/next-preview.mjs start --hostname 127.0.0.1 --port 3100
 ```
 
-หลังตรวจรอบ12ตุลาคมหยุดserverที่เปิดเพื่อทดสอบแล้ว ยังไม่มีpublicURL ขั้นต่อไปตั้งvariablesแยกscopeบนVercel Preview แล้วdeployและทวนURLจริง
+หลังตรวจlocal buildหยุดserverที่เปิดเพื่อทดสอบแล้ว จากนั้นตั้งvariablesแยกscopeบนVercel PreviewและทวนURLจริงผ่านตามสถานะล่าสุดด้านบน
 
 ผู้ใช้วาง JSON ชื่อเดิมจาก Firebase ไว้ใน `work/runtime/firebase-preview/` แล้ว ตรวจตัวตนของ service account/key และนำ `client_email`/`private_key` เข้า server env ในเครื่องโดยไม่พิมพ์ค่าออก log หรือแชท ไม่สร้าง key เพิ่มหรือเปลี่ยนชื่อไฟล์ ไม่รวม JSON/env ที่มี key กับ source หากต้องเตรียมเครื่องใหม่ใช้ key ที่ผู้ใช้จัดเตรียมในเครื่องตามแนวทางเดียวกัน
 
-เผยแพร่ Rules และตรวจ live privacy/browser/APIจริงแล้ว รอบนี้localproductionfrontend/backendใช้FirebasePreviewจริง ไม่ใช่ผลตรวจVercel deployment การส่งเว็บ/APIขึ้นVercelเป็นขั้นต่อไป และProductionต้องแยกproject/configจากPreviewก่อนใช้งานจริง
+ผลlocalproductionfrontend/backendกับFirebasePreviewเป็นประวัติคนละรอบกับผลVercelล่าสุด ทั้งสองรอบมีหลักฐานแยกกัน Productionต้องแยกproject/configจากPreviewก่อนใช้งานจริง
 
 ## ค่าที่ต้องตั้ง
 
@@ -63,10 +73,10 @@ Next.js production โหลด `process.env` → `.env.production.local` → `.
 
 `ready` หมายถึงผ่านการตรวจค่าใน process: ค่าจำเป็นครบ, ปิด Emulator, ไม่เป็น demo, client/server project และ RTDB URL ตรงกัน, URL/hostname/PEM มีรูปแบบที่รองรับ และไม่มี credentials ที่ตรวจพบใน public variables ยังไม่ยืนยันว่า API key/appId ใช้งานได้, key เป็นของ service account นั้น, database เป็นของ project นั้น หรือเปิด Anonymous Auth/Rules ถูกต้อง ต้องตรวจการเชื่อมต่อจริงในขั้นถัดไป
 
-## นำค่าขึ้น Vercel ในขั้นถัดไป
+## นำค่าขึ้น Vercel เมื่อเตรียม environment ใหม่
 
 ตั้งแต่ละค่าให้ถูก scope ใน Project settings → Environment Variables แยก Preview/Production แล้วตั้ง public config ก่อน build เพราะ `NEXT_PUBLIC_*` ถูกฝังใน client bundle ตอน build การเปลี่ยนค่าเหล่านี้ต้อง build/deploy ใหม่ ใช้ Next.js preset และ Node.js 24.x ตาม README เก็บ `FIREBASE_PRIVATE_KEY` เป็น Secret
 
-ไฟล์ `.env.preview.local`, `.env.production.local` และ service account JSON ต้องเก็บส่วนตัว แม่แบบ `.env.production.example` ไม่มีcredentialsจึงรวมกับsourceได้ การdeployเว็บและdeploy `firebase/database.rules.json`เป็นคนละขั้น ตอนนี้RulesของPreviewเผยแพร่แล้ว ส่วนVercelเว็บ/APIยังไม่ได้deploy
+ไฟล์ `.env.preview.local`, `.env.production.local` และ service account JSON ต้องเก็บส่วนตัว แม่แบบ `.env.production.example` ไม่มีcredentialsจึงรวมกับsourceได้ การdeployเว็บและdeploy `firebase/database.rules.json`เป็นคนละขั้น ตอนนี้Rulesและเว็บ/APIของPreviewเผยแพร่พร้อมตรวจจริงแล้ว Productionยังเป็นขั้นแยก
 
 อ้างอิง: [Next.js environment variables](https://nextjs.org/docs/app/guides/environment-variables), [Vercel environment scopes](https://vercel.com/docs/environment-variables), [Firebase Admin service accounts](https://firebase.google.com/docs/admin/setup), [RTDB URL ตาม region](https://firebase.google.com/docs/database/web/start)

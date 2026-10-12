@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-10-12T07:26:35.270Z",
+  "taskCreatedBypassRemoved": true,
+  "remainingBypasses": 0,
+  "unauthenticatedStatus": 302,
+  "protection": {
+    "deploymentType": "all_except_custom_domains"
+  }
+}

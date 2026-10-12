@@ -1,6 +1,20 @@
 # Progress — 12 ตุลาคม 2026
 
-## ขั้นตอนล่าสุด — deploy RTDB Rules และทดสอบ Firebase จริงผ่าน
+## ขั้นตอนล่าสุด — GitHub และ Vercel Preview ผ่าน
+
+ส่งinitial commit `77e9660` ขึ้นrepo https://github.com/sirasakswnk/Merchant-s-Bluff ทั้งmain/preview แล้วเชื่อมVercel project `merchant-s-bluff` ใน `mingmings-projects-c4169f4b` ตั้งFirebase10ค่าและNODE_OPTIONSเฉพาะPreview, private keyเป็นSecret Credentials/env/runtime/ภาพ/raw logsกันออกจากGitและCLIuploadแล้ว
+
+URLที่ตรวจจริง: https://merchant-s-bluff-buombdlfv-mingmings-projects-c4169f4b.vercel.app — READY/Preview (`staging` ในREST API), Node24.x/Functions sin1 Deployment Protectionยังเปิดอยู่ ต้องล็อกอินVercelที่มีสิทธิ์เข้าถึงproject
+
+4/5/6 browser contextsเล่นจบ8/10/12รอบครบ นายด่านคนละ2ครั้ง Conservation311จุด/ไพ่360และunique360/รายชนิด/IDเดิม/เงินรวมN×50 ผ่าน Liveprivacy51 assertionsผ่าน เกม4คนผ่านค่าปรับ/ชดเชย/เงินเสนอ/retryหลังcommit/offline/reload/controltakeover/rematch เกม5/6แลก3ขน5PASSตลอดและ6คนสับdiscardกลับจริง Health200/unauthcreate401/diagnostics404, command responses200จำนวน803 ไม่มีEmulatorrequests/pageerror/finalscoreoverflow ตรวจ9 deployedJSresponsesไม่มีprivate key/email
+
+ล้างเฉพาะรอบสุดท้าย3ห้อง/16usersและรอบcheckpointเดิม1ห้อง/5usersครบ Revoke bypassที่CLIสร้างสำหรับรอบทดสอบแล้ว อัปเดตเอกสารและตรวจเกณฑ์M0–M5: ขอบเขตเดิมผ่าน M4งานภาพขั้นสุดท้ายยังพัก ไม่มีgame/rule/price/UI changes รอบนี้เพิ่มNODE_OPTIONSตามERR_REQUIRE_ESMที่พบจริง และปรับเฉพาะharnessให้อ่านstate/publicในenvelopeเดียว ไม่ถือผลเดิมเป็นหลักฐานURLใหม่
+
+Deploymentแรกที่บริการจัดเป็นProductionยกเลิกระหว่างbuildก่อนREADY ต่อมาสร้างและทดสอบเฉพาะPreviewได้ ไม่มีProduction release รายละเอียด/ผลเริ่มต้นที่ไม่ผ่านอยู่ [verification/vercel-preview/report.md](verification/vercel-preview/report.md)
+
+ขั้นนี้เสร็จแล้ว รอคำสั่งถัดไป ก่อนเปิดให้เพื่อนทั่วไปต้องกำหนดการเข้าถึงPreview ส่วนProductionยังต้องแยกFirebase project, retention/usage/cost, โทรศัพท์จริงและhuman playtest ไม่ทวนmatrixไม่แลก/แลก3ทั้ง6กรณีบนVercelซ้ำ ผลmatrixครบอยู่rules-0.2ตามเดิม
+
+## ประวัติ — deploy RTDB Rules และทดสอบ Firebase จริงผ่าน
 
 ตามการอนุมัติล่าสุด เผยแพร่เฉพาะ Rules ไปยัง `merchant-s-bluff` / `merchant-s-bluff-default-rtdb` ที่ Singapore อ่านฉบับก่อนเผยแพร่ตรงกับ review PUT200 และอ่านกลับตรงกับ repository/proposal root read/write=false ไม่เปลี่ยนบัญชี CLI/IAM ไม่ deploy Vercel
 

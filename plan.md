@@ -429,7 +429,7 @@ M2 ผ่านเกณฑ์ local API: integration 15 ผ่านบน Auth
 
 ผลทวน local สำหรับ rulesVersion 0.2/360 ใบ: unit 80 และ integration 16 ผ่าน; lint/typecheck/build ผ่าน E2E ผ่านครบ 17 กรณีจาก full run ผ่าน 15 และ targeted rerun ผ่านอีก 2 หลังแก้การรอใน test harness ไม่ใช่ full run ที่ผ่าน 17 ครั้งเดียว ตรวจ browser → API → Auth/RTDB Emulators → realtime UI จริง เกมขน 5 ใบ/PASS ทุกครั้งครบ 4/5/6 คน ทั้งไม่แลกและแลก 3 ใบทุกเทิร์น รวม 6 เกมถึง GAME_OVER 8/10/12 รอบ ไพ่รวมและ instance ไม่ซ้ำครบ 360 ทุก checkpoint นายด่านคนละ 2 ครั้ง Unit เพิ่ม 18 simulations/4,644 transitions และ integration ยืนยันเกมเก่า 0.1 ยัง 120 ใบผ่าน resume/command ก่อน rematch เริ่มเกมใหม่เป็น 0.2
 
-เกณฑ์ M5 เดิมยังผ่าน: privacy, race/dedup, unknown result หลัง commit/retry ID เดิม, offline draft, control takeover, stale confirmation, rematch และ restart Next API process คนละ PID ระหว่าง RESOLUTION ได้เงิน/result เดิม พร้อม manual advance ต่อ Accessibility ทวน 40 axe snapshots ไม่พบ violations รายงาน work/verification/rules-0.2/report.md และ work/progress.md หลังจากนั้น12ตุลาคมเผยแพร่Rulesตามอนุมัติและทดสอบlocalproductionbrowser/APIกับFirebasePreviewจริง4/5/6คนครบ8/10/12รอบ พร้อมprivacy51กรณีผ่าน ดูwork/verification/firebase-preview/report.md ยังไม่มีVercel deploymentหรือผลตรวจโทรศัพท์จริง/Production Firebaseที่แยกจากPreview
+เกณฑ์ M5 เดิมยังผ่าน: privacy, race/dedup, unknown result หลัง commit/retry ID เดิม, offline draft, control takeover, stale confirmation, rematch และ restart Next API process คนละ PID ระหว่าง RESOLUTION ได้เงิน/result เดิม พร้อม manual advance ต่อ Accessibility ทวน 40 axe snapshots ไม่พบ violations รายงาน work/verification/rules-0.2/report.md และ work/progress.md หลังจากนั้น12ตุลาคมเผยแพร่RulesตามอนุมัติและทดสอบlocalproductionกับFirebaseจริง ก่อนทดสอบVercelPreviewURLครบ4/5/6คน8/10/12รอบและprivacy51กรณีผ่าน ดูwork/verification/vercel-preview/report.md ยังไม่ได้ตรวจโทรศัพท์จริงหรือเปิดProduction Firebaseที่แยกจากPreview งานภาพสุดท้ายM4ยังพัก
 
 ## 8. Test matrix ที่ต้องมี
 
@@ -503,8 +503,8 @@ Definition of Done นี้ผ่านการทวนใน local/Emulators
 
 - [x] Firebase Preview project `merchant-s-bluff` มี Realtime Databaseที่SingaporeและAnonymous Auth พร้อมทดสอบจริงแล้ว Production projectยังต้องแยกในขั้นถัดไป
 - [ ] แยก development/preview ออกจาก production Firebase project/database ไม่ใช้ preview เขียนเกมจริง
-- [ ] Public Firebase web config เช่น API key/projectId/databaseURL ใช้ client env ได้ แต่ไม่ใช่สิทธิ์เข้าถึงข้อมูล; การคุ้มครองอยู่ที่ Auth/Rules/API
-- [ ] Admin credentials เก็บ Vercel server-only environment variables ห้าม prefix NEXT_PUBLIC_/VITE_ ห้าม commit service-account JSON หรือใส่ใน HTML
+- [x] Public Firebase web config ใช้NEXT_PUBLIC_ในPreview; privacyจริง51assertionsผ่าน สิทธิ์ข้อมูลคุ้มครองด้วย Auth/Rules/API
+- [x] Admin credentials เก็บVercelPreview server-only variables, private keyเป็นSecret; staged auditไม่มีcredentials/service-account/envและdeployedJS9responsesไม่มีkey/email
 - [x] Document env เช่น NEXT_PUBLIC_FIREBASE_API_KEY, AUTH_DOMAIN, DATABASE_URL, PROJECT_ID, APP_ID (ทุก client key ใช้ prefix ตาม framework) และ server FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY, FIREBASE_DATABASE_URL — docs/deployment-env.md และ .env.production.example; ตรวจ script 7 tests/lint/typecheck ผ่าน ขั้นนี้ยังไม่ตั้งค่าบริการจริง
 - [x] แยก Admin SDK module ด้วย server-only import และตรวจ client bundle14filesไม่มีprivate key/email/Admin markers พร้อมpublicconfigจริง
 - [x] Deploy database.rules.json ไปยังFirebasePreviewตามอนุมัติและอ่านกลับตรงsource พร้อมliveprivacy51assertionsผ่าน แยกจากdeployVercel Production Rulesของprojectแยกยังต้องตรวจภายหลัง
@@ -518,11 +518,11 @@ Definition of Done นี้ผ่านการทวนใน local/Emulators
 - [ ] ทดสอบหลาย API instances เขียนห้องเดียวกัน, callback retry, request timeout หลัง commit, listener reconnect และ cold start
 - [ ] ทดสอบสมาชิกอ่าน private ของเพื่อน/authoritative/root ไม่ได้; non-member อ่าน public ไม่ได้; client แก้เงิน/ไพ่/roles ไม่ได้
 - [ ] จำกัด subscriptions ที่จำเป็น ถอด listener เมื่อออกห้อง ตั้งขอบเขต history/retention และตรวจ usage จริงก่อนเลือก plan ไม่รับประกันค่าใช้จ่ายเป็นศูนย์
-- [x] ทดสอบlocalproductionbrowser/API→FirebasePreviewจริงด้วยcredentials/Rulesที่ได้รับอนุมัติ4/5/6คนจนจบเกมแล้ว ทดสอบVercelPreviewURLหลังdeploymentยังเป็นขั้นถัดไป ไม่มีpublicURL
+- [x] ทดสอบlocalproductionและVercelPreview browser/API→Firebaseจริงครบ4/5/6คนจนจบ8/10/12รอบ conservation311จุด/360ใบไม่ซ้ำหาย, privacy51assertionsผ่าน มีURLที่ตรวจแล้ว ดูwork/verification/vercel-preview/report.md
 
 M0 เพิ่มการตั้ง Firebase SDK/Admin SDK + emulators; M2 เพิ่ม Rules และ transactions; M5 เพิ่ม deployment checklist นี้ กติกาและตัวเลขสินค้าทุกส่วนคงเดิม
 
-ขั้นตอนหลัง M5 ที่ทำแล้ว: environmentแยกจากdemo/credentialsครบ10/10 และ12ตุลาคมผู้ใช้อนุมัติdeployRulesพร้อมทดสอบFirebaseจริง เผยแพร่Rulesไปยัง`merchant-s-bluff`/Singapore อ่านกลับhashตรงsource Rootread/write=false ทดสอบlocalproductionUI/APIกับAuth/RTDBจริง4/5/6คนครบ8/10/12รอบ ไพ่360ไม่ซ้ำหาย 311 checkpoints, privacy51assertionsผ่าน และretry/offline/reload/controltakeover/rematchผ่านในเกม4คน ล้างห้องและผู้ใช้ทดสอบเฉพาะที่สร้างและหยุดserverแล้ว ไม่เปลี่ยนบัญชี/IAMและยังไม่มีVercel deployment ขั้นที่อนุมัตินี้เสร็จแล้ว ขั้นต่อไปVercelPreviewenv/deploy/URLverification ดูwork/verification/firebase-preview/report.md และwork/progress.md
+ขั้นตอนหลัง M5 ที่ทำแล้ว: environmentแยกจากdemo/credentialsครบ10/10, deployRulesตามอนุมัติพร้อมทดสอบlocalproductionกับFirebaseจริง และ12ตุลาคมเชื่อมGitHubพร้อมVercelPreviewโดยตั้งvariablesเฉพาะPreview Node24.x/sin1 เกม4/5/6คนจบ8/10/12รอบบนURLจริง ไพ่360ไม่ซ้ำหาย311checkpoints/privacy51assertions/retry/offline/reload/controltakeover/rematchผ่าน ล้างเฉพาะข้อมูลทดสอบและrevokeautomationbypassแล้ว เกณฑ์milestoneขอบเขตเดิมผ่าน M4งานภาพสุดท้ายยังพัก ไม่มีProduction release ขั้นนี้เสร็จแล้วรอคำสั่งถัดไป ดูwork/verification/vercel-preview/report.md และwork/progress.md
 
 เอกสารทางการสำหรับ Codex ตรวจ API ณ วันพัฒนา:
 

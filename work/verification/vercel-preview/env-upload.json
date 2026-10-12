@@ -1,0 +1,89 @@
+{
+  "checkedAt": "2026-10-12T07:08:40.854Z",
+  "project": "merchant-s-bluff",
+  "team": "mingmings-projects-c4169f4b",
+  "previewOnly": true,
+  "passed": true,
+  "variables": [
+    {
+      "key": "NEXT_PUBLIC_USE_FIREBASE_EMULATORS",
+      "type": "config",
+      "target": [
+        "preview"
+      ],
+      "exitCode": 0
+    },
+    {
+      "key": "NEXT_PUBLIC_FIREBASE_API_KEY",
+      "type": "config",
+      "target": [
+        "preview"
+      ],
+      "exitCode": 0
+    },
+    {
+      "key": "NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN",
+      "type": "config",
+      "target": [
+        "preview"
+      ],
+      "exitCode": 0
+    },
+    {
+      "key": "NEXT_PUBLIC_FIREBASE_PROJECT_ID",
+      "type": "config",
+      "target": [
+        "preview"
+      ],
+      "exitCode": 0
+    },
+    {
+      "key": "NEXT_PUBLIC_FIREBASE_DATABASE_URL",
+      "type": "config",
+      "target": [
+        "preview"
+      ],
+      "exitCode": 0
+    },
+    {
+      "key": "NEXT_PUBLIC_FIREBASE_APP_ID",
+      "type": "config",
+      "target": [
+        "preview"
+      ],
+      "exitCode": 0
+    },
+    {
+      "key": "FIREBASE_PROJECT_ID",
+      "type": "config",
+      "target": [
+        "preview"
+      ],
+      "exitCode": 0
+    },
+    {
+      "key": "FIREBASE_DATABASE_URL",
+      "type": "config",
+      "target": [
+        "preview"
+      ],
+      "exitCode": 0
+    },
+    {
+      "key": "FIREBASE_CLIENT_EMAIL",
+      "type": "config",
+      "target": [
+        "preview"
+      ],
+      "exitCode": 0
+    },
+    {
+      "key": "FIREBASE_PRIVATE_KEY",
+      "type": "secret",
+      "target": [
+        "preview"
+      ],
+      "exitCode": 0
+    }
+  ]
+}

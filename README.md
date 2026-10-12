@@ -2,7 +2,9 @@
 
 เว็บเกมภาษาไทยสำหรับเพื่อน 4–6 คนตาม [plan.md](plan.md) กติกา 0.2
 
-สถานะ: **multiplayer ผ่านการทดสอบในเครื่องและ Firebase Preview จริงแล้ว** Engine, backend, data access และ UI แยกกัน Browser contexts 4/5/6 คนเล่นครบ 8/10/12 รอบทั้งบน Emulators และบน local production buildที่ใช้Firebase Auth/RTDBจริง RulesของPreviewเผยแพร่และตรวจprivacy51กรณีผ่านแล้ว ยังไม่deployเว็บ/APIขึ้นVercelหรือมีpublicURL ผลตรวจอยู่ [work/progress.md](work/progress.md) และ [รายงานFirebase Preview](work/verification/firebase-preview/report.md)
+สถานะ: **Vercel Preview deploy และ multiplayer กับ Firebaseจริงผ่านแล้ว** Engine, backend, data access และ UI แยกกัน Browser contexts 4/5/6 คนเล่นครบ8/10/12รอบบนVercel พร้อมconservation311จุด/ไพ่360ไม่ซ้ำหาย, privacy51กรณีและrecoveryผ่าน ผลอยู่ [work/progress.md](work/progress.md) และ [รายงานVercel Preview](work/verification/vercel-preview/report.md)
+
+[เปิด Preview ที่ทดสอบแล้ว](https://merchant-s-bluff-buombdlfv-mingmings-projects-c4169f4b.vercel.app) — Deployment Protectionเปิดอยู่ ต้องใช้บัญชีVercelที่เข้าถึงprojectได้ Sourceอยู่ใน [GitHub](https://github.com/sirasakswnk/Merchant-s-Bluff) branch `preview`; commitที่ทดสอบ `77e9660` ยังไม่มีProduction release
 
 > ผู้ใช้อนุมัติสำรับ **360 ใบ**: แอปเปิล84 ขนมปัง72 ชีส60 ผ้า54 เหล้าเถื่อน36 หน้าไม้30 ใบกัญชา24 เปลี่ยนเฉพาะจำนวนและ rulesVersion เป็น0.2 ราคา ค่าปรับ ค่าชดเชย และกติกาอื่นคงเดิม ใช้เมื่อเริ่มเกมใหม่เท่านั้น เกมที่เริ่มแล้วคง rules snapshot เดิม ไม่มีการเติมไพ่เข้าเกมเก่า
 
@@ -86,7 +88,7 @@ Production build ต้องเอาค่า emulator ออกจาก envi
 
 ดู [docs/architecture.md](docs/architecture.md) และ [docs/rules.md](docs/rules.md) กติกาย่อและ catalogue อยู่ในห้องเล่นด้วย UI อ่าน rules snapshot ของเกมนั้น
 
-## Vercel / Firebase (Preview Rules เผยแพร่แล้ว; Vercel ยังไม่ deploy)
+## Vercel / Firebase (Preview ผ่านแล้ว)
 
 Next.js Node.js Route Handlers บน Vercel กับ Firebase Auth/RTDB ไม่ใช้ Firestore, Socket.IO, local disk หรือ process-local state สำหรับเกม
 
@@ -95,11 +97,11 @@ Next.js Node.js Route Handlers บน Vercel กับ Firebase Auth/RTDB ไม
 1. สร้าง Firebase projects แยก development/preview/production เปิด Anonymous Auth และ RTDB
 2. ตั้ง public keys ตาม `.env.example` เป็น project จริง ตั้ง `NEXT_PUBLIC_USE_FIREBASE_EMULATORS=false` ลบ `FIREBASE_AUTH_EMULATOR_HOST`/`FIREBASE_DATABASE_EMULATOR_HOST` จาก deployment env
 3. ตั้ง server-only `FIREBASE_PROJECT_ID`, `FIREBASE_DATABASE_URL`, `FIREBASE_CLIENT_EMAIL`, `FIREBASE_PRIVATE_KEY` ห้าม prefix private credentialsด้วย NEXT_PUBLIC_ หรือ commit service account JSON
-4. ตั้ง Node.js 24.x ใน Vercel, installจาก lockfile, build `npm run build` ใช้ Next.js preset
+4. ตั้ง Node.js 24.x ใน Vercel, installจาก lockfile, build `npm run build` ใช้ Next.js preset Previewนี้ตั้ง `NODE_OPTIONS=--experimental-require-module` หลังตรวจERR_REQUIRE_ESMจากFirebase Adminบนruntimeจริง
 5. Deploy Rulesแยก: `npx firebase deploy --only database --project <project-id> --config firebase.json` เว็บ deployไม่ได้อัปเดต Rulesให้เอง
 6. เพิ่ม domainsที่จำเป็นใน Firebase Auth และทดสอบ previewเมื่อมี credentials/deploymentที่อนุญาต
 
-Production Rules deny root/authoritative/code index/client game writes อนุญาตเฉพาะสมาชิกอ่าน public, เจ้าของอ่าน private และเขียน presence ของตัวเองที่ผ่าน validation Emulator Rules เพิ่ม healthChecks เจ้าของเพื่อ diagnostics เท่านั้น ห้าม deployไฟล์ emulator Rulesจริง ยังไม่มี public URLและยังไม่ตรวจ production
+Rulesจริง deny root/authoritative/code index/client game writes อนุญาตเฉพาะสมาชิกอ่าน public, เจ้าของอ่าน private และเขียน presence ของตัวเองที่ผ่าน validation Emulator Rules เพิ่ม healthChecks เจ้าของเพื่อ diagnostics เท่านั้น ห้าม deployไฟล์ emulator Rulesจริง PreviewมีURLและทดสอบจริงแล้ว ส่วนProductionยังต้องแยกFirebase projectและตรวจretention/usageก่อนเปิด
 
 M2 implementation defaults: รหัสห้อง 4 ตัวไม่ใช้ I/O/0/1 ชื่อ 1–16 ตัวและ avatar 0–7 ตาม home.html คำสั่งตรวจ UID จาก Firebase token พร้อม clientId/sessionGeneration/gameId จำกัด API 180 คำสั่งใหม่ต่อนาทีต่อ UID (retry commandId เดิมไม่นับเพิ่ม) ไม่มี deadline ของเกม
 

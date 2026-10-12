@@ -1,0 +1,341 @@
+{
+  "projectId": "merchant-s-bluff",
+  "startedAt": "2026-10-12T07:17:55.714Z",
+  "server": "Vercel Preview",
+  "deploymentId": "dpl_HgG5ifxnEs71eB7Xg5tZRw6aAnh2",
+  "commit": "77e9660dfcb42e826eb4924e9ccd7717d7befeec",
+  "url": "https://merchant-s-bluff-buombdlfv-mingmings-projects-c4169f4b.vercel.app",
+  "firebase": "live Auth and Realtime Database",
+  "games": [],
+  "rulesChecks": [
+    {
+      "label": "4 players: member public",
+      "method": "GET",
+      "status": 200,
+      "expectedAllowed": true,
+      "passed": true
+    },
+    {
+      "label": "4 players: own private",
+      "method": "GET",
+      "status": 200,
+      "expectedAllowed": true,
+      "passed": true
+    },
+    {
+      "label": "4 players: friend private denied",
+      "method": "GET",
+      "status": 401,
+      "expectedAllowed": false,
+      "passed": true
+    },
+    {
+      "label": "4 players: nonmember public denied",
+      "method": "GET",
+      "status": 401,
+      "expectedAllowed": false,
+      "passed": true
+    },
+    {
+      "label": "4 players: guest public denied",
+      "method": "GET",
+      "status": 401,
+      "expectedAllowed": false,
+      "passed": true
+    },
+    {
+      "label": "4 players: ancestor room denied",
+      "method": "GET",
+      "status": 401,
+      "expectedAllowed": false,
+      "passed": true
+    },
+    {
+      "label": "4 players: ancestor /authoritative denied",
+      "method": "GET",
+      "status": 401,
+      "expectedAllowed": false,
+      "passed": true
+    },
+    {
+      "label": "4 players: ancestor /views denied",
+      "method": "GET",
+      "status": 401,
+      "expectedAllowed": false,
+      "passed": true
+    },
+    {
+      "label": "4 players: ancestor /views/private denied",
+      "method": "GET",
+      "status": 401,
+      "expectedAllowed": false,
+      "passed": true
+    },
+    {
+      "label": "4 players: root denied",
+      "method": "GET",
+      "status": 401,
+      "expectedAllowed": false,
+      "passed": true
+    },
+    {
+      "label": "4 players: authoritative write denied",
+      "method": "PUT",
+      "status": 401,
+      "expectedAllowed": false,
+      "passed": true
+    },
+    {
+      "label": "4 players: public write denied",
+      "method": "PUT",
+      "status": 401,
+      "expectedAllowed": false,
+      "passed": true
+    },
+    {
+      "label": "4 players: private write denied",
+      "method": "PUT",
+      "status": 401,
+      "expectedAllowed": false,
+      "passed": true
+    },
+    {
+      "label": "4 players: own presence allowed",
+      "method": "PUT",
+      "status": 200,
+      "expectedAllowed": true,
+      "passed": true
+    },
+    {
+      "label": "4 players: friend presence write denied",
+      "method": "PUT",
+      "status": 401,
+      "expectedAllowed": false,
+      "passed": true
+    },
+    {
+      "label": "4 players: forged presence fields denied",
+      "method": "PUT",
+      "status": 401,
+      "expectedAllowed": false,
+      "passed": true
+    },
+    {
+      "label": "4 players: own presence removal allowed",
+      "method": "DELETE",
+      "status": 200,
+      "expectedAllowed": true,
+      "passed": true
+    }
+  ],
+  "apiRequests": {
+    "POST /api/rooms/create 200": 1,
+    "GET /api/rooms/:roomId 200": 6,
+    "POST /api/rooms/join 200": 3,
+    "POST /api/rooms/command 200": 162
+  },
+  "network": {
+    "emulatorRequests": 0,
+    "authHosts": [
+      "identitytoolkit.googleapis.com"
+    ],
+    "databaseNamespaces": [
+      "merchant-s-bluff-default-rtdb"
+    ]
+  },
+  "cleanup": {
+    "createdRooms": 1,
+    "removedRooms": 1,
+    "createdUsers": 5,
+    "removedUsers": 5,
+    "errors": []
+  },
+  "httpSmoke": {
+    "health": 200,
+    "unauthenticatedCreate": 401,
+    "productionDiagnostics": 404
+  },
+  "passed": false,
+  "failedAt": "4: round 8 resolve merchant 0",
+  "failure": {
+    "type": "AssertionError",
+    "message": "The expression evaluated to a falsy value:\n\n  assert.ok(!/\"(?:instanceId|hand|bag|stash|goodsValue)\"\\s*:/.test(JSON.stringify(view)))\n"
+  },
+  "lastReceivedRevisions": [
+    {
+      "player": "4-0",
+      "view": "private",
+      "revision": 163
+    },
+    {
+      "player": "4-2",
+      "view": "private",
+      "revision": 163
+    },
+    {
+      "player": "4-1",
+      "view": "public",
+      "revision": 163
+    },
+    {
+      "player": "4-3",
+      "view": "public",
+      "revision": 163
+    },
+    {
+      "player": "4-0",
+      "view": "public",
+      "revision": 163
+    },
+    {
+      "player": "4-2",
+      "view": "public",
+      "revision": 163
+    },
+    {
+      "player": "4-1",
+      "view": "private",
+      "revision": 164
+    },
+    {
+      "player": "4-3",
+      "view": "private",
+      "revision": 164
+    },
+    {
+      "player": "4-2",
+      "view": "private",
+      "revision": 164
+    },
+    {
+      "player": "4-0",
+      "view": "private",
+      "revision": 164
+    },
+    {
+      "player": "4-1",
+      "view": "public",
+      "revision": 164
+    },
+    {
+      "player": "4-3",
+      "view": "public",
+      "revision": 164
+    },
+    {
+      "player": "4-2",
+      "view": "public",
+      "revision": 164
+    },
+    {
+      "player": "4-0",
+      "view": "public",
+      "revision": 164
+    },
+    {
+      "player": "4-0",
+      "view": "private",
+      "revision": 165
+    },
+    {
+      "player": "4-1",
+      "view": "private",
+      "revision": 165
+    },
+    {
+      "player": "4-2",
+      "view": "private",
+      "revision": 165
+    },
+    {
+      "player": "4-3",
+      "view": "private",
+      "revision": 165
+    },
+    {
+      "player": "4-0",
+      "view": "public",
+      "revision": 165
+    },
+    {
+      "player": "4-1",
+      "view": "public",
+      "revision": 165
+    },
+    {
+      "player": "4-2",
+      "view": "public",
+      "revision": 165
+    },
+    {
+      "player": "4-3",
+      "view": "public",
+      "revision": 165
+    },
+    {
+      "player": "4-0",
+      "view": "private",
+      "revision": 166
+    },
+    {
+      "player": "4-2",
+      "view": "private",
+      "revision": 166
+    },
+    {
+      "player": "4-1",
+      "view": "private",
+      "revision": 166
+    },
+    {
+      "player": "4-0",
+      "view": "public",
+      "revision": 166
+    },
+    {
+      "player": "4-1",
+      "view": "public",
+      "revision": 166
+    },
+    {
+      "player": "4-2",
+      "view": "public",
+      "revision": 166
+    },
+    {
+      "player": "4-3",
+      "view": "private",
+      "revision": 166
+    },
+    {
+      "player": "4-3",
+      "view": "public",
+      "revision": 166
+    }
+  ],
+  "failureState": {
+    "revision": 166,
+    "phase": "GAME_OVER",
+    "round": 8
+  },
+  "browserStates": [
+    {
+      "phase": "GAME_OVER",
+      "status": "เชื่อมต่อแล้ว"
+    },
+    {
+      "phase": "GAME_OVER",
+      "status": "เชื่อมต่อแล้ว"
+    },
+    {
+      "phase": "GAME_OVER",
+      "status": "เชื่อมต่อแล้ว"
+    },
+    {
+      "phase": "GAME_OVER",
+      "status": "เชื่อมต่อแล้ว"
+    }
+  ],
+  "pageErrors": [],
+  "finishedAt": "2026-10-12T07:19:04.474Z"
+}

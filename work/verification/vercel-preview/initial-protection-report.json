@@ -1,0 +1,33 @@
+{
+  "projectId": "merchant-s-bluff",
+  "startedAt": "2026-10-12T07:12:54.011Z",
+  "server": "Vercel Preview",
+  "deploymentId": "dpl_GbphAcfJ9cVY3QNQykKx2CRennax",
+  "commit": "77e9660dfcb42e826eb4924e9ccd7717d7befeec",
+  "url": "https://merchant-s-bluff-qa30wmbwv-mingmings-projects-c4169f4b.vercel.app",
+  "firebase": "live Auth and Realtime Database",
+  "games": [],
+  "rulesChecks": [],
+  "apiRequests": {},
+  "network": {
+    "emulatorRequests": 0,
+    "authHosts": [],
+    "databaseNamespaces": []
+  },
+  "cleanup": {
+    "createdRooms": 0,
+    "removedRooms": 0,
+    "createdUsers": 0,
+    "removedUsers": 0,
+    "errors": []
+  },
+  "passed": false,
+  "failedAt": "health",
+  "failure": {
+    "type": "AssertionError",
+    "message": "Expected values to be strictly equal:\n\n403 !== 200\n"
+  },
+  "lastReceivedRevisions": [],
+  "pageErrors": [],
+  "finishedAt": "2026-10-12T07:12:54.990Z"
+}
