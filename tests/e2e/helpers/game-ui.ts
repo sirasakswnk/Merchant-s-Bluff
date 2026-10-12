@@ -14,7 +14,7 @@ export async function publicMoney(page: Page) {
     id: node.getAttribute('data-player-id'), cash: Number(node.textContent?.match(/เงิน (\d+) เหรียญ/)?.[1]),
   })));
 }
-export async function joinPlayers(browser: Browser, count: number, origin = 'http://127.0.0.1:3100') {
+export async function joinPlayers(browser: Browser, count: number, origin = process.env.MERCHANT_E2E_ORIGIN ?? 'http://127.0.0.1:3100') {
   const contexts: BrowserContext[] = []; const pages: Page[] = [];
   try {
     for (let index = 0; index < count; index++) {

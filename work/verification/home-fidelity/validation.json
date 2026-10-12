@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-12T14:49:07.729Z",
+  "pointerTiltAndReset": {
+    "active": true,
+    "transform": "perspective(700px) translateY(-6px) rotateX(-1.2deg) rotateY(2.8deg)",
+    "glare": "1"
+  },
+  "engineBackendDataRulesUnchanged": true,
+  "sourceSecretHits": [],
+  "clientBundleFiles": 13,
+  "clientBundleSecretHits": [],
+  "typecheck": "passed",
+  "lint": "passed",
+  "productionBuild": "passed",
+  "targetedE2E": {
+    "m0Passed": 2,
+    "m4Passed": 1,
+    "scope": "M4 contrast audit uses prefers-contrast:more"
+  },
+  "deployed": false
+}

@@ -12,9 +12,13 @@
 
 > ผู้ใช้อนุมัติสำรับ **360 ใบ**: แอปเปิล84 ขนมปัง72 ชีส60 ผ้า54 เหล้าเถื่อน36 หน้าไม้30 ใบกัญชา24 เปลี่ยนเฉพาะจำนวนและ rulesVersion เป็น0.2 ราคา ค่าปรับ ค่าชดเชย และกติกาอื่นคงเดิม ใช้เมื่อเริ่มเกมใหม่เท่านั้น เกมที่เริ่มแล้วคง rules snapshot เดิม ไม่มีการเติมไพ่เข้าเกมเก่า
 
-หน้าแรกใช้ layout/สี/SVG จาก `home.html` ฟอร์มเชื่อมระบบจริงแล้ว หน้าเกมใช้ UI ชั่วคราวเรียบง่าย `merchant-gate.html` ยังไม่ใช่ดีไซน์ที่อนุมัติ M4 ทำ responsive/accessibility/safe area/reduced-motion งานภาพขั้นสุดท้ายของหน้าที่ยังไม่ได้เลือกพักไว้
+หน้าแรกคืน layout/สี/SVG inline/ฟอนต์และเอฟเฟกต์จาก `home.html` ครบแล้ว ฟอร์มเชื่อมระบบจริง ทวนภาพheroตรงระดับpixel4ขนาดและเล่น4คนหนึ่งรอบบนEmulatorsผ่าน การแก้designล่าสุดยังอยู่ในเครื่อง ดู [ผลตรวจหน้าแรก](work/verification/home-fidelity/report.md) หน้าเกมยังใช้UIเดิมสำหรับขั้นถัดไป `merchant-gate.html` ยังไม่ใช้เป็นreference งานresponsive/accessibility/safe area/reduced-motionคงไว้
 
 ## เตรียมเครื่อง
+
+ล็อบบี้ใช้โต๊ะไม้กลมและตัวละครที่เลือกแล้ว ผู้ชมอยู่ล่างเสมอ ดู [พรีวิวล็อบบี้6คน](http://localhost:4100/preview?scene=lobby&role=sheriff&players=6&width=390) และ [แบบ/ขอบเขต](docs/lobby-design.md) เปลี่ยนเฉพาะล็อบบี้ก่อนเริ่มเกม ขั้นนี้ยังอยู่ในเครื่อง
+
+สำหรับตรวจดีไซน์โดยไม่ต้องสร้างห้อง เปิด `/preview` เช่น [ตัวอย่างในเครื่อง](http://localhost:4100/preview) เลือกทุกเฟส มุมมอง4–6คน สถานะและขนาดมือถือได้ ไม่เชื่อมFirebaseหรือแก้ข้อมูลเกม ดู [วิธีใช้พรีวิว](docs/preview.md) และ [ผลตรวจ](work/verification/preview-route/report.md) routeจากงานนี้ยังไม่deployProduction
 
 - Node.js **24.12 ขึ้นไปในสาย 24 LTS** (ตรวจบน 24.20.0), npm
 - Java JDK 21 ขึ้นไปสำหรับ RTDB Emulator (เครื่องที่ตรวจมี Java 25)

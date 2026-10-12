@@ -1,0 +1,22 @@
+{
+  "audits": [
+    {
+      "width": 360,
+      "violations": []
+    },
+    {
+      "width": 390,
+      "violations": []
+    },
+    {
+      "width": 430,
+      "violations": []
+    },
+    {
+      "width": 1280,
+      "violations": []
+    }
+  ],
+  "pageErrors": [],
+  "apiOrFirebaseRequests": []
+}

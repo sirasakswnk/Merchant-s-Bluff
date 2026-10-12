@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "players": 6,
+  "namesLength": 16,
+  "selectedAvatarIds": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "readinessRealtime": true,
+  "reload": true,
+  "offlineBlocksCommands": true,
+  "startedPhase": "PREPARE",
+  "seatOrderPreserved": true,
+  "totalCards": 360,
+  "rulesVersion": "0.2",
+  "pageErrors": [],
+  "liveFirebaseRequests": [],
+  "cleanup": {
+    "rooms": 1,
+    "users": 6
+  }
+}

@@ -1,0 +1,380 @@
+[
+  {
+    "width": 360,
+    "count": 6,
+    "role": "sheriff",
+    "geometry": {
+      "overflow": false,
+      "table": {
+        "x": 65.765625,
+        "y": 681.6875,
+        "width": 228.46875,
+        "height": 228.46875,
+        "top": 681.6875,
+        "right": 294.234375,
+        "bottom": 910.15625,
+        "left": 65.765625
+      },
+      "seats": [
+        {
+          "own": "true",
+          "index": "0",
+          "box": {
+            "x": 128,
+            "y": 900.15625,
+            "width": 104,
+            "height": 133.46875,
+            "top": 900.15625,
+            "right": 232,
+            "bottom": 1033.625,
+            "left": 128
+          }
+        },
+        {
+          "own": "false",
+          "index": "1",
+          "box": {
+            "x": 12,
+            "y": 833.046875,
+            "width": 104,
+            "height": 133.46875,
+            "top": 833.046875,
+            "right": 116,
+            "bottom": 966.515625,
+            "left": 12
+          }
+        },
+        {
+          "own": "false",
+          "index": "2",
+          "box": {
+            "x": 12,
+            "y": 698.796875,
+            "width": 104,
+            "height": 133.46875,
+            "top": 698.796875,
+            "right": 116,
+            "bottom": 832.265625,
+            "left": 12
+          }
+        },
+        {
+          "own": "false",
+          "index": "3",
+          "box": {
+            "x": 128,
+            "y": 631.6875,
+            "width": 104,
+            "height": 133.46875,
+            "top": 631.6875,
+            "right": 232,
+            "bottom": 765.15625,
+            "left": 128
+          }
+        },
+        {
+          "own": "false",
+          "index": "4",
+          "box": {
+            "x": 244,
+            "y": 698.796875,
+            "width": 104,
+            "height": 133.46875,
+            "top": 698.796875,
+            "right": 348,
+            "bottom": 832.265625,
+            "left": 244
+          }
+        },
+        {
+          "own": "false",
+          "index": "5",
+          "box": {
+            "x": 244,
+            "y": 833.046875,
+            "width": 104,
+            "height": 133.46875,
+            "top": 833.046875,
+            "right": 348,
+            "bottom": 966.515625,
+            "left": 244
+          }
+        }
+      ]
+    },
+    "violations": []
+  },
+  {
+    "width": 390,
+    "count": 5,
+    "role": "merchant",
+    "geometry": {
+      "overflow": false,
+      "table": {
+        "x": 70.5625,
+        "y": 681.28125,
+        "width": 248.875,
+        "height": 248.875,
+        "top": 681.28125,
+        "right": 319.4375,
+        "bottom": 930.15625,
+        "left": 70.5625
+      },
+      "seats": [
+        {
+          "own": "true",
+          "index": "0",
+          "box": {
+            "x": 143,
+            "y": 920.15625,
+            "width": 104,
+            "height": 133.46875,
+            "top": 920.15625,
+            "right": 247,
+            "bottom": 1053.625,
+            "left": 143
+          }
+        },
+        {
+          "own": "false",
+          "index": "1",
+          "box": {
+            "x": 12,
+            "y": 820.34375,
+            "width": 104,
+            "height": 133.46875,
+            "top": 820.34375,
+            "right": 116,
+            "bottom": 953.8125,
+            "left": 12
+          }
+        },
+        {
+          "own": "false",
+          "index": "2",
+          "box": {
+            "x": 62.03125,
+            "y": 658.859375,
+            "width": 104,
+            "height": 133.46875,
+            "top": 658.859375,
+            "right": 166.03125,
+            "bottom": 792.328125,
+            "left": 62.03125
+          }
+        },
+        {
+          "own": "false",
+          "index": "3",
+          "box": {
+            "x": 223.953125,
+            "y": 658.859375,
+            "width": 104,
+            "height": 133.46875,
+            "top": 658.859375,
+            "right": 327.953125,
+            "bottom": 792.328125,
+            "left": 223.953125
+          }
+        },
+        {
+          "own": "false",
+          "index": "4",
+          "box": {
+            "x": 274,
+            "y": 820.34375,
+            "width": 104,
+            "height": 133.46875,
+            "top": 820.34375,
+            "right": 378,
+            "bottom": 953.8125,
+            "left": 274
+          }
+        }
+      ]
+    },
+    "violations": []
+  },
+  {
+    "width": 430,
+    "count": 4,
+    "role": "merchant",
+    "geometry": {
+      "overflow": false,
+      "table": {
+        "x": 76.9609375,
+        "y": 680.7265625,
+        "width": 276.078125,
+        "height": 276.078125,
+        "top": 680.7265625,
+        "right": 353.0390625,
+        "bottom": 956.8046875,
+        "left": 76.9609375
+      },
+      "seats": [
+        {
+          "own": "true",
+          "index": "0",
+          "box": {
+            "x": 163,
+            "y": 946.8125,
+            "width": 104,
+            "height": 133.46875,
+            "top": 946.8125,
+            "right": 267,
+            "bottom": 1080.28125,
+            "left": 163
+          }
+        },
+        {
+          "own": "false",
+          "index": "1",
+          "box": {
+            "x": 12,
+            "y": 788.765625,
+            "width": 104,
+            "height": 133.46875,
+            "top": 788.765625,
+            "right": 116,
+            "bottom": 922.234375,
+            "left": 12
+          }
+        },
+        {
+          "own": "false",
+          "index": "2",
+          "box": {
+            "x": 163,
+            "y": 630.734375,
+            "width": 104,
+            "height": 133.46875,
+            "top": 630.734375,
+            "right": 267,
+            "bottom": 764.203125,
+            "left": 163
+          }
+        },
+        {
+          "own": "false",
+          "index": "3",
+          "box": {
+            "x": 314,
+            "y": 788.765625,
+            "width": 104,
+            "height": 133.46875,
+            "top": 788.765625,
+            "right": 418,
+            "bottom": 922.234375,
+            "left": 314
+          }
+        }
+      ]
+    },
+    "violations": []
+  },
+  {
+    "width": 1280,
+    "count": 6,
+    "role": "sheriff",
+    "geometry": {
+      "overflow": false,
+      "table": {
+        "x": 400,
+        "y": 646.984375,
+        "width": 480,
+        "height": 480,
+        "top": 646.984375,
+        "right": 880,
+        "bottom": 1126.984375,
+        "left": 400
+      },
+      "seats": [
+        {
+          "own": "true",
+          "index": "0",
+          "box": {
+            "x": 576,
+            "y": 1106.984375,
+            "width": 128,
+            "height": 159.9375,
+            "top": 1106.984375,
+            "right": 704,
+            "bottom": 1266.921875,
+            "left": 576
+          }
+        },
+        {
+          "own": "false",
+          "index": "1",
+          "box": {
+            "x": 260,
+            "y": 976.984375,
+            "width": 128,
+            "height": 159.9375,
+            "top": 976.984375,
+            "right": 388,
+            "bottom": 1136.921875,
+            "left": 260
+          }
+        },
+        {
+          "own": "false",
+          "index": "2",
+          "box": {
+            "x": 260,
+            "y": 716.984375,
+            "width": 128,
+            "height": 159.9375,
+            "top": 716.984375,
+            "right": 388,
+            "bottom": 876.921875,
+            "left": 260
+          }
+        },
+        {
+          "own": "false",
+          "index": "3",
+          "box": {
+            "x": 576,
+            "y": 586.984375,
+            "width": 128,
+            "height": 159.9375,
+            "top": 586.984375,
+            "right": 704,
+            "bottom": 746.921875,
+            "left": 576
+          }
+        },
+        {
+          "own": "false",
+          "index": "4",
+          "box": {
+            "x": 892,
+            "y": 716.984375,
+            "width": 128,
+            "height": 159.9375,
+            "top": 716.984375,
+            "right": 1020,
+            "bottom": 876.921875,
+            "left": 892
+          }
+        },
+        {
+          "own": "false",
+          "index": "5",
+          "box": {
+            "x": 892,
+            "y": 976.984375,
+            "width": 128,
+            "height": 159.9375,
+            "top": 976.984375,
+            "right": 1020,
+            "bottom": 1136.921875,
+            "left": 892
+          }
+        }
+      ]
+    },
+    "violations": []
+  }
+]

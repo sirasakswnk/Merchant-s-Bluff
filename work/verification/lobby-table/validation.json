@@ -1,0 +1,93 @@
+{
+  "checkedAt": "2026-10-12T16:46:54.078Z",
+  "typecheck": "passed",
+  "lint": "passed",
+  "productionBuild": "passed",
+  "cases": [
+    {
+      "title": "lobby preview keeps the viewer below a round table across 4/5/6 players, roles and mobile widths",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 13404
+        }
+      ]
+    },
+    {
+      "title": "six real emulator players keep their avatars and own seats, toggle ready, reload and start the game",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 14700
+        }
+      ]
+    },
+    {
+      "title": "home supports keyboard, touch sizes, high contrast, readable reflow, reduced motion and HTTP-safe IDs",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 16652
+        }
+      ]
+    },
+    {
+      "title": "preview controls use shared room screens without Firebase, API commands or player-storage writes",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2015
+        }
+      ]
+    },
+    {
+      "title": "preview renders all scenes and viewpoints, 4/5/6 players, state presets and actual iframe widths",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 8401
+        }
+      ]
+    }
+  ],
+  "layoutCases": 24,
+  "lobbyDefaultPaletteAxeViolations": 0,
+  "previewFirebaseOrApiRequests": 0,
+  "liveFlow": {
+    "passed": true,
+    "players": 6,
+    "namesLength": 16,
+    "selectedAvatarIds": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "readinessRealtime": true,
+    "reload": true,
+    "offlineBlocksCommands": true,
+    "startedPhase": "PREPARE",
+    "seatOrderPreserved": true,
+    "totalCards": 360,
+    "rulesVersion": "0.2",
+    "pageErrors": [],
+    "liveFirebaseRequests": [],
+    "cleanup": {
+      "rooms": 1,
+      "users": 6
+    }
+  },
+  "coreSourcesChanged": false,
+  "clientAndSourceSecretAudit": {
+    "files": 88,
+    "matches": 0
+  },
+  "deployed": false
+}

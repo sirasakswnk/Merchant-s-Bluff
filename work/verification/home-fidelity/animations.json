@@ -1,0 +1,19 @@
+{
+  "keyframes": [
+    "spin",
+    "stamp-in",
+    "bag-move",
+    "bag-glow",
+    "deal-fly",
+    "deal-flip",
+    "breathe",
+    "gate-light",
+    "flicker",
+    "flame",
+    "wave",
+    "twinkle",
+    "token-flip"
+  ],
+  "count": 13,
+  "allExact": true
+}

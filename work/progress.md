@@ -1,6 +1,40 @@
 # Progress — 12 ตุลาคม 2026
 
-## ขั้นตอนล่าสุด — Production พร้อมเล่นผ่าน URL หลัก
+## ขั้นตอนล่าสุด — ล็อบบี้โต๊ะกลม
+
+ผู้ใช้เลือกเริ่มเฉพาะล็อบบี้ก่อนเกม ทำโต๊ะไม้กลมและตัวละครที่เลือกจากhome.htmlล้อมรอบ ผู้ชมอยู่ล่างเสมอ ชื่อ/พร้อม/ออนไลน์/มงกุฎผู้จัดห้อง รหัส/เชิญเหนือโต๊ะ พร้อมด้านล่าง เริ่มกลางโต๊ะ callbackเดิม ไม่มีการสลับseatOrderจริง แยกLobbyView/CSS Modules/seat layout และRoomStatus presentation ใช้ทั้งห้องจริงและpreview
+
+TypeScript/lint/productionbuildผ่าน E2E5กรณีในรอบสุดท้ายผ่าน: layout24มุม4/5/6คน×2roles×4widths โปรไฟล์ไม่ซ้อน/ไม่มีoverflow/selfล่าง/avatarตรง default-lobby axe0ทั้ง4ขนาด keyboard44px/200%text/320px/reduced-motion/state presetsผ่าน Preview isolationเดิมผ่าน M4home+live lobby/rulesผ่าน (home contrastยังใช้high contrast)
+
+ทดสอบห้องจริง6contextsบนNext/Auth/RTDB Emulators: ชื่อ16ตัว avatar2–7 พร้อม/ยกเลิก realtime reloadที่นั่งเดิม offlineปิดคำสั่ง ทุกคนพร้อมและstartPREPAREรอบ1ผ่าน snapshot0.2/360/seatOrderเดิม ไม่มีpageerrorหรือFirebaseจริงrequests ล้างfixtureและidentityที่สร้างแล้ว ไม่รันเกมเต็มรอบหรือโทรศัพท์จริงซ้ำในขั้นนี้
+
+ผล [verification/lobby-table/report.md](verification/lobby-table/report.md) แบบ [../docs/lobby-design.md](../docs/lobby-design.md) เปิดhttp://localhost:4100/preview?scene=lobby&role=sheriff&players=6&width=390ได้ งานก่อนหน้าคงไว้ ไม่แก้engine/backend/data/Rules/ราคา/สำรับ/rulesVersion ไม่commit/push/deploy
+
+ขั้นล็อบบี้เสร็จ หยุดตามงานทีละขั้น หน้าเล่นเกมยังเดิม ขั้นถัดไปค่อยทำโต๊ะร่วมและนายด่านบน โดยตัวเองล่างเสมอ รวมเมื่อเป็นนายด่าน และสลับภาพนายด่านเก่า/ใหม่ตามคำตอบผู้ใช้
+
+## ประวัติ — /preview ดูทุกเฟสโดยไม่ต้องเล่นจริง
+
+เพิ่มhttp://localhost:4100/previewตามผู้ใช้ พร้อม11ฉาก/2มุมมอง/4–6คน/7สถานะ/iframe360/390/430/1280และauto เลือกจากURL/refreshได้ เปิดเต็มหน้า/reset/replayglowได้ iframeสูงตามเนื้อหาทั้งหน้า ปุ่มส่งผลเฉพาะตัวอย่างและอ่านสินค้า/ราคาจากconfig0.2/360 ไม่สร้างเกมจริง
+
+แยกRoomViewจากRoomClientเพื่อใช้presentationร่วมกัน RoomClientยังถือAuth/realtime/presence/commands/storage/clipboard/abortconfirmation ส่วนRoomPreviewใช้syntheticviewsและmemorycallbacks ไม่importFirebaseหรือtests/fixtures ใช้purecalcเดิมเพื่อแสดงผล/คะแนนตัวอย่าง persistDraft=false ไม่แตะdraft/active-room/pendingของผู้เล่น มีnoindex/allowlistquery/roomIDที่ไม่ผ่านvalidationจริง ไม่เพิ่มseed/debugdatabase endpoint
+
+TypeScript/lint/buildผ่าน รวมE2E4กรณีผ่านในรอบเดียว: Previewisolation/scene22มุม+playercounts/statepresets/viewportจริง/URLfallbackผ่าน requestsAPI/Firebase0 และplayerStorageไม่มีwrite/remove/clear M4keyboard/reflow/reducedmotion/clipboard/home+live-lobbyผ่าน และM5เกมจริง5contextsจบ10รอบพร้อมretry/offline/controltakeover/staleoffer/rematchผ่าน จากนั้นทวนPreview2หลังautoheight/storageaudit/เลือกไพ่1ใบตรงviewผ่าน ไม่claimFirebaseจริงหรือfullmatrixรอบนี้
+
+ผล [verification/preview-route/report.md](verification/preview-route/report.md) วิธีใช้docs/preview.md คงงานหน้าแรกก่อนหน้าทั้งหมด ยังไม่commit/push/deployProduction ขั้นpreviewเสร็จแล้วหยุดตามงานทีละขั้น พร้อมใช้ตรวจdesignหน้าห้อง/เกม/ผล/คะแนนต่อ
+
+## ประวัติ — คืนหน้าแรกและเอฟเฟกต์ตรง home.html
+
+ผู้ใช้เลือกกลับมาทำdesignและต้องการเอฟเฟกต์/animationเหมือนhome.htmlโดยตรง ขั้นนี้คืนหน้าแรกด้วยSVGinline/CSSจากต้นฉบับ/Chonburi+Sarabun/อวาตาร์8แบบ ไม่เปลี่ยนengine/backend/data access/กติกา/ราคา/360ใบ/rulesVersion ฟอร์มใช้APIจริง spinnerรอresponseและstampหลังreceiptที่commitแล้ว ก่อนเข้าล็อบบี้ ไม่มีrandomCodeหรือsuccesssimulation
+
+เทียบheader/hero/form14จุด360/390/430/1280ไม่มีความต่าง ภาพheroเท่ากันระดับpixelทั้ง4ขนาด Keyframes13ชุดตรงsource แสงประตู/ไฟ/ธง/ดาว offscreenpause tokenflip0.55s deal0.9s+delay120ms tilt/glare bag1.4s spinner0.8s stamp0.38s และreducedmotionพร้อม CSSscope/keyframeprefixไม่ทับหน้าเกม
+
+TypeScript/lint/productionbuildผ่าน M0/M4targeted3กรณีผ่าน (2+1rerun) keyboard/radio/touch/200%text/reducedmotion/Auth/API/RTDB/reload/clipboardfallbackผ่าน Axeในโหมดเพิ่มcontrast0violations10snapshots ส่วนสีปกติคงต้นฉบับมีtag-legalcontrast3.77เป็นข้อจำกัดที่บันทึกไว้ ไม่อ้างว่าปกติaxe0
+
+ทดสอบbrowser→NextAPI→FirebaseEmulators4profilesสร้าง/เข้าห้อง/พร้อม/เริ่ม แลก3ขน5PASSครบหนึ่งรอบ/manualadvanceรอบ2และreloadผ่าน Conservation360/unique360/IDเดิม/รายชนิด6checkpoints ไม่มีpageerror actualAPIerror/offline/draft/receipt/avatarIdผ่าน ล้างflowfixture1ห้อง/5usersแล้ว ไม่มีFirebaseจริงwrites/Rules/Productiondeployment รอบนี้แก้harnesslocatorsและรอphaseให้ถูก ไม่แก้engineเพื่อผ่าน
+
+ตัวอย่างในเครื่อง http://localhost:4100 หลักฐาน [verification/home-fidelity/report.md](verification/home-fidelity/report.md) ยังไม่commit/push/deploy ขั้นนี้หน้าแรกเสร็จตามต้นฉบับ หยุดตามงานทีละขั้น หน้าเกม/ล็อบบี้/ผล/คะแนนเป็นงานdesignถัดไปเมื่อผู้ใช้สั่ง Productionปัจจุบันยังเป็นreleaseเดิมที่ตรวจแล้ว ระบบล้างห้องอัตโนมัติยังปิด
+
+## ประวัติ — Production พร้อมเล่นผ่าน URL หลัก
 
 ผู้ใช้อนุมัติให้ URLหลักเข้าได้โดยไม่ต้องล็อกอินVercel เปิด [merchant-s-bluff.vercel.app](https://merchant-s-bluff.vercel.app) แล้ว Preview/URLของแต่ละdeploymentยังป้องกันตามเดิม ไม่เปลี่ยนprotectionทั้งproject ลิงก์เพื่อนเดิมยังอยู่ ใช้Firebase `merchant-s-bluff` ร่วมตามอนุมัติและคงแผนฟรี
 

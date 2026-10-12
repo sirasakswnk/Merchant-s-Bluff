@@ -6,16 +6,16 @@ import type { LegalProductId } from '@/lib/game/types';
 import type { PrivateRoomView, PublicRoomView, RoomCommandRequest } from '@/lib/shared/rooms';
 
 export type SendCommand = (command: RoomCommandRequest['command']) => Promise<void>;
-function useDraft<T>(key: string, initial: T) {
-  const [value, setValue] = useState<T>(() => { try { return JSON.parse(sessionStorage.getItem(key) ?? 'null') ?? initial; } catch { return initial; } });
-  return [value, (next: T) => { sessionStorage.setItem(key, JSON.stringify(next)); setValue(next); }] as const;
+function useDraft<T>(key: string, initial: T, persist: boolean) {
+  const [value, setValue] = useState<T>(() => { if (!persist) return initial; try { return JSON.parse(sessionStorage.getItem(key) ?? 'null') ?? initial; } catch { return initial; } });
+  return [value, (next: T) => { if (persist) sessionStorage.setItem(key, JSON.stringify(next)); setValue(next); }] as const;
 }
-export function MerchantControls({ room, own, disabled, draftDisabled, send }: { room: PublicRoomView; own: PrivateRoomView; disabled: boolean; draftDisabled: boolean; send: SendCommand }) {
+export function MerchantControls({ room, own, disabled, draftDisabled, send, persistDraft = true }: { room: PublicRoomView; own: PrivateRoomView; disabled: boolean; draftDisabled: boolean; send: SendCommand; persistDraft?: boolean }) {
   const PRODUCTS = room.rules.products;
   const key = `merchant-draft:${room.roomId}:${own.playerId}:${room.gameId}:${room.roundIndex}:${room.phase}`;
-  const [selection, setSelection] = useDraft<string[]>(key, []);
-  const [declaration, setDeclaration] = useDraft<LegalProductId>(key + ':declaration', 'apple');
-  const [amount, setAmount] = useDraft<string>(key + ':offer', '0');
+  const [selection, setSelection] = useDraft<string[]>(key, [], persistDraft);
+  const [declaration, setDeclaration] = useDraft<LegalProductId>(key + ':declaration', 'apple', persistDraft);
+  const [amount, setAmount] = useDraft<string>(key + ':offer', '0', persistDraft);
   const packing = room.phase === 'PACK_AND_DECLARE'; const maximum = packing ? room.rules.maxBagSize : room.rules.maxExchange;
   if (room.phase === 'PREPARE' || packing) {
     if (own.prepared && !packing || packing && own.declaration) return <section className="panel"><h2>รอเพื่อน</h2><p>{packing ? 'ปิดกระเป๋าแล้ว แก้สินค้าและคำแจ้งไม่ได้' : 'เตรียมสินค้าแล้ว รอพ่อค้าทุกคนพร้อม'}</p></section>;

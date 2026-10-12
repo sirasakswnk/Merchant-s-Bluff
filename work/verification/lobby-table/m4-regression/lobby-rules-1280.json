@@ -1,0 +1,10 @@
+{
+  "size": {
+    "width": 1280,
+    "height": 900
+  },
+  "violations": [],
+  "incomplete": [
+    "color-contrast"
+  ]
+}

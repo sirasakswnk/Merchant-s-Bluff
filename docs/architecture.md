@@ -72,6 +72,10 @@ Local modeต้อง demo project IDsตรงกันและมีทั�
 
 ## Design
 
+ล็อบบี้ lifecycle LOBBY ใช้ LobbyView แยก CSS Modules กับลำดับวาดโต๊ะในcomponents/lobby/seats.ts ผู้ชมล่างโดยหมุนสำเนารายชื่อ ไม่เปลี่ยนseatOrderของserver CharacterAvatarอ่านavatarIdและartworkหน้าแรก RoomStatusเป็นpresentationสถานะร่วม ส่วนRoomClientยังถือSDK/commandsเดิม หน้าเล่นเกมยังเดิม ดูdocs/lobby-design.md
+
+มี `/preview` สำหรับดูUIด้วยข้อมูลตัวอย่าง แยก`RoomView`เป็นpresentationร่วมกับ`RoomClient` โดยadapterจริงยังถือAuth/realtime/command/storage ส่วน`RoomPreview`มีเฉพาะmemory callbacksและไม่เรียกFirebase/api ภาพในiframeใช้ขนาดจริงของviewport พร้อมqueryparametersเลือกscene/role/count/state การแก้UIจึงไม่ต้องทำสำเนาเกมอีกชุด ดูdocs/preview.md
+
 หน้าแรกใช้ referenceจาก home.html หน้าเกมยังเป็น UIชั่วคราวภาษาไทย responsiveและ semantic controls ไม่ยึด merchant-gate.htmlเป็นดีไซน์สุดท้าย M4ตรวจ responsive/accessibility/safe-area/reduced-motion/error/loadingแล้ว ภาพตกแต่งขั้นสุดท้ายของหน้าที่ยังไม่ได้เลือกพักไว้ การเปลี่ยน UIไม่ต้องเปลี่ยน engine
 
 ## จำนวนสำรับที่ยืนยันแล้ว

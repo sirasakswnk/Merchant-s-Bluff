@@ -1,0 +1,794 @@
+{
+  "checkedAt": "2026-10-12T14:38:38.108Z",
+  "comparisons": [
+    {
+      "width": 360,
+      "differences": [],
+      "fonts": {
+        "reference": {
+          "faces": [
+            {
+              "family": "Chonburi",
+              "status": "loaded"
+            },
+            {
+              "family": "Chonburi",
+              "status": "unloaded"
+            },
+            {
+              "family": "Chonburi",
+              "status": "unloaded"
+            },
+            {
+              "family": "Chonburi",
+              "status": "loaded"
+            },
+            {
+              "family": "Chonburi Fallback",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun Fallback",
+              "status": "unloaded"
+            },
+            {
+              "family": "__nextjs-Geist",
+              "status": "unloaded"
+            },
+            {
+              "family": "__nextjs-Geist Mono",
+              "status": "unloaded"
+            },
+            {
+              "family": "__nextjs-Geist",
+              "status": "unloaded"
+            },
+            {
+              "family": "__nextjs-Geist Mono",
+              "status": "unloaded"
+            }
+          ],
+          "titleFont": "Chonburi, Sarabun, \"Noto Sans Thai\", \"Leelawadee UI\", Thonburi, Loma, serif"
+        },
+        "app": {
+          "faces": [
+            {
+              "family": "Chonburi",
+              "status": "loaded"
+            },
+            {
+              "family": "Chonburi",
+              "status": "unloaded"
+            },
+            {
+              "family": "Chonburi",
+              "status": "unloaded"
+            },
+            {
+              "family": "Chonburi",
+              "status": "loaded"
+            },
+            {
+              "family": "Chonburi Fallback",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun Fallback",
+              "status": "loaded"
+            },
+            {
+              "family": "__nextjs-Geist",
+              "status": "unloaded"
+            },
+            {
+              "family": "__nextjs-Geist Mono",
+              "status": "unloaded"
+            },
+            {
+              "family": "__nextjs-Geist",
+              "status": "unloaded"
+            },
+            {
+              "family": "__nextjs-Geist Mono",
+              "status": "unloaded"
+            }
+          ],
+          "titleFont": "Chonburi, \"Chonburi Fallback\", Sarabun, \"Sarabun Fallback\", \"Noto Sans Thai\", \"Leelawadee UI\", Thonburi, Loma, serif"
+        }
+      },
+      "heroPixelExact": true,
+      "heroHashes": [
+        "0652b7f804d7c620a4485bf2a6a29d726c69c9c8e388b933d2b9170377773f76",
+        "0652b7f804d7c620a4485bf2a6a29d726c69c9c8e388b933d2b9170377773f76"
+      ]
+    },
+    {
+      "width": 390,
+      "differences": [],
+      "fonts": {
+        "reference": {
+          "faces": [
+            {
+              "family": "Chonburi",
+              "status": "loaded"
+            },
+            {
+              "family": "Chonburi",
+              "status": "unloaded"
+            },
+            {
+              "family": "Chonburi",
+              "status": "unloaded"
+            },
+            {
+              "family": "Chonburi",
+              "status": "loaded"
+            },
+            {
+              "family": "Chonburi Fallback",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun Fallback",
+              "status": "unloaded"
+            },
+            {
+              "family": "__nextjs-Geist",
+              "status": "unloaded"
+            },
+            {
+              "family": "__nextjs-Geist Mono",
+              "status": "unloaded"
+            },
+            {
+              "family": "__nextjs-Geist",
+              "status": "unloaded"
+            },
+            {
+              "family": "__nextjs-Geist Mono",
+              "status": "unloaded"
+            }
+          ],
+          "titleFont": "Chonburi, Sarabun, \"Noto Sans Thai\", \"Leelawadee UI\", Thonburi, Loma, serif"
+        },
+        "app": {
+          "faces": [
+            {
+              "family": "Chonburi",
+              "status": "loaded"
+            },
+            {
+              "family": "Chonburi",
+              "status": "unloaded"
+            },
+            {
+              "family": "Chonburi",
+              "status": "unloaded"
+            },
+            {
+              "family": "Chonburi",
+              "status": "loaded"
+            },
+            {
+              "family": "Chonburi Fallback",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun Fallback",
+              "status": "loaded"
+            },
+            {
+              "family": "__nextjs-Geist",
+              "status": "unloaded"
+            },
+            {
+              "family": "__nextjs-Geist Mono",
+              "status": "unloaded"
+            },
+            {
+              "family": "__nextjs-Geist",
+              "status": "unloaded"
+            },
+            {
+              "family": "__nextjs-Geist Mono",
+              "status": "unloaded"
+            }
+          ],
+          "titleFont": "Chonburi, \"Chonburi Fallback\", Sarabun, \"Sarabun Fallback\", \"Noto Sans Thai\", \"Leelawadee UI\", Thonburi, Loma, serif"
+        }
+      },
+      "heroPixelExact": true,
+      "heroHashes": [
+        "1ba267c3438cb175b2f2911d67084a2d953ae358ade115bcd1cf30ed5e5903f2",
+        "1ba267c3438cb175b2f2911d67084a2d953ae358ade115bcd1cf30ed5e5903f2"
+      ]
+    },
+    {
+      "width": 430,
+      "differences": [],
+      "fonts": {
+        "reference": {
+          "faces": [
+            {
+              "family": "Chonburi",
+              "status": "loaded"
+            },
+            {
+              "family": "Chonburi",
+              "status": "unloaded"
+            },
+            {
+              "family": "Chonburi",
+              "status": "unloaded"
+            },
+            {
+              "family": "Chonburi",
+              "status": "loaded"
+            },
+            {
+              "family": "Chonburi Fallback",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun Fallback",
+              "status": "unloaded"
+            },
+            {
+              "family": "__nextjs-Geist",
+              "status": "unloaded"
+            },
+            {
+              "family": "__nextjs-Geist Mono",
+              "status": "unloaded"
+            },
+            {
+              "family": "__nextjs-Geist",
+              "status": "unloaded"
+            },
+            {
+              "family": "__nextjs-Geist Mono",
+              "status": "unloaded"
+            }
+          ],
+          "titleFont": "Chonburi, Sarabun, \"Noto Sans Thai\", \"Leelawadee UI\", Thonburi, Loma, serif"
+        },
+        "app": {
+          "faces": [
+            {
+              "family": "Chonburi",
+              "status": "loaded"
+            },
+            {
+              "family": "Chonburi",
+              "status": "unloaded"
+            },
+            {
+              "family": "Chonburi",
+              "status": "unloaded"
+            },
+            {
+              "family": "Chonburi",
+              "status": "loaded"
+            },
+            {
+              "family": "Chonburi Fallback",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun Fallback",
+              "status": "loaded"
+            },
+            {
+              "family": "__nextjs-Geist",
+              "status": "unloaded"
+            },
+            {
+              "family": "__nextjs-Geist Mono",
+              "status": "unloaded"
+            },
+            {
+              "family": "__nextjs-Geist",
+              "status": "unloaded"
+            },
+            {
+              "family": "__nextjs-Geist Mono",
+              "status": "unloaded"
+            }
+          ],
+          "titleFont": "Chonburi, \"Chonburi Fallback\", Sarabun, \"Sarabun Fallback\", \"Noto Sans Thai\", \"Leelawadee UI\", Thonburi, Loma, serif"
+        }
+      },
+      "heroPixelExact": true,
+      "heroHashes": [
+        "9e4db37b9fbe164cbd6fa83f3568ffe5b47688dc261e088b49cf721d88bade0a",
+        "9e4db37b9fbe164cbd6fa83f3568ffe5b47688dc261e088b49cf721d88bade0a"
+      ]
+    },
+    {
+      "width": 1280,
+      "differences": [],
+      "fonts": {
+        "reference": {
+          "faces": [
+            {
+              "family": "Chonburi",
+              "status": "loaded"
+            },
+            {
+              "family": "Chonburi",
+              "status": "unloaded"
+            },
+            {
+              "family": "Chonburi",
+              "status": "unloaded"
+            },
+            {
+              "family": "Chonburi",
+              "status": "loaded"
+            },
+            {
+              "family": "Chonburi Fallback",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun Fallback",
+              "status": "unloaded"
+            },
+            {
+              "family": "__nextjs-Geist",
+              "status": "unloaded"
+            },
+            {
+              "family": "__nextjs-Geist Mono",
+              "status": "unloaded"
+            },
+            {
+              "family": "__nextjs-Geist",
+              "status": "unloaded"
+            },
+            {
+              "family": "__nextjs-Geist Mono",
+              "status": "unloaded"
+            }
+          ],
+          "titleFont": "Chonburi, Sarabun, \"Noto Sans Thai\", \"Leelawadee UI\", Thonburi, Loma, serif"
+        },
+        "app": {
+          "faces": [
+            {
+              "family": "Chonburi",
+              "status": "loaded"
+            },
+            {
+              "family": "Chonburi",
+              "status": "unloaded"
+            },
+            {
+              "family": "Chonburi",
+              "status": "unloaded"
+            },
+            {
+              "family": "Chonburi",
+              "status": "loaded"
+            },
+            {
+              "family": "Chonburi Fallback",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "unloaded"
+            },
+            {
+              "family": "Sarabun",
+              "status": "loaded"
+            },
+            {
+              "family": "Sarabun Fallback",
+              "status": "loaded"
+            },
+            {
+              "family": "__nextjs-Geist",
+              "status": "unloaded"
+            },
+            {
+              "family": "__nextjs-Geist Mono",
+              "status": "unloaded"
+            },
+            {
+              "family": "__nextjs-Geist",
+              "status": "unloaded"
+            },
+            {
+              "family": "__nextjs-Geist Mono",
+              "status": "unloaded"
+            }
+          ],
+          "titleFont": "Chonburi, \"Chonburi Fallback\", Sarabun, \"Sarabun Fallback\", \"Noto Sans Thai\", \"Leelawadee UI\", Thonburi, Loma, serif"
+        }
+      },
+      "heroPixelExact": true,
+      "heroHashes": [
+        "dfdfbc334cbf223fe12dd65e179602d0c28e59c1241b9082c13a9dfd2bd90c0f",
+        "dfdfbc334cbf223fe12dd65e179602d0c28e59c1241b9082c13a9dfd2bd90c0f"
+      ]
+    }
+  ],
+  "errors": []
+}

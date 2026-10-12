@@ -1,0 +1,95 @@
+{
+  "checkedAt": "2026-10-12T16:08:14.934Z",
+  "typecheck": "passed",
+  "lint": "passed",
+  "productionBuild": "passed",
+  "cases": [
+    {
+      "title": "home supports keyboard, touch sizes, high contrast, readable reflow, reduced motion and HTTP-safe IDs",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 12484
+        }
+      ]
+    },
+    {
+      "title": "5 browser players finish 10 rounds; retry, offline and tab controls preserve the game",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 61918
+        }
+      ]
+    },
+    {
+      "title": "preview controls use shared room screens without Firebase, API commands or player-storage writes",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1758
+        }
+      ]
+    },
+    {
+      "title": "preview renders all scenes and viewpoints, 4/5/6 players, state presets and actual iframe widths",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5837
+        }
+      ]
+    }
+  ],
+  "expected": 4,
+  "unexpected": 0,
+  "previewScenes": 11,
+  "roles": 2,
+  "playerCounts": [
+    4,
+    5,
+    6
+  ],
+  "statePresets": 7,
+  "frameWidths": [
+    360,
+    390,
+    430,
+    1280
+  ],
+  "previewApiAndFirebaseRequests": 0,
+  "playerStoragePreserved": true,
+  "liveRegression": {
+    "players": 5,
+    "rounds": 10,
+    "environment": "local Firebase Emulators",
+    "retryOfflineTakeover": true
+  },
+  "screenshots": [
+    {
+      "label": "studio",
+      "width": 1280,
+      "path": "work/verification/preview-route/studio.png"
+    },
+    {
+      "label": "studio-mobile",
+      "width": 390,
+      "path": "work/verification/preview-route/studio-mobile.png"
+    },
+    {
+      "label": "glow",
+      "width": 390,
+      "path": "work/verification/preview-route/glow.png"
+    },
+    {
+      "label": "scores",
+      "width": 1280,
+      "path": "work/verification/preview-route/scores.png"
+    }
+  ],
+  "deployed": false
+}

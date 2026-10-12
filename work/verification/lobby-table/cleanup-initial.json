@@ -1,0 +1,6 @@
+{
+  "environment": "local Auth emulator",
+  "removedAnonymousUsers": 1,
+  "matchedFirstAttemptWindow": true,
+  "notRoomMember": true
+}
