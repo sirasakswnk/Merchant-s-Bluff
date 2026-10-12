@@ -1,6 +1,22 @@
 # Progress — 12 ตุลาคม 2026
 
-## ขั้นตอนล่าสุด — Retention 24 ชั่วโมงผ่านการตรวจบน Preview
+## ขั้นตอนล่าสุด — เตรียม Production environment โดยใช้ Firebase ร่วมตามอนุมัติ
+
+ผู้ใช้ระบุ `merchant-s-bluff` และยืนยันให้ใช้ Firebase ร่วมกันสำหรับเว็บเล่นกับเพื่อน จึงบันทึกข้อยกเว้นจากแผนแยก project เดิม: Preview/Production ใช้ Auth/RTDB ชุดเดียวกัน แต่ตัวแปร Vercel แยก scope คงแผนฟรี ไม่คำนวณค่าใช้จ่าย ไม่สร้าง project หรือเปลี่ยน Rules ในขั้นนี้
+
+เตรียม `.env.production.local` แบบ ignored โดยคง Emulator/Preview files เดิม เพิ่ม Production-only variables 14 ชื่อบน Vercel ตรวจ Config readback 12 ค่าตรง; `FIREBASE_PRIVATE_KEY`/`CRON_SECRET` เป็น Secret และ Preview variables/protection เดิม Node 24.x / sin1; `RETENTION_APPLY_ENABLED=false` ยืนยันจาก Config readback
+
+ตัวตรวจ 10/10 และ deployment checker 7 กรณีผ่าน OAuth/Rules/Auth read-only ผ่าน (Rules hash ตรง source/root deny/Anonymous enabled), local production build+TypeScript ผ่าน HTTP health200/dev404/unauth-create401/maintenance-no-Bearer401/valid-Bearer200 dry-run ผ่าน Bundle14ไฟล์ไม่มีprivate key/email/Cron secret/server module ไม่มีdemo ไม่สร้างห้องหรือบัญชี ไม่ล้างห้อง และหยุดserverตรวจแล้ว
+
+ยังไม่ deploy เว็บไซต์ Production และผล HTTP เป็น local production build ที่จำลอง `VERCEL_ENV=production` ไม่ใช่ผลจาก URL Production สาขาProductionยังmainซึ่งเป็นโค้ดรุ่นเริ่มต้น โค้ดล่าสุดอยู่preview ต้องใช้รุ่นล่าสุดในการเผยแพร่ขั้นถัดไป คู่มือ `docs/production-setup.md` หลักฐาน `verification/firebase-production/report.md` ขั้นนี้เสร็จแล้ว หยุดรอคำสั่งสำหรับ deploy และตรวจ URL Production จริง
+
+## ประวัติ — คงแผนฟรีและข้ามการคำนวณค่าใช้จ่ายตามผู้ใช้
+
+ผู้ใช้เลือกข้ามการคำนวณค่าใช้จ่าย เพราะเว็บใช้เล่นกับเพื่อนและใช้ free plan จึงยุติงานคำนวณต้นทุนและเปรียบเทียบแพ็กเกจ บันทึกใน `docs/free-plan-decision.md` ตรวจ Vercel team ที่ผูกกับโปรเจกต์แล้วเป็น Hobby/active ส่วน Firebase free plan เป็นข้อมูลที่ผู้ใช้ยืนยัน ไม่อ้างว่าตรวจ billing/usage ได้หรือรับประกันยอดศูนย์
+
+Vercel usage CLI ไม่มี cost data ของช่วงนี้ และ metrics ต้องใช้ Observability Plus; service account อ่าน Firebase billing/monitoring ไม่ได้ ไม่อัปเกรดหรือเปลี่ยนสิทธิ์เพื่ออ่าน ไม่มีการแก้ engine/backend/UI/Rules/env หรือเปิด Production/Cron ขั้นนี้เป็นการบันทึกการตัดสินใจ จึงตรวจเฉพาะเอกสารและ Git diff ขั้นถัดไปเตรียม environment ใช้งานแยกจาก Preview ตามแผน โดยคงแผนฟรี
+
+## ประวัติ — Retention 24 ชั่วโมงผ่านการตรวจบน Preview
 
 ผู้ใช้แจ้งว่าเล่นหลายคนกับเพื่อนผ่านแล้วและให้เริ่มงานretention พร้อมเลือกเก็บ1วันทั้งหมด จึงเพิ่มmetadataนอกgame snapshotสำหรับLOBBY/FINISHED/ABORTED เมื่อไม่มีAPIที่ถูกต้องมาใช้24ชั่วโมงและไม่มีคนออนไลน์ ส่วนPLAYINGไม่ล้างและlegacyไม่มีmetadataถูกข้าม เกม0.1/0.2/rulesVersion/ราคา/สำรับไม่เปลี่ยน M4ภาพสุดท้ายยังพัก
 

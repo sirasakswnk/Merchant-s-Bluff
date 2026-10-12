@@ -1,0 +1,247 @@
+{
+  "checkedAt": "2026-10-12T09:44:52.766Z",
+  "project": "merchant-s-bluff",
+  "projectId": "prj_sHBgyJCUNYQYl3mIfGgNYUWStx7I",
+  "teamId": "team_7r4uc6GwzzgfmnkaHkYgs5QL",
+  "sharedFirebaseApproved": true,
+  "productionOnly": true,
+  "passed": true,
+  "previewVariablesUnchanged": true,
+  "deploymentProtectionUnchanged": true,
+  "automaticDeletionEnabled": false,
+  "nodeVersion": "24.x",
+  "functionRegion": "sin1",
+  "productionBranch": "main",
+  "variables": [
+    {
+      "key": "NEXT_PUBLIC_USE_FIREBASE_EMULATORS",
+      "type": "config",
+      "target": [
+        "production"
+      ],
+      "exitCode": 0
+    },
+    {
+      "key": "NEXT_PUBLIC_FIREBASE_API_KEY",
+      "type": "config",
+      "target": [
+        "production"
+      ],
+      "exitCode": 0
+    },
+    {
+      "key": "NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN",
+      "type": "config",
+      "target": [
+        "production"
+      ],
+      "exitCode": 0
+    },
+    {
+      "key": "NEXT_PUBLIC_FIREBASE_PROJECT_ID",
+      "type": "config",
+      "target": [
+        "production"
+      ],
+      "exitCode": 0
+    },
+    {
+      "key": "NEXT_PUBLIC_FIREBASE_DATABASE_URL",
+      "type": "config",
+      "target": [
+        "production"
+      ],
+      "exitCode": 0
+    },
+    {
+      "key": "NEXT_PUBLIC_FIREBASE_APP_ID",
+      "type": "config",
+      "target": [
+        "production"
+      ],
+      "exitCode": 0
+    },
+    {
+      "key": "FIREBASE_PROJECT_ID",
+      "type": "config",
+      "target": [
+        "production"
+      ],
+      "exitCode": 0
+    },
+    {
+      "key": "FIREBASE_DATABASE_URL",
+      "type": "config",
+      "target": [
+        "production"
+      ],
+      "exitCode": 0
+    },
+    {
+      "key": "FIREBASE_CLIENT_EMAIL",
+      "type": "config",
+      "target": [
+        "production"
+      ],
+      "exitCode": 0
+    },
+    {
+      "key": "FIREBASE_PRIVATE_KEY",
+      "type": "secret",
+      "target": [
+        "production"
+      ],
+      "exitCode": 0
+    },
+    {
+      "key": "NODE_OPTIONS",
+      "type": "config",
+      "target": [
+        "production"
+      ],
+      "exitCode": 0
+    },
+    {
+      "key": "CRON_SECRET",
+      "type": "secret",
+      "target": [
+        "production"
+      ],
+      "exitCode": 0
+    },
+    {
+      "key": "RETENTION_APPLY_ENABLED",
+      "type": "config",
+      "target": [
+        "production"
+      ],
+      "exitCode": 0
+    },
+    {
+      "key": "RETENTION_FIREBASE_PROJECT_ID",
+      "type": "config",
+      "target": [
+        "production"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "metadata": [
+    {
+      "key": "CRON_SECRET",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "secret": true
+    },
+    {
+      "key": "FIREBASE_CLIENT_EMAIL",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "secret": false
+    },
+    {
+      "key": "FIREBASE_DATABASE_URL",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "secret": false
+    },
+    {
+      "key": "FIREBASE_PRIVATE_KEY",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "secret": true
+    },
+    {
+      "key": "FIREBASE_PROJECT_ID",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "secret": false
+    },
+    {
+      "key": "NEXT_PUBLIC_FIREBASE_API_KEY",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "secret": false
+    },
+    {
+      "key": "NEXT_PUBLIC_FIREBASE_APP_ID",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "secret": false
+    },
+    {
+      "key": "NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "secret": false
+    },
+    {
+      "key": "NEXT_PUBLIC_FIREBASE_DATABASE_URL",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "secret": false
+    },
+    {
+      "key": "NEXT_PUBLIC_FIREBASE_PROJECT_ID",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "secret": false
+    },
+    {
+      "key": "NEXT_PUBLIC_USE_FIREBASE_EMULATORS",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "secret": false
+    },
+    {
+      "key": "NODE_OPTIONS",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "secret": false
+    },
+    {
+      "key": "RETENTION_APPLY_ENABLED",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "secret": false
+    },
+    {
+      "key": "RETENTION_FIREBASE_PROJECT_ID",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "secret": false
+    }
+  ],
+  "finalMetadataCheckedAt": "2026-10-12T09:49:12.370Z",
+  "productionWebsiteDeployed": false,
+  "configReadbackMatches": true,
+  "secretsNotPulled": true
+}

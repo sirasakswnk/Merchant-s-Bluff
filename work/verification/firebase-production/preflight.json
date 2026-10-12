@@ -1,0 +1,32 @@
+{
+  "checkedAt": "2026-10-12T09:42:42.127Z",
+  "projectId": "merchant-s-bluff",
+  "sharedFirebaseApproved": true,
+  "readOnly": true,
+  "roomsCreated": 0,
+  "authUsersCreated": 0,
+  "rulesDeployed": false,
+  "checks": {
+    "environment": {
+      "ready": true,
+      "required": 10,
+      "present": 10,
+      "issues": []
+    },
+    "oauth": {
+      "passed": true
+    },
+    "rules": {
+      "sourceMatches": true,
+      "rootReadDenied": true,
+      "rootWriteDenied": true,
+      "sha256": "288488b1448de6b372a0e2c3a7a7d42da98d54fc9da1a21bdb160e1f51dcb085"
+    },
+    "auth": {
+      "configurationReadStatus": 200,
+      "anonymousEnabled": true,
+      "authorizedDomainsCount": 3
+    }
+  },
+  "passed": true
+}

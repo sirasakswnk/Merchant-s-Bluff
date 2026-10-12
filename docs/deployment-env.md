@@ -1,8 +1,14 @@
 # เตรียม environment สำหรับ Vercel / Firebase
 
+## สถานะล่าสุด — เตรียม Production แล้ว
+
+12 ตุลาคม 2026 ผู้ใช้อนุมัติให้ใช้ Firebase `merchant-s-bluff` ร่วมกันสำหรับ Preview/Production เป็นข้อยกเว้นจากแผนเดิม เพิ่ม Production-only variables 14 ชื่อบน Vercelแล้ว private key และ Cron secret เป็น Secret, Config readback ตรง, Preview variables เดิม ตรวจ credentials/Rules/Auth/build/local HTTP ผ่าน ระบบล้างอัตโนมัติยังปิดและยังไม่ deploy เว็บไซต์ Production ดู [รายละเอียดและผลตรวจ](production-setup.md)
+
+ใช้ `.env.production.local` สำหรับการตรวจ Production ในเครื่อง ไฟล์จริงถูก ignore และไม่แทนที่ `.env.local` ของ Emulator หรือ `.env.preview.local` ทุก environment ใช้ข้อมูล Firebase ชุดเดียวกันตามคำอนุมัติล่าสุด ข้อความเรื่องแยก Firebase ในประวัติด้านล่างเป็นแผนก่อนอนุมัติข้อยกเว้น
+
 Firebase Preview project `merchant-s-bluff` พร้อม credentials และเผยแพร่ RTDB Rules ตามอนุมัติแล้ว ทดสอบ browser/API multiplayer บน Vercel Preview กับ Firebase Auth/RTDB จริงครบ4/5/6คนจนจบเกม และ live privacy51กรณีผ่าน ปัจจุบันเกมใหม่ใช้สำรับ360ใบ/rulesVersion0.2ตามการอนุมัติ ส่วนเกมที่เริ่มแล้วคง snapshot เดิม
 
-## Vercel Preview ที่ตรวจจริง — 12 ตุลาคม 2026
+## ประวัติ Vercel Preview ที่ตรวจจริง — 12 ตุลาคม 2026
 
 Project `merchant-s-bluff` ใน `mingmings-projects-c4169f4b` เชื่อม GitHub `sirasakswnk/Merchant-s-Bluff` แล้ว ใช้ Next.js preset, Node24.x และ Functions sin1 ตั้ง10ค่าด้านล่างเฉพาะPreview พร้อม `NODE_OPTIONS=--experimental-require-module` หลังruntimeจริงพบERR_REQUIRE_ESMจากFirebase Admin/jwks-rsa/jose Private keyเป็นSecret ไม่มีProduction application variablesหรือEmulator variablesบนบริการ
 
@@ -14,7 +20,7 @@ Automation bypassที่CLIสร้างในรอบก่อนถูก
 
 Git push ไปbranch `preview` ใช้buildตามปกติ ไม่ตั้งIgnored Build Step รอบส่งเอกสารพบว่าcommandที่ต้องใช้Git checkoutล้มด้วย `git_invalid_command` จึงเอาoverrideออกแล้ว ไม่เปลี่ยนapp sourceจากcommitที่เล่นครบ หากแก้environmentให้redeployใหม่ตามworkflowของVercel
 
-ใช้ `.env.example` สำหรับ local Emulator ใช้ `.env.production.example` เป็นแม่แบบว่างสำหรับ Preview/Production โดยกรอกค่าแยกกันตาม Firebase project ของ environment นั้น Preview ต้องไม่ใช้ฐานข้อมูลเกมจริงของ Production
+ใช้ `.env.example` สำหรับ local Emulator และ `.env.production.example` เป็นแม่แบบว่างสำหรับ Preview/Production โดยกรอกค่าให้ตรง environment ในการตั้งครั้งแรก ปัจจุบันผู้ใช้อนุมัติให้ Preview/Production ใช้ Firebase project เดียวกันตาม production-setup.md
 
 ## ประวัติ Firebase และ local build — 12 ตุลาคม 2026
 
@@ -37,7 +43,7 @@ node work/runtime/firebase-preview/next-preview.mjs start --hostname 127.0.0.1 -
 
 ผู้ใช้วาง JSON ชื่อเดิมจาก Firebase ไว้ใน `work/runtime/firebase-preview/` แล้ว ตรวจตัวตนของ service account/key และนำ `client_email`/`private_key` เข้า server env ในเครื่องโดยไม่พิมพ์ค่าออก log หรือแชท ไม่สร้าง key เพิ่มหรือเปลี่ยนชื่อไฟล์ ไม่รวม JSON/env ที่มี key กับ source หากต้องเตรียมเครื่องใหม่ใช้ key ที่ผู้ใช้จัดเตรียมในเครื่องตามแนวทางเดียวกัน
 
-ผลlocalproductionfrontend/backendกับFirebasePreviewเป็นประวัติคนละรอบกับผลVercelล่าสุด ทั้งสองรอบมีหลักฐานแยกกัน Productionต้องแยกproject/configจากPreviewก่อนใช้งานจริง
+ผลlocalproductionfrontend/backendกับFirebasePreviewเป็นประวัติคนละรอบกับผลVercel ทั้งสองรอบมีหลักฐานแยกกัน Production config ชุดปัจจุบันเตรียมแล้วโดยใช้ Firebase ร่วมตามคำอนุมัติ ยังต้องตรวจ URL Production หลัง deploy
 
 ## ค่าที่ต้องตั้ง
 
@@ -61,7 +67,7 @@ Private key รองรับ PEM หลายบรรทัดหรือข
 ## ตรวจในเครื่อง
 
 ```powershell
-Copy-Item .env.production.example .env.production.local
+if (-not (Test-Path .env.production.local)) { Copy-Item .env.production.example .env.production.local }
 # กรอกค่าจริงใน .env.production.local ผ่าน editor
 node --env-file=.env.production.local scripts/check-deployment-env.mjs
 npm.cmd run test:deployment

@@ -1,0 +1,40 @@
+{
+  "checkedAt": "2026-10-12T09:47:06.403Z",
+  "server": "local production build",
+  "vercelEnvironmentSimulated": "production",
+  "projectId": "merchant-s-bluff",
+  "readOnly": true,
+  "roomsCreated": 0,
+  "authUsersCreated": 0,
+  "api": {
+    "GET /api/health": 200,
+    "POST /api/dev/connect": 404,
+    "POST /api/rooms/create": 401,
+    "GET /api/maintenance/retention withoutAuth": 401,
+    "GET /api/maintenance/retention authenticated": 200
+  },
+  "bundle": {
+    "files": 14,
+    "privateCredentialHits": [],
+    "serverMarkerHits": [],
+    "actualProjectPresent": true,
+    "demoProjectPresent": false,
+    "cronSecretIncludedInScan": true
+  },
+  "passed": true,
+  "cleanup": {
+    "ownServerStopped": true
+  },
+  "maintenance": {
+    "mode": "dry-run",
+    "busy": false,
+    "batches": 1,
+    "candidates": 0,
+    "counts": {
+      "legacy-or-invalid": 2
+    },
+    "hasMore": false
+  },
+  "automaticDeletionEnabled": false,
+  "previousEnvironmentFilesUnchanged": true
+}

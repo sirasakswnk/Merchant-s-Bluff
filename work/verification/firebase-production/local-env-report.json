@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-12T09:41:53.486Z",
+  "sharedFirebaseApprovedByUser": true,
+  "projectId": "merchant-s-bluff",
+  "file": ".env.production.local",
+  "fileIgnored": true,
+  "firebaseValidation": {
+    "ready": true,
+    "required": 10,
+    "present": 10,
+    "issues": []
+  },
+  "cronSecretGeneratedLocally": true,
+  "cronSecretLogged": false,
+  "automaticDeletionEnabled": false,
+  "previewFileModified": false,
+  "emulatorFileModified": false
+}

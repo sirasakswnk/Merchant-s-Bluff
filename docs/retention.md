@@ -34,6 +34,8 @@ Manifestเก็บใน `work/runtime/retention/plan.json` เท่านั
 
 ## Vercel Cron สำหรับขั้นProduction
 
+สถานะล่าสุด 12 ตุลาคม 2026: เตรียม Production environment โดยใช้ Firebase ร่วมกับ Preview ตามคำอนุมัติผู้ใช้แล้ว มี `CRON_SECRET` เป็น Secret, `RETENTION_FIREBASE_PROJECT_ID=merchant-s-bluff` และ `RETENTION_APPLY_ENABLED=false` ตรวจ readback/local HTTP dry-run ผ่าน ยังไม่ deploy เว็บไซต์ Production หรือเปิดการล้างอัตโนมัติ ดู [Production setup](production-setup.md)
+
 เตรียม `GET /api/maintenance/retention` และdaily cronในvercel.json เวลา20:00UTC (03:00ไทย) ต้องมี `CRON_SECRET` ความยาวอย่างน้อย32ตัวและBearerตรงกัน มิฉะนั้น404/401ก่อนเปิดdatabase
 
 การล้างอัตโนมัติต้องตั้งครบทั้ง `RETENTION_APPLY_ENABLED=true`, `VERCEL_ENV=production` และ `RETENTION_FIREBASE_PROJECT_ID` ตรง `FIREBASE_PROJECT_ID` ที่ตรวจไว้ ตั้งSecretอย่างเดียวไม่เปิดการล้าง Previewไม่สามารถเปิดapplyผ่านHTTPได้ ตั้งenvเมื่อProduction project/configพร้อมและตรวจRulesแล้ว ไม่ใช้secretในNEXT_PUBLIC_หรือส่งในแชท

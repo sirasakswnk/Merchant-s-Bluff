@@ -501,10 +501,10 @@ Definition of Done นี้ผ่านการทวนใน local/Emulators
 
 ## 11. Vercel / Firebase deployment checklist (revision 0.2)
 
-- [x] Firebase Preview project `merchant-s-bluff` มี Realtime Databaseที่SingaporeและAnonymous Auth พร้อมทดสอบจริงแล้ว Production projectยังต้องแยกในขั้นถัดไป
-- [ ] แยก development/preview ออกจาก production Firebase project/database ไม่ใช้ preview เขียนเกมจริง
+- [x] Firebase project `merchant-s-bluff` มี Realtime Databaseที่SingaporeและAnonymous Auth พร้อมทดสอบจริงแล้ว 12ตุลาคมผู้ใช้อนุมัติให้ใช้ร่วมกับProductionสำหรับเว็บเล่นกับเพื่อน
+- [x] ยืนยันนโยบาย environment ตามผู้ใช้:ใช้ Firebase Auth/RTDB ชุดเดียวกันสำหรับ Preview/Production เป็นข้อยกเว้นจากแผนแยกprojectเดิม แยกเฉพาะVercel variable scopes; Production14ตัวพร้อมและlocalchecksผ่าน ยังไม่deployเว็บไซต์Production ดูdocs/production-setup.md
 - [x] Public Firebase web config ใช้NEXT_PUBLIC_ในPreview; privacyจริง51assertionsผ่าน สิทธิ์ข้อมูลคุ้มครองด้วย Auth/Rules/API
-- [x] Admin credentials เก็บVercelPreview server-only variables, private keyเป็นSecret; staged auditไม่มีcredentials/service-account/envและdeployedJS9responsesไม่มีkey/email
+- [x] Admin credentials เก็บVercelPreview/Production server-only variables, private keyเป็นSecret; ProductionCron secretเป็นSecret; Preview valuesเดิม ConfigProduction readbackตรง BundlelocalProduction14filesไม่มีkey/email/Cron secret ดูwork/verification/firebase-production/ ส่วนdeployedJS9responsesที่ผ่านเป็นผลPreviewเดิม
 - [x] Document env เช่น NEXT_PUBLIC_FIREBASE_API_KEY, AUTH_DOMAIN, DATABASE_URL, PROJECT_ID, APP_ID (ทุก client key ใช้ prefix ตาม framework) และ server FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY, FIREBASE_DATABASE_URL — docs/deployment-env.md และ .env.production.example; ตรวจ script 7 tests/lint/typecheck ผ่าน ขั้นนี้ยังไม่ตั้งค่าบริการจริง
 - [x] แยก Admin SDK module ด้วย server-only import และตรวจ client bundle14filesไม่มีprivate key/email/Admin markers พร้อมpublicconfigจริง
 - [x] Deploy database.rules.json ไปยังFirebasePreviewตามอนุมัติและอ่านกลับตรงsource พร้อมliveprivacy51assertionsผ่าน แยกจากdeployVercel Production Rulesของprojectแยกยังต้องตรวจภายหลัง
@@ -518,7 +518,7 @@ Definition of Done นี้ผ่านการทวนใน local/Emulators
 - [ ] ทดสอบหลาย API instances เขียนห้องเดียวกัน, callback retry, request timeout หลัง commit, listener reconnect และ cold start
 - [ ] ทดสอบสมาชิกอ่าน private ของเพื่อน/authoritative/root ไม่ได้; non-member อ่าน public ไม่ได้; client แก้เงิน/ไพ่/roles ไม่ได้
 - [x] Retentionตามอนุมัติ1วัน:metadataแยกเกม, dry-run/applyกับproject guard,online/PLAYING/legacy guards,transactions/presence fenceและworker recovery ตรวจ89unit/28integration/17E2E/livefixturesผ่าน เตรียมCronรอProduction ดูdocs/retention.md
-- [ ] ตรวจusageจริง/ข้อจำกัดบริการก่อนเลือกplanและเปิดProduction ไม่รับประกันค่าใช้จ่ายเป็นศูนย์ ขอบเขตhistory/subscriptionsและการถอดlistenerใช้ตามimplementationเดิม
+- [x] บันทึกการเลือกแผนฟรีสำหรับเล่นกับเพื่อน: 12ตุลาคมผู้ใช้เลือกข้ามการคำนวณค่าใช้จ่ายและการเปรียบเทียบแพ็กเกจ ตรวจVercelเป็นHobby/active; Firebase free planผู้ใช้ยืนยัน ไม่ถือว่าตรวจยอดusageจริงผ่านหรือรับประกันยอดศูนย์ ดูdocs/free-plan-decision.md ขอบเขตhistory/subscriptionsและการถอดlistenerใช้ตามimplementationเดิม
 - [x] ทดสอบlocalproductionและVercelPreview browser/API→Firebaseจริงครบ4/5/6คนจนจบ8/10/12รอบ conservation311จุด/360ใบไม่ซ้ำหาย, privacy51assertionsผ่าน มีURLที่ตรวจแล้ว ดูwork/verification/vercel-preview/report.md
 
 M0 เพิ่มการตั้ง Firebase SDK/Admin SDK + emulators; M2 เพิ่ม Rules และ transactions; M5 เพิ่ม deployment checklist นี้ กติกาและตัวเลขสินค้าทุกส่วนคงเดิม

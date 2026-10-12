@@ -2,6 +2,8 @@
 
 เว็บเกมภาษาไทยสำหรับเพื่อน 4–6 คนตาม [plan.md](plan.md) กติกา 0.2
 
+Production environment เตรียมแล้ว: Vercel variables 14 ตัวใน scope Production, Secret สำหรับ private key/Cron, local build/API/credentials checks ผ่าน ผู้ใช้อนุมัติให้ใช้ Firebase `merchant-s-bluff` ร่วมกับ Preview และคงแผนฟรี เว็บไซต์ Production ยังไม่ deploy และ automatic deletion ยังปิด ดู [Production setup](docs/production-setup.md)
+
 สถานะ: **Vercel Preview deploy และ multiplayer กับ Firebaseจริงผ่านแล้ว** Engine, backend, data access และ UI แยกกัน Browser contexts 4/5/6 คนเล่นครบ8/10/12รอบบนVercel พร้อมconservation311จุด/ไพ่360ไม่ซ้ำหาย, privacy51กรณีและrecoveryผ่าน ผลอยู่ [work/progress.md](work/progress.md) และ [รายงานVercel Preview](work/verification/vercel-preview/report.md)
 
 [เปิด Preview ที่ทดสอบแล้ว](https://merchant-s-bluff-buombdlfv-mingmings-projects-c4169f4b.vercel.app) — Deployment Protectionเปิดอยู่ ต้องใช้บัญชีVercelที่เข้าถึงprojectได้ Sourceอยู่ใน [GitHub](https://github.com/sirasakswnk/Merchant-s-Bluff) branch `preview`; commitที่ทดสอบ `77e9660` ยังไม่มีProduction release
@@ -96,14 +98,14 @@ Next.js Node.js Route Handlers บน Vercel กับ Firebase Auth/RTDB ไม
 
 แม่แบบ Preview/Production และวิธีตรวจค่าก่อนเชื่อมบริการจริง: [docs/deployment-env.md](docs/deployment-env.md) ใช้ `.env.production.example` และ `npm.cmd run check:deployment` (ตรวจ process env) หรือ `node --env-file=.env.production.local scripts/check-deployment-env.mjs` (ระบุไฟล์) ผลผ่านยังไม่ใช่การยืนยันสิทธิ์/Rules บน Firebase จริง
 
-1. สร้าง Firebase projects แยก development/preview/production เปิด Anonymous Auth และ RTDB
+1. ใช้ Firebase project `merchant-s-bluff` ที่เปิด Anonymous Auth และ RTDB แล้ว Preview/Production ใช้ร่วมกันตามคำอนุมัติผู้ใช้ ส่วน local/test ใช้ Emulator
 2. ตั้ง public keys ตาม `.env.example` เป็น project จริง ตั้ง `NEXT_PUBLIC_USE_FIREBASE_EMULATORS=false` ลบ `FIREBASE_AUTH_EMULATOR_HOST`/`FIREBASE_DATABASE_EMULATOR_HOST` จาก deployment env
 3. ตั้ง server-only `FIREBASE_PROJECT_ID`, `FIREBASE_DATABASE_URL`, `FIREBASE_CLIENT_EMAIL`, `FIREBASE_PRIVATE_KEY` ห้าม prefix private credentialsด้วย NEXT_PUBLIC_ หรือ commit service account JSON
 4. ตั้ง Node.js 24.x ใน Vercel, installจาก lockfile, build `npm run build` ใช้ Next.js preset Previewนี้ตั้ง `NODE_OPTIONS=--experimental-require-module` หลังตรวจERR_REQUIRE_ESMจากFirebase Adminบนruntimeจริง
 5. Deploy Rulesแยก: `npx firebase deploy --only database --project <project-id> --config firebase.json` เว็บ deployไม่ได้อัปเดต Rulesให้เอง
 6. เพิ่ม domainsที่จำเป็นใน Firebase Auth และทดสอบ previewเมื่อมี credentials/deploymentที่อนุญาต
 
-Rulesจริง deny root/authoritative/code index/client game writes อนุญาตเฉพาะสมาชิกอ่าน public, เจ้าของอ่าน private และเขียน presence ของตัวเองที่ผ่าน validation Emulator Rules เพิ่ม healthChecks เจ้าของเพื่อ diagnostics เท่านั้น ห้าม deployไฟล์ emulator Rulesจริง PreviewมีURLและทดสอบจริงแล้ว ส่วนProductionยังต้องแยกFirebase projectและตรวจretention/usageก่อนเปิด
+Rulesจริง deny root/authoritative/code index/client game writes อนุญาตเฉพาะสมาชิกอ่าน public, เจ้าของอ่าน private และเขียน presence ของตัวเองที่ผ่าน validation Emulator Rules เพิ่ม healthChecks เจ้าของเพื่อ diagnostics เท่านั้น ห้าม deployไฟล์ emulator Rulesจริง PreviewมีURLและทดสอบจริงแล้ว Productionconfigพร้อมโดยใช้Firebaseร่วมกันตามอนุมัติ ยังต้องdeployและตรวจURLจริง ใช้แผนฟรีสำหรับเล่นกับเพื่อนตามการตัดสินใจล่าสุด
 
 M2 implementation defaults: รหัสห้อง 4 ตัวไม่ใช้ I/O/0/1 ชื่อ 1–16 ตัวและ avatar 0–7 ตาม home.html คำสั่งตรวจ UID จาก Firebase token พร้อม clientId/sessionGeneration/gameId จำกัด API 180 คำสั่งใหม่ต่อนาทีต่อ UID (retry commandId เดิมไม่นับเพิ่ม) ไม่มี deadline ของเกม
 
@@ -115,7 +117,7 @@ Dev ปิด Turbopack filesystem cache เพื่อให้การรั
 
 Unknown resultเก็บ commandId/payload เดิมและต้องกดลองใหม่ก่อนส่งคำสั่งอื่น การกลับหน้าแรกไม่เขียน pending ทับ ออฟไลน์แก้ draft ส่วนตัวได้แต่ปุ่มส่งปิด ไม่มี queueตรวจ/ให้ผ่าน แท็บใหม่ต้องกดรับการควบคุม แท็บเดิมอ่านอย่างเดียว Anonymous UIDอยู่ใน browser/storage เดิม การล้าง storage/เปลี่ยนเครื่องไม่รับประกันคืนที่นั่ง
 
-ระบบretentionตามอนุมัติ1วันพร้อมแล้ว:ห้องจบ/ยุติ/ล็อบบี้ร้างไม่มีการใช้งาน24ชั่วโมงและไม่มีคนออนไลน์เข้าเกณฑ์ล้าง ส่วนPLAYINGและlegacyที่ไม่มีmetadataถูกข้าม Default CLIเป็นdry-run พร้อมtransaction/presence fenceและdailyCronที่รอเปิดProduction ดู [วิธีใช้และข้อจำกัด](docs/retention.md) Historyจำกัดหนึ่งเกม/command records4096ตามเดิม ยังต้องตรวจusage/costก่อนเปิดจริง
+ระบบretentionตามอนุมัติ1วันพร้อมแล้ว:ห้องจบ/ยุติ/ล็อบบี้ร้างไม่มีการใช้งาน24ชั่วโมงและไม่มีคนออนไลน์เข้าเกณฑ์ล้าง ส่วนPLAYINGและlegacyที่ไม่มีmetadataถูกข้าม Default CLIเป็นdry-run พร้อมtransaction/presence fenceและdailyCronที่รอเปิดProduction ดู [วิธีใช้และข้อจำกัด](docs/retention.md) Historyจำกัดหนึ่งเกม/command records4096ตามเดิม ผู้ใช้เลือกคงแผนฟรีและข้ามการคำนวณค่าใช้จ่าย ดู [การตัดสินใจเรื่องแผนบริการ](docs/free-plan-decision.md)
 
 Dependency audit: override `@grpc/grpc-js` เป็น1.14.6เพื่อแก้ transitive advisory; `npm audit --omit=dev` ผ่าน0รายการ Full dev-tool auditยังมี15รายการ (4 moderate/11 high) ไม่ใช้ `audit fix --force` ที่อาจเปลี่ยน majorของเครื่องมือ รายงานอยู่ work/verification/m5/
 
