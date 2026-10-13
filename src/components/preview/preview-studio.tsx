@@ -6,15 +6,27 @@ import { PREVIEW_SCENES, PREVIEW_STATES, previewQuery, type PreviewOptions } fro
 export function PreviewStudio({initialOptions}:{initialOptions:PreviewOptions}) {
   const [options,setOptions]=useState(initialOptions);const [reset,setReset]=useState(0);
   const [frameHeight,setFrameHeight]=useState(900);const observerRef=useRef<ResizeObserver|null>(null);
+  const popupObserverRef=useRef<MutationObserver|null>(null);
   const frameRef=useRef<HTMLIFrameElement|null>(null);
   const fitFrame=useCallback(()=>{
     observerRef.current?.disconnect();
+    popupObserverRef.current?.disconnect();
     const content=frameRef.current?.contentDocument?.querySelector('.preview-frame-page');
     if(!content)return;
-    const fit=()=>setFrameHeight(Math.max(520,Math.ceil(content.getBoundingClientRect().height)));
+    const fit=()=>setFrameHeight(content.querySelector('[data-sheriff-popup]')
+      ? window.innerHeight : Math.max(520,Math.ceil(content.getBoundingClientRect().height)));
     observerRef.current=new ResizeObserver(fit);observerRef.current.observe(content);fit();
+    let visiblePopup:Element|null=null;
+    const revealPopup=()=>{
+      const popup=content.querySelector('[data-sheriff-popup][open]');
+      fit();
+      if(popup&&popup!==visiblePopup)frameRef.current?.scrollIntoView({block:'start',inline:'nearest'});
+      visiblePopup=popup;
+    };
+    popupObserverRef.current=new MutationObserver(revealPopup);
+    popupObserverRef.current.observe(content,{subtree:true,childList:true,attributes:true,attributeFilter:['open']});revealPopup();
   },[]);
-  useEffect(()=>{fitFrame();return ()=>observerRef.current?.disconnect();},[fitFrame]);
+  useEffect(()=>{fitFrame();window.addEventListener('resize',fitFrame);return ()=>{observerRef.current?.disconnect();popupObserverRef.current?.disconnect();window.removeEventListener('resize',fitFrame);};},[fitFrame]);
   function update(values:Partial<PreviewOptions>) {
     const next={...options,...values};setOptions(next);window.history.replaceState(null,'',previewQuery(next));
   }

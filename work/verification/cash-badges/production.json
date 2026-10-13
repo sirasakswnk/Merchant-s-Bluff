@@ -1,0 +1,798 @@
+{
+  "cases": [
+    {
+      "scene": "negotiate",
+      "players": 4,
+      "role": "merchant",
+      "width": 390,
+      "overlaps": [],
+      "cash": [
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(212, 162, 76)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": true
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        }
+      ],
+      "clearance": 45.40625,
+      "overflow": false
+    },
+    {
+      "scene": "negotiate",
+      "players": 4,
+      "role": "merchant",
+      "width": 1280,
+      "overlaps": [],
+      "cash": [
+        {
+          "value": "50",
+          "text": "50",
+          "font": "20px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 95.765625,
+          "seatWidth": 128,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "20px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(212, 162, 76)",
+          "width": 95.765625,
+          "seatWidth": 128,
+          "clipped": false,
+          "own": true
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "20px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 95.765625,
+          "seatWidth": 128,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "20px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 95.765625,
+          "seatWidth": 128,
+          "clipped": false,
+          "own": false
+        }
+      ],
+      "clearance": 61.390625,
+      "overflow": false
+    },
+    {
+      "scene": "negotiate",
+      "players": 4,
+      "role": "sheriff",
+      "width": 390,
+      "overlaps": [],
+      "cash": [
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(212, 162, 76)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": true
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        }
+      ],
+      "clearance": 91.34375,
+      "overflow": false
+    },
+    {
+      "scene": "negotiate",
+      "players": 4,
+      "role": "sheriff",
+      "width": 1280,
+      "overlaps": [],
+      "cash": [
+        {
+          "value": "50",
+          "text": "50",
+          "font": "20px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(212, 162, 76)",
+          "width": 95.765625,
+          "seatWidth": 128,
+          "clipped": false,
+          "own": true
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "20px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 95.765625,
+          "seatWidth": 128,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "20px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 95.765625,
+          "seatWidth": 128,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "20px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 95.765625,
+          "seatWidth": 128,
+          "clipped": false,
+          "own": false
+        }
+      ],
+      "clearance": 92.0625,
+      "overflow": false
+    },
+    {
+      "scene": "negotiate",
+      "players": 5,
+      "role": "merchant",
+      "width": 390,
+      "overlaps": [],
+      "cash": [
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(212, 162, 76)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": true
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        }
+      ],
+      "clearance": 45.40625,
+      "overflow": false
+    },
+    {
+      "scene": "negotiate",
+      "players": 5,
+      "role": "merchant",
+      "width": 1280,
+      "overlaps": [],
+      "cash": [
+        {
+          "value": "50",
+          "text": "50",
+          "font": "20px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 95.765625,
+          "seatWidth": 128,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "20px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(212, 162, 76)",
+          "width": 95.765625,
+          "seatWidth": 128,
+          "clipped": false,
+          "own": true
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "20px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 95.765625,
+          "seatWidth": 128,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "20px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 95.765625,
+          "seatWidth": 128,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "20px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 95.765625,
+          "seatWidth": 128,
+          "clipped": false,
+          "own": false
+        }
+      ],
+      "clearance": 61.390625,
+      "overflow": false
+    },
+    {
+      "scene": "negotiate",
+      "players": 5,
+      "role": "sheriff",
+      "width": 390,
+      "overlaps": [],
+      "cash": [
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(212, 162, 76)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": true
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        }
+      ],
+      "clearance": 91.34375,
+      "overflow": false
+    },
+    {
+      "scene": "negotiate",
+      "players": 5,
+      "role": "sheriff",
+      "width": 1280,
+      "overlaps": [],
+      "cash": [
+        {
+          "value": "50",
+          "text": "50",
+          "font": "20px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(212, 162, 76)",
+          "width": 95.765625,
+          "seatWidth": 128,
+          "clipped": false,
+          "own": true
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "20px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 95.765625,
+          "seatWidth": 128,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "20px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 95.765625,
+          "seatWidth": 128,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "20px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 95.765625,
+          "seatWidth": 128,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "20px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 95.765625,
+          "seatWidth": 128,
+          "clipped": false,
+          "own": false
+        }
+      ],
+      "clearance": 92.0625,
+      "overflow": false
+    },
+    {
+      "scene": "negotiate",
+      "players": 6,
+      "role": "merchant",
+      "width": 390,
+      "overlaps": [],
+      "cash": [
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(212, 162, 76)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": true
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        }
+      ],
+      "clearance": 45.40625,
+      "overflow": false
+    },
+    {
+      "scene": "negotiate",
+      "players": 6,
+      "role": "merchant",
+      "width": 1280,
+      "overlaps": [],
+      "cash": [
+        {
+          "value": "50",
+          "text": "50",
+          "font": "20px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 95.765625,
+          "seatWidth": 128,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "20px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(212, 162, 76)",
+          "width": 95.765625,
+          "seatWidth": 128,
+          "clipped": false,
+          "own": true
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "20px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 95.765625,
+          "seatWidth": 128,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "20px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 95.765625,
+          "seatWidth": 128,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "20px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 95.765625,
+          "seatWidth": 128,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "20px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 95.765625,
+          "seatWidth": 128,
+          "clipped": false,
+          "own": false
+        }
+      ],
+      "clearance": 61.390625,
+      "overflow": false
+    },
+    {
+      "scene": "negotiate",
+      "players": 6,
+      "role": "sheriff",
+      "width": 390,
+      "overlaps": [],
+      "cash": [
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(212, 162, 76)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": true
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        }
+      ],
+      "clearance": 91.34375,
+      "overflow": false
+    },
+    {
+      "scene": "negotiate",
+      "players": 6,
+      "role": "sheriff",
+      "width": 1280,
+      "overlaps": [],
+      "cash": [
+        {
+          "value": "50",
+          "text": "50",
+          "font": "20px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(212, 162, 76)",
+          "width": 95.765625,
+          "seatWidth": 128,
+          "clipped": false,
+          "own": true
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "20px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 95.765625,
+          "seatWidth": 128,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "20px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 95.765625,
+          "seatWidth": 128,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "20px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 95.765625,
+          "seatWidth": 128,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "20px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 95.765625,
+          "seatWidth": 128,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "20px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 95.765625,
+          "seatWidth": 128,
+          "clipped": false,
+          "own": false
+        }
+      ],
+      "clearance": 92.0625,
+      "overflow": false
+    }
+  ],
+  "pageErrors": [],
+  "apiOrFirebaseRequests": []
+}

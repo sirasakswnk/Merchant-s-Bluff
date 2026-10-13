@@ -1,0 +1,700 @@
+{
+  "cases": [
+    {
+      "scene": "prepare",
+      "players": 6,
+      "role": "merchant",
+      "width": 390,
+      "overlaps": [],
+      "cash": [
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(212, 162, 76)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": true
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        }
+      ],
+      "clearance": 50.84375,
+      "overflow": false
+    },
+    {
+      "scene": "pack",
+      "players": 6,
+      "role": "merchant",
+      "width": 390,
+      "overlaps": [],
+      "cash": [
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(212, 162, 76)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": true
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        }
+      ],
+      "clearance": 50.84375,
+      "overflow": false
+    },
+    {
+      "scene": "pass-legal",
+      "players": 6,
+      "role": "merchant",
+      "width": 390,
+      "overlaps": [],
+      "cash": [
+        {
+          "value": "54",
+          "text": "54",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "46",
+          "text": "46",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(212, 162, 76)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": true
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        }
+      ],
+      "clearance": 18.609375,
+      "overflow": false
+    },
+    {
+      "scene": "pass-contraband",
+      "players": 6,
+      "role": "merchant",
+      "width": 390,
+      "overlaps": [],
+      "cash": [
+        {
+          "value": "54",
+          "text": "54",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "46",
+          "text": "46",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(212, 162, 76)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": true
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        }
+      ],
+      "clearance": 18.609375,
+      "overflow": false
+    },
+    {
+      "scene": "inspect-legal",
+      "players": 6,
+      "role": "merchant",
+      "width": 390,
+      "overlaps": [],
+      "cash": [
+        {
+          "value": "43",
+          "text": "43",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "57",
+          "text": "57",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(212, 162, 76)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": true
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        }
+      ],
+      "clearance": 18.609375,
+      "overflow": false
+    },
+    {
+      "scene": "inspect-contraband",
+      "players": 6,
+      "role": "merchant",
+      "width": 390,
+      "overlaps": [],
+      "cash": [
+        {
+          "value": "59",
+          "text": "59",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "41",
+          "text": "41",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(212, 162, 76)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": true
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        }
+      ],
+      "clearance": 18.609375,
+      "overflow": false
+    },
+    {
+      "scene": "game-over",
+      "players": 6,
+      "role": "merchant",
+      "width": 390,
+      "overlaps": [],
+      "cash": [
+        {
+          "value": "100",
+          "text": "100",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 103.671875,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "0",
+          "text": "0",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(212, 162, 76)",
+          "width": 83.328125,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": true
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        }
+      ],
+      "clearance": 50.84375,
+      "overflow": false
+    },
+    {
+      "scene": "aborted",
+      "players": 6,
+      "role": "merchant",
+      "width": 390,
+      "overlaps": [],
+      "cash": [
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(212, 162, 76)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": true
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "18px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 93.5,
+          "seatWidth": 104,
+          "clipped": false,
+          "own": false
+        }
+      ],
+      "clearance": 50.84375,
+      "overflow": false
+    },
+    {
+      "scene": "summary",
+      "players": 6,
+      "role": "merchant",
+      "width": 390,
+      "textZoom": "200%",
+      "overlaps": [],
+      "cash": [
+        {
+          "value": "54",
+          "text": "54",
+          "font": "36px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 145,
+          "seatWidth": 175,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "46",
+          "text": "46",
+          "font": "36px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(212, 162, 76)",
+          "width": 145,
+          "seatWidth": 366,
+          "clipped": false,
+          "own": true
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "36px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 145,
+          "seatWidth": 175,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "36px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 145,
+          "seatWidth": 175,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "36px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 145,
+          "seatWidth": 175,
+          "clipped": false,
+          "own": false
+        },
+        {
+          "value": "50",
+          "text": "50",
+          "font": "36px",
+          "color": "rgb(41, 36, 27)",
+          "border": "rgb(121, 83, 53)",
+          "width": 145,
+          "seatWidth": 175,
+          "clipped": false,
+          "own": false
+        }
+      ],
+      "clearance": 20,
+      "overflow": false
+    }
+  ],
+  "pageErrors": [],
+  "apiOrFirebaseRequests": []
+}

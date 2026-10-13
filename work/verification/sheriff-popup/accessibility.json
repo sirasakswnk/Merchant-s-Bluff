@@ -1,0 +1,12 @@
+{
+  "keyboard": true,
+  "focusRestored": true,
+  "closeClearsConfirmation": true,
+  "text200": true,
+  "resize": true,
+  "disabledStates": 4,
+  "errorVisible": true,
+  "pendingRetry": true,
+  "claimControl": true,
+  "touchLandscape": true
+}

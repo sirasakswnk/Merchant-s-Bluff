@@ -1,4 +1,4 @@
-import { expect, type Browser, type BrowserContext, type Page } from '@playwright/test';
+import { expect, type Browser, type BrowserContext, type FrameLocator, type Page } from '@playwright/test';
 import { showHandCard } from './hand';
 
 export async function roomPhase(page: Page, value: string, round?: number) {
@@ -13,9 +13,16 @@ export function gameActionName(name: string): string | RegExp {
 export async function press(page: Page, name: string) {
   const button = page.getByRole('button', { name: gameActionName(name), exact: true }); await expect(button).toBeEnabled(); await button.focus(); await button.press('Enter');
 }
+export async function closeSheriffPopup(page: Page | FrameLocator) {
+  const popup = page.locator('[data-sheriff-popup][open]');
+  if (await popup.count()) {
+    await popup.getByRole('button', { name: 'ปิดหน้าตัดสินพ่อค้า', exact: true }).click();
+    await expect(popup).toHaveCount(0);
+  }
+}
 export async function publicMoney(page: Page) {
   return page.locator('.players .player').evaluateAll(nodes => nodes.map(node => ({
-    id: node.getAttribute('data-player-id'), cash: Number(node.textContent?.match(/เงิน (\d+) เหรียญ/)?.[1]),
+    id: node.getAttribute('data-player-id'), cash: Number(node.querySelector('[data-player-cash] strong')?.textContent ?? NaN),
   })));
 }
 export async function joinPlayers(browser: Browser, count: number, origin = process.env.MERCHANT_E2E_ORIGIN ?? 'http://127.0.0.1:3100', hasTouch = false) {

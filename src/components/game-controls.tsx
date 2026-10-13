@@ -1,7 +1,8 @@
 'use client';
-import { useState } from 'react';
+import { useState, type ReactNode } from 'react';
 import { MerchantHand } from './cards/merchant-hand';
 import { GamePanel } from './table/game-panel';
+import { SheriffDecisionPanel } from './table/sheriff-decision-panel';
 import { OfferAmountPicker } from './offers/offer-amount-picker';
 import { OfferDisplay } from './offers/offer-display';
 import styles from './merchant-controls.module.css';
@@ -51,23 +52,22 @@ export function MerchantControls({ room, own, disabled, draftDisabled, send, per
   }
   return <GamePanel><h2>รอผลและรอบถัดไป</h2><p>นายด่านเป็นผู้กดเดินรอบ ไม่มีตัวนับเวลา</p></GamePanel>;
 }
-export function SheriffControls({ room, disabled, send }: { room: PublicRoomView; disabled: boolean; send: SendCommand }) {
+export function SheriffControls({ room, disabled, send, status, mobileResult }: { room: PublicRoomView; disabled: boolean; send: SendCommand; status?: ReactNode; mobileResult?: ReactNode }) {
   const PRODUCTS = room.rules.products;
   const [confirmation, setConfirmation] = useState<{ merchantId: string; action: 'PASS' | 'INSPECT'; version: number; amount: number } | null>(null);
-  if (room.phase === 'RESOLUTION') return <GamePanel><h2>ผลตัดสินแล้ว</h2><button disabled={disabled}
+  if (room.phase === 'RESOLUTION') return <SheriffDecisionPanel title="ผลตัดสินแล้ว" disabled={disabled} status={status} mobileSummary={mobileResult}><button disabled={disabled}
     onClick={() => void send({ type: 'acknowledgeResolution', roundIndex: room.roundIndex, resolutionId: room.result!.id })}>
-    {room.players.filter(player => player.id !== room.sheriffId).every(player => player.decisionId) ? 'สรุปรอบ' : 'เลือกพ่อค้าคนต่อไป'}</button></GamePanel>;
-  if (room.phase === 'ROUND_SUMMARY') return <GamePanel><h2>จบรอบ</h2><button disabled={disabled} onClick={() => void send({ type: 'endRound', roundIndex: room.roundIndex })}>
-    {room.roundIndex === room.totalRounds ? 'ยืนยันจบรอบสุดท้ายและดูคะแนน' : 'จบรอบ / ส่งต่อตำแหน่งนายด่าน'}</button></GamePanel>;
+    {room.players.filter(player => player.id !== room.sheriffId).every(player => player.decisionId) ? 'สรุปรอบ' : 'เลือกพ่อค้าคนต่อไป'}</button></SheriffDecisionPanel>;
+  if (room.phase === 'ROUND_SUMMARY') return <SheriffDecisionPanel title="จบรอบ" disabled={disabled} status={status}><button disabled={disabled} onClick={() => void send({ type: 'endRound', roundIndex: room.roundIndex })}>
+    {room.roundIndex === room.totalRounds ? 'ยืนยันจบรอบสุดท้ายและดูคะแนน' : 'จบรอบ / ส่งต่อตำแหน่งนายด่าน'}</button></SheriffDecisionPanel>;
   if (room.phase !== 'NEGOTIATE') return <GamePanel><h2>คุณเป็นนายด่าน</h2><p>รอพ่อค้าเตรียมและปิดกระเป๋า มือของคุณเก็บไว้ตามเดิม เลือกพ่อค้าคนใดก่อนก็ได้เมื่อเริ่มเจรจา</p></GamePanel>;
   const target = room.players.find(player => player.id === room.selectedMerchantId);
   const confirmationTarget = room.players.find(player => player.id === confirmation?.merchantId);
   const changed = confirmation && (confirmationTarget?.offer?.version !== confirmation.version || room.selectedMerchantId !== confirmation.merchantId);
-  return <GamePanel><h2>เลือกพ่อค้าและตัดสิน</h2>
-    <div className="button-row">{room.players.filter(player => player.id !== room.sheriffId && !player.decisionId).map(player =>
-      <button className="secondary" key={player.id} aria-pressed={player.id === room.selectedMerchantId} disabled={disabled}
-        onClick={() => { setConfirmation(null); void send({ type: 'selectMerchant', roundIndex: room.roundIndex, merchantId: player.id }); }}>เลือก {player.displayName}</button>)}</div>
-    {target ? <div><h3>กำลังคุย: {target.displayName}</h3><p>แจ้งสินค้า {target.declaration ? `${PRODUCTS[target.declaration.productId].name} ${target.declaration.count} ใบ` : '—'}</p>
+  return <SheriffDecisionPanel title="เลือกพ่อค้าและตัดสิน" merchants={room.players.filter(player => player.id !== room.sheriffId && !player.decisionId)}
+    target={target} disabled={disabled} status={status} onReset={() => setConfirmation(null)}
+    onSelect={merchantId => { setConfirmation(null); void send({ type: 'selectMerchant', roundIndex: room.roundIndex, merchantId }); }}>
+    {target ? <div><h3 data-sheriff-target-name>กำลังคุย: {target.displayName}</h3><p>แจ้งสินค้า {target.declaration ? `${PRODUCTS[target.declaration.productId].name} ${target.declaration.count} ใบ` : '—'}</p>
       <OfferDisplay key={target.id} offer={target.offer} variant="detail" />
       <div className="button-row"><button data-offer-pass disabled={disabled || !target.offer?.submitted} onClick={() => setConfirmation({ merchantId: target.id, action: 'PASS', version: target.offer!.version, amount: target.offer!.amount })}>{target.offer?.submitted ? `ให้ผ่าน · รับ ${target.offer.amount} เหรียญ` : 'ให้ผ่าน · รอข้อเสนอ'}</button>
         <button className="secondary" disabled={disabled || !target.offer?.submitted} onClick={() => setConfirmation({ merchantId: target.id, action: 'INSPECT', version: target.offer!.version, amount: target.offer!.amount })}>ตรวจ</button></div>
@@ -78,5 +78,5 @@ export function SheriffControls({ room, disabled, send }: { room: PublicRoomView
       <div className="button-row"><button disabled={disabled || !!changed} onClick={() => void send({ type: 'resolveMerchant', roundIndex: room.roundIndex,
         merchantId: confirmation.merchantId, action: confirmation.action, expectedOfferVersion: confirmation.version })}>ยืนยัน{confirmation.action === 'PASS' ? 'ให้ผ่าน' : 'ตรวจ'}</button>
         <button className="secondary" type="button" disabled={disabled} onClick={() => setConfirmation(null)}>ยกเลิก</button></div></section> : null}
-  </GamePanel>;
+  </SheriffDecisionPanel>;
 }

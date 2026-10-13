@@ -1,6 +1,7 @@
 import { test, expect, type Page } from '@playwright/test';
 import { PREVIEW_SCENES, PREVIEW_STATES } from '../../src/lib/preview/scenarios';
 import { showHandCard } from './helpers/hand';
+import { closeSheriffPopup } from './helpers/game-ui';
 
 async function frameLoaded(page:Page,scene:string) {
   await expect.poll(()=>page.frames().find(frame=>new URL(frame.url()||'about:blank').searchParams.get('frame')==='1')?.url()).toContain(`scene=${scene}`);
@@ -30,9 +31,11 @@ test('preview controls use shared room screens without Firebase, API commands or
   await expect(frame.getByText('แจ้งสินค้า แอปเปิล 1 ใบ',{exact:true})).toBeVisible();
   await page.getByLabel('หน้าจอ',{exact:true}).selectOption('negotiate');await page.getByLabel('มุมมอง',{exact:true}).selectOption('sheriff');frame=await frameLoaded(page,'negotiate');
   await expect(frame.locator('main')).toHaveAttribute('data-own-role','sheriff');
+  await expect(frame.locator('[data-sheriff-popup]')).toHaveAttribute('open','');
+  await frame.locator('[data-merchant-choice]').first().click();
   await frame.getByRole('button',{name:/^ให้ผ่าน · รับ \d+ เหรียญ$/}).click();await expect(frame.getByRole('heading',{name:/ยืนยันให้ผ่าน/})).toBeVisible();
   await frame.getByRole('button',{name:'ยืนยันให้ผ่าน',exact:true}).click();await expect(frame.locator('main')).toHaveAttribute('data-phase','RESOLUTION');
-  await expect(frame.locator('.result-bag')).toHaveClass(/glow/);await frame.getByRole('button',{name:'เล่นเอฟเฟกต์ซ้ำ',exact:true}).click();
+  await expect(frame.locator('.result-bag')).toHaveClass(/glow/);await closeSheriffPopup(frame);await frame.getByRole('button',{name:'เล่นเอฟเฟกต์ซ้ำ',exact:true}).click();
   await frame.getByRole('button',{name:'รีเซ็ตตัวอย่าง',exact:true}).click();await expect(frame.locator('main')).toHaveAttribute('data-phase','NEGOTIATE');
   expect(await page.evaluate(()=>(window as Window&{previewStorageWrites?:string[]}).previewStorageWrites)).toEqual([]);
   await page.reload();await expect(page.getByLabel('หน้าจอ',{exact:true})).toHaveValue('negotiate');await expect(page.getByLabel('มุมมอง',{exact:true})).toHaveValue('sheriff');

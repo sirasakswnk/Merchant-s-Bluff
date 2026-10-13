@@ -1,0 +1,22 @@
+{
+  "cases": 9,
+  "audits": [
+    {
+      "width": 320,
+      "step": "detail",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "step": "detail",
+      "violations": []
+    },
+    {
+      "width": 430,
+      "step": "detail",
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "previewApiOrFirebaseRequests": []
+}

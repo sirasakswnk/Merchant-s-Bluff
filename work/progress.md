@@ -1,6 +1,42 @@
 # Progress — 13 ตุลาคม 2026
 
-## ขั้นตอนล่าสุด — ป๊อปอัปอันดับตอนจบเกม
+## ขั้นตอนล่าสุด — จัด Popup นายด่านให้อยู่กลางหน้าจอ
+
+ผู้ใช้ให้popupล่าสุดอยู่ตรงกลาง สาเหตุอยู่ที่CSSเฉพาะPreviewตั้งmarginด้านบน12pxเพื่อชดเชยiframeที่สูงทั้งหน้า ลบoverrideและให้PreviewStudioใช้ความสูงหน้าจอผู้ชมเมื่อมีpopupนายด่าน (เปิดหรือปิดชั่วคราว) พร้อมปรับเมื่อresize/cleanup listener เฟสอื่นยังfitตามเนื้อหา โต๊ะ/ข้อมูลเกม/คำสั่ง/confirmationเดิมไม่เปลี่ยน
+
+ทวนE2Epopup2และPreview2รวม4/4ผ่าน TypeScript/lint/productionbuildผ่าน ตรวจproduction24มุม4/5/6คน×เต็มหน้า/ฝังiframe×รายชื่อ/รายละเอียด/ผลตรวจ/สรุปรอบ popupตรงกลางทั้งสองแกนคลาดเคลื่อนสูงสุด0.211px ไม่ถูกตัด ไม่มีpageerrorหรือAPI/Firebase requestsจากPreview ตรวจภาพมือถือ390×844และiframeบนdesktop1280×844แล้ว หยุดserverชั่วคราว/คืนgeneratedtype imports หลักฐาน [verification/sheriff-popup-center/report.md](verification/sheriff-popup-center/report.md) ไม่commit/push/deployในขั้นนี้
+
+## ประวัติ — Popup เลือกพ่อค้าและตัดสินบนมือถือ
+
+ผู้ใช้ต้องการไม่เลื่อนลงไปหากล่องเลือกพ่อค้า บนมือถือเปิดnative popupอัตโนมัติในช่วงเจรจา รายชื่อมีแค่ชื่อและตัวละครที่เลือก เมื่อแตะคนจึงแสดงโปรไฟล์ คำแจ้งและข้อเสนอล่าสุดพร้อมให้ผ่าน/ตรวจ รอselectedMerchantIdจากserverก่อนเปิดรายละเอียด ย้อนกลับรายชื่อได้ ปิด/เปิดซ้ำผ่านปุ่มลอยเหนือsafe area Closingล้างconfirmationที่ยังไม่ส่ง ผลตัดสิน/คนถัดไป/สรุปรอบ/จบรอบทำต่อได้ในpopup Desktopยังมีpanelในหน้า รองรับtouch landscape
+
+แยกSheriffDecisionPanel/CSS Moduleเป็นpresentation ใช้media subscriptionที่มีSSR snapshot/cleanupและnative dialog/focus trap/escape/body scroll lock SheriffControlsยังถือconfirmation/version และส่งcommandsเดิม RoomStatusส่งต่อerror/pending retry/claimControlให้เห็นในmodal ใช้public result fragmentร่วมกับกล่องผลเดิม PASSไม่เปิดเผยชนิดไพ่ PreviewมีMutationObserverเลื่อนiframeเข้ามุมมองเฉพาะเมื่อpopupใหม่เปิด ไม่เลื่อนซ้ำจากข้อเสนอ/revisionทั่วไป มีcleanupครบ
+
+ทดสอบ9กรณีที่เกี่ยวข้องผ่านหลังแก้จุดที่พบระหว่างตรวจ (7กรณีผ่านในชุดหลัก และ3กรณีผ่านในการตรวจเฉพาะจุดที่แก้ มี1กรณีซ้ำ): popup2กรณี/offer3/preview2/โต๊ะ2 รวมรายชื่อ4/5/6คน×320/390/430px, การตัดสินต่อเนื่องไม่เลื่อนหน้า, back/close/reopen/clear confirmation, Tab/Escape/focus restore, ข้อความ200%, resize/แนวนอนtouch, offline/readonly/busy/pending/error, retry/claimControl, PrivacyPASS และoffer versionที่เปลี่ยนระหว่างยืนยันผ่าน
+
+เกมlocalAuth/RTDBEmulators4คนสองflowผ่าน เลือก/ให้ผ่าน15/ตรวจโดยไม่โอนข้อเสนอ8/ยืนยัน0/ส่งต่อนายด่าน/reload/ยุติ/rematch ไพ่12จุด360/unique360/รายชนิด/IDsครบ cleanupเฉพาะfixtureรวม2ห้อง8users แก้helperอ่านเงินจากป้ายใหม่และให้การทดสอบรอยืนยันเตรียมสินค้าแต่ละคนก่อนกดคนถัดไป จุดแรกที่พบในPreviewคือpopupในiframeอยู่นอกมุมมองที่เลื่อนค้างไว้ แก้reveal popupแล้วทวนPreviewผ่าน ไม่แก้game logicเพื่อแก้test
+
+TypeScript/lint/productionbuildผ่าน ตรวจproductionในเครื่อง18มุมเลือก/ผลตรวจ/สรุปรอบ×4/5/6คน×390/1280px ไม่ล้น ปุ่ม44px ไม่มีpageerror/API/Firebase requestsจากPreview ภาพตรวจแล้ว React reviewผ่านเรื่องtyped props/controller ownership/SSR/media/ref cleanup/accessibility ไม่มีnew network/storage actions หลักฐาน [verification/sheriff-popup/report.md](verification/sheriff-popup/report.md) ไม่แก้backend/data/Rules/ราคา/360ใบ/rulesVersion0.2 หยุดserverชั่วคราว/คืนgeneratedtypes ไม่commit/push/deployหรือทดสอบโทรศัพท์/Firebaseจริงในขั้นนี้
+
+## ประวัติ — จัดโต๊ะให้อยู่กึ่งกลางวงผู้เล่น
+
+ผู้ใช้พบว่าโต๊ะดูไม่อยู่กลางวงหลังเพิ่มป้ายเงิน สาเหตุคือที่นั่งยึดกึ่งกลางรูปโปรไฟล์แต่ชื่อ/เงิน/คำแจ้ง/สถานะต่อยาวลงด้านล่าง และข้อมูลกลางโต๊ะมีoffsetอีกชุด เปลี่ยนCSSให้โต๊ะ ข้อมูลกลางโต๊ะ และตำแหน่งผู้เล่นใช้จุดกลาง50%ร่วมกัน โปรไฟล์translateตามครึ่งหนึ่งของทั้งบล็อก รัศมีที่นั่งยังแยกตามขนาดจอ/ข้อเสนอ ตัวเราอยู่ล่าง นายด่านคนอื่นอยู่บนและสลับที่นั่งเดิม Layoutจอแคบ/ข้อความขยายยังไหลอ่านได้
+
+ตรวจตำแหน่ง54มุมจัดกระเป๋า/เจรจา/สรุปรอบ×4/5/6คน×2roles×360/390/1280px จุดกลางโต๊ะตรงกึ่งกลางโปรไฟล์บน/ล่างคลาดเคลื่อนสูงสุด0.008px แนวนอนและข้อมูลกลางโต๊ะตรงกัน ไม่ทับโปรไฟล์ ไม่ล้นจอ และพื้นที่ไพ่ต่ำกว่าทุกโปรไฟล์ ทวนE2Eโต๊ะเดิมผ่าน30layouts/60ครั้งส่งต่อนายด่าน/40scene-role-size/axe20ไม่มีviolations/keyboard/reduced motion/200%
+
+TypeScript/lint/productionbuildผ่าน ตรวจproductionในเครื่อง12มุม4/5/6คน×2roles×390/1280pxตรงกัน ตรวจภาพmobile/desktopแล้ว ไม่มีpageerrors/API/Firebase requestsจากPreview หยุดserverชั่วคราวและคืนgenerated type importsเดิม หลักฐาน [verification/table-centering/report.md](verification/table-centering/report.md) แก้CSSการจัดวางเท่านั้น ไม่แก้engine/backend/data/Rules/ราคา/360ใบ/rulesVersion0.2 ไม่commit/push/deployในขั้นนี้
+
+## ประวัติ — ป้ายเงินคงเหลือบนโต๊ะเกม
+
+ผู้ใช้อนุมัติป้ายกระเป๋าเงินใต้ชื่อผู้เล่น: พื้นครีม ขอบหนังบางและรอยเย็บ ไอคอนเหรียญ ตัวเลขเข้มตัวหนา18pxบนมือถือ/20pxบนจอใหญ่ หน่วยเหรียญเล็ก และขอบทองสำหรับป้ายของเรา ใช้GameTableViewร่วมทุกช่วงหลังเริ่มเกม อ่านpublic player.cashเดิม ไม่ปะปนกับป้ายข้อเสนอที่มีคำว่าเสนอ มีข้อความเงินคงเหลือสำหรับscreen reader ไม่มีstate/effect/networkใหม่
+
+ตรวจพบครั้งแรกว่า5/6คนบนจอ360pxป้ายใหญ่ขึ้นทำให้โปรไฟล์เบียดกัน จึงเพิ่มระยะที่นั่งแนวตั้งและพื้นที่ก่อนกล่องไพ่ตามขนาดจอ โดยคงตำแหน่งตัวเรา/นายด่านและการสลับเดิม ตรวจซ้ำโต๊ะ30มุม4/5/6คน×2roles×360/390/430/740landscape/1280px ไม่ทับกัน ส่งต่อตำแหน่ง60ครั้งและ40มุมทุกsceneผ่าน axe20กรณีไม่มีviolations keyboard/reduced-motion/200%ผ่าน
+
+เกมlocalAuth/RTDBEmulators4คนแลก3ขน5 ให้ผ่าน/ตรวจ/ส่งต่อนายด่าน/reload/ยุติ/กลับล็อบบี้ผ่าน ไพ่ครบ360/unique360/รายชนิด/IDsเดิม และcleanupห้อง1/users4 พรีวิวเดิม2กรณีผ่าน ตรวจป้ายเพิ่ม36มุมเจรจา/สรุปรอบ×4/5/6คน×2roles×320/390/1280px และ9มุมทุกsceneที่เหลือรวม200% ไม่ล้น/ไม่ตัดยอด/ไม่ทับพื้นที่ไพ่ ไม่มีpageerrorหรือAPI/Firebase requestsจากPreview
+
+TypeScript/lint/productionbuildผ่าน ภาพproductionในเครื่อง12มุม4/5/6คน×2roles×390/1280pxมีป้ายและยอดเดิมถูกต้อง ตรวจภาพmobile/desktopแล้วและหยุดserverชั่วคราว หลักฐาน [verification/cash-badges/report.md](verification/cash-badges/report.md) ไม่แก้engine/backend/data/Rules/ราคา/สำรับ360ใบ/rulesVersion0.2 ไม่commit/push/deployหรือทดสอบFirebaseจริง/โทรศัพท์จริงในขั้นนี้ หยุดตามงานที่อนุมัติ
+
+## ประวัติ — ป๊อปอัปอันดับตอนจบเกม
 
 ผู้ใช้ต้องการสรุปที่เพื่อนคุยกันต่อได้ แทนหน้าคะแนนละเอียดด้วยFinalScorePopup/native dialogเปิดอัตโนมัติเมื่อเกมจบ ใช้ผ้าใบกระสอบ/ขอบหนังเดิม แถวมีแค่อันดับ โปรไฟล์ตัวละคร ชื่อ และเงินสดคงเหลือ score.cash อันดับอ่านscore.rank/ลำดับจากserverและคงอันดับร่วม ไม่มีรายการสินค้า โบนัส หนี้หรือคะแนนรวมในแถว ไม่เปลี่ยนสูตรอันดับ
 

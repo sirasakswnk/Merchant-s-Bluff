@@ -3,7 +3,7 @@ import AxeBuilder from '@axe-core/playwright';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { initializeApp, deleteApp } from 'firebase-admin/app';
 import { getDatabase } from 'firebase-admin/database';
-import { joinPlayers, press, roomPhase, prepareAndPack } from './helpers/game-ui';
+import { joinPlayers, press, roomPhase, prepareAndPack, closeSheriffPopup } from './helpers/game-ui';
 import { cleanupLocalFixture } from './helpers/local-fixture';
 import { activeCards, assertApprovedInventory } from '../fixtures/inventory';
 
@@ -45,7 +45,7 @@ test('game table pins self and sheriff, swaps only the top occupant, and stays u
     await page.setViewportSize({ width: 390, height: 844 }); await page.goto(`/preview?frame=1&scene=negotiate&players=${count}&role=${role}`);
     const originalIds = await page.locator('.players .player').evaluateAll(nodes => nodes.map(node => node.getAttribute('data-player-id')));
     for (let turn = 0; turn < count * 2; turn++) {
-      await pinnedSeats(page); const before = await slots(page); await page.getByRole('button', { name: 'เปลี่ยนนายด่านตัวอย่าง', exact: true }).click(); await pinnedSeats(page);
+      await pinnedSeats(page); await closeSheriffPopup(page); const before = await slots(page); await page.getByRole('button', { name: 'เปลี่ยนนายด่านตัวอย่าง', exact: true }).click(); await pinnedSeats(page);
       const after = await slots(page); expect(Object.keys(after).filter(id => before[id] !== after[id]).length).toBeLessThanOrEqual(2);
       expect(await page.locator('.players .player').evaluateAll(nodes => nodes.map(node => node.getAttribute('data-player-id')))).toEqual(originalIds);
     }
@@ -105,7 +105,7 @@ test('four real players exchange three, pack five, inspect and pass; the next sh
     await pages[1].reload(); await roomPhase(pages[1], 'PREPARE', 2); await pinnedSeats(pages[1]);
     const second = await prepareAndPack(pages, 2, 1, 0); await press(pages[second.sheriff], `เลือก ทดสอบ${second.merchants[0] + 1}`); await press(pages[second.sheriff], 'ให้ผ่าน'); await press(pages[second.sheriff], 'ยืนยันให้ผ่าน');
     for (const page of pages) await roomPhase(page, 'RESOLUTION', 2); await checkpoint();
-    pages[0].once('dialog', dialog => dialog.accept()); await press(pages[0], 'ยุติเกมนี้');
+    await closeSheriffPopup(pages[0]); pages[0].once('dialog', dialog => dialog.accept()); await press(pages[0], 'ยุติเกมนี้');
     for (const page of pages) { await expect(page.getByRole('heading', { name: 'ยุติเกม', exact: true })).toBeVisible(); await expect(page.locator('.result-bag')).toHaveCount(0); await expect(page.getByRole('link', { name: 'ดูผลตัดสิน', exact: false })).toHaveCount(0); }
     await press(pages[0], 'กลับล็อบบี้เพื่อเล่นใหม่'); for (const page of pages) await roomPhase(page, 'LOBBY'); expect(errors).toEqual([]);
     Object.assign(report, { passed: true, players: 4, exchange: 3, bagSize: 5, actions: ['PASS', 'INSPECT', 'INSPECT'], advancedToRound: 2, seatOrderPreserved: true, abortDuringResolution: true, rematch: true, checkpoints, pageErrors: errors });

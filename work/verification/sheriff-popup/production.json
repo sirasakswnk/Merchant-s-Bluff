@@ -1,0 +1,199 @@
+{
+  "cases": [
+    {
+      "scene": "negotiate",
+      "players": 4,
+      "width": 390,
+      "initialOffers": 0,
+      "bounds": {
+        "x": 12,
+        "y": 194.109375,
+        "width": 366,
+        "height": 455.765625
+      },
+      "overflow": false,
+      "dialogOverflow": false,
+      "smallButtons": []
+    },
+    {
+      "scene": "negotiate",
+      "players": 4,
+      "width": 1280,
+      "popups": 0,
+      "overflow": false
+    },
+    {
+      "scene": "negotiate",
+      "players": 5,
+      "width": 390,
+      "initialOffers": 0,
+      "bounds": {
+        "x": 12,
+        "y": 194.109375,
+        "width": 366,
+        "height": 455.765625
+      },
+      "overflow": false,
+      "dialogOverflow": false,
+      "smallButtons": []
+    },
+    {
+      "scene": "negotiate",
+      "players": 5,
+      "width": 1280,
+      "popups": 0,
+      "overflow": false
+    },
+    {
+      "scene": "negotiate",
+      "players": 6,
+      "width": 390,
+      "initialOffers": 0,
+      "bounds": {
+        "x": 12,
+        "y": 194.109375,
+        "width": 366,
+        "height": 455.765625
+      },
+      "overflow": false,
+      "dialogOverflow": false,
+      "smallButtons": []
+    },
+    {
+      "scene": "negotiate",
+      "players": 6,
+      "width": 1280,
+      "popups": 0,
+      "overflow": false
+    },
+    {
+      "scene": "inspect-contraband",
+      "players": 4,
+      "width": 390,
+      "bounds": {
+        "x": 12,
+        "y": 243.8125,
+        "width": 366,
+        "height": 356.359375
+      },
+      "overflow": false,
+      "dialogOverflow": false,
+      "smallButtons": []
+    },
+    {
+      "scene": "inspect-contraband",
+      "players": 4,
+      "width": 1280,
+      "popups": 0,
+      "overflow": false
+    },
+    {
+      "scene": "inspect-contraband",
+      "players": 5,
+      "width": 390,
+      "bounds": {
+        "x": 12,
+        "y": 243.8125,
+        "width": 366,
+        "height": 356.359375
+      },
+      "overflow": false,
+      "dialogOverflow": false,
+      "smallButtons": []
+    },
+    {
+      "scene": "inspect-contraband",
+      "players": 5,
+      "width": 1280,
+      "popups": 0,
+      "overflow": false
+    },
+    {
+      "scene": "inspect-contraband",
+      "players": 6,
+      "width": 390,
+      "bounds": {
+        "x": 12,
+        "y": 243.8125,
+        "width": 366,
+        "height": 356.359375
+      },
+      "overflow": false,
+      "dialogOverflow": false,
+      "smallButtons": []
+    },
+    {
+      "scene": "inspect-contraband",
+      "players": 6,
+      "width": 1280,
+      "popups": 0,
+      "overflow": false
+    },
+    {
+      "scene": "summary",
+      "players": 4,
+      "width": 390,
+      "bounds": {
+        "x": 12,
+        "y": 348.296875,
+        "width": 366,
+        "height": 147.390625
+      },
+      "overflow": false,
+      "dialogOverflow": false,
+      "smallButtons": []
+    },
+    {
+      "scene": "summary",
+      "players": 4,
+      "width": 1280,
+      "popups": 0,
+      "overflow": false
+    },
+    {
+      "scene": "summary",
+      "players": 5,
+      "width": 390,
+      "bounds": {
+        "x": 12,
+        "y": 348.296875,
+        "width": 366,
+        "height": 147.390625
+      },
+      "overflow": false,
+      "dialogOverflow": false,
+      "smallButtons": []
+    },
+    {
+      "scene": "summary",
+      "players": 5,
+      "width": 1280,
+      "popups": 0,
+      "overflow": false
+    },
+    {
+      "scene": "summary",
+      "players": 6,
+      "width": 390,
+      "bounds": {
+        "x": 12,
+        "y": 348.296875,
+        "width": 366,
+        "height": 147.390625
+      },
+      "overflow": false,
+      "dialogOverflow": false,
+      "smallButtons": []
+    },
+    {
+      "scene": "summary",
+      "players": 6,
+      "width": 1280,
+      "popups": 0,
+      "overflow": false
+    }
+  ],
+  "pageErrors": [],
+  "apiOrFirebaseRequests": [],
+  "placement": "Mobile cases remove only the Preview wrapper class to inspect the native room modal position."
+}

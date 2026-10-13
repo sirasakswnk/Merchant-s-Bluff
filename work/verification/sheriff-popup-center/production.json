@@ -1,0 +1,414 @@
+{
+  "cases": [
+    {
+      "mode": "direct",
+      "players": 4,
+      "scene": "negotiate",
+      "step": "choose",
+      "box": {
+        "x": 12,
+        "y": 246.5,
+        "width": 366,
+        "height": 351
+      },
+      "centerError": {
+        "x": 0,
+        "y": 0
+      },
+      "fits": true
+    },
+    {
+      "mode": "direct",
+      "players": 4,
+      "scene": "negotiate",
+      "step": "detail",
+      "box": {
+        "x": 12,
+        "y": 194.109375,
+        "width": 366,
+        "height": 455.765625
+      },
+      "centerError": {
+        "x": 0,
+        "y": 0.0078125
+      },
+      "fits": true
+    },
+    {
+      "mode": "direct",
+      "players": 4,
+      "scene": "inspect-contraband",
+      "step": "action",
+      "box": {
+        "x": 12,
+        "y": 243.8125,
+        "width": 366,
+        "height": 356.359375
+      },
+      "centerError": {
+        "x": 0,
+        "y": 0.0078125
+      },
+      "fits": true
+    },
+    {
+      "mode": "direct",
+      "players": 4,
+      "scene": "summary",
+      "step": "action",
+      "box": {
+        "x": 12,
+        "y": 348.296875,
+        "width": 366,
+        "height": 147.390625
+      },
+      "centerError": {
+        "x": 0,
+        "y": 0.0078125
+      },
+      "fits": true
+    },
+    {
+      "mode": "direct",
+      "players": 5,
+      "scene": "negotiate",
+      "step": "choose",
+      "box": {
+        "x": 12,
+        "y": 205.5,
+        "width": 366,
+        "height": 433
+      },
+      "centerError": {
+        "x": 0,
+        "y": 0
+      },
+      "fits": true
+    },
+    {
+      "mode": "direct",
+      "players": 5,
+      "scene": "negotiate",
+      "step": "detail",
+      "box": {
+        "x": 12,
+        "y": 194.109375,
+        "width": 366,
+        "height": 455.765625
+      },
+      "centerError": {
+        "x": 0,
+        "y": 0.0078125
+      },
+      "fits": true
+    },
+    {
+      "mode": "direct",
+      "players": 5,
+      "scene": "inspect-contraband",
+      "step": "action",
+      "box": {
+        "x": 12,
+        "y": 243.8125,
+        "width": 366,
+        "height": 356.359375
+      },
+      "centerError": {
+        "x": 0,
+        "y": 0.0078125
+      },
+      "fits": true
+    },
+    {
+      "mode": "direct",
+      "players": 5,
+      "scene": "summary",
+      "step": "action",
+      "box": {
+        "x": 12,
+        "y": 348.296875,
+        "width": 366,
+        "height": 147.390625
+      },
+      "centerError": {
+        "x": 0,
+        "y": 0.0078125
+      },
+      "fits": true
+    },
+    {
+      "mode": "direct",
+      "players": 6,
+      "scene": "negotiate",
+      "step": "choose",
+      "box": {
+        "x": 12,
+        "y": 164.5,
+        "width": 366,
+        "height": 515
+      },
+      "centerError": {
+        "x": 0,
+        "y": 0
+      },
+      "fits": true
+    },
+    {
+      "mode": "direct",
+      "players": 6,
+      "scene": "negotiate",
+      "step": "detail",
+      "box": {
+        "x": 12,
+        "y": 194.109375,
+        "width": 366,
+        "height": 455.765625
+      },
+      "centerError": {
+        "x": 0,
+        "y": 0.0078125
+      },
+      "fits": true
+    },
+    {
+      "mode": "direct",
+      "players": 6,
+      "scene": "inspect-contraband",
+      "step": "action",
+      "box": {
+        "x": 12,
+        "y": 243.8125,
+        "width": 366,
+        "height": 356.359375
+      },
+      "centerError": {
+        "x": 0,
+        "y": 0.0078125
+      },
+      "fits": true
+    },
+    {
+      "mode": "direct",
+      "players": 6,
+      "scene": "summary",
+      "step": "action",
+      "box": {
+        "x": 12,
+        "y": 348.296875,
+        "width": 366,
+        "height": 147.390625
+      },
+      "centerError": {
+        "x": 0,
+        "y": 0.0078125
+      },
+      "fits": true
+    },
+    {
+      "mode": "embedded",
+      "players": 4,
+      "scene": "negotiate",
+      "step": "choose",
+      "box": {
+        "x": 457,
+        "y": 246.296875,
+        "width": 366,
+        "height": 351
+      },
+      "centerError": {
+        "x": 0,
+        "y": 0.203125
+      },
+      "fits": true
+    },
+    {
+      "mode": "embedded",
+      "players": 4,
+      "scene": "negotiate",
+      "step": "detail",
+      "box": {
+        "x": 457,
+        "y": 193.90625,
+        "width": 366,
+        "height": 455.765625
+      },
+      "centerError": {
+        "x": 0,
+        "y": 0.2109375
+      },
+      "fits": true
+    },
+    {
+      "mode": "embedded",
+      "players": 4,
+      "scene": "inspect-contraband",
+      "step": "action",
+      "box": {
+        "x": 457,
+        "y": 243.609375,
+        "width": 366,
+        "height": 356.359375
+      },
+      "centerError": {
+        "x": 0,
+        "y": 0.2109375
+      },
+      "fits": true
+    },
+    {
+      "mode": "embedded",
+      "players": 4,
+      "scene": "summary",
+      "step": "action",
+      "box": {
+        "x": 457,
+        "y": 348.09375,
+        "width": 366,
+        "height": 147.390625
+      },
+      "centerError": {
+        "x": 0,
+        "y": 0.2109375
+      },
+      "fits": true
+    },
+    {
+      "mode": "embedded",
+      "players": 5,
+      "scene": "negotiate",
+      "step": "choose",
+      "box": {
+        "x": 457,
+        "y": 205.296875,
+        "width": 366,
+        "height": 433
+      },
+      "centerError": {
+        "x": 0,
+        "y": 0.203125
+      },
+      "fits": true
+    },
+    {
+      "mode": "embedded",
+      "players": 5,
+      "scene": "negotiate",
+      "step": "detail",
+      "box": {
+        "x": 457,
+        "y": 193.90625,
+        "width": 366,
+        "height": 455.765625
+      },
+      "centerError": {
+        "x": 0,
+        "y": 0.2109375
+      },
+      "fits": true
+    },
+    {
+      "mode": "embedded",
+      "players": 5,
+      "scene": "inspect-contraband",
+      "step": "action",
+      "box": {
+        "x": 457,
+        "y": 243.609375,
+        "width": 366,
+        "height": 356.359375
+      },
+      "centerError": {
+        "x": 0,
+        "y": 0.2109375
+      },
+      "fits": true
+    },
+    {
+      "mode": "embedded",
+      "players": 5,
+      "scene": "summary",
+      "step": "action",
+      "box": {
+        "x": 457,
+        "y": 348.09375,
+        "width": 366,
+        "height": 147.390625
+      },
+      "centerError": {
+        "x": 0,
+        "y": 0.2109375
+      },
+      "fits": true
+    },
+    {
+      "mode": "embedded",
+      "players": 6,
+      "scene": "negotiate",
+      "step": "choose",
+      "box": {
+        "x": 457,
+        "y": 164.296875,
+        "width": 366,
+        "height": 515
+      },
+      "centerError": {
+        "x": 0,
+        "y": 0.203125
+      },
+      "fits": true
+    },
+    {
+      "mode": "embedded",
+      "players": 6,
+      "scene": "negotiate",
+      "step": "detail",
+      "box": {
+        "x": 457,
+        "y": 193.90625,
+        "width": 366,
+        "height": 455.765625
+      },
+      "centerError": {
+        "x": 0,
+        "y": 0.2109375
+      },
+      "fits": true
+    },
+    {
+      "mode": "embedded",
+      "players": 6,
+      "scene": "inspect-contraband",
+      "step": "action",
+      "box": {
+        "x": 457,
+        "y": 243.609375,
+        "width": 366,
+        "height": 356.359375
+      },
+      "centerError": {
+        "x": 0,
+        "y": 0.2109375
+      },
+      "fits": true
+    },
+    {
+      "mode": "embedded",
+      "players": 6,
+      "scene": "summary",
+      "step": "action",
+      "box": {
+        "x": 457,
+        "y": 348.09375,
+        "width": 366,
+        "height": 147.390625
+      },
+      "centerError": {
+        "x": 0,
+        "y": 0.2109375
+      },
+      "fits": true
+    }
+  ],
+  "pageErrors": [],
+  "apiOrFirebaseRequests": []
+}

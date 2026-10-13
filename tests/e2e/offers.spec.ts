@@ -3,12 +3,12 @@ import AxeBuilder from '@axe-core/playwright';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { initializeApp, deleteApp } from 'firebase-admin/app';
 import { getDatabase } from 'firebase-admin/database';
-import { joinPlayers, press, roomPhase, publicMoney } from './helpers/game-ui';
+import { joinPlayers, press, roomPhase, publicMoney, closeSheriffPopup } from './helpers/game-ui';
 import { showHandCard } from './helpers/hand';
 import { cleanupLocalFixture } from './helpers/local-fixture';
 import { activeCards, assertApprovedInventory } from '../fixtures/inventory';
 
-const output = 'work/verification/coin-offers';
+const output = process.env.MERCHANT_OFFERS_OUTPUT ?? 'work/verification/coin-offers';
 const seatOffer = (page: Page, id: string) => page.locator(`[data-player-id="${id}"] [data-offer-display="seat"]`);
 
 test('offer picker keeps drafts private, clamps shortcuts and distinguishes explicit zero', async ({ page, context }) => {
@@ -64,7 +64,7 @@ test('public offers fit all table sizes and offer controls remain accessible', a
     if (count === 6) {
       const violations = (await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa']).analyze()).violations;
       expect(violations).toEqual([]); audits.push({ role, width, violations });
-      if (width === 390) { await mkdir(output, { recursive: true }); await page.locator('[data-game-stage]').screenshot({ path: `${output}/table-${role}-390.png` }); await page.locator('#your-turn').screenshot({ path: `${output}/controls-${role}-390.png` }); }
+      if (width === 390) { await mkdir(output, { recursive: true }); if (role === 'sheriff') { await page.locator('[data-sheriff-popup]').screenshot({ path: `${output}/popup-sheriff-390.png` }); await closeSheriffPopup(page); } await page.locator('[data-game-stage]').screenshot({ path: `${output}/table-${role}-390.png` }); if (role === 'merchant') await page.locator('#your-turn').screenshot({ path: `${output}/controls-${role}-390.png` }); }
     }
   }
   for (const state of ['readonly', 'busy', 'pending', 'offline']) {
@@ -98,11 +98,12 @@ test('confirmed offers sync to four players, reject stale confirmation and trans
     const checkpoint = async () => { const current = await snapshot(); checkpoints.push(assertApprovedInventory(current.game, inventoryIds)); return current; };
     const sheriff = (await Promise.all(pages.map(page => page.locator('main').getAttribute('data-own-role')))).indexOf('sheriff');
     const merchants = pages.map((_, index) => index).filter(index => index !== sheriff);
-    for (const index of merchants) await press(pages[index], 'พร้อมจัดกระเป๋า');
+    for (const index of merchants) { await press(pages[index], 'พร้อมจัดกระเป๋า'); await expect(pages[index].getByRole('button', { name: 'พร้อมจัดกระเป๋า', exact: true })).toHaveCount(0); }
     for (const page of pages) await roomPhase(page, 'PACK_AND_DECLARE', 1);
     for (const index of merchants) { await showHandCard(pages[index], 0); await pages[index].locator('button.card').first().click(); await press(pages[index], 'ปิดกระเป๋าและยืนยัน'); }
     for (const page of pages) await roomPhase(page, 'NEGOTIATE', 1);
     const official = pages[sheriff], merchant = pages[merchants[0]], id = playerIds[merchants[0]];
+    await official.setViewportSize({ width: 390, height: 844 });
     for (const page of pages) await expect(seatOffer(page, id)).toHaveAttribute('data-offer-submitted', 'false');
     await merchant.getByRole('button', { name: 'เพิ่ม 10 เหรียญ', exact: true }).click(); await expect(merchant.getByLabel('ยอดเสนอเงิน')).toHaveValue('10');
     await merchant.reload(); await roomPhase(merchant, 'NEGOTIATE', 1); await expect(merchant.getByLabel('ยอดเสนอเงิน')).toHaveValue('10');

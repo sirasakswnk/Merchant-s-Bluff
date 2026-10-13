@@ -1,0 +1,109 @@
+{
+  "layoutCases": 30,
+  "sceneCases": 40,
+  "sheriffTransitions": 60,
+  "audits": [
+    {
+      "scene": "prepare",
+      "role": "merchant",
+      "violations": []
+    },
+    {
+      "scene": "prepare",
+      "role": "sheriff",
+      "violations": []
+    },
+    {
+      "scene": "pack",
+      "role": "merchant",
+      "violations": []
+    },
+    {
+      "scene": "pack",
+      "role": "sheriff",
+      "violations": []
+    },
+    {
+      "scene": "negotiate",
+      "role": "merchant",
+      "violations": []
+    },
+    {
+      "scene": "negotiate",
+      "role": "sheriff",
+      "violations": []
+    },
+    {
+      "scene": "pass-legal",
+      "role": "merchant",
+      "violations": []
+    },
+    {
+      "scene": "pass-legal",
+      "role": "sheriff",
+      "violations": []
+    },
+    {
+      "scene": "pass-contraband",
+      "role": "merchant",
+      "violations": []
+    },
+    {
+      "scene": "pass-contraband",
+      "role": "sheriff",
+      "violations": []
+    },
+    {
+      "scene": "inspect-legal",
+      "role": "merchant",
+      "violations": []
+    },
+    {
+      "scene": "inspect-legal",
+      "role": "sheriff",
+      "violations": []
+    },
+    {
+      "scene": "inspect-contraband",
+      "role": "merchant",
+      "violations": []
+    },
+    {
+      "scene": "inspect-contraband",
+      "role": "sheriff",
+      "violations": []
+    },
+    {
+      "scene": "summary",
+      "role": "merchant",
+      "violations": []
+    },
+    {
+      "scene": "summary",
+      "role": "sheriff",
+      "violations": []
+    },
+    {
+      "scene": "game-over",
+      "role": "merchant",
+      "violations": []
+    },
+    {
+      "scene": "game-over",
+      "role": "sheriff",
+      "violations": []
+    },
+    {
+      "scene": "aborted",
+      "role": "merchant",
+      "violations": []
+    },
+    {
+      "scene": "aborted",
+      "role": "sheriff",
+      "violations": []
+    }
+  ],
+  "pageErrors": [],
+  "apiOrFirebaseRequests": []
+}
