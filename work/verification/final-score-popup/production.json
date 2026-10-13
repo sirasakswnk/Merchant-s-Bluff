@@ -1,0 +1,137 @@
+{
+  "checks": [
+    {
+      "players": 4,
+      "role": "merchant",
+      "width": 390,
+      "theme": {
+        "border": "7px",
+        "stitch": "dashed"
+      },
+      "autoOpen": true,
+      "reopen": true
+    },
+    {
+      "players": 4,
+      "role": "merchant",
+      "width": 1280,
+      "theme": {
+        "border": "7px",
+        "stitch": "dashed"
+      },
+      "autoOpen": true,
+      "reopen": true
+    },
+    {
+      "players": 4,
+      "role": "sheriff",
+      "width": 390,
+      "theme": {
+        "border": "7px",
+        "stitch": "dashed"
+      },
+      "autoOpen": true,
+      "reopen": true
+    },
+    {
+      "players": 4,
+      "role": "sheriff",
+      "width": 1280,
+      "theme": {
+        "border": "7px",
+        "stitch": "dashed"
+      },
+      "autoOpen": true,
+      "reopen": true
+    },
+    {
+      "players": 5,
+      "role": "merchant",
+      "width": 390,
+      "theme": {
+        "border": "7px",
+        "stitch": "dashed"
+      },
+      "autoOpen": true,
+      "reopen": true
+    },
+    {
+      "players": 5,
+      "role": "merchant",
+      "width": 1280,
+      "theme": {
+        "border": "7px",
+        "stitch": "dashed"
+      },
+      "autoOpen": true,
+      "reopen": true
+    },
+    {
+      "players": 5,
+      "role": "sheriff",
+      "width": 390,
+      "theme": {
+        "border": "7px",
+        "stitch": "dashed"
+      },
+      "autoOpen": true,
+      "reopen": true
+    },
+    {
+      "players": 5,
+      "role": "sheriff",
+      "width": 1280,
+      "theme": {
+        "border": "7px",
+        "stitch": "dashed"
+      },
+      "autoOpen": true,
+      "reopen": true
+    },
+    {
+      "players": 6,
+      "role": "merchant",
+      "width": 390,
+      "theme": {
+        "border": "7px",
+        "stitch": "dashed"
+      },
+      "autoOpen": true,
+      "reopen": true
+    },
+    {
+      "players": 6,
+      "role": "merchant",
+      "width": 1280,
+      "theme": {
+        "border": "7px",
+        "stitch": "dashed"
+      },
+      "autoOpen": true,
+      "reopen": true
+    },
+    {
+      "players": 6,
+      "role": "sheriff",
+      "width": 390,
+      "theme": {
+        "border": "7px",
+        "stitch": "dashed"
+      },
+      "autoOpen": true,
+      "reopen": true
+    },
+    {
+      "players": 6,
+      "role": "sheriff",
+      "width": 1280,
+      "theme": {
+        "border": "7px",
+        "stitch": "dashed"
+      },
+      "autoOpen": true,
+      "reopen": true
+    }
+  ],
+  "errors": []
+}

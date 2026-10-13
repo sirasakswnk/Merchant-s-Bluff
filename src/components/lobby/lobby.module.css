@@ -13,7 +13,7 @@
 .room button, .room a, .room summary { transition: background-color 160ms, box-shadow 160ms, transform 160ms; }
 .room button:disabled { cursor: not-allowed; opacity: 1; }
 .room :focus-visible { outline: 3px solid #7cc4ff; outline-offset: 4px; }
-.header { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin: 0 -24px 28px; padding: 18px 24px; border-bottom: 3px solid #24170d; background: linear-gradient(180deg, #6a4529, #4a2f1b); box-shadow: inset 0 1px #fff1b32e, 0 4px 12px #0004; }
+.header { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin: 0 -24px 28px; padding: 18px 24px; border-bottom: 3px solid #24170d; background: var(--merchant-header-background); box-shadow: var(--merchant-header-shadow); }
 .brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
 .brand > svg { width: 40px; height: 40px; flex: none; color: #f0c36c; }
 .brand p { margin: 0; font-family: var(--lobby-font-display), serif; font-size: 1.1rem; color: var(--paper); }
@@ -101,4 +101,4 @@
   .seat { position: relative; top: auto; left: auto; transform: none; width: calc(50% - 8px); }.ownSeat { order: 1; width: 100%; margin-top: 10px; }.seat h3 { font-size: .9rem; }.seat .readiness { font-size: .8rem; }
   .ownActions > p { text-align: center; }.boardHeading { flex-wrap: wrap; }.tableTitle { font-size: .9rem; }.tableCenter .seal { display: none; }
 }
-@media (prefers-reduced-motion: reduce) { .room button, .room a, .room summary, .portrait { transition: none; }.room button:hover:enabled { transform: none; } }
+@media (prefers-reduced-motion: reduce) { .room button, .room a, .room summary, .portrait { transition: none; }.room button:not(:global(.card)):hover:enabled { transform: none; } }

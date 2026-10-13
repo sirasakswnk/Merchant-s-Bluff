@@ -8,6 +8,7 @@ import { arrangeHand } from '../fixtures/game';
 import type { RoomCore, StoredRoom } from '../../src/lib/server/room-model';
 import type { PublicRoomView, PrivateRoomView } from '../../src/lib/shared/rooms';
 import { joinPlayers, press, publicMoney, roomPhase } from './helpers/game-ui';
+import { showHandCard } from './helpers/hand';
 import { writeFile } from 'node:fs/promises';
 
 test('cash-empty sheriff creates debts and later PASS receipts settle oldest debt first on every UI', async ({ browser }) => {
@@ -39,7 +40,7 @@ test('cash-empty sheriff creates debts and later PASS receipts settle oldest deb
     await expect.poll(async () => (await publicMoney(official)).find(player => player.id === room.game!.sheriffId)?.cash).toBe(0);
     for (const index of merchants) { await press(pages[index], 'พร้อมจัดกระเป๋า'); await expect(pages[index].getByRole('button', { name: 'พร้อมจัดกระเป๋า', exact: true })).toHaveCount(0); }
     for (const page of pages) await roomPhase(page, 'PACK_AND_DECLARE', 1);
-    for (const index of merchants) { const card = pages[index].locator('button.card').first(); await card.click(); await expect(card).toHaveAttribute('aria-pressed', 'true'); await press(pages[index], 'ปิดกระเป๋าและยืนยัน'); await expect(pages[index].getByRole('button', { name: 'ปิดกระเป๋าและยืนยัน', exact: true })).toHaveCount(0); }
+    for (const index of merchants) { const card = pages[index].locator('button.card').first(); await showHandCard(pages[index], 0); await card.click(); await expect(card).toHaveAttribute('aria-pressed', 'true'); await press(pages[index], 'ปิดกระเป๋าและยืนยัน'); await expect(pages[index].getByRole('button', { name: 'ปิดกระเป๋าและยืนยัน', exact: true })).toHaveCount(0); }
     for (const page of pages) await roomPhase(page, 'NEGOTIATE', 1);
     for (const index of merchants) { await press(pages[index], 'ไม่เสนอเงิน'); await expect(pages[index].getByText('ยืนยันล่าสุด: ไม่เสนอเงิน', { exact: true })).toBeVisible(); }
     for (const index of [first, second]) {

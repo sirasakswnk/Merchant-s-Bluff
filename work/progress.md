@@ -1,6 +1,104 @@
-# Progress — 12 ตุลาคม 2026
+# Progress — 13 ตุลาคม 2026
 
-## ขั้นตอนล่าสุด — ล็อบบี้โต๊ะกลม
+## ขั้นตอนล่าสุด — ป๊อปอัปอันดับตอนจบเกม
+
+ผู้ใช้ต้องการสรุปที่เพื่อนคุยกันต่อได้ แทนหน้าคะแนนละเอียดด้วยFinalScorePopup/native dialogเปิดอัตโนมัติเมื่อเกมจบ ใช้ผ้าใบกระสอบ/ขอบหนังเดิม แถวมีแค่อันดับ โปรไฟล์ตัวละคร ชื่อ และเงินสดคงเหลือ score.cash อันดับอ่านscore.rank/ลำดับจากserverและคงอันดับร่วม ไม่มีรายการสินค้า โบนัส หนี้หรือคะแนนรวมในแถว ไม่เปลี่ยนสูตรอันดับ
+
+ปิดด้วย×/Escapeและคืนfocusไปดูอันดับอีกครั้ง วนTab/Shift+Tabภายใน dialog พื้นหลังinert/ล็อกscroll เปิดดูซ้ำได้ ผู้จัดห้องเล่นใหม่ด้วยcallbackเดิมและdisabledตามสถานะ ไม่เปิดใหม่จากrevisionทั่วไปเพราะผูกmountกับgameId Previewวางpopupต้นiframeให้เห็นทันทีหลังจบ โดยไม่เปลี่ยนหน้าจอเกมจริง
+
+E2E5/5ผ่านรวมเกมlocalAuth/RTDBEmulators4คนครบ8รอบ ทุกจอเปิดpopup/rank/cashตรงauthoritative snapshot reload/Escape/rematchผ่าน ไพ่9จุด360/unique360/รายชนิดและIDsครบ cleanup1ห้อง4users ทวนUI4/4หลังปรับตำแหน่งPreview: 30มุม4/5/6คน×2roles×320/390/430/740landscape/1280px ไม่มีoverflow axe10กรณีไม่มีviolations controls44px/keyboard/200%/disabled4สถานะผ่าน ไม่มีAPI/Firebase requestsจากPreview
+
+TypeScript/lint/productionbuildผ่าน ตรวจproductionในเครื่อง12มุม4/5/6×2roles×390/1280px auto-open/ปิด/เปิดซ้ำ/themeผ่าน ตรวจภาพแล้ว React reviewแยกpresentation/typed callbacks/native dialog/ref effectcleanupและไม่ถือกติกา ไม่แก้engine/backend/data/Rules/ราคา/360ใบ/rulesVersion0.2 หลักฐาน [verification/final-score-popup/report.md](verification/final-score-popup/report.md) ไม่commit/push/deployหรือทดสอบโทรศัพท์จริง/Firebaseจริงในขั้นนี้ หยุดตามงานที่อนุมัติ
+
+## ประวัติ — เสนอเหรียญและถาดข้อเสนอบนโต๊ะ
+
+ผู้ใช้อนุมัติข้อเสนอปรับยอดง่ายและแสดงให้ทุกคนเห็น เพิ่มOfferAmountPickerแยกpresentation: ยอดใหญ่ ลด/เพิ่ม1 เพิ่ม5/10 พิมพ์ยอดเองได้ จำกัดปุ่มปรับในช่วง0–เงินใช้ได้ ร่างส่วนตัวอยู่session draftเดิม ยื่นโดยปุ่มแสดงยอดเท่านั้น ปุ่มไม่เสนอเงินยืนยัน0และคืนช่องร่างเป็น0 ไม่ส่งคำสั่งจากการปรับตัวเลข
+
+OfferDisplayอ่านpublic offersเดิม: ป้ายข้างพ่อค้าทุกคน/ถาดกลางตามคนที่ถูกเลือก/ยอดใหญ่ฝั่งนายด่าน แยกยังไม่ยื่นและยืนยัน0 ปุ่มให้ผ่านแสดงยอดรับ คงcashและคำแจ้ง แทนป้ายยื่นข้อเสนอที่ซ้ำเดิม กองเหรียญขยับ360msเมื่อconfirmed versionเปลี่ยน ไม่ขยับตอนเปิดหน้า/แก้ร่าง รองรับreduced motionและcleanup เพิ่มระยะโต๊ะเฉพาะเฟสข้อเสนอเพื่อไม่ชนพื้นที่ของเรา
+
+ผลสุดท้าย E2E6/6ผ่านชุดเดียว: offer3 + Preview2 + game-table UI1 (layout30/สลับนายด่าน60/ฉาก40/axe20) ทดสอบpickerขอบเขต/invalid/native keyboard/explicit0/draftไม่เผย/motion/reduced-motionผ่าน UIข้อเสนอ18มุม4/5/6×2roles×320/390/1280px axe6ไม่มีviolations disabled4สถานะ/200%ผ่าน LocalAuth/RTDBEmulators4คนครบหนึ่งรอบ: unselected merchantเสนอได้ ร่างหลังreload ยอดsyncทุกจอ stale confirmationถูกปิด PASSโอน15ครั้งเดียว INSPECTข้อเสนอ8ไม่มีโอน8 ยืนยัน0แล้วตัดสินได้ ไพ่5จุด360/unique360/IDsและรายชนิดครบ ล้างfixture1ห้อง4usersแล้ว
+
+TypeScript/lint/productionbuildผ่าน ProductionPreviewในเครื่อง12มุม4/5/6×2roles×390/1280px ปรับร่างยังไม่เปลี่ยนป้าย ยื่นแล้วป้าย/ถาดเปลี่ยนและconfirmationมีจำนวนถูกต้อง ไม่มีAPI/Firebase requestsจากPreview ตรวจตามReact Best Practices: childไม่ถือgame rules, controlled draft, hook dependencies/cleanup, native controls/labels/direct imports ตรวจภาพแล้ว ไม่แก้engine/backend/data/Rules/ราคา/360ใบ/rulesVersion0.2 หลักฐาน [verification/coin-offers/report.md](verification/coin-offers/report.md) ไม่commit/push/deployหรือทดสอบFirebaseจริง/โทรศัพท์จริงในขั้นนี้ หยุดตามขั้นที่อนุมัติ
+
+## ประวัติ — กล่องคะแนนสุดท้าย
+
+เปลี่ยนกรอบคะแนนสุดท้ายเป็นGamePanelผ้าใบกระสอบสีทราย ขอบหนัง7px รอยเย็บและเงานูนชุดเดียวกับกล่องเล่นเกม คงพื้นสีอ่อนของคะแนนรายคนและการจัดรายการเดิม ไม่แก้ผู้ชนะ/อันดับ/คะแนน/จำนวนสินค้า/สูตรคำนวณหรือcallbackเล่นใหม่
+
+ตรวจ30มุม4/5/6คน×merchant/sheriff×320/360/390/430/1280px ข้อความคะแนนและรายละเอียดทุกช่องตรงกับก่อนแก้ ไม่ล้นจอ Scopedaxe12กรณีไม่พบviolations ปุ่มกลับล็อบบี้ใช้Enterได้และdisabledตามoffline/readonly/busy/pending ข้อความ200%ผ่าน Preview E2E2/2, TypeScript/lint/productionbuildผ่าน ตรวจproductionในเครื่อง12มุม4/5/6คน×2roles×390/1280pxได้ธีมและข้อมูลเดิม ภาพตรวจแล้ว หลักฐาน [verification/final-score-theme/report.md](verification/final-score-theme/report.md) ไม่ทดสอบFirebaseจริงหรือโทรศัพท์จริงซ้ำ ไม่มีcommit/push/deploy หยุดตามขั้นที่อนุมัติ
+
+## ประวัติ — ธีมกล่องทุกช่วงของเกม
+
+ผู้ใช้ให้กล่องเตรียมสินค้า เจรจาและข้อเสนอ รอผล/รอบถัดไป และผลของพ่อค้าใช้ธีมเดียวกับจัดกระเป๋า แยกGamePanel/CSS Moduleร่วมเป็นผ้าใบกระสอบสีทราย ขอบหนัง7px รอยเย็บและเงานูน ใช้กับMerchantControlsทุกสถานะรวมรอเพื่อน SheriffControlsและกล่องผลตัดสิน ช่องกรอกพ่อค้ามีพื้นสีอ่อนอ่านง่าย ไพ่prepare/packยังยื่นเต็มจอและปัดครึ่งวงกลมได้
+
+TypeScript/lint/productionbuildผ่าน E2E10/10ผ่านเดิม ตรวจ80มุม8ฉาก×2roles×320/360/390/430/1280px ทุกกล่องมีthemeที่คำนวณแล้วตรงกัน ไม่ล้นจอ controls44px decorationsไม่บังpointer Scopedaxe32กรณีไม่พบviolations ตรวจเสนอเงิน7/ปฏิเสธยอดติดลบ/ไม่เสนอเงิน/ยกเลิกและยืนยันตรวจ/disabled4สถานะ/ข้อความ200%ผ่าน PASSยังไม่เผยชนิดของต้องห้าม INSPECTแสดงผลเดิม ไม่มีpageerrorหรือAPI/Firebase requestจากPreview
+
+ตรวจproduction buildในเครื่องอีก24มุม6ฉาก×2roles×390/1280px CSSที่รวมแล้วตรงธีมและฟอร์มเสนอเงินผ่าน ตรวจตามReact Best Practices: wrapperไม่มีstate/effect/network ใหม่ ส่งต่อaria/data/result IDsเดิม keys/hooks/draft/commandcallbacksเดิม หลักฐาน [verification/game-panel-theme/report.md](verification/game-panel-theme/report.md) ไม่แก้engine/backend/data/Rules/ราคา/360ใบ/rulesVersion0.2 ไม่commit/push/deployหรือทดสอบFirebaseจริง/โทรศัพท์จริงในขั้นนี้ หยุดหลังงานที่อนุมัติ
+
+## ประวัติ — กล่องผ้าใบกระสอบและขอบหนังเย็บ
+
+ผู้ใช้เลือกผ้าใบกระสอบสีทรายและขอบหนังเย็บจากตัวอย่าง เปลี่ยนเฉพาะกล่องจัดกระเป๋าและแจ้งสินค้าในPACK_AND_DECLARE ด้วยCSS Module ลายผ้าจางใต้ข้อความ ขอบหนัง7px/รอยเย็บ/เงานูน แยกพื้นสีอ่อนรองรับช่องแจ้งสินค้าและปุ่ม เพิ่มพื้นที่ยื่นมือไพ่ตามความหนาขอบเพื่อคงเต็มความกว้างจอบนมือถือ ใช้MerchantControlsร่วมกันทั้งPreviewและห้องจริง
+
+TypeScript/lint/productionbuildผ่าน E2E10/10ผ่าน รวมtouch24มุม4/5/6คน×prepare/pack×360/390/430/1280px และgesture6มุม320/390/430px พร้อมkeyboard/200%/disabled/offline/Preview isolation ตรวจกล่องใหม่โดยตรงที่320/360/390/430/1280pxไม่มีoverflowหรือaxe violations ปุ่มและselectอย่างน้อย44px ขอบตกแต่งไม่รับpointer คีย์บอร์ดและข้อความ200%ผ่าน ตรวจproduction buildในเครื่องที่390/1280pxได้ขอบ7px/รอยเย็บเดิม เลือกไพ่/แจ้งสินค้า/ปุ่มยืนยันและCSSที่รวมแล้วผ่าน ไม่มีpageerror
+
+คงcallbacks/draft/instanceIds/เพดานเลือก/กติกา/ราคา/360ใบ/rulesVersion0.2 ไม่แก้engine/backend/data/Rules หลักฐาน [verification/packing-texture/report.md](verification/packing-texture/report.md) ขั้นนี้ตรวจUIในChromium ไม่รันเกมFirebaseจริงหรือโทรศัพท์จริงซ้ำ ไม่มีcommit/push/deploy หยุดหลังขั้นที่ผู้ใช้อนุมัติ
+
+## ประวัติ — ภาพหน้าการ์ดจาก card.zip
+
+ผู้ใช้ส่งภาพสินค้า7ชนิด ใช้เต็มใบแทนภาพ/ชื่อ/ตัวเลขเดิมในMerchantHandทั้งprepare/packและช่องรายละเอียด ภาพพิมพ์ราคา/ชดเชย/ค่าปรับตรงrules0.2ครบ7ชนิด เก็บpublic/art/cardsเป็นWebP lossless1024×1536px decoded pixelsตรงPNGทุกใบ Next/Imageส่งขนาดตามจอ/remและใช้contain ป้ายเลือกแล้วอยู่ใต้กรอบไม่ทับราคา คงปัดครึ่งวงกลม/ขนาดไพ่/instanceIds/เพดาน3และ5/keyboard/disabled ราคาและscreen reader/detailsยังอ่านrules snapshotเดิม
+
+TypeScript/lint/productionbuildผ่าน E2E10/10ผ่านชุดเดียว: motion6กรณี prepare/pack×320/390/430px + selection/keyboard2 + Preview2 รวมtouch24มุม4/5/6คน การหมุน/ปัดไม่เลือก/แตะใบริมจอ/200%/readonly/busy/pending/offlineผ่าน ไม่มีpage overflow/axe violations/APIหรือFirebase requestsจากพรีวิว ตรวจภาพมือถือ390และdesktop1280/DPR2 โหลดครบ object-fit contain และdraggablefalse Optimizer384pxของภาพทั้ง7ชนิดตอบ200 ภาพที่ส่งราว22–29KBต่อใบ ต้นทางยังความละเอียดเต็ม
+
+ตรวจUI/ภาพเท่านั้นในขั้นนี้ ไม่รันเกมEmulator4คนซ้ำหลังเปลี่ยนassets หลักฐานเกมก่อนหน้าอยู่verification/arc-hand ไม่แก้engine/backend/data/Rules/ราคา/360ใบ/rulesVersion ไม่เปลี่ยนหน้าแรก ผล [verification/card-art/report.md](verification/card-art/report.md) และข้อมูล [../docs/card-art.md](../docs/card-art.md) ยังอยู่ในเครื่อง ไม่มีcommit/push/deployหรือทดสอบโทรศัพท์จริง/Safari
+
+## ประวัติ — ปัดมือไพ่ตามแนวครึ่งวงกลม
+
+ผู้ใช้อนุมัติตัวอย่างsemicircle-hand-motion นำมาใช้กับMerchantHandทั้งprepare/packจริงและพรีวิว แยกuseArcHandเฉพาะpresentation มือถือ≤600pxไพ่132×192pxหมุนรอบpivotร่วมต่ำกว่าจอ ตำแหน่งและมุมเปลี่ยนพร้อมกันตามนิ้ว ปล่อยแล้วใช้แรงเฉื่อยจำกัดและชะลอ320msหยุดที่ใบกลาง หยุดหัวท้ายไม่วน ไพ่ยื่นพ้นpanelเต็มจอ เลือกแล้วยก32pxตามรัศมี แตะใบริมจอแล้วหมุนเข้ากลาง ปัดไม่เลือกและยังเลื่อนหน้าแนวตั้งได้ ปุ่มก่อน/ถัดไป/Tab/ลูกศร/Home/Endอ่านครบทุกใบ ลดmotionแล้วหยุดทันที แก้shared hover ruleให้ไม่ล้างตำแหน่งไพ่เมื่อใช้reduced motion
+
+ผลสุดท้าย E2E11/11ผ่านชุดเดียว: gesture6มุม prepare/pack×320/390/430pxติดตามตำแหน่งจากrenderจริงและfitเป็นวงกลมเดียวกัน ไม่มีเลือกขณะปัด/แตะneighborผิด/keyboardclip/page overflow/axe violations ชุดtouch24มุม4/5/6คนและสองเฟสที่360/390/430/1280ใช้reduced motionเพื่อตรวจselection/เพดาน3และ5/สินค้าเดียวกันคนละID ส่วนgesture6มุมตรวจmotionปกติ Keyboard/200%/readonly/busy/pending/offlineผ่าน Previewเดิม2กรณีผ่านไม่มีAPI/Firebaseหรือplayer-storagewrites
+
+ห้องlocalAuth/RTDBEmulators4browser contextsเปิดtouch เลือกไพ่ด้วยtap แลก3ขน5ทุกพ่อค้า แจ้งbread PASSครบหนึ่งรอบ/เริ่มรอบ2 ร่าง/คำแจ้งอยู่หลังreloadและAPIรับinstanceIdsตรงselection Inventory10จุด360ใบ/unique360/รายชนิดและIDsครบ seatOrderเดิม ล้างเฉพาะfixture1ห้อง4users TypeScript/lint/productionbuildผ่าน Desktop1280ภาพเหมือนก่อนปรับทุกbyte ผล [verification/arc-hand/report.md](verification/arc-hand/report.md) ไม่แก้engine/backend/data/Rules/ราคา/360ใบ/rulesVersion0.2 ยังเป็นChromiumจำลองมือถือ ไม่มีphoneจริง/Safari/Firebaseจริงหรือcommit/push/deployในขั้นนี้
+
+## ประวัติ — มือไพ่มือถือเป็นพัดโค้ง
+
+ผู้ใช้ต้องการทรงโค้งเหมือนถือไพ่บอร์ดเกม ปรับเฉพาะCSSมือถือให้ตัวไพ่และพื้นที่แตะเอียงไปด้วยกันจากซ้ายไปขวา ไพ่กลางสูงกว่าปลายพัด เพิ่มพื้นที่รอบไพ่เอียงและไพ่ยกขึ้น คงไพ่ใหญ่132px/ซ้อน24px/ยื่นพ้นpanel/ปัดซ้าย–ขวา/แตะเลือกยก32px/instanceIdและกติกาเดิม
+
+ตรวจหลังเปลี่ยนCSS: E2E8/8ผ่าน (gesture6มุม prepare/pack×320/390/430px + regression touch/keyboard/200%/readonly/reduced motion2กรณี) เลือกใบริมจอ ปัดไม่เลือก และfocusเลื่อนเผยไพ่ผ่าน ไม่มีhorizontal page overflow/axe violations ตรวจภาพปลายพัดซ้ายและขวาครบ3ขนาด ไม่มีvertical overflowในพื้นที่ไพ่ ภาพdesktop1280ยังเหมือนก่อนปรับทุกbyte ProductionbuildและTypeScriptผ่าน ผล [verification/mobile-hand/report.md](verification/mobile-hand/report.md) ยังเป็นChromiumจำลองมือถือ งานอยู่ในเครื่อง
+
+## ประวัติ — ไพ่บนมือถือยื่นพ้นกล่องและปัดซ้าย–ขวา
+
+ผู้ใช้อนุมัติให้ไพ่มือถือยื่นพ้นขอบกล่องและปัดมือไพ่ได้ ใช้ทั้งช่วงแลกและจัดกระเป๋า จอไม่เกิน600pxแสดงไพ่132px ซ้อนเพียง24px เต็มความกว้างจอ มีใบถัดไปโผล่ริมจอให้รู้ว่าปัดต่อได้ แตะแล้วยก32pxและอยู่ด้านหน้า แตะซ้ำเอาออก แตะใบที่เห็นบางส่วนหรือใช้keyboardแล้วเผยเต็มใบ ไม่เลือกไพ่ขณะปัด แก้เฉพาะMerchantHand/CSSและระยะbleedของpanel คงdesktop/instanceId/hand order/เพดาน3และ5/engine/backend/data/Rules/ราคา/360ใบ/rulesVersion0.2
+
+TypeScript/lint/productionbuildผ่าน E2Eสุดท้าย11/11ผ่านในชุดเดียว: ชุดไพ่เดิม3 + gestureมือถือ6 (prepare/pack×320/390/430px) + Previewเดิม2 ตรวจnative touchซ้าย/ขวาไม่เปลี่ยนselection, แตะใบริมจอ, keyboardเลื่อนเผยไพ่, เลื่อนหน้าแนวตั้งบนพื้นที่ไพ่, ไม่มีpage overflowหรือaxe violationsในชุดไพ่มือถือ6มุม พรีวิวไม่เรียกAPI/Firebaseหรือเขียนplayer storage Desktop1280ภาพชุดไพ่ก่อน/หลังเหมือนทุกbyte
+
+ห้องlocalEmulators4browser contextsแลก3ขน5ทุกพ่อค้า PASSครบหนึ่งรอบ/เข้าสู่รอบ2 ร่างและคำแจ้งคงอยู่หลังreload คำสั่งตรงinstanceIdที่เลือก Inventory10จุดยัง360ใบ/unique360/รายชนิดและIDsครบ ล้างเฉพาะfixture1ห้อง4users ผล [verification/mobile-hand/report.md](verification/mobile-hand/report.md) ตรวจด้วยChromiumจำลองขนาดและtouch ยังไม่ทดสอบโทรศัพท์จริง/Safari งานอยู่ในเครื่อง ยังไม่commit/push/deploy
+
+## ประวัติ — ไพ่พ่อค้าเป็นพัดโค้งตื้น
+
+ผู้ใช้เลือกพัดไพ่โค้งตื้นและแตะแล้วยกขึ้น แยก MerchantHand/CSS Modules เป็นส่วนแสดงไพ่ส่วนตัว ใช้ภาพสินค้าและ texture กระดาษชุดเดิมของหน้าแรก ไพ่เลือกแลก/จัดกระเป๋าทั้ง6ใบคงลำดับและinstanceIdจากมือเดิม มุมสินค้า/มูลค่ามองเห็นขณะซ้อน เลือกแล้วยก32pxพร้อม✓ แตะซ้ำเอาออก มีรายละเอียดไพ่ที่กำลังดู จอแคบมากและข้อความ200%กาง2คอลัมน์อัตโนมัติ ใช้พื้นที่แตะอย่างน้อย44px/keyboard/reduced motion ไม่เพิ่มdragหรือแก้เกม engine/backend/data/Rules/ราคา/360ใบ/rulesVersion0.2
+
+E2Eสุดท้าย5กรณีผ่านชุดเดียว: touch24มุม prepare/pack×4/5/6คน×360/390/430/1280, ไพ่สินค้าเดียวกันคนละใบ/เพดาน3และ5/เอาออกเลือกใหม่ผ่าน axe2มุมไม่มีviolations, readonly/busy/pendingไม่เปลี่ยนselection offlineแก้draftได้แต่ส่งไม่ได้, keyboard/reflow320/200%/reduced motionผ่าน Previewเดิม2กรณีผ่านไม่มีFirebase/API/player-storagewrites
+
+ห้องจริงlocalEmulators4คนแลก3ขน5ทุกพ่อค้า PASSทุกรายครบหนึ่งรอบและส่งต่อนายด่านสู่รอบ2ผ่าน draftและคำแจ้งbreadอยู่หลังreloadทั้งprepare/pack cardIdsในคำสั่งตรงไพ่ที่แตะ inventory10จุด total360/unique360/IDและรายชนิดครบ seatOrderเดิม ล้างเฉพาะfixture1ห้อง4users TypeScript/lint/productionbuildผ่าน ไม่มีpageerror หลักฐาน [verification/merchant-hand/report.md](verification/merchant-hand/report.md) ขั้นนี้ยังไม่commit/push/deploy ไม่claimphysicalphoneหรือFirebaseจริง
+
+## ประวัติ — texture หัวห้องตรงกับหน้าแรก
+
+ย้ายลายไม้ SVG เดิมจาก home.html เป็น CSS token ร่วมใน globals.css หน้าแรกและหัวห้องใช้พื้นหลัง/เงาชุดเดียวกัน รวมหน้าเล่นเกมที่ใช้หัวห้องร่วมกับล็อบบี้ คงข้อความและขนาดเดิม แก้เฉพาะ CSS ไม่เปลี่ยนกติกาหรือข้อมูลเกม
+
+ตรวจใน Chromium หน้าแรก/preview lobby/pack ที่360/390/1280px: background/border/shadow/repeat/size/positionตรงกันครบ6มุม ไม่มีล้นแนวนอน ปุ่มหน้าแรกสูงอย่างน้อย44px ไม่มีpageerror ภาพหัวหน้าแรก390pxก่อน/หลังตรงกันทุกbyte ProductionbuildและTypeScriptผ่านโดยแยกoutputจากdev server ไม่deploy หลักฐานในwork/runtime/header-texture ยังไม่commit/push
+
+## ประวัติ — หน้าเล่นเกมโต๊ะกลม
+
+ผู้ใช้รับข้อเสนอและสั่งลงมือ ใช้โต๊ะไม้กลมทุกเฟส ตัวละครเดิม/ชื่อ/เงิน/คำแจ้ง/สถานะ ผู้ชมล่างเสมอรวมเมื่อเป็นนายด่าน นายด่านคนอื่นบน สลับภาพไม่เกิน2คนและDOMยังเรียงตามserver ภาพตำแหน่งเก็บmemoryของหน้าที่เปิด เมื่อreloadจัดใหม่แต่self/sheriffตามเงื่อนไขและseatOrderจริงเดิม ไพ่และปุ่มใต้โต๊ะ มีjump link กลางโต๊ะเฉพาะpublictarget/bag/result รายละเอียดผล/score/rematchด้านล่าง
+
+แยกGameTableView/game-seats/CSS Modules ใช้art/fontsร่วมกับLobbyView RoomClient/controls/draft/retry/pending/offline/readonly/confirmationเดิม ไม่แก้engine/backend/data/Rules/config/ราคา/360ใบ/rulesVersion0.2 พรีวิวเปลี่ยนนายด่านได้โดยไม่แตะFirebase/playerstorage Guardเมื่อabortระหว่างresolutionไม่แสดงผลเก่าหรือลิงก์ที่ไม่มีปลายทาง
+
+TypeScript/lint/productionbuildผ่าน E2E9กรณีสุดท้ายผ่านจากชุดรวม8+ทวน4คน/preview3หลังแก้harness: layout30กรณี4/5/6×2roles×5widths, sheriffTransitions60, scene40/axe20ไม่มีviolations, keyboard44px/200%/320px/reducedmotion/privacy/passglowผ่าน Preview2และLobby2/M4ผ่านไม่ทำลายหน้าเดิม Homecontrastยังใช้highcontrastตามข้อจำกัดเดิม
+
+เกมจริงlocalEmulators4คนแลก3ขน5PASS1/INSPECT2ครบหนึ่งรอบ/sheriffส่งต่อ/reloadผ่าน inventory7จุด total360/unique360/IDและรายชนิดครบ จากนั้นรอบ2ถึงresolutionแล้วabort/rematchผ่าน เกม5คน10รอบ/6คน12รอบ (caseM5pack1/exchange0) นายด่านคนละ2ครั้ง/เงินคะแนนทุกbrowserตรง/retry commandเดิม/offline+reload/control takeover/staleoffer/rematchผ่าน ไม่มีpageerror ล้างเฉพาะfixture4/5/6คนที่สร้างแล้ว ไม่claimphysicalphoneหรือFirebaseจริงรอบนี้
+
+ผล [verification/game-table/report.md](verification/game-table/report.md) แบบ [../docs/game-table-design.md](../docs/game-table-design.md) เปิดhttp://localhost:4100/preview?scene=pack&role=merchant&players=6&width=390ได้ งานก่อนหน้าส่งbranchpreview760426eแล้ว งานใหม่ขั้นนี้ไม่มีcommit/push/deploy หยุดตามงานทีละขั้น
+
+## ประวัติ — ล็อบบี้โต๊ะกลม
 
 ผู้ใช้เลือกเริ่มเฉพาะล็อบบี้ก่อนเกม ทำโต๊ะไม้กลมและตัวละครที่เลือกจากhome.htmlล้อมรอบ ผู้ชมอยู่ล่างเสมอ ชื่อ/พร้อม/ออนไลน์/มงกุฎผู้จัดห้อง รหัส/เชิญเหนือโต๊ะ พร้อมด้านล่าง เริ่มกลางโต๊ะ callbackเดิม ไม่มีการสลับseatOrderจริง แยกLobbyView/CSS Modules/seat layout และRoomStatus presentation ใช้ทั้งห้องจริงและpreview
 

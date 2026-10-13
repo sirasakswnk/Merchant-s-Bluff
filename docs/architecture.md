@@ -72,11 +72,19 @@ Local modeต้อง demo project IDsตรงกันและมีทั�
 
 ## Design
 
+GameTableViewใช้display slotsในcomponents/table/game-seats.ts ตรึงviewerล่างและsheriffอื่นบน โดยสลับเฉพาะภาพและคงDOM/public playerorderตามserver CSS Modules/art/fontsแชร์กับล็อบบี้ RoomViewเลือกviewตามlifecycle แผงMerchantControls/SheriffControls/draft/commandsเดิมอยู่ใต้โต๊ะ ส่วนกลางโต๊ะอ่านเฉพาะPublicRoomView ไม่ใช้own.hand/bagคำนวณผล ยุติเกมมีguardแม้currentResolutionยังอยู่ ดูdocs/game-table-design.md
+
+MerchantHandในcomponents/cardsรับเฉพาะhandส่วนตัว, productsจากrules snapshot, selectedIds, maximum, disabledและcallback เลือกตามinstanceIdโดยไม่สลับลำดับมือจริง ค่าใช้จ่าย/จำนวนเลือกมาจากsnapshotเดิม ไม่มีFirebase/API/storageหรือการส่งคำสั่งในส่วนแสดงผล MerchantControlsยังถือdraft/declarationและส่งprepareGoods/lockBagเดิม CSS Modulesจัดพัดdesktop/ยกไพ่และใช้textureกระดาษร่วมกับหน้าแรก
+
+useArcHandแยกmotionมือถือออกจากselection: คำนวณตำแหน่งและมุมรอบpivotร่วมจากขนาดไพ่ที่วัดจริง เก็บfocus/gesture/animationในrefsและปรับCSS variablesด้วยrequestAnimationFrame Reactอัปเดตเพียงเมื่อใบกลางเปลี่ยน Pointer captureเริ่มหลังยืนยันปัดแนวนอน แยกการถ่ายimplicit captureจากcardไปviewportออกจากการยกเลิก gesture เพื่อให้ปัดต่อเนื่องได้ ใช้touch-action pan-y/pinch-zoomคงการเลื่อนหน้า/zoom การแตะtouchใช้visible hit targetผ่านguarded click handlerเดิมและระงับfollow-up clickเพื่อไม่ให้neighborที่browserปรับจุดแตะได้รับselectionซ้ำ Keyboardยังใช้nativeclickตามเดิม
+
+Viewportยื่นพ้นpanelผ่านhand-bleedและclipภาพปลายพัด ไม่มีpage overflow ปุ่มก่อน/ถัดไป/keyboardเผยไพ่ด้วยview indexที่จำกัดหัวท้าย รองรับresize/ข้อความ200%และprefers-reduced-motion Observer/media listeners/frame/captureถูกล้างเมื่อunmountหรือhand IDsเปลี่ยน ข้อมูลมุมมองไม่เขียนstorage/API/RTDB และไม่แก้seatOrder/ลำดับมือ/กติกา
+
 ล็อบบี้ lifecycle LOBBY ใช้ LobbyView แยก CSS Modules กับลำดับวาดโต๊ะในcomponents/lobby/seats.ts ผู้ชมล่างโดยหมุนสำเนารายชื่อ ไม่เปลี่ยนseatOrderของserver CharacterAvatarอ่านavatarIdและartworkหน้าแรก RoomStatusเป็นpresentationสถานะร่วม ส่วนRoomClientยังถือSDK/commandsเดิม หน้าเล่นเกมยังเดิม ดูdocs/lobby-design.md
 
 มี `/preview` สำหรับดูUIด้วยข้อมูลตัวอย่าง แยก`RoomView`เป็นpresentationร่วมกับ`RoomClient` โดยadapterจริงยังถือAuth/realtime/command/storage ส่วน`RoomPreview`มีเฉพาะmemory callbacksและไม่เรียกFirebase/api ภาพในiframeใช้ขนาดจริงของviewport พร้อมqueryparametersเลือกscene/role/count/state การแก้UIจึงไม่ต้องทำสำเนาเกมอีกชุด ดูdocs/preview.md
 
-หน้าแรกใช้ referenceจาก home.html หน้าเกมยังเป็น UIชั่วคราวภาษาไทย responsiveและ semantic controls ไม่ยึด merchant-gate.htmlเป็นดีไซน์สุดท้าย M4ตรวจ responsive/accessibility/safe-area/reduced-motion/error/loadingแล้ว ภาพตกแต่งขั้นสุดท้ายของหน้าที่ยังไม่ได้เลือกพักไว้ การเปลี่ยน UIไม่ต้องเปลี่ยน engine
+หน้าแรกใช้ referenceจาก home.html ล็อบบี้และหน้าเล่นเกมใช้โต๊ะไม้กลมตามแนวทางที่ผู้ใช้เลือก ภาษาไทย responsiveและ semantic controls ไม่ยึด merchant-gate.htmlเป็นดีไซน์สุดท้าย M4ตรวจ responsive/accessibility/safe-area/reduced-motion/error/loadingแล้ว ภาพตกแต่งขั้นสุดท้ายของหน้าที่ยังไม่ได้เลือกพักไว้ การเปลี่ยน UIไม่ต้องเปลี่ยน engine
 
 ## จำนวนสำรับที่ยืนยันแล้ว
 

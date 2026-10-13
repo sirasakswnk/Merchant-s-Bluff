@@ -1,0 +1,1357 @@
+{
+  "cases": 30,
+  "views": [
+    {
+      "players": 4,
+      "role": "merchant",
+      "width": 320,
+      "height": 900,
+      "rows": [
+        {
+          "id": "preview-player-1",
+          "rank": 1,
+          "cash": 100,
+          "avatar": 0,
+          "text": "อันดับ 1\n    \n    ฟิลด์ผู้ซื่อสัตย์100เหรียญ"
+        },
+        {
+          "id": "preview-player-4",
+          "rank": 2,
+          "cash": 50,
+          "avatar": 3,
+          "text": "อันดับ 2\n    \n    ข้าวพ่อค้าผ้า50เหรียญ"
+        },
+        {
+          "id": "preview-player-3",
+          "rank": 3,
+          "cash": 50,
+          "avatar": 2,
+          "text": "อันดับ 3\n    \n    ต้นนักต่อรอง50เหรียญ"
+        },
+        {
+          "id": "preview-player-2",
+          "rank": 4,
+          "cash": 0,
+          "avatar": 1,
+          "text": "อันดับ 4\n    \n    เมย์ตลาดเช้า0เหรียญ"
+        }
+      ],
+      "axeChecked": false,
+      "violations": []
+    },
+    {
+      "players": 4,
+      "role": "merchant",
+      "width": 390,
+      "height": 900,
+      "rows": [
+        {
+          "id": "preview-player-1",
+          "rank": 1,
+          "cash": 100,
+          "avatar": 0,
+          "text": "อันดับ 1\n    \n    ฟิลด์ผู้ซื่อสัตย์100เหรียญ"
+        },
+        {
+          "id": "preview-player-4",
+          "rank": 2,
+          "cash": 50,
+          "avatar": 3,
+          "text": "อันดับ 2\n    \n    ข้าวพ่อค้าผ้า50เหรียญ"
+        },
+        {
+          "id": "preview-player-3",
+          "rank": 3,
+          "cash": 50,
+          "avatar": 2,
+          "text": "อันดับ 3\n    \n    ต้นนักต่อรอง50เหรียญ"
+        },
+        {
+          "id": "preview-player-2",
+          "rank": 4,
+          "cash": 0,
+          "avatar": 1,
+          "text": "อันดับ 4\n    \n    เมย์ตลาดเช้า0เหรียญ"
+        }
+      ],
+      "axeChecked": false,
+      "violations": []
+    },
+    {
+      "players": 4,
+      "role": "merchant",
+      "width": 430,
+      "height": 900,
+      "rows": [
+        {
+          "id": "preview-player-1",
+          "rank": 1,
+          "cash": 100,
+          "avatar": 0,
+          "text": "อันดับ 1\n    \n    ฟิลด์ผู้ซื่อสัตย์100เหรียญ"
+        },
+        {
+          "id": "preview-player-4",
+          "rank": 2,
+          "cash": 50,
+          "avatar": 3,
+          "text": "อันดับ 2\n    \n    ข้าวพ่อค้าผ้า50เหรียญ"
+        },
+        {
+          "id": "preview-player-3",
+          "rank": 3,
+          "cash": 50,
+          "avatar": 2,
+          "text": "อันดับ 3\n    \n    ต้นนักต่อรอง50เหรียญ"
+        },
+        {
+          "id": "preview-player-2",
+          "rank": 4,
+          "cash": 0,
+          "avatar": 1,
+          "text": "อันดับ 4\n    \n    เมย์ตลาดเช้า0เหรียญ"
+        }
+      ],
+      "axeChecked": false,
+      "violations": []
+    },
+    {
+      "players": 4,
+      "role": "merchant",
+      "width": 740,
+      "height": 360,
+      "rows": [
+        {
+          "id": "preview-player-1",
+          "rank": 1,
+          "cash": 100,
+          "avatar": 0,
+          "text": "อันดับ 1\n    \n    ฟิลด์ผู้ซื่อสัตย์100เหรียญ"
+        },
+        {
+          "id": "preview-player-4",
+          "rank": 2,
+          "cash": 50,
+          "avatar": 3,
+          "text": "อันดับ 2\n    \n    ข้าวพ่อค้าผ้า50เหรียญ"
+        },
+        {
+          "id": "preview-player-3",
+          "rank": 3,
+          "cash": 50,
+          "avatar": 2,
+          "text": "อันดับ 3\n    \n    ต้นนักต่อรอง50เหรียญ"
+        },
+        {
+          "id": "preview-player-2",
+          "rank": 4,
+          "cash": 0,
+          "avatar": 1,
+          "text": "อันดับ 4\n    \n    เมย์ตลาดเช้า0เหรียญ"
+        }
+      ],
+      "axeChecked": false,
+      "violations": []
+    },
+    {
+      "players": 4,
+      "role": "merchant",
+      "width": 1280,
+      "height": 900,
+      "rows": [
+        {
+          "id": "preview-player-1",
+          "rank": 1,
+          "cash": 100,
+          "avatar": 0,
+          "text": "อันดับ 1\n    \n    ฟิลด์ผู้ซื่อสัตย์100เหรียญ"
+        },
+        {
+          "id": "preview-player-4",
+          "rank": 2,
+          "cash": 50,
+          "avatar": 3,
+          "text": "อันดับ 2\n    \n    ข้าวพ่อค้าผ้า50เหรียญ"
+        },
+        {
+          "id": "preview-player-3",
+          "rank": 3,
+          "cash": 50,
+          "avatar": 2,
+          "text": "อันดับ 3\n    \n    ต้นนักต่อรอง50เหรียญ"
+        },
+        {
+          "id": "preview-player-2",
+          "rank": 4,
+          "cash": 0,
+          "avatar": 1,
+          "text": "อันดับ 4\n    \n    เมย์ตลาดเช้า0เหรียญ"
+        }
+      ],
+      "axeChecked": false,
+      "violations": []
+    },
+    {
+      "players": 4,
+      "role": "sheriff",
+      "width": 320,
+      "height": 900,
+      "rows": [
+        {
+          "id": "preview-player-1",
+          "rank": 1,
+          "cash": 100,
+          "avatar": 0,
+          "text": "อันดับ 1\n    \n    ฟิลด์ผู้ซื่อสัตย์100เหรียญ"
+        },
+        {
+          "id": "preview-player-4",
+          "rank": 2,
+          "cash": 50,
+          "avatar": 3,
+          "text": "อันดับ 2\n    \n    ข้าวพ่อค้าผ้า50เหรียญ"
+        },
+        {
+          "id": "preview-player-3",
+          "rank": 3,
+          "cash": 50,
+          "avatar": 2,
+          "text": "อันดับ 3\n    \n    ต้นนักต่อรอง50เหรียญ"
+        },
+        {
+          "id": "preview-player-2",
+          "rank": 4,
+          "cash": 0,
+          "avatar": 1,
+          "text": "อันดับ 4\n    \n    เมย์ตลาดเช้า0เหรียญ"
+        }
+      ],
+      "axeChecked": false,
+      "violations": []
+    },
+    {
+      "players": 4,
+      "role": "sheriff",
+      "width": 390,
+      "height": 900,
+      "rows": [
+        {
+          "id": "preview-player-1",
+          "rank": 1,
+          "cash": 100,
+          "avatar": 0,
+          "text": "อันดับ 1\n    \n    ฟิลด์ผู้ซื่อสัตย์100เหรียญ"
+        },
+        {
+          "id": "preview-player-4",
+          "rank": 2,
+          "cash": 50,
+          "avatar": 3,
+          "text": "อันดับ 2\n    \n    ข้าวพ่อค้าผ้า50เหรียญ"
+        },
+        {
+          "id": "preview-player-3",
+          "rank": 3,
+          "cash": 50,
+          "avatar": 2,
+          "text": "อันดับ 3\n    \n    ต้นนักต่อรอง50เหรียญ"
+        },
+        {
+          "id": "preview-player-2",
+          "rank": 4,
+          "cash": 0,
+          "avatar": 1,
+          "text": "อันดับ 4\n    \n    เมย์ตลาดเช้า0เหรียญ"
+        }
+      ],
+      "axeChecked": false,
+      "violations": []
+    },
+    {
+      "players": 4,
+      "role": "sheriff",
+      "width": 430,
+      "height": 900,
+      "rows": [
+        {
+          "id": "preview-player-1",
+          "rank": 1,
+          "cash": 100,
+          "avatar": 0,
+          "text": "อันดับ 1\n    \n    ฟิลด์ผู้ซื่อสัตย์100เหรียญ"
+        },
+        {
+          "id": "preview-player-4",
+          "rank": 2,
+          "cash": 50,
+          "avatar": 3,
+          "text": "อันดับ 2\n    \n    ข้าวพ่อค้าผ้า50เหรียญ"
+        },
+        {
+          "id": "preview-player-3",
+          "rank": 3,
+          "cash": 50,
+          "avatar": 2,
+          "text": "อันดับ 3\n    \n    ต้นนักต่อรอง50เหรียญ"
+        },
+        {
+          "id": "preview-player-2",
+          "rank": 4,
+          "cash": 0,
+          "avatar": 1,
+          "text": "อันดับ 4\n    \n    เมย์ตลาดเช้า0เหรียญ"
+        }
+      ],
+      "axeChecked": false,
+      "violations": []
+    },
+    {
+      "players": 4,
+      "role": "sheriff",
+      "width": 740,
+      "height": 360,
+      "rows": [
+        {
+          "id": "preview-player-1",
+          "rank": 1,
+          "cash": 100,
+          "avatar": 0,
+          "text": "อันดับ 1\n    \n    ฟิลด์ผู้ซื่อสัตย์100เหรียญ"
+        },
+        {
+          "id": "preview-player-4",
+          "rank": 2,
+          "cash": 50,
+          "avatar": 3,
+          "text": "อันดับ 2\n    \n    ข้าวพ่อค้าผ้า50เหรียญ"
+        },
+        {
+          "id": "preview-player-3",
+          "rank": 3,
+          "cash": 50,
+          "avatar": 2,
+          "text": "อันดับ 3\n    \n    ต้นนักต่อรอง50เหรียญ"
+        },
+        {
+          "id": "preview-player-2",
+          "rank": 4,
+          "cash": 0,
+          "avatar": 1,
+          "text": "อันดับ 4\n    \n    เมย์ตลาดเช้า0เหรียญ"
+        }
+      ],
+      "axeChecked": false,
+      "violations": []
+    },
+    {
+      "players": 4,
+      "role": "sheriff",
+      "width": 1280,
+      "height": 900,
+      "rows": [
+        {
+          "id": "preview-player-1",
+          "rank": 1,
+          "cash": 100,
+          "avatar": 0,
+          "text": "อันดับ 1\n    \n    ฟิลด์ผู้ซื่อสัตย์100เหรียญ"
+        },
+        {
+          "id": "preview-player-4",
+          "rank": 2,
+          "cash": 50,
+          "avatar": 3,
+          "text": "อันดับ 2\n    \n    ข้าวพ่อค้าผ้า50เหรียญ"
+        },
+        {
+          "id": "preview-player-3",
+          "rank": 3,
+          "cash": 50,
+          "avatar": 2,
+          "text": "อันดับ 3\n    \n    ต้นนักต่อรอง50เหรียญ"
+        },
+        {
+          "id": "preview-player-2",
+          "rank": 4,
+          "cash": 0,
+          "avatar": 1,
+          "text": "อันดับ 4\n    \n    เมย์ตลาดเช้า0เหรียญ"
+        }
+      ],
+      "axeChecked": false,
+      "violations": []
+    },
+    {
+      "players": 5,
+      "role": "merchant",
+      "width": 320,
+      "height": 900,
+      "rows": [
+        {
+          "id": "preview-player-1",
+          "rank": 1,
+          "cash": 100,
+          "avatar": 0,
+          "text": "อันดับ 1\n    \n    ฟิลด์ผู้ซื่อสัตย์100เหรียญ"
+        },
+        {
+          "id": "preview-player-5",
+          "rank": 2,
+          "cash": 50,
+          "avatar": 4,
+          "text": "อันดับ 2\n    \n    ฟ้าขนของ50เหรียญ"
+        },
+        {
+          "id": "preview-player-4",
+          "rank": 3,
+          "cash": 50,
+          "avatar": 3,
+          "text": "อันดับ 3\n    \n    ข้าวพ่อค้าผ้า50เหรียญ"
+        },
+        {
+          "id": "preview-player-3",
+          "rank": 4,
+          "cash": 50,
+          "avatar": 2,
+          "text": "อันดับ 4\n    \n    ต้นนักต่อรอง50เหรียญ"
+        },
+        {
+          "id": "preview-player-2",
+          "rank": 5,
+          "cash": 0,
+          "avatar": 1,
+          "text": "อันดับ 5\n    \n    เมย์ตลาดเช้า0เหรียญ"
+        }
+      ],
+      "axeChecked": false,
+      "violations": []
+    },
+    {
+      "players": 5,
+      "role": "merchant",
+      "width": 390,
+      "height": 900,
+      "rows": [
+        {
+          "id": "preview-player-1",
+          "rank": 1,
+          "cash": 100,
+          "avatar": 0,
+          "text": "อันดับ 1\n    \n    ฟิลด์ผู้ซื่อสัตย์100เหรียญ"
+        },
+        {
+          "id": "preview-player-5",
+          "rank": 2,
+          "cash": 50,
+          "avatar": 4,
+          "text": "อันดับ 2\n    \n    ฟ้าขนของ50เหรียญ"
+        },
+        {
+          "id": "preview-player-4",
+          "rank": 3,
+          "cash": 50,
+          "avatar": 3,
+          "text": "อันดับ 3\n    \n    ข้าวพ่อค้าผ้า50เหรียญ"
+        },
+        {
+          "id": "preview-player-3",
+          "rank": 4,
+          "cash": 50,
+          "avatar": 2,
+          "text": "อันดับ 4\n    \n    ต้นนักต่อรอง50เหรียญ"
+        },
+        {
+          "id": "preview-player-2",
+          "rank": 5,
+          "cash": 0,
+          "avatar": 1,
+          "text": "อันดับ 5\n    \n    เมย์ตลาดเช้า0เหรียญ"
+        }
+      ],
+      "axeChecked": false,
+      "violations": []
+    },
+    {
+      "players": 5,
+      "role": "merchant",
+      "width": 430,
+      "height": 900,
+      "rows": [
+        {
+          "id": "preview-player-1",
+          "rank": 1,
+          "cash": 100,
+          "avatar": 0,
+          "text": "อันดับ 1\n    \n    ฟิลด์ผู้ซื่อสัตย์100เหรียญ"
+        },
+        {
+          "id": "preview-player-5",
+          "rank": 2,
+          "cash": 50,
+          "avatar": 4,
+          "text": "อันดับ 2\n    \n    ฟ้าขนของ50เหรียญ"
+        },
+        {
+          "id": "preview-player-4",
+          "rank": 3,
+          "cash": 50,
+          "avatar": 3,
+          "text": "อันดับ 3\n    \n    ข้าวพ่อค้าผ้า50เหรียญ"
+        },
+        {
+          "id": "preview-player-3",
+          "rank": 4,
+          "cash": 50,
+          "avatar": 2,
+          "text": "อันดับ 4\n    \n    ต้นนักต่อรอง50เหรียญ"
+        },
+        {
+          "id": "preview-player-2",
+          "rank": 5,
+          "cash": 0,
+          "avatar": 1,
+          "text": "อันดับ 5\n    \n    เมย์ตลาดเช้า0เหรียญ"
+        }
+      ],
+      "axeChecked": false,
+      "violations": []
+    },
+    {
+      "players": 5,
+      "role": "merchant",
+      "width": 740,
+      "height": 360,
+      "rows": [
+        {
+          "id": "preview-player-1",
+          "rank": 1,
+          "cash": 100,
+          "avatar": 0,
+          "text": "อันดับ 1\n    \n    ฟิลด์ผู้ซื่อสัตย์100เหรียญ"
+        },
+        {
+          "id": "preview-player-5",
+          "rank": 2,
+          "cash": 50,
+          "avatar": 4,
+          "text": "อันดับ 2\n    \n    ฟ้าขนของ50เหรียญ"
+        },
+        {
+          "id": "preview-player-4",
+          "rank": 3,
+          "cash": 50,
+          "avatar": 3,
+          "text": "อันดับ 3\n    \n    ข้าวพ่อค้าผ้า50เหรียญ"
+        },
+        {
+          "id": "preview-player-3",
+          "rank": 4,
+          "cash": 50,
+          "avatar": 2,
+          "text": "อันดับ 4\n    \n    ต้นนักต่อรอง50เหรียญ"
+        },
+        {
+          "id": "preview-player-2",
+          "rank": 5,
+          "cash": 0,
+          "avatar": 1,
+          "text": "อันดับ 5\n    \n    เมย์ตลาดเช้า0เหรียญ"
+        }
+      ],
+      "axeChecked": false,
+      "violations": []
+    },
+    {
+      "players": 5,
+      "role": "merchant",
+      "width": 1280,
+      "height": 900,
+      "rows": [
+        {
+          "id": "preview-player-1",
+          "rank": 1,
+          "cash": 100,
+          "avatar": 0,
+          "text": "อันดับ 1\n    \n    ฟิลด์ผู้ซื่อสัตย์100เหรียญ"
+        },
+        {
+          "id": "preview-player-5",
+          "rank": 2,
+          "cash": 50,
+          "avatar": 4,
+          "text": "อันดับ 2\n    \n    ฟ้าขนของ50เหรียญ"
+        },
+        {
+          "id": "preview-player-4",
+          "rank": 3,
+          "cash": 50,
+          "avatar": 3,
+          "text": "อันดับ 3\n    \n    ข้าวพ่อค้าผ้า50เหรียญ"
+        },
+        {
+          "id": "preview-player-3",
+          "rank": 4,
+          "cash": 50,
+          "avatar": 2,
+          "text": "อันดับ 4\n    \n    ต้นนักต่อรอง50เหรียญ"
+        },
+        {
+          "id": "preview-player-2",
+          "rank": 5,
+          "cash": 0,
+          "avatar": 1,
+          "text": "อันดับ 5\n    \n    เมย์ตลาดเช้า0เหรียญ"
+        }
+      ],
+      "axeChecked": false,
+      "violations": []
+    },
+    {
+      "players": 5,
+      "role": "sheriff",
+      "width": 320,
+      "height": 900,
+      "rows": [
+        {
+          "id": "preview-player-1",
+          "rank": 1,
+          "cash": 100,
+          "avatar": 0,
+          "text": "อันดับ 1\n    \n    ฟิลด์ผู้ซื่อสัตย์100เหรียญ"
+        },
+        {
+          "id": "preview-player-5",
+          "rank": 2,
+          "cash": 50,
+          "avatar": 4,
+          "text": "อันดับ 2\n    \n    ฟ้าขนของ50เหรียญ"
+        },
+        {
+          "id": "preview-player-4",
+          "rank": 3,
+          "cash": 50,
+          "avatar": 3,
+          "text": "อันดับ 3\n    \n    ข้าวพ่อค้าผ้า50เหรียญ"
+        },
+        {
+          "id": "preview-player-3",
+          "rank": 4,
+          "cash": 50,
+          "avatar": 2,
+          "text": "อันดับ 4\n    \n    ต้นนักต่อรอง50เหรียญ"
+        },
+        {
+          "id": "preview-player-2",
+          "rank": 5,
+          "cash": 0,
+          "avatar": 1,
+          "text": "อันดับ 5\n    \n    เมย์ตลาดเช้า0เหรียญ"
+        }
+      ],
+      "axeChecked": false,
+      "violations": []
+    },
+    {
+      "players": 5,
+      "role": "sheriff",
+      "width": 390,
+      "height": 900,
+      "rows": [
+        {
+          "id": "preview-player-1",
+          "rank": 1,
+          "cash": 100,
+          "avatar": 0,
+          "text": "อันดับ 1\n    \n    ฟิลด์ผู้ซื่อสัตย์100เหรียญ"
+        },
+        {
+          "id": "preview-player-5",
+          "rank": 2,
+          "cash": 50,
+          "avatar": 4,
+          "text": "อันดับ 2\n    \n    ฟ้าขนของ50เหรียญ"
+        },
+        {
+          "id": "preview-player-4",
+          "rank": 3,
+          "cash": 50,
+          "avatar": 3,
+          "text": "อันดับ 3\n    \n    ข้าวพ่อค้าผ้า50เหรียญ"
+        },
+        {
+          "id": "preview-player-3",
+          "rank": 4,
+          "cash": 50,
+          "avatar": 2,
+          "text": "อันดับ 4\n    \n    ต้นนักต่อรอง50เหรียญ"
+        },
+        {
+          "id": "preview-player-2",
+          "rank": 5,
+          "cash": 0,
+          "avatar": 1,
+          "text": "อันดับ 5\n    \n    เมย์ตลาดเช้า0เหรียญ"
+        }
+      ],
+      "axeChecked": false,
+      "violations": []
+    },
+    {
+      "players": 5,
+      "role": "sheriff",
+      "width": 430,
+      "height": 900,
+      "rows": [
+        {
+          "id": "preview-player-1",
+          "rank": 1,
+          "cash": 100,
+          "avatar": 0,
+          "text": "อันดับ 1\n    \n    ฟิลด์ผู้ซื่อสัตย์100เหรียญ"
+        },
+        {
+          "id": "preview-player-5",
+          "rank": 2,
+          "cash": 50,
+          "avatar": 4,
+          "text": "อันดับ 2\n    \n    ฟ้าขนของ50เหรียญ"
+        },
+        {
+          "id": "preview-player-4",
+          "rank": 3,
+          "cash": 50,
+          "avatar": 3,
+          "text": "อันดับ 3\n    \n    ข้าวพ่อค้าผ้า50เหรียญ"
+        },
+        {
+          "id": "preview-player-3",
+          "rank": 4,
+          "cash": 50,
+          "avatar": 2,
+          "text": "อันดับ 4\n    \n    ต้นนักต่อรอง50เหรียญ"
+        },
+        {
+          "id": "preview-player-2",
+          "rank": 5,
+          "cash": 0,
+          "avatar": 1,
+          "text": "อันดับ 5\n    \n    เมย์ตลาดเช้า0เหรียญ"
+        }
+      ],
+      "axeChecked": false,
+      "violations": []
+    },
+    {
+      "players": 5,
+      "role": "sheriff",
+      "width": 740,
+      "height": 360,
+      "rows": [
+        {
+          "id": "preview-player-1",
+          "rank": 1,
+          "cash": 100,
+          "avatar": 0,
+          "text": "อันดับ 1\n    \n    ฟิลด์ผู้ซื่อสัตย์100เหรียญ"
+        },
+        {
+          "id": "preview-player-5",
+          "rank": 2,
+          "cash": 50,
+          "avatar": 4,
+          "text": "อันดับ 2\n    \n    ฟ้าขนของ50เหรียญ"
+        },
+        {
+          "id": "preview-player-4",
+          "rank": 3,
+          "cash": 50,
+          "avatar": 3,
+          "text": "อันดับ 3\n    \n    ข้าวพ่อค้าผ้า50เหรียญ"
+        },
+        {
+          "id": "preview-player-3",
+          "rank": 4,
+          "cash": 50,
+          "avatar": 2,
+          "text": "อันดับ 4\n    \n    ต้นนักต่อรอง50เหรียญ"
+        },
+        {
+          "id": "preview-player-2",
+          "rank": 5,
+          "cash": 0,
+          "avatar": 1,
+          "text": "อันดับ 5\n    \n    เมย์ตลาดเช้า0เหรียญ"
+        }
+      ],
+      "axeChecked": false,
+      "violations": []
+    },
+    {
+      "players": 5,
+      "role": "sheriff",
+      "width": 1280,
+      "height": 900,
+      "rows": [
+        {
+          "id": "preview-player-1",
+          "rank": 1,
+          "cash": 100,
+          "avatar": 0,
+          "text": "อันดับ 1\n    \n    ฟิลด์ผู้ซื่อสัตย์100เหรียญ"
+        },
+        {
+          "id": "preview-player-5",
+          "rank": 2,
+          "cash": 50,
+          "avatar": 4,
+          "text": "อันดับ 2\n    \n    ฟ้าขนของ50เหรียญ"
+        },
+        {
+          "id": "preview-player-4",
+          "rank": 3,
+          "cash": 50,
+          "avatar": 3,
+          "text": "อันดับ 3\n    \n    ข้าวพ่อค้าผ้า50เหรียญ"
+        },
+        {
+          "id": "preview-player-3",
+          "rank": 4,
+          "cash": 50,
+          "avatar": 2,
+          "text": "อันดับ 4\n    \n    ต้นนักต่อรอง50เหรียญ"
+        },
+        {
+          "id": "preview-player-2",
+          "rank": 5,
+          "cash": 0,
+          "avatar": 1,
+          "text": "อันดับ 5\n    \n    เมย์ตลาดเช้า0เหรียญ"
+        }
+      ],
+      "axeChecked": false,
+      "violations": []
+    },
+    {
+      "players": 6,
+      "role": "merchant",
+      "width": 320,
+      "height": 900,
+      "rows": [
+        {
+          "id": "preview-player-1",
+          "rank": 1,
+          "cash": 100,
+          "avatar": 0,
+          "text": "อันดับ 1\n    \n    ฟิลด์ผู้ซื่อสัตย์100เหรียญ"
+        },
+        {
+          "id": "preview-player-6",
+          "rank": 2,
+          "cash": 50,
+          "avatar": 5,
+          "text": "อันดับ 2\n    \n    นนท์ริมประตู50เหรียญ"
+        },
+        {
+          "id": "preview-player-5",
+          "rank": 3,
+          "cash": 50,
+          "avatar": 4,
+          "text": "อันดับ 3\n    \n    ฟ้าขนของ50เหรียญ"
+        },
+        {
+          "id": "preview-player-4",
+          "rank": 4,
+          "cash": 50,
+          "avatar": 3,
+          "text": "อันดับ 4\n    \n    ข้าวพ่อค้าผ้า50เหรียญ"
+        },
+        {
+          "id": "preview-player-3",
+          "rank": 5,
+          "cash": 50,
+          "avatar": 2,
+          "text": "อันดับ 5\n    \n    ต้นนักต่อรอง50เหรียญ"
+        },
+        {
+          "id": "preview-player-2",
+          "rank": 6,
+          "cash": 0,
+          "avatar": 1,
+          "text": "อันดับ 6\n    \n    เมย์ตลาดเช้า0เหรียญ"
+        }
+      ],
+      "axeChecked": true,
+      "violations": []
+    },
+    {
+      "players": 6,
+      "role": "merchant",
+      "width": 390,
+      "height": 900,
+      "rows": [
+        {
+          "id": "preview-player-1",
+          "rank": 1,
+          "cash": 100,
+          "avatar": 0,
+          "text": "อันดับ 1\n    \n    ฟิลด์ผู้ซื่อสัตย์100เหรียญ"
+        },
+        {
+          "id": "preview-player-6",
+          "rank": 2,
+          "cash": 50,
+          "avatar": 5,
+          "text": "อันดับ 2\n    \n    นนท์ริมประตู50เหรียญ"
+        },
+        {
+          "id": "preview-player-5",
+          "rank": 3,
+          "cash": 50,
+          "avatar": 4,
+          "text": "อันดับ 3\n    \n    ฟ้าขนของ50เหรียญ"
+        },
+        {
+          "id": "preview-player-4",
+          "rank": 4,
+          "cash": 50,
+          "avatar": 3,
+          "text": "อันดับ 4\n    \n    ข้าวพ่อค้าผ้า50เหรียญ"
+        },
+        {
+          "id": "preview-player-3",
+          "rank": 5,
+          "cash": 50,
+          "avatar": 2,
+          "text": "อันดับ 5\n    \n    ต้นนักต่อรอง50เหรียญ"
+        },
+        {
+          "id": "preview-player-2",
+          "rank": 6,
+          "cash": 0,
+          "avatar": 1,
+          "text": "อันดับ 6\n    \n    เมย์ตลาดเช้า0เหรียญ"
+        }
+      ],
+      "axeChecked": true,
+      "violations": []
+    },
+    {
+      "players": 6,
+      "role": "merchant",
+      "width": 430,
+      "height": 900,
+      "rows": [
+        {
+          "id": "preview-player-1",
+          "rank": 1,
+          "cash": 100,
+          "avatar": 0,
+          "text": "อันดับ 1\n    \n    ฟิลด์ผู้ซื่อสัตย์100เหรียญ"
+        },
+        {
+          "id": "preview-player-6",
+          "rank": 2,
+          "cash": 50,
+          "avatar": 5,
+          "text": "อันดับ 2\n    \n    นนท์ริมประตู50เหรียญ"
+        },
+        {
+          "id": "preview-player-5",
+          "rank": 3,
+          "cash": 50,
+          "avatar": 4,
+          "text": "อันดับ 3\n    \n    ฟ้าขนของ50เหรียญ"
+        },
+        {
+          "id": "preview-player-4",
+          "rank": 4,
+          "cash": 50,
+          "avatar": 3,
+          "text": "อันดับ 4\n    \n    ข้าวพ่อค้าผ้า50เหรียญ"
+        },
+        {
+          "id": "preview-player-3",
+          "rank": 5,
+          "cash": 50,
+          "avatar": 2,
+          "text": "อันดับ 5\n    \n    ต้นนักต่อรอง50เหรียญ"
+        },
+        {
+          "id": "preview-player-2",
+          "rank": 6,
+          "cash": 0,
+          "avatar": 1,
+          "text": "อันดับ 6\n    \n    เมย์ตลาดเช้า0เหรียญ"
+        }
+      ],
+      "axeChecked": true,
+      "violations": []
+    },
+    {
+      "players": 6,
+      "role": "merchant",
+      "width": 740,
+      "height": 360,
+      "rows": [
+        {
+          "id": "preview-player-1",
+          "rank": 1,
+          "cash": 100,
+          "avatar": 0,
+          "text": "อันดับ 1\n    \n    ฟิลด์ผู้ซื่อสัตย์100เหรียญ"
+        },
+        {
+          "id": "preview-player-6",
+          "rank": 2,
+          "cash": 50,
+          "avatar": 5,
+          "text": "อันดับ 2\n    \n    นนท์ริมประตู50เหรียญ"
+        },
+        {
+          "id": "preview-player-5",
+          "rank": 3,
+          "cash": 50,
+          "avatar": 4,
+          "text": "อันดับ 3\n    \n    ฟ้าขนของ50เหรียญ"
+        },
+        {
+          "id": "preview-player-4",
+          "rank": 4,
+          "cash": 50,
+          "avatar": 3,
+          "text": "อันดับ 4\n    \n    ข้าวพ่อค้าผ้า50เหรียญ"
+        },
+        {
+          "id": "preview-player-3",
+          "rank": 5,
+          "cash": 50,
+          "avatar": 2,
+          "text": "อันดับ 5\n    \n    ต้นนักต่อรอง50เหรียญ"
+        },
+        {
+          "id": "preview-player-2",
+          "rank": 6,
+          "cash": 0,
+          "avatar": 1,
+          "text": "อันดับ 6\n    \n    เมย์ตลาดเช้า0เหรียญ"
+        }
+      ],
+      "axeChecked": true,
+      "violations": []
+    },
+    {
+      "players": 6,
+      "role": "merchant",
+      "width": 1280,
+      "height": 900,
+      "rows": [
+        {
+          "id": "preview-player-1",
+          "rank": 1,
+          "cash": 100,
+          "avatar": 0,
+          "text": "อันดับ 1\n    \n    ฟิลด์ผู้ซื่อสัตย์100เหรียญ"
+        },
+        {
+          "id": "preview-player-6",
+          "rank": 2,
+          "cash": 50,
+          "avatar": 5,
+          "text": "อันดับ 2\n    \n    นนท์ริมประตู50เหรียญ"
+        },
+        {
+          "id": "preview-player-5",
+          "rank": 3,
+          "cash": 50,
+          "avatar": 4,
+          "text": "อันดับ 3\n    \n    ฟ้าขนของ50เหรียญ"
+        },
+        {
+          "id": "preview-player-4",
+          "rank": 4,
+          "cash": 50,
+          "avatar": 3,
+          "text": "อันดับ 4\n    \n    ข้าวพ่อค้าผ้า50เหรียญ"
+        },
+        {
+          "id": "preview-player-3",
+          "rank": 5,
+          "cash": 50,
+          "avatar": 2,
+          "text": "อันดับ 5\n    \n    ต้นนักต่อรอง50เหรียญ"
+        },
+        {
+          "id": "preview-player-2",
+          "rank": 6,
+          "cash": 0,
+          "avatar": 1,
+          "text": "อันดับ 6\n    \n    เมย์ตลาดเช้า0เหรียญ"
+        }
+      ],
+      "axeChecked": true,
+      "violations": []
+    },
+    {
+      "players": 6,
+      "role": "sheriff",
+      "width": 320,
+      "height": 900,
+      "rows": [
+        {
+          "id": "preview-player-1",
+          "rank": 1,
+          "cash": 100,
+          "avatar": 0,
+          "text": "อันดับ 1\n    \n    ฟิลด์ผู้ซื่อสัตย์100เหรียญ"
+        },
+        {
+          "id": "preview-player-6",
+          "rank": 2,
+          "cash": 50,
+          "avatar": 5,
+          "text": "อันดับ 2\n    \n    นนท์ริมประตู50เหรียญ"
+        },
+        {
+          "id": "preview-player-5",
+          "rank": 3,
+          "cash": 50,
+          "avatar": 4,
+          "text": "อันดับ 3\n    \n    ฟ้าขนของ50เหรียญ"
+        },
+        {
+          "id": "preview-player-4",
+          "rank": 4,
+          "cash": 50,
+          "avatar": 3,
+          "text": "อันดับ 4\n    \n    ข้าวพ่อค้าผ้า50เหรียญ"
+        },
+        {
+          "id": "preview-player-3",
+          "rank": 5,
+          "cash": 50,
+          "avatar": 2,
+          "text": "อันดับ 5\n    \n    ต้นนักต่อรอง50เหรียญ"
+        },
+        {
+          "id": "preview-player-2",
+          "rank": 6,
+          "cash": 0,
+          "avatar": 1,
+          "text": "อันดับ 6\n    \n    เมย์ตลาดเช้า0เหรียญ"
+        }
+      ],
+      "axeChecked": true,
+      "violations": []
+    },
+    {
+      "players": 6,
+      "role": "sheriff",
+      "width": 390,
+      "height": 900,
+      "rows": [
+        {
+          "id": "preview-player-1",
+          "rank": 1,
+          "cash": 100,
+          "avatar": 0,
+          "text": "อันดับ 1\n    \n    ฟิลด์ผู้ซื่อสัตย์100เหรียญ"
+        },
+        {
+          "id": "preview-player-6",
+          "rank": 2,
+          "cash": 50,
+          "avatar": 5,
+          "text": "อันดับ 2\n    \n    นนท์ริมประตู50เหรียญ"
+        },
+        {
+          "id": "preview-player-5",
+          "rank": 3,
+          "cash": 50,
+          "avatar": 4,
+          "text": "อันดับ 3\n    \n    ฟ้าขนของ50เหรียญ"
+        },
+        {
+          "id": "preview-player-4",
+          "rank": 4,
+          "cash": 50,
+          "avatar": 3,
+          "text": "อันดับ 4\n    \n    ข้าวพ่อค้าผ้า50เหรียญ"
+        },
+        {
+          "id": "preview-player-3",
+          "rank": 5,
+          "cash": 50,
+          "avatar": 2,
+          "text": "อันดับ 5\n    \n    ต้นนักต่อรอง50เหรียญ"
+        },
+        {
+          "id": "preview-player-2",
+          "rank": 6,
+          "cash": 0,
+          "avatar": 1,
+          "text": "อันดับ 6\n    \n    เมย์ตลาดเช้า0เหรียญ"
+        }
+      ],
+      "axeChecked": true,
+      "violations": []
+    },
+    {
+      "players": 6,
+      "role": "sheriff",
+      "width": 430,
+      "height": 900,
+      "rows": [
+        {
+          "id": "preview-player-1",
+          "rank": 1,
+          "cash": 100,
+          "avatar": 0,
+          "text": "อันดับ 1\n    \n    ฟิลด์ผู้ซื่อสัตย์100เหรียญ"
+        },
+        {
+          "id": "preview-player-6",
+          "rank": 2,
+          "cash": 50,
+          "avatar": 5,
+          "text": "อันดับ 2\n    \n    นนท์ริมประตู50เหรียญ"
+        },
+        {
+          "id": "preview-player-5",
+          "rank": 3,
+          "cash": 50,
+          "avatar": 4,
+          "text": "อันดับ 3\n    \n    ฟ้าขนของ50เหรียญ"
+        },
+        {
+          "id": "preview-player-4",
+          "rank": 4,
+          "cash": 50,
+          "avatar": 3,
+          "text": "อันดับ 4\n    \n    ข้าวพ่อค้าผ้า50เหรียญ"
+        },
+        {
+          "id": "preview-player-3",
+          "rank": 5,
+          "cash": 50,
+          "avatar": 2,
+          "text": "อันดับ 5\n    \n    ต้นนักต่อรอง50เหรียญ"
+        },
+        {
+          "id": "preview-player-2",
+          "rank": 6,
+          "cash": 0,
+          "avatar": 1,
+          "text": "อันดับ 6\n    \n    เมย์ตลาดเช้า0เหรียญ"
+        }
+      ],
+      "axeChecked": true,
+      "violations": []
+    },
+    {
+      "players": 6,
+      "role": "sheriff",
+      "width": 740,
+      "height": 360,
+      "rows": [
+        {
+          "id": "preview-player-1",
+          "rank": 1,
+          "cash": 100,
+          "avatar": 0,
+          "text": "อันดับ 1\n    \n    ฟิลด์ผู้ซื่อสัตย์100เหรียญ"
+        },
+        {
+          "id": "preview-player-6",
+          "rank": 2,
+          "cash": 50,
+          "avatar": 5,
+          "text": "อันดับ 2\n    \n    นนท์ริมประตู50เหรียญ"
+        },
+        {
+          "id": "preview-player-5",
+          "rank": 3,
+          "cash": 50,
+          "avatar": 4,
+          "text": "อันดับ 3\n    \n    ฟ้าขนของ50เหรียญ"
+        },
+        {
+          "id": "preview-player-4",
+          "rank": 4,
+          "cash": 50,
+          "avatar": 3,
+          "text": "อันดับ 4\n    \n    ข้าวพ่อค้าผ้า50เหรียญ"
+        },
+        {
+          "id": "preview-player-3",
+          "rank": 5,
+          "cash": 50,
+          "avatar": 2,
+          "text": "อันดับ 5\n    \n    ต้นนักต่อรอง50เหรียญ"
+        },
+        {
+          "id": "preview-player-2",
+          "rank": 6,
+          "cash": 0,
+          "avatar": 1,
+          "text": "อันดับ 6\n    \n    เมย์ตลาดเช้า0เหรียญ"
+        }
+      ],
+      "axeChecked": true,
+      "violations": []
+    },
+    {
+      "players": 6,
+      "role": "sheriff",
+      "width": 1280,
+      "height": 900,
+      "rows": [
+        {
+          "id": "preview-player-1",
+          "rank": 1,
+          "cash": 100,
+          "avatar": 0,
+          "text": "อันดับ 1\n    \n    ฟิลด์ผู้ซื่อสัตย์100เหรียญ"
+        },
+        {
+          "id": "preview-player-6",
+          "rank": 2,
+          "cash": 50,
+          "avatar": 5,
+          "text": "อันดับ 2\n    \n    นนท์ริมประตู50เหรียญ"
+        },
+        {
+          "id": "preview-player-5",
+          "rank": 3,
+          "cash": 50,
+          "avatar": 4,
+          "text": "อันดับ 3\n    \n    ฟ้าขนของ50เหรียญ"
+        },
+        {
+          "id": "preview-player-4",
+          "rank": 4,
+          "cash": 50,
+          "avatar": 3,
+          "text": "อันดับ 4\n    \n    ข้าวพ่อค้าผ้า50เหรียญ"
+        },
+        {
+          "id": "preview-player-3",
+          "rank": 5,
+          "cash": 50,
+          "avatar": 2,
+          "text": "อันดับ 5\n    \n    ต้นนักต่อรอง50เหรียญ"
+        },
+        {
+          "id": "preview-player-2",
+          "rank": 6,
+          "cash": 0,
+          "avatar": 1,
+          "text": "อันดับ 6\n    \n    เมย์ตลาดเช้า0เหรียญ"
+        }
+      ],
+      "axeChecked": true,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "apiOrFirebaseRequests": []
+}

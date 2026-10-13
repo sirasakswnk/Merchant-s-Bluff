@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "scene": "prepare",
+      "width": 390,
+      "bounds": {
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "content": 760,
+        "panelLeft": 12,
+        "panelRight": 378
+      },
+      "cardWidths": [
+        162.19700622558594,
+        150.4232635498047,
+        138.23724365234375,
+        138.23724365234375,
+        150.42324829101562,
+        162.197021484375
+      ],
+      "scrollAfterLeft": 205,
+      "nativeSwipeDidNotSelect": true,
+      "verticalPan": true,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "apiOrFirebaseRequests": []
+}

@@ -1,0 +1,49 @@
+.room .roomTitle { margin: 3px 0 0; font-family: var(--lobby-font-body), sans-serif; font-size: .9rem; color: #e8dbb9; }
+.roomTitle span { letter-spacing: .1em; margin-left: 4px; }
+.phaseHeading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin: 24px 0 14px; }
+.phaseHeading h2 { font-size: 1.4rem; margin: 4px 0 6px; }.roleLine { margin: 0; color: #e8dbb9; font-size: .9rem; }
+.jumpLink { font-size: .9rem; color: #efe7d2; background: #24332f; border-color: #3e544e; gap: 8px; }
+.phaseTrack { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; list-style: none; font-size: .8rem; color: #bdb6a0; }
+.phaseTrack li { display: flex; align-items: center; gap: 6px; padding: 6px 10px; background: #24332f; border: 1px solid #3e544e; border-radius: 6px; }.phaseTrack li[aria-current] { color: #f0c36c; border-color: #d4a24c; }.phaseTrack li span { font-weight: 700; }
+.boardSection { container: game-board / inline-size; margin: 8px 0 0; }
+.stage { --table-size: min(70cqw, 480px); height: calc(var(--table-size) + 430px); }
+.stage .seat { top: calc(45% + (var(--table-size) / 2 + 85px) * var(--seat-y)); transition: top 380ms ease, left 380ms ease; }
+.stage [data-game-table] { top: 45%; }
+.offerStage { height: calc(var(--table-size) + 560px); }
+.offerStage .seat { top: calc(45% + (var(--table-size) / 2 + 105px) * var(--seat-y)); }
+.tableCenter { position: absolute; top: calc(45% + 64px); left: 50%; transform: translate(-50%, -50%); width: 176px; text-align: center; display: grid; justify-items: center; gap: 5px; z-index: 1; color: #fff1d2; }
+.tableCenter h3 { font-size: .95rem; line-height: 1.35; overflow-wrap: anywhere; }.tableCenter p { font-size: .85rem; margin: 0; }.centerTag { color: #fff1d2; font-family: var(--lobby-font-display), serif; }
+.negotiationCenter { top: calc(45% + 34px); }
+.tableCenter .bag { width: 80px; height: 80px; border-radius: 50%; background: #3f271645; }.bag img { width: 64px; height: 64px; }
+.tableCenter .contrabandMark { color: #fff; background: #8f1f17; border: 1px solid #f6d9d3; border-radius: 4px; padding: 3px 5px; font-size: .75rem; }
+.resultLink { display: grid; align-items: center; min-height: 44px; color: #fff1d2; font-size: .8rem; text-decoration: underline; text-underline-offset: 3px; }
+.sheriffBadge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); border: 1px solid #7a5413; box-shadow: 0 2px #121b19; background: #f0c36c; color: #24170d; font-size: .7rem; line-height: 1.5; border-radius: 4px; padding: 1px 7px; white-space: nowrap; font-weight: 700; }
+.seat .cash { color: #f0c36c; font-size: .8rem; margin: 2px 0; line-height: 1.5; }
+.seat .declaration { color: #efe7d2; font-size: .7rem; line-height: 1.4; margin: 2px 0; padding-inline: 3px; }
+.seat .progress { font-size: .75rem; padding: 2px 6px; margin-top: 2px; }
+.selectedPortrait { outline: 3px solid #7cc4ff; outline-offset: 3px; }.selected h3 { color: #bce1ff; }
+.yourTurn { scroll-margin-top: 16px; padding-top: 12px; }.ownLabel { color: #f0c36c; text-align: center; margin: 0 0 12px; font-size: .9rem; font-weight: 700; }
+.yourTurn > :global(.panel) { margin-top: 0; border: 3px double #8b774e; padding: 20px; box-shadow: 0 3px #b9a378, 0 8px 16px #0003; }
+.yourTurn :global(h2), .result h2 { font-size: 1.2rem; }
+.yourTurn :focus-visible, .result :focus-visible { outline-color: #1f5fbf; }
+.yourTurn :global(.button-row) { gap: 10px; }.yourTurn :global(.button-row) > button { flex-grow: 1; }
+.yourTurn :global(button:not(.card)) { background: #24332f; border-color: #3f6b4a; color: #efe7d2; font-weight: 600; box-shadow: 0 2px #121b19; }
+.yourTurn :global(button.secondary) { background: #f3ead3; border-color: #8b774e; color: #1d2422; box-shadow: 0 2px #b9a378; }
+.yourTurn :global(button:not(.card):disabled) { color: #55513f; background: #e8dbb9; border-color: #b9a378; box-shadow: none; }
+.yourTurn :global(.confirmation) { background: #fffdf5; border: 2px solid #7a5413; box-shadow: 0 3px #b9a378; }
+.room > :global(details.panel) { color: #efe7d2; background: #24332f; border-color: #3e544e; }.room > :global(details.panel) summary { font-weight: 600; }.room > :global(details.panel) :global(.product) { color: #1d2422; }
+.publicDetails { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 12px; }.publicDetails article { border: 1px solid #3e544e; border-radius: 8px; padding: 12px; }.publicDetails p { margin-block: 6px; font-size: .9rem; }
+.room :global(.scores) :global(.player) { color: #1d2422; }.room footer { text-align: center; }
+@media (max-width: 600px) {
+  .phaseHeading { margin-top: 18px; }.phaseHeading h2 { font-size: 1.15rem; }.roleLine { font-size: .8rem; }.jumpLink { width: 100%; justify-content: center; font-size: .85rem; }.phaseTrack { gap: 5px; font-size: .7rem; }.phaseTrack li { padding: 5px 7px; }
+  .tableCenter { width: 124px; gap: 3px; }.tableCenter h3 { font-size: .8rem; }.tableCenter p { font-size: .75rem; }.tableCenter .bag { width: 58px; height: 58px; }.bag img { width: 48px; height: 48px; }.tableCenter .contrabandMark { font-size: .65rem; }.seat .cash { font-size: .75rem; }.seat .progress { font-size: .7rem; padding: 2px 4px; }
+  .negotiationCenter { top: calc(45% + 8px); }
+  /* Extend only the mobile hand across panel padding, border and room gutter. */
+  .yourTurn > :global(.panel) { padding: 14px; --hand-bleed: 29px; }
+}
+@container game-board (max-width: 20rem) {
+  .stage, .offerStage { display: flex; flex-direction: column; gap: 20px; align-items: center; height: auto; padding: 20px 0; }.stage [data-game-table] { width: 220px; top: 110px; }
+  .tableCenter { position: relative; top: auto; left: auto; transform: none; min-height: 220px; width: 170px; align-content: center; }
+  .stage > :global(.players) { display: flex; flex-wrap: wrap; width: 100%; justify-content: center; gap: 18px 8px; }.stage .seat, .offerStage .seat { position: relative; left: auto; top: auto; transform: none; width: calc(50% - 8px); }.stage [data-own-seat='true'] { order: 1; width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { .stage .seat { transition: none; } }

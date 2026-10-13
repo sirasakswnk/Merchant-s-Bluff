@@ -1,24 +1,28 @@
 import { expect, type Browser, type BrowserContext, type Page } from '@playwright/test';
+import { showHandCard } from './hand';
 
 export async function roomPhase(page: Page, value: string, round?: number) {
   // A fresh Next dev server can still compile/resume the first room after navigation.
   await expect(page.locator('main')).toHaveAttribute('data-phase', value, { timeout: 15000 });
   if (round) await expect(page.locator('main')).toHaveAttribute('data-round', String(round));
-  await expect(page.getByRole('status')).toHaveText('เชื่อมต่อแล้ว');
+  await expect(page.locator('.connection-state')).toHaveText('เชื่อมต่อแล้ว');
+}
+export function gameActionName(name: string): string | RegExp {
+  return name === 'เสนอเงิน' ? /^ยื่นข้อเสนอ(?: \d+ เหรียญ)?$/ : name === 'ให้ผ่าน' ? /^ให้ผ่าน · (รับ \d+ เหรียญ|รอข้อเสนอ)$/ : name;
 }
 export async function press(page: Page, name: string) {
-  const button = page.getByRole('button', { name, exact: true }); await expect(button).toBeEnabled(); await button.focus(); await button.press('Enter');
+  const button = page.getByRole('button', { name: gameActionName(name), exact: true }); await expect(button).toBeEnabled(); await button.focus(); await button.press('Enter');
 }
 export async function publicMoney(page: Page) {
   return page.locator('.players .player').evaluateAll(nodes => nodes.map(node => ({
     id: node.getAttribute('data-player-id'), cash: Number(node.textContent?.match(/เงิน (\d+) เหรียญ/)?.[1]),
   })));
 }
-export async function joinPlayers(browser: Browser, count: number, origin = process.env.MERCHANT_E2E_ORIGIN ?? 'http://127.0.0.1:3100') {
+export async function joinPlayers(browser: Browser, count: number, origin = process.env.MERCHANT_E2E_ORIGIN ?? 'http://127.0.0.1:3100', hasTouch = false) {
   const contexts: BrowserContext[] = []; const pages: Page[] = [];
   try {
     for (let index = 0; index < count; index++) {
-      const context = await browser.newContext({ viewport: { width: [360, 390, 430, 1280][index % 4], height: 900 } });
+      const context = await browser.newContext({ viewport: { width: [360, 390, 430, 1280][index % 4], height: 900 }, hasTouch });
       contexts.push(context); pages.push(await context.newPage());
     }
     await pages[0].goto(origin); await pages[0].getByLabel('ชื่อที่เพื่อนจะเห็น').fill('ทดสอบ1'); await press(pages[0], 'สร้างห้องและเข้าเล่น'); await roomPhase(pages[0], 'LOBBY');
@@ -37,7 +41,7 @@ export async function prepareAndPack(pages: Page[], round: number, count = 1, ex
   for (const index of merchants) {
     await expect(pages[index].getByRole('status')).toHaveText('เชื่อมต่อแล้ว');
     for (let position = 0; position < exchange; position++) {
-      const card = pages[index].locator('button.card').nth(position); await card.click(); await expect(card).toHaveAttribute('aria-pressed', 'true');
+      const card = pages[index].locator('button.card').nth(position); await showHandCard(pages[index], position); await card.click(); await expect(card).toHaveAttribute('aria-pressed', 'true');
     }
     await press(pages[index], 'พร้อมจัดกระเป๋า');
     // Observe the committed own state before the next player's action.
@@ -46,7 +50,7 @@ export async function prepareAndPack(pages: Page[], round: number, count = 1, ex
   for (const page of pages) await roomPhase(page, 'PACK_AND_DECLARE', round);
   for (const index of merchants) {
     for (let position = 0; position < count; position++) {
-      const card = pages[index].locator('button.card').nth(position); await card.click(); await expect(card).toHaveAttribute('aria-pressed', 'true');
+      const card = pages[index].locator('button.card').nth(position); await showHandCard(pages[index], position); await card.click(); await expect(card).toHaveAttribute('aria-pressed', 'true');
     }
     await press(pages[index], 'ปิดกระเป๋าและยืนยัน');
     await expect(pages[index].getByRole('button', { name: 'ปิดกระเป๋าและยืนยัน', exact: true })).toHaveCount(0);

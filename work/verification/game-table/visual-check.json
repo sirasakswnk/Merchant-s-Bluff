@@ -1,0 +1,498 @@
+[
+  {
+    "scene": "pack",
+    "role": "merchant",
+    "count": 6,
+    "width": 360,
+    "geometry": {
+      "overflow": false,
+      "seats": [
+        {
+          "id": "preview-player-1",
+          "own": "false",
+          "sheriff": "true",
+          "slot": "3",
+          "box": {
+            "x": 128,
+            "y": 566.125,
+            "width": 104,
+            "height": 153.875,
+            "top": 566.125,
+            "right": 232,
+            "bottom": 720,
+            "left": 128
+          }
+        },
+        {
+          "id": "preview-player-2",
+          "own": "true",
+          "sheriff": "false",
+          "slot": "0",
+          "box": {
+            "x": 128,
+            "y": 971.3125,
+            "width": 104,
+            "height": 153.875,
+            "top": 971.3125,
+            "right": 232,
+            "bottom": 1125.1875,
+            "left": 128
+          }
+        },
+        {
+          "id": "preview-player-3",
+          "own": "false",
+          "sheriff": "false",
+          "slot": "1",
+          "box": {
+            "x": 12,
+            "y": 870.015625,
+            "width": 104,
+            "height": 153.875,
+            "top": 870.015625,
+            "right": 116,
+            "bottom": 1023.890625,
+            "left": 12
+          }
+        },
+        {
+          "id": "preview-player-4",
+          "own": "false",
+          "sheriff": "false",
+          "slot": "2",
+          "box": {
+            "x": 12,
+            "y": 667.421875,
+            "width": 104,
+            "height": 153.875,
+            "top": 667.421875,
+            "right": 116,
+            "bottom": 821.296875,
+            "left": 12
+          }
+        },
+        {
+          "id": "preview-player-5",
+          "own": "false",
+          "sheriff": "false",
+          "slot": "5",
+          "box": {
+            "x": 244,
+            "y": 870.015625,
+            "width": 104,
+            "height": 153.875,
+            "top": 870.015625,
+            "right": 348,
+            "bottom": 1023.890625,
+            "left": 244
+          }
+        },
+        {
+          "id": "preview-player-6",
+          "own": "false",
+          "sheriff": "false",
+          "slot": "4",
+          "box": {
+            "x": 244,
+            "y": 667.421875,
+            "width": 104,
+            "height": 153.875,
+            "top": 667.421875,
+            "right": 348,
+            "bottom": 821.296875,
+            "left": 244
+          }
+        }
+      ],
+      "center": {
+        "x": 118,
+        "y": 815.0234375,
+        "width": 124,
+        "height": 95.390625,
+        "top": 815.0234375,
+        "right": 242,
+        "bottom": 910.4140625,
+        "left": 118
+      },
+      "ownArea": {
+        "x": 12,
+        "y": 1164.578125,
+        "width": 336,
+        "height": 1079,
+        "top": 1164.578125,
+        "right": 348,
+        "bottom": 2243.578125,
+        "left": 12
+      }
+    },
+    "violations": []
+  },
+  {
+    "scene": "negotiate",
+    "role": "sheriff",
+    "count": 5,
+    "width": 390,
+    "geometry": {
+      "overflow": false,
+      "seats": [
+        {
+          "id": "preview-player-1",
+          "own": "true",
+          "sheriff": "true",
+          "slot": "0",
+          "box": {
+            "x": 143,
+            "y": 991.265625,
+            "width": 104,
+            "height": 153.875,
+            "top": 991.265625,
+            "right": 247,
+            "bottom": 1145.140625,
+            "left": 143
+          }
+        },
+        {
+          "id": "preview-player-2",
+          "own": "false",
+          "sheriff": "false",
+          "slot": "1",
+          "box": {
+            "x": 12,
+            "y": 778.171875,
+            "width": 104,
+            "height": 187.21875,
+            "top": 778.171875,
+            "right": 116,
+            "bottom": 965.390625,
+            "left": 12
+          }
+        },
+        {
+          "id": "preview-player-3",
+          "own": "false",
+          "sheriff": "false",
+          "slot": "2",
+          "box": {
+            "x": 143,
+            "y": 565.0625,
+            "width": 104,
+            "height": 187.21875,
+            "top": 565.0625,
+            "right": 247,
+            "bottom": 752.28125,
+            "left": 143
+          }
+        },
+        {
+          "id": "preview-player-4",
+          "own": "false",
+          "sheriff": "false",
+          "slot": "3",
+          "box": {
+            "x": 274,
+            "y": 671.609375,
+            "width": 104,
+            "height": 187.21875,
+            "top": 671.609375,
+            "right": 378,
+            "bottom": 858.828125,
+            "left": 274
+          }
+        },
+        {
+          "id": "preview-player-5",
+          "own": "false",
+          "sheriff": "false",
+          "slot": "4",
+          "box": {
+            "x": 274,
+            "y": 884.71875,
+            "width": 104,
+            "height": 187.21875,
+            "top": 884.71875,
+            "right": 378,
+            "bottom": 1071.9375,
+            "left": 274
+          }
+        }
+      ],
+      "center": {
+        "x": 133,
+        "y": 798.84375,
+        "width": 124,
+        "height": 146.65625,
+        "top": 798.84375,
+        "right": 257,
+        "bottom": 945.5,
+        "left": 133
+      },
+      "ownArea": {
+        "x": 12,
+        "y": 1185.578125,
+        "width": 366,
+        "height": 421.53125,
+        "top": 1185.578125,
+        "right": 378,
+        "bottom": 1607.109375,
+        "left": 12
+      }
+    },
+    "violations": []
+  },
+  {
+    "scene": "pass-contraband",
+    "role": "merchant",
+    "count": 6,
+    "width": 430,
+    "geometry": {
+      "overflow": false,
+      "seats": [
+        {
+          "id": "preview-player-1",
+          "own": "false",
+          "sheriff": "true",
+          "slot": "3",
+          "box": {
+            "x": 163,
+            "y": 563.671875,
+            "width": 104,
+            "height": 153.875,
+            "top": 563.671875,
+            "right": 267,
+            "bottom": 717.546875,
+            "left": 163
+          }
+        },
+        {
+          "id": "preview-player-2",
+          "own": "true",
+          "sheriff": "false",
+          "slot": "0",
+          "box": {
+            "x": 163,
+            "y": 1017.875,
+            "width": 104,
+            "height": 187.21875,
+            "top": 1017.875,
+            "right": 267,
+            "bottom": 1205.09375,
+            "left": 163
+          }
+        },
+        {
+          "id": "preview-player-3",
+          "own": "false",
+          "sheriff": "false",
+          "slot": "1",
+          "box": {
+            "x": 12,
+            "y": 904.3125,
+            "width": 104,
+            "height": 187.21875,
+            "top": 904.3125,
+            "right": 116,
+            "bottom": 1091.53125,
+            "left": 12
+          }
+        },
+        {
+          "id": "preview-player-4",
+          "own": "false",
+          "sheriff": "false",
+          "slot": "2",
+          "box": {
+            "x": 12,
+            "y": 677.21875,
+            "width": 104,
+            "height": 187.21875,
+            "top": 677.21875,
+            "right": 116,
+            "bottom": 864.4375,
+            "left": 12
+          }
+        },
+        {
+          "id": "preview-player-5",
+          "own": "false",
+          "sheriff": "false",
+          "slot": "5",
+          "box": {
+            "x": 314,
+            "y": 904.3125,
+            "width": 104,
+            "height": 187.21875,
+            "top": 904.3125,
+            "right": 418,
+            "bottom": 1091.53125,
+            "left": 314
+          }
+        },
+        {
+          "id": "preview-player-6",
+          "own": "false",
+          "sheriff": "false",
+          "slot": "4",
+          "box": {
+            "x": 314,
+            "y": 677.21875,
+            "width": 104,
+            "height": 187.21875,
+            "top": 677.21875,
+            "right": 418,
+            "bottom": 864.4375,
+            "left": 314
+          }
+        }
+      ],
+      "center": {
+        "x": 153,
+        "y": 785.2578125,
+        "width": 124,
+        "height": 199.015625,
+        "top": 785.2578125,
+        "right": 277,
+        "bottom": 984.2734375,
+        "left": 153
+      },
+      "ownArea": {
+        "x": 12,
+        "y": 1213.578125,
+        "width": 406,
+        "height": 162.953125,
+        "top": 1213.578125,
+        "right": 418,
+        "bottom": 1376.53125,
+        "left": 12
+      }
+    },
+    "violations": []
+  },
+  {
+    "scene": "inspect-contraband",
+    "role": "sheriff",
+    "count": 6,
+    "width": 1280,
+    "geometry": {
+      "overflow": false,
+      "seats": [
+        {
+          "id": "preview-player-1",
+          "own": "true",
+          "sheriff": "true",
+          "slot": "0",
+          "box": {
+            "x": 576,
+            "y": 1145.421875,
+            "width": 128,
+            "height": 180.125,
+            "top": 1145.421875,
+            "right": 704,
+            "bottom": 1325.546875,
+            "left": 576
+          }
+        },
+        {
+          "id": "preview-player-2",
+          "own": "false",
+          "sheriff": "false",
+          "slot": "1",
+          "box": {
+            "x": 260,
+            "y": 982.921875,
+            "width": 128,
+            "height": 197.796875,
+            "top": 982.921875,
+            "right": 388,
+            "bottom": 1180.71875,
+            "left": 260
+          }
+        },
+        {
+          "id": "preview-player-3",
+          "own": "false",
+          "sheriff": "false",
+          "slot": "2",
+          "box": {
+            "x": 260,
+            "y": 657.921875,
+            "width": 128,
+            "height": 197.796875,
+            "top": 657.921875,
+            "right": 388,
+            "bottom": 855.71875,
+            "left": 260
+          }
+        },
+        {
+          "id": "preview-player-4",
+          "own": "false",
+          "sheriff": "false",
+          "slot": "3",
+          "box": {
+            "x": 576,
+            "y": 495.421875,
+            "width": 128,
+            "height": 197.796875,
+            "top": 495.421875,
+            "right": 704,
+            "bottom": 693.21875,
+            "left": 576
+          }
+        },
+        {
+          "id": "preview-player-5",
+          "own": "false",
+          "sheriff": "false",
+          "slot": "4",
+          "box": {
+            "x": 892,
+            "y": 657.921875,
+            "width": 128,
+            "height": 197.796875,
+            "top": 657.921875,
+            "right": 1020,
+            "bottom": 855.71875,
+            "left": 892
+          }
+        },
+        {
+          "id": "preview-player-6",
+          "own": "false",
+          "sheriff": "false",
+          "slot": "5",
+          "box": {
+            "x": 892,
+            "y": 982.921875,
+            "width": 128,
+            "height": 197.796875,
+            "top": 982.921875,
+            "right": 1020,
+            "bottom": 1180.71875,
+            "left": 892
+          }
+        }
+      ],
+      "center": {
+        "x": 552,
+        "y": 819.7421875,
+        "width": 176,
+        "height": 209.359375,
+        "top": 819.7421875,
+        "right": 728,
+        "bottom": 1029.1015625,
+        "left": 552
+      },
+      "ownArea": {
+        "x": 104,
+        "y": 1360.921875,
+        "width": 1072,
+        "height": 184.953125,
+        "top": 1360.921875,
+        "right": 1176,
+        "bottom": 1545.875,
+        "left": 104
+      }
+    },
+    "violations": []
+  }
+]

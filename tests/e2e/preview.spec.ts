@@ -1,5 +1,6 @@
 import { test, expect, type Page } from '@playwright/test';
 import { PREVIEW_SCENES, PREVIEW_STATES } from '../../src/lib/preview/scenarios';
+import { showHandCard } from './helpers/hand';
 
 async function frameLoaded(page:Page,scene:string) {
   await expect.poll(()=>page.frames().find(frame=>new URL(frame.url()||'about:blank').searchParams.get('frame')==='1')?.url()).toContain(`scene=${scene}`);
@@ -24,12 +25,12 @@ test('preview controls use shared room screens without Firebase, API commands or
   await page.getByLabel('หน้าจอ',{exact:true}).selectOption('pack');let frame=await frameLoaded(page,'pack');
   await expect(frame.locator('main')).toHaveAttribute('data-phase','PACK_AND_DECLARE');
   await expect.poll(()=>frame.locator('.preview-frame-page').evaluate(element=>Math.ceil(element.getBoundingClientRect().height)<=innerHeight)).toBe(true);
-  await frame.locator('button.card').first().click();await expect(frame.locator('button.card').first()).toHaveAttribute('aria-pressed','true');
+  await showHandCard(frame,0);await frame.locator('button.card').first().click();await expect(frame.locator('button.card').first()).toHaveAttribute('aria-pressed','true');
   await frame.getByRole('button',{name:'ปิดกระเป๋าและยืนยัน',exact:true}).click();await expect(frame.locator('main')).toHaveAttribute('data-phase','NEGOTIATE');
   await expect(frame.getByText('แจ้งสินค้า แอปเปิล 1 ใบ',{exact:true})).toBeVisible();
   await page.getByLabel('หน้าจอ',{exact:true}).selectOption('negotiate');await page.getByLabel('มุมมอง',{exact:true}).selectOption('sheriff');frame=await frameLoaded(page,'negotiate');
   await expect(frame.locator('main')).toHaveAttribute('data-own-role','sheriff');
-  await frame.getByRole('button',{name:'ให้ผ่าน',exact:true}).click();await expect(frame.getByRole('heading',{name:/ยืนยันให้ผ่าน/})).toBeVisible();
+  await frame.getByRole('button',{name:/^ให้ผ่าน · รับ \d+ เหรียญ$/}).click();await expect(frame.getByRole('heading',{name:/ยืนยันให้ผ่าน/})).toBeVisible();
   await frame.getByRole('button',{name:'ยืนยันให้ผ่าน',exact:true}).click();await expect(frame.locator('main')).toHaveAttribute('data-phase','RESOLUTION');
   await expect(frame.locator('.result-bag')).toHaveClass(/glow/);await frame.getByRole('button',{name:'เล่นเอฟเฟกต์ซ้ำ',exact:true}).click();
   await frame.getByRole('button',{name:'รีเซ็ตตัวอย่าง',exact:true}).click();await expect(frame.locator('main')).toHaveAttribute('data-phase','NEGOTIATE');

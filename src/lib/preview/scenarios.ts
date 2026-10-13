@@ -40,9 +40,12 @@ export function previewQuery(options:PreviewOptions,frame=false) {
 export interface PreviewModel { readonly room:PublicRoomView; readonly own:PrivateRoomView; readonly playerId:string }
 
 /** Synthetic views only. No room ID accepted by the live API; no Firebase or test-fixture imports. */
-export function makePreviewModel(options:PreviewOptions,decision?:{merchantId:string;offerAmount:number}):PreviewModel {
+export function makePreviewModel(options:PreviewOptions,decision?:{merchantId?:string;offerAmount?:number;sheriffId?:string;viewerId?:string;roundIndex?:number}):PreviewModel {
   const rules=createRulesSnapshot();const ids=Array.from({length:options.players},(_,i)=>`preview-player-${i+1}`);
-  const playerId=ids[options.role==='sheriff'?0:1];const merchantId=decision?.merchantId??ids[1];
+  const playerId=decision?.viewerId&&ids.includes(decision.viewerId)?decision.viewerId:ids[options.role==='sheriff'?0:1];
+  const sheriffId=decision?.sheriffId&&ids.includes(decision.sheriffId)?decision.sheriffId:ids[0];
+  const merchantId=decision?.merchantId??(playerId!==sheriffId?playerId:ids.find(id=>id!==sheriffId)!);
+  const roundIndex=decision?.roundIndex??3;
   const lobby=options.scene==='lobby';const finished=options.scene==='game-over';const aborted=options.scene==='aborted';
   const resolving=options.scene.startsWith('pass-')||options.scene.startsWith('inspect-');
   const phase:Phase=lobby||aborted?'LOBBY':options.scene==='prepare'?'PREPARE':options.scene==='pack'?'PACK_AND_DECLARE':options.scene==='negotiate'?'NEGOTIATE':options.scene==='summary'?'ROUND_SUMMARY':finished?'GAME_OVER':'RESOLUTION';
@@ -53,9 +56,9 @@ export function makePreviewModel(options:PreviewOptions,decision?:{merchantId:st
   if(resolving||options.scene==='summary') {
     const contraband=options.scene.endsWith('contraband');const action=options.scene.startsWith('inspect-')?'INSPECT':'PASS';
     const resolved=resolveBag({cards:cards(contraband?['apple','moonshine','crossbow']:['apple','bread','cheese']),declaredProductId:'apple',
-      action,merchantId,sheriffId:ids[0],offer:{submitted:true,amount:offerAmount,version:1},finances,rules});
+      action,merchantId,sheriffId,offer:{submitted:true,amount:offerAmount,version:1},finances,rules});
     finances=resolved.finances;
-    result={id:`preview-result-${options.scene}`,roundIndex:3,merchantId,sheriffId:ids[0],action,bagCount:resolved.bagCount,
+    result={id:`preview-result-${options.scene}-${roundIndex}-${sheriffId}`,roundIndex,merchantId,sheriffId,action,bagCount:resolved.bagCount,
       paymentKind:resolved.paymentKind,paymentAmount:resolved.paymentAmount,contrabandPassed:resolved.contrabandPassed,
       revealed:resolved.revealed?.map(card=>card.productId)??null,passed:action==='INSPECT'?resolved.passed.map(card=>card.productId):null,
       confiscated:action==='INSPECT'?resolved.confiscated.map(card=>card.productId):null};
@@ -66,20 +69,20 @@ export function makePreviewModel(options:PreviewOptions,decision?:{merchantId:st
   const declared=phase==='NEGOTIATE'||phase==='RESOLUTION'||phase==='ROUND_SUMMARY';
   const room:PublicRoomView={rules,revision:1,roomId:'preview-only-room',code:'K7QM',hostId:ids[0],
     lifecycle:lobby?'LOBBY':finished?'FINISHED':aborted?'ABORTED':'PLAYING',phase,
-    gameId:lobby||aborted?null:'00000000-0000-4000-8000-000000000001',roundIndex:lobby||aborted?0:finished?options.players*rules.sheriffTurnsPerPlayer:3,
-    totalRounds:options.players*rules.sheriffTurnsPerPlayer,sheriffId:lobby||aborted?null:ids[0],
+    gameId:lobby||aborted?null:'00000000-0000-4000-8000-000000000001',roundIndex:lobby||aborted?0:finished?options.players*rules.sheriffTurnsPerPlayer:roundIndex,
+    totalRounds:options.players*rules.sheriffTurnsPerPlayer,sheriffId:lobby||aborted?null:sheriffId,
     selectedMerchantId:declared?merchantId:null,result:resolving?result:null,history:result?[result]:[],debts:finances.debts,
     scores:finished?scoreGame(stashes,finances,rules):null,
     players:ids.map((id,index)=>({id,displayName:names[index],avatarId:index,ready:lobby?id!==playerId:true,
       prepared:phase!=='PREPARE'&&phase!=='LOBBY',bagLocked:declared,
-      declaration:declared&&index!==0?{productId:'apple',count:3}:null,
-      offer:declared&&index!==0?{submitted:true,amount:id===merchantId?offerAmount:index%2===0?0:2,version:1}:null,
-      decisionId:options.scene==='summary'&&index!==0?`preview-decision-${index}`:resolving&&id===merchantId?result!.id:null,
+      declaration:declared&&id!==sheriffId?{productId:'apple',count:3}:null,
+      offer:declared&&id!==sheriffId?{submitted:true,amount:id===merchantId?offerAmount:index%2===0?0:2,version:1}:null,
+      decisionId:options.scene==='summary'&&id!==sheriffId?`preview-decision-${index}`:resolving&&id===merchantId?result!.id:null,
       cash:lobby?null:finances.cash[id]})),
   };
   const own:PrivateRoomView={revision:1,playerId,controlClientId:'preview-only-client',sessionGeneration:1,
     hand:cards(['apple','apple','bread','cheese','cloth','crossbow']),
-    bag:declared&&playerId!==ids[0]&&!room.players.find(player=>player.id===playerId)?.decisionId?cards(['apple','bread','moonshine']):[],
+    bag:declared&&playerId!==sheriffId&&!room.players.find(player=>player.id===playerId)?.decisionId?cards(['apple','bread','moonshine']):[],
     stash:stashes.find(player=>player.id===playerId)!.stash,
     declaration:room.players.find(player=>player.id===playerId)!.declaration,offer:room.players.find(player=>player.id===playerId)!.offer??{submitted:false,amount:0,version:0},
     prepared:phase!=='PREPARE'&&phase!=='LOBBY',goodsValue:stashes.find(player=>player.id===playerId)!.stash.reduce((sum,card)=>sum+rules.products[card.productId].value,0)};

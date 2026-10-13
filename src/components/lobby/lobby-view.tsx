@@ -1,31 +1,17 @@
 'use client';
 import type { CSSProperties } from 'react';
 import Link from 'next/link';
-import { Chonburi, Sarabun } from 'next/font/google';
 import { GAME_NAME } from '@/lib/game/config';
 import type { RoomViewProps } from '../room-view';
 import { RoomStatus } from '../room-status';
 import { RulesSummary } from '../rules-summary';
 import { CharacterAvatar } from './character-avatar';
 import { lobbySeats } from './seats';
+import { GateSeal, HostFlag, TableSurface } from '../table/art';
+import { tableFonts } from '../table/fonts';
 import styles from './lobby.module.css';
 
-const displayFont = Chonburi({ weight: '400', subsets: ['thai', 'latin'], variable: '--lobby-font-display', display: 'swap', adjustFontFallback: false });
-const bodyFont = Sarabun({ weight: ['400', '600', '700'], subsets: ['thai', 'latin'], variable: '--lobby-font-body', display: 'swap', adjustFontFallback: false });
 type LobbyProps = Pick<RoomViewProps, 'room' | 'playerId' | 'onlinePlayers' | 'state' | 'dispatch' | 'copyLink' | 'inviteLink' | 'homeHref'>;
-
-function GateSeal({ className }: { className?: string }) {
-  return <svg className={className} viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round">
-    <path d="M8 53V21h12v8h24v-8h12v32M6 53h52M8 21V11h4v5h4v-5h4v10M44 21V11h4v5h4v-5h4v10" />
-    <path d="M24 53V40a8 8 0 0 1 16 0v13M29 53V41M35 53V41M14 30v8M50 30v8" />
-    <path d="m32 5 2 5 5 2-5 2-2 5-2-5-5-2 5-2Z" fill="currentColor" stroke="none" />
-  </svg>;
-}
-function HostFlag() {
-  return <span className={styles.hostFlag} title="ผู้จัดห้อง"><span className={styles.srOnly}>ผู้จัดห้อง</span>
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 7 4 4 4-7 4 7 4-4-2 12H6Z" fill="currentColor" /><path d="M6 19h12" fill="none" stroke="currentColor" strokeWidth="2" /></svg>
-  </span>;
-}
 
 export function LobbyView({ room, playerId, onlinePlayers, state, dispatch, copyLink, inviteLink, homeHref = '/' }: LobbyProps) {
   const me = room.players.find(player => player.id === playerId)!;
@@ -37,7 +23,7 @@ export function LobbyView({ room, playerId, onlinePlayers, state, dispatch, copy
   const startDisabled = state.disabled || !enoughPlayers || !everyoneReady;
   const startHint = !enoughPlayers ? `รอเพื่อนอีก ${room.rules.minPlayers - room.players.length} คน` : !everyoneReady ? 'รอทุกคนกดพร้อม' : isHost ? 'ทุกคนพร้อมแล้ว เปิดตลาดได้เลย' : 'รอผู้จัดห้องเริ่มเกม';
   const seats = lobbySeats(room.players, playerId, room.rules.minPlayers);
-  return <main id="main" tabIndex={-1} className={`room-table ${styles.room} ${displayFont.variable} ${bodyFont.variable}`}
+  return <main id="main" tabIndex={-1} className={`room-table ${styles.room} ${tableFonts}`}
     data-phase={room.phase} data-round={room.roundIndex} data-revision={room.revision} data-own-role="merchant" data-lobby-viewer={playerId}>
     <header className={styles.header}>
       <div className={styles.brand}><GateSeal /><div><p>{GAME_NAME}</p><span>โต๊ะพ่อค้า · ห้องรอเล่น</span></div></div>
@@ -56,7 +42,7 @@ export function LobbyView({ room, playerId, onlinePlayers, state, dispatch, copy
         <p className={styles.playerCount}><span aria-hidden="true">●</span> {room.players.length}/{room.rules.maxPlayers} คน</p>
       </div>
       <div className={styles.stage} data-seat-count={seats.length}>
-        <div className={styles.table} data-lobby-table aria-hidden="true"><div className={styles.tableGrain} /><span className={styles.tableStuds} /><div className={styles.cardStack}><i /><i /><i /></div><div className={styles.coins}><i /><i /><i /></div></div>
+        <TableSurface />
         <div className={styles.tableCenter}><GateSeal className={styles.seal} /><p className={styles.tableTitle}>เตรียมเข้าตลาด</p><p className={styles.readyCount}>พร้อม {readyCount}/{room.players.length} คน</p>
           {isHost ? <button className={styles.startButton} type="button" disabled={startDisabled} aria-describedby="lobby-start-hint" onClick={() => void dispatch({ type: 'startGame' })}>เริ่มเกม <span aria-hidden="true">→</span></button> : <p className={styles.waitHost}>รอผู้จัดห้อง<br />เปิดตลาด</p>}
         </div>

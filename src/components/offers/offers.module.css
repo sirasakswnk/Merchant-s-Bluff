@@ -1,0 +1,28 @@
+.picker { container: offer-picker / inline-size; min-width: 0; }
+.picker > label { margin: 0 0 8px; }
+.stepper { display: grid; grid-template-columns: 48px minmax(0, 1fr) 48px; gap: 8px; align-items: center; }
+.stepper button { min-height: 48px; padding: 4px; font-size: 1.6rem; }
+.stepper input { min-height: 64px; padding: 6px; text-align: center; font-size: 2rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.quickAmounts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.quickAmounts button { flex: 1; min-height: 44px; padding: 8px; }
+.draftNote { color: #55513f; font-size: .85rem; margin: 10px 0 0; }
+.display { box-sizing: border-box; max-width: 100%; }
+.offerValue { display: flex; align-items: center; justify-content: center; gap: 7px; }
+.caption { display: block; font-size: .75rem; font-weight: 600; margin-bottom: 3px; }
+.seat { display: inline-block; margin: 5px auto 2px; padding: 4px 7px; border-radius: 6px; font-size: .8rem; line-height: 1.4; }
+.positive { color: #33230e; background: linear-gradient(#f8db95, #e7bc67); border: 1px solid #997134; box-shadow: 0 2px #3f2716; }
+.neutral { color: #efe7d2; background: #24332f; border: 1px solid #617068; }
+.tray { width: 100%; padding: 7px 6px; border-radius: 10px; }
+.tray .offerValue > span > strong { font-size: 1.5rem; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.tray .unit { font-size: .7rem; }
+.detail { width: min(100%, 20rem); padding: 12px; margin: 12px 0 16px; border-radius: 10px; text-align: center; }
+.detail .offerValue > span > strong { font-size: 2rem; font-variant-numeric: tabular-nums; }
+.coinPile { --coin-size: 13px; position: relative; display: inline-block; width: calc(var(--coin-size) + 8px); height: calc(var(--coin-size) + 7px); flex: none; }
+.coinPile i { position: absolute; width: var(--coin-size); height: var(--coin-size); top: 5px; left: 0; border-radius: 50%; border: 1px solid #765018; background: radial-gradient(circle at 35% 25%, #ffedb6, #e1aa39 75%); box-shadow: inset 0 0 0 2px #f5d481, 0 2px #8e5e21; }
+.coinPile i:nth-child(2) { left: 6px; top: 7px; }.coinPile i:nth-child(3) { left: 2px; top: 2px; }.coinPile i:nth-child(4) { left: 8px; top: 0; }
+.tray .coinPile, .detail .coinPile { --coin-size: 22px; }
+@container offer-picker (max-width: 14rem) {
+  .stepper { grid-template-columns: repeat(2, minmax(44px, 1fr)); }
+  .stepper input { grid-row: 1; grid-column: 1 / -1; }
+  .stepper button { grid-row: 2; }
+}

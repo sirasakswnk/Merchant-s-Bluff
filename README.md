@@ -12,11 +12,17 @@
 
 > ผู้ใช้อนุมัติสำรับ **360 ใบ**: แอปเปิล84 ขนมปัง72 ชีส60 ผ้า54 เหล้าเถื่อน36 หน้าไม้30 ใบกัญชา24 เปลี่ยนเฉพาะจำนวนและ rulesVersion เป็น0.2 ราคา ค่าปรับ ค่าชดเชย และกติกาอื่นคงเดิม ใช้เมื่อเริ่มเกมใหม่เท่านั้น เกมที่เริ่มแล้วคง rules snapshot เดิม ไม่มีการเติมไพ่เข้าเกมเก่า
 
-หน้าแรกคืน layout/สี/SVG inline/ฟอนต์และเอฟเฟกต์จาก `home.html` ครบแล้ว ฟอร์มเชื่อมระบบจริง ทวนภาพheroตรงระดับpixel4ขนาดและเล่น4คนหนึ่งรอบบนEmulatorsผ่าน การแก้designล่าสุดยังอยู่ในเครื่อง ดู [ผลตรวจหน้าแรก](work/verification/home-fidelity/report.md) หน้าเกมยังใช้UIเดิมสำหรับขั้นถัดไป `merchant-gate.html` ยังไม่ใช้เป็นreference งานresponsive/accessibility/safe area/reduced-motionคงไว้
+หน้าแรกคืน layout/สี/SVG inline/ฟอนต์และเอฟเฟกต์จาก `home.html` ครบแล้ว ฟอร์มเชื่อมระบบจริง ทวนภาพheroตรงระดับpixel4ขนาดและเล่น4คนหนึ่งรอบบนEmulatorsผ่าน ดู [ผลตรวจหน้าแรก](work/verification/home-fidelity/report.md) หน้าแรก/พรีวิว/ล็อบบี้ส่งbranchpreviewcommit760426eแล้ว `merchant-gate.html` ยังไม่ใช้เป็นreference งานresponsive/accessibility/safe area/reduced-motionคงไว้
+
+หน้าเล่นเกมใช้โต๊ะกลมแล้ว ตัวเองล่างเสมอ นายด่านคนอื่นอยู่บน ไพ่และปุ่มใต้โต๊ะ ผลที่เปิดเผยได้อยู่กลางโต๊ะ/ด้านล่าง ดู [พรีวิวจัดกระเป๋า](http://localhost:4100/preview?scene=pack&role=merchant&players=6&width=390), [แบบ](docs/game-table-design.md) และ [ผลตรวจ](work/verification/game-table/report.md) งาน UI ล่าสุดรวมอยู่บน branch `preview`
+
+ไพ่พ่อค้า desktop ใช้พัดโค้งตื้นเหมือนเดิม บนมือถือไพ่ขนาดใหญ่ยื่นพ้นกล่องและปัดหมุนตามแนวครึ่งวงกลม ปล่อยนิ้วแล้วชะลอหยุดให้หนึ่งใบตั้งตรงกลางจอ แตะแล้วยกออกจากพัด/แตะซ้ำเอาออก มีรายละเอียดไพ่แยกและปุ่มเลื่อนสำหรับkeyboard ดู [พรีวิวไพ่ในเครื่อง](http://localhost:3000/preview?scene=pack&role=merchant&players=6&width=390) และ [ผลตรวจ](work/verification/arc-hand/report.md) ทดสอบ touch/keyboard และห้องจริงlocal4คนแลก3ขน5ครบหนึ่งรอบแล้ว
+
+หน้าการ์ดใช้ภาพเต็มใบทั้ง7ชนิดจากcard.zipของผู้ใช้แล้ว คงตัวเลขตามกติกา มีป้ายเลือกใต้กรอบและภาพย่อในช่องรายละเอียด ดู [ข้อมูลภาพ](docs/card-art.md) และ [ผลตรวจล่าสุด](work/verification/card-art/report.md)
 
 ## เตรียมเครื่อง
 
-ล็อบบี้ใช้โต๊ะไม้กลมและตัวละครที่เลือกแล้ว ผู้ชมอยู่ล่างเสมอ ดู [พรีวิวล็อบบี้6คน](http://localhost:4100/preview?scene=lobby&role=sheriff&players=6&width=390) และ [แบบ/ขอบเขต](docs/lobby-design.md) เปลี่ยนเฉพาะล็อบบี้ก่อนเริ่มเกม ขั้นนี้ยังอยู่ในเครื่อง
+ล็อบบี้ใช้โต๊ะไม้กลมและตัวละครที่เลือกแล้ว ผู้ชมอยู่ล่างเสมอ ดู [พรีวิวล็อบบี้6คน](http://localhost:4100/preview?scene=lobby&role=sheriff&players=6&width=390) และ [แบบ/ขอบเขต](docs/lobby-design.md)
 
 สำหรับตรวจดีไซน์โดยไม่ต้องสร้างห้อง เปิด `/preview` เช่น [ตัวอย่างในเครื่อง](http://localhost:4100/preview) เลือกทุกเฟส มุมมอง4–6คน สถานะและขนาดมือถือได้ ไม่เชื่อมFirebaseหรือแก้ข้อมูลเกม ดู [วิธีใช้พรีวิว](docs/preview.md) และ [ผลตรวจ](work/verification/preview-route/report.md) routeจากงานนี้ยังไม่deployProduction
 

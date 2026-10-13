@@ -3,12 +3,13 @@ import { PRODUCTS } from '../../src/lib/game/config';
 import type { ProductId } from '../../src/lib/game/types';
 import { auditScreen } from './helpers/accessibility';
 import { press } from './helpers/game-ui';
+import { showHandCard } from './helpers/hand';
 
 interface VisibleCard { id: string; product: ProductId }
 async function phase(page: Page, expected: string, round?: number) {
   await expect(page.locator('main')).toHaveAttribute('data-phase', expected, { timeout: 15000 });
   if (round) await expect(page.locator('main')).toHaveAttribute('data-round', String(round));
-  await expect(page.getByRole('status')).toHaveText('เชื่อมต่อแล้ว');
+  await expect(page.locator('.connection-state')).toHaveText('เชื่อมต่อแล้ว');
 }
 async function click(page: Page, name: string) { await press(page, name); }
 async function visibleCards(page: Page): Promise<VisibleCard[]> {
@@ -41,7 +42,7 @@ test('four mobile browser contexts play eight rounds through the real UI and ret
       expect(sheriff).toBeGreaterThanOrEqual(0); const merchants = [0, 1, 2, 3].filter(index => index !== sheriff);
       for (const index of merchants) {
         if (round % 3 === 0) {
-          const card = pages[index].locator('button.card').first(); await card.click(); await expect(card).toHaveAttribute('aria-pressed', 'true');
+          const card = pages[index].locator('button.card').first(); await showHandCard(pages[index], 0); await card.click(); await expect(card).toHaveAttribute('aria-pressed', 'true');
         }
         await click(pages[index], 'พร้อมจัดกระเป๋า');
         await expect(pages[index].getByRole('button', { name: 'พร้อมจัดกระเป๋า', exact: true })).toHaveCount(0);
@@ -65,7 +66,7 @@ test('four mobile browser contexts play eight rounds through the real UI and ret
         else if ((round + index) % 2 === 0) action = 'INSPECT';
         plans.push({ index, cards: chosen, action, offer, feature });
         for (const card of chosen) {
-          const button = page.locator(`button[data-card-id="${card.id}"]`); await button.click(); await expect(button).toHaveAttribute('aria-pressed', 'true');
+          const button = page.locator(`button[data-card-id="${card.id}"]`); await showHandCard(page, cards.findIndex(item => item.id === card.id)); await button.click(); await expect(button).toHaveAttribute('aria-pressed', 'true');
         }
         if (!reloaded && chosen.length === 2) {
           const before = await page.locator('.players .player').filter({ has: page.getByRole('heading', { name: `ผู้เล่น${index + 1} (คุณ)`, exact: true }) }).getAttribute('data-player-id');

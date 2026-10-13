@@ -1,0 +1,108 @@
+{
+  "passed": true,
+  "players": 4,
+  "draftPrivateAndRetainedOnReload": true,
+  "unselectedMerchantCanOffer": true,
+  "staleConfirmationRejected": true,
+  "passTransferred": 15,
+  "inspectDidNotTransferOffer": 8,
+  "explicitZero": true,
+  "fullRoundCompleted": true,
+  "checkpoints": [
+    {
+      "total": 360,
+      "unique": 360,
+      "deck": 336,
+      "discard": 0,
+      "hand": 21,
+      "bag": 3,
+      "stash": 0,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    },
+    {
+      "total": 360,
+      "unique": 360,
+      "deck": 336,
+      "discard": 0,
+      "hand": 21,
+      "bag": 2,
+      "stash": 1,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    },
+    {
+      "total": 360,
+      "unique": 360,
+      "deck": 336,
+      "discard": 0,
+      "hand": 21,
+      "bag": 2,
+      "stash": 1,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    },
+    {
+      "total": 360,
+      "unique": 360,
+      "deck": 336,
+      "discard": 0,
+      "hand": 21,
+      "bag": 1,
+      "stash": 2,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    },
+    {
+      "total": 360,
+      "unique": 360,
+      "deck": 336,
+      "discard": 0,
+      "hand": 21,
+      "bag": 0,
+      "stash": 3,
+      "products": {
+        "apple": 84,
+        "bread": 72,
+        "cheese": 60,
+        "cloth": 54,
+        "moonshine": 36,
+        "crossbow": 30,
+        "cannabis_leaf": 24
+      }
+    }
+  ],
+  "errors": [],
+  "cleanup": {
+    "rooms": 1,
+    "users": 4
+  }
+}

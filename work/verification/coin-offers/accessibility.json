@@ -1,0 +1,38 @@
+{
+  "cases": 18,
+  "audits": [
+    {
+      "role": "merchant",
+      "width": 320,
+      "violations": []
+    },
+    {
+      "role": "merchant",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "role": "merchant",
+      "width": 1280,
+      "violations": []
+    },
+    {
+      "role": "sheriff",
+      "width": 320,
+      "violations": []
+    },
+    {
+      "role": "sheriff",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "role": "sheriff",
+      "width": 1280,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "disabledStates": 4,
+  "text200": true
+}

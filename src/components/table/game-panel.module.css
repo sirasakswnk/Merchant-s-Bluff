@@ -1,0 +1,42 @@
+.canvasPanel:global(.panel)[data-game-panel] {
+  --game-panel-leather-width: 7px;
+  --game-panel-padding: 20px;
+  position: relative;
+  isolation: isolate;
+  padding: var(--game-panel-padding);
+  color: #29241b;
+  border: var(--game-panel-leather-width) solid #795337;
+  background: radial-gradient(ellipse at 50% 38%, #f1e7ce, #d5c49c);
+  box-shadow: inset 0 0 14px #76572955, 0 3px 0 #3e2e1f, 0 10px 20px #0005;
+}
+.canvasPanel::before, .canvasPanel::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+}
+.canvasPanel::before {
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  opacity: .16;
+  background:
+    repeating-linear-gradient(0deg, #654726aa 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(90deg, #654726aa 0 1px, transparent 1px 3px);
+  mask-image: radial-gradient(ellipse at 50% 45%, #0005, #000);
+}
+.canvasPanel::after {
+  inset: -4px;
+  border: 1px dashed #e3c697;
+  border-radius: 8px;
+}
+.canvasPanel > h2 {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #947b4c66;
+}
+@media (max-width: 600px) {
+  .canvasPanel:global(.panel)[data-game-panel] {
+    --game-panel-padding: 14px;
+    /* Preserve full-width mobile hands when the controls have a leather border. */
+    --hand-bleed: calc(var(--game-panel-padding) + var(--game-panel-leather-width) + 12px);
+  }
+}

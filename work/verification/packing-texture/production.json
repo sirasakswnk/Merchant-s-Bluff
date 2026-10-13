@@ -1,0 +1,19 @@
+{
+  "checks": [
+    {
+      "width": 390,
+      "border": "7px",
+      "stitch": "dashed",
+      "overflow": false,
+      "selectionAndDeclaration": "passed"
+    },
+    {
+      "width": 1280,
+      "border": "7px",
+      "stitch": "dashed",
+      "overflow": false,
+      "selectionAndDeclaration": "passed"
+    }
+  ],
+  "errors": []
+}

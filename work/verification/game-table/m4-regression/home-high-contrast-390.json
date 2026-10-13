@@ -1,0 +1,11 @@
+{
+  "size": {
+    "width": 390,
+    "height": 844
+  },
+  "violations": [],
+  "incomplete": [
+    "aria-prohibited-attr",
+    "color-contrast"
+  ]
+}

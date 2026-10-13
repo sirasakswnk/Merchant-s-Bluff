@@ -1,0 +1,949 @@
+{
+  "cases": [
+    {
+      "scene": "prepare",
+      "role": "merchant",
+      "width": 320,
+      "titles": [
+        "เตรียมสินค้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "scene": "prepare",
+      "role": "merchant",
+      "width": 360,
+      "titles": [
+        "เตรียมสินค้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "prepare",
+      "role": "merchant",
+      "width": 390,
+      "titles": [
+        "เตรียมสินค้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "prepare",
+      "role": "merchant",
+      "width": 430,
+      "titles": [
+        "เตรียมสินค้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "prepare",
+      "role": "merchant",
+      "width": 1280,
+      "titles": [
+        "เตรียมสินค้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "scene": "prepare",
+      "role": "sheriff",
+      "width": 320,
+      "titles": [
+        "คุณเป็นนายด่าน"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "scene": "prepare",
+      "role": "sheriff",
+      "width": 360,
+      "titles": [
+        "คุณเป็นนายด่าน"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "prepare",
+      "role": "sheriff",
+      "width": 390,
+      "titles": [
+        "คุณเป็นนายด่าน"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "prepare",
+      "role": "sheriff",
+      "width": 430,
+      "titles": [
+        "คุณเป็นนายด่าน"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "prepare",
+      "role": "sheriff",
+      "width": 1280,
+      "titles": [
+        "คุณเป็นนายด่าน"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "scene": "pack",
+      "role": "merchant",
+      "width": 320,
+      "titles": [
+        "จัดกระเป๋าและแจ้งสินค้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "scene": "pack",
+      "role": "merchant",
+      "width": 360,
+      "titles": [
+        "จัดกระเป๋าและแจ้งสินค้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "pack",
+      "role": "merchant",
+      "width": 390,
+      "titles": [
+        "จัดกระเป๋าและแจ้งสินค้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "pack",
+      "role": "merchant",
+      "width": 430,
+      "titles": [
+        "จัดกระเป๋าและแจ้งสินค้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "pack",
+      "role": "merchant",
+      "width": 1280,
+      "titles": [
+        "จัดกระเป๋าและแจ้งสินค้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "scene": "pack",
+      "role": "sheriff",
+      "width": 320,
+      "titles": [
+        "คุณเป็นนายด่าน"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "scene": "pack",
+      "role": "sheriff",
+      "width": 360,
+      "titles": [
+        "คุณเป็นนายด่าน"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "pack",
+      "role": "sheriff",
+      "width": 390,
+      "titles": [
+        "คุณเป็นนายด่าน"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "pack",
+      "role": "sheriff",
+      "width": 430,
+      "titles": [
+        "คุณเป็นนายด่าน"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "pack",
+      "role": "sheriff",
+      "width": 1280,
+      "titles": [
+        "คุณเป็นนายด่าน"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "scene": "negotiate",
+      "role": "merchant",
+      "width": 320,
+      "titles": [
+        "เจรจาและข้อเสนอ"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "scene": "negotiate",
+      "role": "merchant",
+      "width": 360,
+      "titles": [
+        "เจรจาและข้อเสนอ"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "negotiate",
+      "role": "merchant",
+      "width": 390,
+      "titles": [
+        "เจรจาและข้อเสนอ"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "negotiate",
+      "role": "merchant",
+      "width": 430,
+      "titles": [
+        "เจรจาและข้อเสนอ"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "negotiate",
+      "role": "merchant",
+      "width": 1280,
+      "titles": [
+        "เจรจาและข้อเสนอ"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "scene": "negotiate",
+      "role": "sheriff",
+      "width": 320,
+      "titles": [
+        "เลือกพ่อค้าและตัดสิน"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "scene": "negotiate",
+      "role": "sheriff",
+      "width": 360,
+      "titles": [
+        "เลือกพ่อค้าและตัดสิน"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "negotiate",
+      "role": "sheriff",
+      "width": 390,
+      "titles": [
+        "เลือกพ่อค้าและตัดสิน"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "negotiate",
+      "role": "sheriff",
+      "width": 430,
+      "titles": [
+        "เลือกพ่อค้าและตัดสิน"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "negotiate",
+      "role": "sheriff",
+      "width": 1280,
+      "titles": [
+        "เลือกพ่อค้าและตัดสิน"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "scene": "pass-legal",
+      "role": "merchant",
+      "width": 320,
+      "titles": [
+        "รอผลและรอบถัดไป",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "scene": "pass-legal",
+      "role": "merchant",
+      "width": 360,
+      "titles": [
+        "รอผลและรอบถัดไป",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "pass-legal",
+      "role": "merchant",
+      "width": 390,
+      "titles": [
+        "รอผลและรอบถัดไป",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "pass-legal",
+      "role": "merchant",
+      "width": 430,
+      "titles": [
+        "รอผลและรอบถัดไป",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "pass-legal",
+      "role": "merchant",
+      "width": 1280,
+      "titles": [
+        "รอผลและรอบถัดไป",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "scene": "pass-legal",
+      "role": "sheriff",
+      "width": 320,
+      "titles": [
+        "ผลตัดสินแล้ว",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "scene": "pass-legal",
+      "role": "sheriff",
+      "width": 360,
+      "titles": [
+        "ผลตัดสินแล้ว",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "pass-legal",
+      "role": "sheriff",
+      "width": 390,
+      "titles": [
+        "ผลตัดสินแล้ว",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "pass-legal",
+      "role": "sheriff",
+      "width": 430,
+      "titles": [
+        "ผลตัดสินแล้ว",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "pass-legal",
+      "role": "sheriff",
+      "width": 1280,
+      "titles": [
+        "ผลตัดสินแล้ว",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "scene": "pass-contraband",
+      "role": "merchant",
+      "width": 320,
+      "titles": [
+        "รอผลและรอบถัดไป",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "scene": "pass-contraband",
+      "role": "merchant",
+      "width": 360,
+      "titles": [
+        "รอผลและรอบถัดไป",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "pass-contraband",
+      "role": "merchant",
+      "width": 390,
+      "titles": [
+        "รอผลและรอบถัดไป",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "pass-contraband",
+      "role": "merchant",
+      "width": 430,
+      "titles": [
+        "รอผลและรอบถัดไป",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "pass-contraband",
+      "role": "merchant",
+      "width": 1280,
+      "titles": [
+        "รอผลและรอบถัดไป",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "scene": "pass-contraband",
+      "role": "sheriff",
+      "width": 320,
+      "titles": [
+        "ผลตัดสินแล้ว",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "scene": "pass-contraband",
+      "role": "sheriff",
+      "width": 360,
+      "titles": [
+        "ผลตัดสินแล้ว",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "pass-contraband",
+      "role": "sheriff",
+      "width": 390,
+      "titles": [
+        "ผลตัดสินแล้ว",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "pass-contraband",
+      "role": "sheriff",
+      "width": 430,
+      "titles": [
+        "ผลตัดสินแล้ว",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "pass-contraband",
+      "role": "sheriff",
+      "width": 1280,
+      "titles": [
+        "ผลตัดสินแล้ว",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "scene": "inspect-legal",
+      "role": "merchant",
+      "width": 320,
+      "titles": [
+        "รอผลและรอบถัดไป",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "scene": "inspect-legal",
+      "role": "merchant",
+      "width": 360,
+      "titles": [
+        "รอผลและรอบถัดไป",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "inspect-legal",
+      "role": "merchant",
+      "width": 390,
+      "titles": [
+        "รอผลและรอบถัดไป",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "inspect-legal",
+      "role": "merchant",
+      "width": 430,
+      "titles": [
+        "รอผลและรอบถัดไป",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "inspect-legal",
+      "role": "merchant",
+      "width": 1280,
+      "titles": [
+        "รอผลและรอบถัดไป",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "scene": "inspect-legal",
+      "role": "sheriff",
+      "width": 320,
+      "titles": [
+        "ผลตัดสินแล้ว",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "scene": "inspect-legal",
+      "role": "sheriff",
+      "width": 360,
+      "titles": [
+        "ผลตัดสินแล้ว",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "inspect-legal",
+      "role": "sheriff",
+      "width": 390,
+      "titles": [
+        "ผลตัดสินแล้ว",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "inspect-legal",
+      "role": "sheriff",
+      "width": 430,
+      "titles": [
+        "ผลตัดสินแล้ว",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "inspect-legal",
+      "role": "sheriff",
+      "width": 1280,
+      "titles": [
+        "ผลตัดสินแล้ว",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "scene": "inspect-contraband",
+      "role": "merchant",
+      "width": 320,
+      "titles": [
+        "รอผลและรอบถัดไป",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "scene": "inspect-contraband",
+      "role": "merchant",
+      "width": 360,
+      "titles": [
+        "รอผลและรอบถัดไป",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "inspect-contraband",
+      "role": "merchant",
+      "width": 390,
+      "titles": [
+        "รอผลและรอบถัดไป",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "inspect-contraband",
+      "role": "merchant",
+      "width": 430,
+      "titles": [
+        "รอผลและรอบถัดไป",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "inspect-contraband",
+      "role": "merchant",
+      "width": 1280,
+      "titles": [
+        "รอผลและรอบถัดไป",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "scene": "inspect-contraband",
+      "role": "sheriff",
+      "width": 320,
+      "titles": [
+        "ผลตัดสินแล้ว",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "scene": "inspect-contraband",
+      "role": "sheriff",
+      "width": 360,
+      "titles": [
+        "ผลตัดสินแล้ว",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "inspect-contraband",
+      "role": "sheriff",
+      "width": 390,
+      "titles": [
+        "ผลตัดสินแล้ว",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "inspect-contraband",
+      "role": "sheriff",
+      "width": 430,
+      "titles": [
+        "ผลตัดสินแล้ว",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "inspect-contraband",
+      "role": "sheriff",
+      "width": 1280,
+      "titles": [
+        "ผลตัดสินแล้ว",
+        "ผลของ เมย์ตลาดเช้า"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "scene": "summary",
+      "role": "merchant",
+      "width": 320,
+      "titles": [
+        "รอผลและรอบถัดไป"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "scene": "summary",
+      "role": "merchant",
+      "width": 360,
+      "titles": [
+        "รอผลและรอบถัดไป"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "summary",
+      "role": "merchant",
+      "width": 390,
+      "titles": [
+        "รอผลและรอบถัดไป"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "summary",
+      "role": "merchant",
+      "width": 430,
+      "titles": [
+        "รอผลและรอบถัดไป"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "summary",
+      "role": "merchant",
+      "width": 1280,
+      "titles": [
+        "รอผลและรอบถัดไป"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "scene": "summary",
+      "role": "sheriff",
+      "width": 320,
+      "titles": [
+        "จบรอบ"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "scene": "summary",
+      "role": "sheriff",
+      "width": 360,
+      "titles": [
+        "จบรอบ"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "summary",
+      "role": "sheriff",
+      "width": 390,
+      "titles": [
+        "จบรอบ"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "summary",
+      "role": "sheriff",
+      "width": 430,
+      "titles": [
+        "จบรอบ"
+      ],
+      "identicalTheme": true,
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "scene": "summary",
+      "role": "sheriff",
+      "width": 1280,
+      "titles": [
+        "จบรอบ"
+      ],
+      "identicalTheme": true,
+      "axeChecked": true,
+      "violations": 0
+    }
+  ],
+  "comparedTheme": {
+    "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+    "color": "rgb(41, 36, 27)",
+    "border": "7px solid rgb(121, 83, 55)",
+    "shadow": "rgba(118, 87, 41, 0.333) 0px 0px 14px 0px inset, rgb(62, 46, 31) 0px 3px 0px 0px, rgba(0, 0, 0, 0.333) 0px 10px 20px 0px",
+    "weave": "repeating-linear-gradient(0deg, rgba(101, 71, 38, 0.667) 0px, rgba(101, 71, 38, 0.667) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 3px), repeating-linear-gradient(90deg, rgba(101, 71, 38, 0.667) 0px, rgba(101, 71, 38, 0.667) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 3px)",
+    "opacity": "0.16",
+    "stitch": "1px dashed rgb(227, 198, 151)"
+  },
+  "formSubmissionAndConfirmation": "passed",
+  "disabledStates": [
+    "offline",
+    "readonly",
+    "busy",
+    "pending"
+  ],
+  "largeTextScenes": [
+    "prepare",
+    "negotiate",
+    "summary",
+    "inspect-contraband"
+  ],
+  "publicResultPrivacy": "passed",
+  "errors": [],
+  "apiOrFirebaseRequests": []
+}

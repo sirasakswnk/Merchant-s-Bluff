@@ -1,0 +1,439 @@
+{
+  "cases": [
+    {
+      "count": 4,
+      "role": "merchant",
+      "width": 320,
+      "unchangedScoreContent": true,
+      "style": {
+        "border": "7px",
+        "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+        "stitch": "dashed",
+        "ignoresPointer": true
+      },
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "count": 4,
+      "role": "merchant",
+      "width": 360,
+      "unchangedScoreContent": true,
+      "style": {
+        "border": "7px",
+        "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+        "stitch": "dashed",
+        "ignoresPointer": true
+      },
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "count": 4,
+      "role": "merchant",
+      "width": 390,
+      "unchangedScoreContent": true,
+      "style": {
+        "border": "7px",
+        "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+        "stitch": "dashed",
+        "ignoresPointer": true
+      },
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "count": 4,
+      "role": "merchant",
+      "width": 430,
+      "unchangedScoreContent": true,
+      "style": {
+        "border": "7px",
+        "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+        "stitch": "dashed",
+        "ignoresPointer": true
+      },
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "count": 4,
+      "role": "merchant",
+      "width": 1280,
+      "unchangedScoreContent": true,
+      "style": {
+        "border": "7px",
+        "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+        "stitch": "dashed",
+        "ignoresPointer": true
+      },
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "count": 4,
+      "role": "sheriff",
+      "width": 320,
+      "unchangedScoreContent": true,
+      "style": {
+        "border": "7px",
+        "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+        "stitch": "dashed",
+        "ignoresPointer": true
+      },
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "count": 4,
+      "role": "sheriff",
+      "width": 360,
+      "unchangedScoreContent": true,
+      "style": {
+        "border": "7px",
+        "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+        "stitch": "dashed",
+        "ignoresPointer": true
+      },
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "count": 4,
+      "role": "sheriff",
+      "width": 390,
+      "unchangedScoreContent": true,
+      "style": {
+        "border": "7px",
+        "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+        "stitch": "dashed",
+        "ignoresPointer": true
+      },
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "count": 4,
+      "role": "sheriff",
+      "width": 430,
+      "unchangedScoreContent": true,
+      "style": {
+        "border": "7px",
+        "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+        "stitch": "dashed",
+        "ignoresPointer": true
+      },
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "count": 4,
+      "role": "sheriff",
+      "width": 1280,
+      "unchangedScoreContent": true,
+      "style": {
+        "border": "7px",
+        "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+        "stitch": "dashed",
+        "ignoresPointer": true
+      },
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "count": 5,
+      "role": "merchant",
+      "width": 320,
+      "unchangedScoreContent": true,
+      "style": {
+        "border": "7px",
+        "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+        "stitch": "dashed",
+        "ignoresPointer": true
+      },
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "count": 5,
+      "role": "merchant",
+      "width": 360,
+      "unchangedScoreContent": true,
+      "style": {
+        "border": "7px",
+        "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+        "stitch": "dashed",
+        "ignoresPointer": true
+      },
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "count": 5,
+      "role": "merchant",
+      "width": 390,
+      "unchangedScoreContent": true,
+      "style": {
+        "border": "7px",
+        "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+        "stitch": "dashed",
+        "ignoresPointer": true
+      },
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "count": 5,
+      "role": "merchant",
+      "width": 430,
+      "unchangedScoreContent": true,
+      "style": {
+        "border": "7px",
+        "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+        "stitch": "dashed",
+        "ignoresPointer": true
+      },
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "count": 5,
+      "role": "merchant",
+      "width": 1280,
+      "unchangedScoreContent": true,
+      "style": {
+        "border": "7px",
+        "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+        "stitch": "dashed",
+        "ignoresPointer": true
+      },
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "count": 5,
+      "role": "sheriff",
+      "width": 320,
+      "unchangedScoreContent": true,
+      "style": {
+        "border": "7px",
+        "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+        "stitch": "dashed",
+        "ignoresPointer": true
+      },
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "count": 5,
+      "role": "sheriff",
+      "width": 360,
+      "unchangedScoreContent": true,
+      "style": {
+        "border": "7px",
+        "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+        "stitch": "dashed",
+        "ignoresPointer": true
+      },
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "count": 5,
+      "role": "sheriff",
+      "width": 390,
+      "unchangedScoreContent": true,
+      "style": {
+        "border": "7px",
+        "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+        "stitch": "dashed",
+        "ignoresPointer": true
+      },
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "count": 5,
+      "role": "sheriff",
+      "width": 430,
+      "unchangedScoreContent": true,
+      "style": {
+        "border": "7px",
+        "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+        "stitch": "dashed",
+        "ignoresPointer": true
+      },
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "count": 5,
+      "role": "sheriff",
+      "width": 1280,
+      "unchangedScoreContent": true,
+      "style": {
+        "border": "7px",
+        "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+        "stitch": "dashed",
+        "ignoresPointer": true
+      },
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "count": 6,
+      "role": "merchant",
+      "width": 320,
+      "unchangedScoreContent": true,
+      "style": {
+        "border": "7px",
+        "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+        "stitch": "dashed",
+        "ignoresPointer": true
+      },
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "count": 6,
+      "role": "merchant",
+      "width": 360,
+      "unchangedScoreContent": true,
+      "style": {
+        "border": "7px",
+        "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+        "stitch": "dashed",
+        "ignoresPointer": true
+      },
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "count": 6,
+      "role": "merchant",
+      "width": 390,
+      "unchangedScoreContent": true,
+      "style": {
+        "border": "7px",
+        "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+        "stitch": "dashed",
+        "ignoresPointer": true
+      },
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "count": 6,
+      "role": "merchant",
+      "width": 430,
+      "unchangedScoreContent": true,
+      "style": {
+        "border": "7px",
+        "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+        "stitch": "dashed",
+        "ignoresPointer": true
+      },
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "count": 6,
+      "role": "merchant",
+      "width": 1280,
+      "unchangedScoreContent": true,
+      "style": {
+        "border": "7px",
+        "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+        "stitch": "dashed",
+        "ignoresPointer": true
+      },
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "count": 6,
+      "role": "sheriff",
+      "width": 320,
+      "unchangedScoreContent": true,
+      "style": {
+        "border": "7px",
+        "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+        "stitch": "dashed",
+        "ignoresPointer": true
+      },
+      "axeChecked": true,
+      "violations": 0
+    },
+    {
+      "count": 6,
+      "role": "sheriff",
+      "width": 360,
+      "unchangedScoreContent": true,
+      "style": {
+        "border": "7px",
+        "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+        "stitch": "dashed",
+        "ignoresPointer": true
+      },
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "count": 6,
+      "role": "sheriff",
+      "width": 390,
+      "unchangedScoreContent": true,
+      "style": {
+        "border": "7px",
+        "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+        "stitch": "dashed",
+        "ignoresPointer": true
+      },
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "count": 6,
+      "role": "sheriff",
+      "width": 430,
+      "unchangedScoreContent": true,
+      "style": {
+        "border": "7px",
+        "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+        "stitch": "dashed",
+        "ignoresPointer": true
+      },
+      "axeChecked": false,
+      "violations": 0
+    },
+    {
+      "count": 6,
+      "role": "sheriff",
+      "width": 1280,
+      "unchangedScoreContent": true,
+      "style": {
+        "border": "7px",
+        "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+        "stitch": "dashed",
+        "ignoresPointer": true
+      },
+      "axeChecked": true,
+      "violations": 0
+    }
+  ],
+  "unchangedScoreContent": true,
+  "rematchKeyboard": {
+    "outline": "solid",
+    "width": 181.390625,
+    "height": 48.390625
+  },
+  "rematchDisabledStates": [
+    "offline",
+    "readonly",
+    "busy",
+    "pending"
+  ],
+  "text200": "passed",
+  "errors": [],
+  "apiOrFirebaseRequests": []
+}

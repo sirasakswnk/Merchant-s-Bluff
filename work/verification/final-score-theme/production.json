@@ -1,0 +1,112 @@
+{
+  "checks": [
+    {
+      "count": 4,
+      "role": "merchant",
+      "width": 390,
+      "unchangedScoreContent": true,
+      "border": "7px",
+      "stitch": "dashed",
+      "overflow": false
+    },
+    {
+      "count": 4,
+      "role": "merchant",
+      "width": 1280,
+      "unchangedScoreContent": true,
+      "border": "7px",
+      "stitch": "dashed",
+      "overflow": false
+    },
+    {
+      "count": 4,
+      "role": "sheriff",
+      "width": 390,
+      "unchangedScoreContent": true,
+      "border": "7px",
+      "stitch": "dashed",
+      "overflow": false
+    },
+    {
+      "count": 4,
+      "role": "sheriff",
+      "width": 1280,
+      "unchangedScoreContent": true,
+      "border": "7px",
+      "stitch": "dashed",
+      "overflow": false
+    },
+    {
+      "count": 5,
+      "role": "merchant",
+      "width": 390,
+      "unchangedScoreContent": true,
+      "border": "7px",
+      "stitch": "dashed",
+      "overflow": false
+    },
+    {
+      "count": 5,
+      "role": "merchant",
+      "width": 1280,
+      "unchangedScoreContent": true,
+      "border": "7px",
+      "stitch": "dashed",
+      "overflow": false
+    },
+    {
+      "count": 5,
+      "role": "sheriff",
+      "width": 390,
+      "unchangedScoreContent": true,
+      "border": "7px",
+      "stitch": "dashed",
+      "overflow": false
+    },
+    {
+      "count": 5,
+      "role": "sheriff",
+      "width": 1280,
+      "unchangedScoreContent": true,
+      "border": "7px",
+      "stitch": "dashed",
+      "overflow": false
+    },
+    {
+      "count": 6,
+      "role": "merchant",
+      "width": 390,
+      "unchangedScoreContent": true,
+      "border": "7px",
+      "stitch": "dashed",
+      "overflow": false
+    },
+    {
+      "count": 6,
+      "role": "merchant",
+      "width": 1280,
+      "unchangedScoreContent": true,
+      "border": "7px",
+      "stitch": "dashed",
+      "overflow": false
+    },
+    {
+      "count": 6,
+      "role": "sheriff",
+      "width": 390,
+      "unchangedScoreContent": true,
+      "border": "7px",
+      "stitch": "dashed",
+      "overflow": false
+    },
+    {
+      "count": 6,
+      "role": "sheriff",
+      "width": 1280,
+      "unchangedScoreContent": true,
+      "border": "7px",
+      "stitch": "dashed",
+      "overflow": false
+    }
+  ]
+}

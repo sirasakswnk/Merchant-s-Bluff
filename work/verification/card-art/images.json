@@ -1,0 +1,132 @@
+{
+  "results": [
+    {
+      "width": 390,
+      "images": [
+        {
+          "url": "http://localhost:3000/_next/image?url=%2Fart%2Fcards%2Fapple.webp&w=384&q=75",
+          "fit": "contain",
+          "loaded": true,
+          "draggable": false
+        },
+        {
+          "url": "http://localhost:3000/_next/image?url=%2Fart%2Fcards%2Fapple.webp&w=384&q=75",
+          "fit": "contain",
+          "loaded": true,
+          "draggable": false
+        },
+        {
+          "url": "http://localhost:3000/_next/image?url=%2Fart%2Fcards%2Fbread.webp&w=384&q=75",
+          "fit": "contain",
+          "loaded": true,
+          "draggable": false
+        },
+        {
+          "url": "http://localhost:3000/_next/image?url=%2Fart%2Fcards%2Fcheese.webp&w=384&q=75",
+          "fit": "contain",
+          "loaded": true,
+          "draggable": false
+        },
+        {
+          "url": "http://localhost:3000/_next/image?url=%2Fart%2Fcards%2Fcloth.webp&w=384&q=75",
+          "fit": "contain",
+          "loaded": true,
+          "draggable": false
+        },
+        {
+          "url": "http://localhost:3000/_next/image?url=%2Fart%2Fcards%2Fcrossbow.webp&w=384&q=75",
+          "fit": "contain",
+          "loaded": true,
+          "draggable": false
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 1280,
+      "images": [
+        {
+          "url": "http://localhost:3000/_next/image?url=%2Fart%2Fcards%2Fapple.webp&w=384&q=75",
+          "fit": "contain",
+          "loaded": true,
+          "draggable": false
+        },
+        {
+          "url": "http://localhost:3000/_next/image?url=%2Fart%2Fcards%2Fapple.webp&w=384&q=75",
+          "fit": "contain",
+          "loaded": true,
+          "draggable": false
+        },
+        {
+          "url": "http://localhost:3000/_next/image?url=%2Fart%2Fcards%2Fbread.webp&w=384&q=75",
+          "fit": "contain",
+          "loaded": true,
+          "draggable": false
+        },
+        {
+          "url": "http://localhost:3000/_next/image?url=%2Fart%2Fcards%2Fcheese.webp&w=384&q=75",
+          "fit": "contain",
+          "loaded": true,
+          "draggable": false
+        },
+        {
+          "url": "http://localhost:3000/_next/image?url=%2Fart%2Fcards%2Fcloth.webp&w=384&q=75",
+          "fit": "contain",
+          "loaded": true,
+          "draggable": false
+        },
+        {
+          "url": "http://localhost:3000/_next/image?url=%2Fart%2Fcards%2Fcrossbow.webp&w=384&q=75",
+          "fit": "contain",
+          "loaded": true,
+          "draggable": false
+        }
+      ],
+      "overflow": false
+    }
+  ],
+  "assets": [
+    {
+      "id": "apple",
+      "status": 200,
+      "mime": "image/jpeg",
+      "renderBytes": 21946
+    },
+    {
+      "id": "bread",
+      "status": 200,
+      "mime": "image/jpeg",
+      "renderBytes": 25476
+    },
+    {
+      "id": "cheese",
+      "status": 200,
+      "mime": "image/jpeg",
+      "renderBytes": 22485
+    },
+    {
+      "id": "cloth",
+      "status": 200,
+      "mime": "image/jpeg",
+      "renderBytes": 26157
+    },
+    {
+      "id": "moonshine",
+      "status": 200,
+      "mime": "image/jpeg",
+      "renderBytes": 24649
+    },
+    {
+      "id": "crossbow",
+      "status": 200,
+      "mime": "image/jpeg",
+      "renderBytes": 26038
+    },
+    {
+      "id": "cannabis_leaf",
+      "status": 200,
+      "mime": "image/jpeg",
+      "renderBytes": 28648
+    }
+  ]
+}

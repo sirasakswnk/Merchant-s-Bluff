@@ -1,10 +1,14 @@
 import { test, expect } from '@playwright/test';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { joinPlayers, prepareAndPack, press, publicMoney, roomPhase } from './helpers/game-ui';
+import { cleanupLocalFixture } from './helpers/local-fixture';
+const output = process.env.MERCHANT_M5_OUTPUT ?? 'work/verification/m5';
 
 for (const count of [5, 6]) test(`${count} browser players finish ${count * 2} rounds; retry, offline and tab controls preserve the game`, async ({ browser }) => {
   test.setTimeout(180000);
   const { contexts, pages } = await joinPlayers(browser, count);
+  const origin = new URL(pages[0].url()).origin, roomId = new URL(pages[0].url()).pathname.split('/').at(-1)!;
+  const playerIds = await Promise.all(pages.map(async page => (await page.locator('main').getAttribute('data-lobby-viewer'))!));
   const errors: string[] = []; pages.forEach(page => page.on('pageerror', error => errors.push(error.message)));
   try {
     const owner = pages[0]; const commandIds: string[] = []; let dropped = false;
@@ -46,7 +50,7 @@ for (const count of [5, 6]) test(`${count} browser players finish ${count * 2} r
           const before = await publicMoney(official);
           await contexts[index].setOffline(true);
           await expect(merchant.getByRole('status')).toContainText('กำลังเชื่อมต่อใหม่');
-          await expect(merchant.getByRole('button', { name: 'เสนอเงิน', exact: true })).toBeDisabled();
+          await expect(merchant.getByRole('button', { name: /^ยื่นข้อเสนอ(?: \d+ เหรียญ)?$/ })).toBeDisabled();
           await merchant.getByLabel('ยอดเสนอเงิน').fill('7'); // Draft only; never queued as a gameplay request.
           await official.waitForTimeout(500); await expect(official.locator('main')).toHaveAttribute('data-phase', 'NEGOTIATE');
           await contexts[index].setOffline(false); await roomPhase(merchant, 'NEGOTIATE', round);
@@ -77,10 +81,10 @@ for (const count of [5, 6]) test(`${count} browser players finish ${count * 2} r
     expect(sheriffs).toEqual(Array.from({ length: count }, () => 2));
     const scoreboard = await pages[0].locator('.scores').innerText();
     for (const page of pages) { expect(await page.locator('.scores').innerText()).toBe(scoreboard); expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true); }
-    expect(errors).toEqual([]); await mkdir('work/verification/m5', { recursive: true });
-    await pages[0].screenshot({ path: `work/verification/m5/final-${count}-players.png`, fullPage: true });
-    await writeFile(`work/verification/m5/game-${count}.json`, JSON.stringify({ count, rounds: count * 2, sheriffTurns: sheriffs, retrySameCommand: commandIds[0] === commandIds[1], pageErrors: errors, scoreboard }, null, 2));
+    expect(errors).toEqual([]); await mkdir(output, { recursive: true });
+    await pages[0].screenshot({ path: `${output}/final-${count}-players.png`, fullPage: true });
+    await writeFile(`${output}/game-${count}.json`, JSON.stringify({ count, rounds: count * 2, sheriffTurns: sheriffs, retrySameCommand: commandIds[0] === commandIds[1], pageErrors: errors, scoreboard }, null, 2));
     await press(pages[0], 'กลับล็อบบี้เพื่อเล่นใหม่');
     for (const page of pages) { await roomPhase(page, 'LOBBY'); await expect(page.getByRole('button', { name: 'พร้อม', exact: true })).toBeEnabled(); await expect(page.getByRole('heading', { name: 'คะแนนสุดท้าย', exact: true })).toHaveCount(0); }
-  } finally { await Promise.all(contexts.map(context => context.close())); }
+  } finally { await Promise.all(contexts.map(context => context.close())); const cleanup = await cleanupLocalFixture(origin, roomId, playerIds); await mkdir(output, { recursive: true }); await writeFile(`${output}/cleanup-${count}.json`, JSON.stringify(cleanup, null, 2)); }
 });

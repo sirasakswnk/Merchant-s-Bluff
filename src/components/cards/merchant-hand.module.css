@@ -1,0 +1,93 @@
+.shell { container: merchant-hand / inline-size; width: 100%; }
+.mobileHint { display: none; }
+.navigation { display: none; }
+.shell .hand {
+  --card-width: clamp(3.75rem, calc(100cqw - var(--hand-spaces) * 2.75rem - 16px), 9.5rem);
+  position: relative; display: block; width: 100%; max-width: 45rem; height: 18.5rem;
+  margin: 0 auto; padding: 0;
+}
+.hand .card {
+  --card-lift: 0px;
+  position: absolute; top: 3.5rem;
+  left: calc(8px + var(--card-index) * (100% - 16px - var(--card-width)) / var(--hand-spaces));
+  width: calc((100% - 16px - var(--card-width)) / var(--hand-spaces));
+  height: 14rem; min-height: 44px; min-width: 44px; z-index: var(--card-index);
+  display: block; padding: 0; margin: 0; border: 0; border-radius: 10px; background: transparent; color: #1d2422;
+  transform: translateY(calc(var(--card-arc) - var(--card-lift)));
+  transition: transform 220ms cubic-bezier(.2,.8,.25,1); touch-action: manipulation;
+  box-shadow: none; text-align: center;
+}
+.hand .card:last-child { width: var(--card-width); }
+.hand .card[aria-pressed='true'] { --card-lift: 32px; background: transparent; box-shadow: none; }
+.hand .card[aria-disabled='true'] { cursor: not-allowed; }
+.hand .card:focus-visible { outline: none; }
+.hand .card:focus-visible .face { outline: 3px solid #1f5fbf; outline-offset: 3px; }
+.face {
+  display: block; width: var(--card-width); height: 100%; padding: 0; border-radius: 10px; overflow: hidden;
+  background: transparent;
+  box-shadow: 0 1px #c9bfa5, 0 3px #a99f86, 0 8px 14px #0005;
+  transform: rotate(var(--card-angle)); transform-origin: 50% 100%;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+.card[aria-pressed='true'] .face { box-shadow: 0 0 0 2px #d4a24c, 0 3px #a99f86, 0 12px 18px #0005; }
+.cardImage { display: block; width: 100%; height: 100%; object-fit: contain; }
+.selectedBadge { position: absolute; bottom: -9px; left: calc(var(--card-width) / 2); transform: translateX(-50%); padding: 2px 7px; border: 1px solid #8b774e; border-radius: 12px; background: #fff9e8; color: #325638; font-size: .75rem; line-height: 1.4; font-weight: 700; white-space: nowrap; pointer-events: none; }
+.detail { display: flex; align-items: center; gap: 12px; margin: 0 auto; max-width: 45rem; padding: 12px; background: #fffdf5; border: 1px solid #cdb98c; border-radius: 8px; }
+.detail > img { width: 40px; height: 60px; object-fit: contain; flex: none; }.detail > div { min-width: 0; }
+.detail p { margin: 4px 0 0; font-size: .9rem; color: #55513f; }.detail .detailLabel { margin: 0 0 2px; font-size: .8rem; }
+.detail strong { font-weight: 700; font-size: 1rem; }.shell .hint { color: #55513f; margin: 8px 0 0; text-align: center; font-size: .85rem; }
+@media (hover: hover) and (pointer: fine) {
+  .hand .card:hover { --card-lift: 16px; }.hand .card[aria-pressed='true']:hover { --card-lift: 40px; }
+  .hand .card:hover .face { transform: rotate(0deg); }
+}
+@container merchant-hand (max-width: 34rem) {
+  .face { transform: rotate(calc(var(--card-angle) * .18)); }
+  .hand .card { --card-arc: 0px; }
+}
+@container merchant-hand (max-width: 18.5rem) {
+  .shell .hand { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 12px; height: auto; padding: 18px 0; }
+  .hand .card, .hand .card:last-child { position: relative; top: auto; left: auto; width: 100%; height: 14rem; transform: translateY(calc(var(--card-lift) * -.35)); }
+  .face { width: 100%; transform: rotate(0deg); }
+  .selectedBadge { left: 50%; }
+}
+@media (max-width: 600px) {
+  .viewport {
+    width: calc(100% + var(--hand-bleed, 0px) * 2);
+    margin: 8px calc(var(--hand-bleed, 0px) * -1) 12px;
+    overflow-x: auto; overflow-y: auto;
+    scroll-padding-inline: 12px; scrollbar-width: thin;
+    scrollbar-color: #8b774e #24332f;
+    background: radial-gradient(ellipse at 50% 35%, #2f413c, #1c2826 75%);
+  }
+  .shell .hand {
+    --card-width: 8.25rem; --mobile-step: 6.75rem;
+    display: flex; gap: 0; align-items: flex-start;
+    /* Leave space for the tilted end cards and the selected card's lift. */
+    width: calc(var(--hand-spaces) * var(--mobile-step) + var(--card-width) + 5.5rem);
+    max-width: none; height: 21rem; padding: 3.5rem 2.75rem 0; margin: 0;
+  }
+  .hand .card, .hand .card:last-child {
+    position: relative; left: auto; top: auto;
+    flex: 0 0 var(--card-width); width: var(--card-width); height: 15rem; margin-right: -1.5rem;
+    transform: translateY(calc(var(--card-arc) * 1.6 - var(--card-lift))) rotate(var(--card-angle));
+    transform-origin: 50% 100%;
+    scroll-margin-inline: 12px;
+  }
+  .hand .card:last-child { margin-right: 0; }
+  .face { width: var(--card-width); transform: rotate(0deg); pointer-events: none; }
+  .selectedBadge { left: calc(var(--card-width) / 2); }
+  .hand .card[aria-pressed='true'] { z-index: calc(10 + var(--card-index)); }
+  .hand .card[data-hand-front='true'] { z-index: 30; }
+  .desktopHint { display: none; }.mobileHint { display: inline; }
+  .viewport[data-hand-arc='true'] { overflow: clip; touch-action: pan-y pinch-zoom; }
+  .viewport[data-hand-arc='true'] .hand { display: block; width: 100%; height: 20rem; padding: 0; }
+  .viewport[data-hand-arc='true'] .hand .card, .viewport[data-hand-arc='true'] .hand .card:last-child {
+    position: absolute; top: 0; left: 0; width: var(--card-width); height: 12rem; margin: 0;
+    transform: translate3d(var(--arc-x, 0px), var(--arc-y, 0px), 0) rotate(var(--arc-angle, 0deg));
+    transform-origin: 50% 100%; z-index: var(--arc-depth, 0); touch-action: pan-y pinch-zoom;
+  }
+  .viewport[data-hand-moving='true'] .hand .card { transition: none; }
+  .viewport[data-hand-arc='true'] + .navigation { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 0 0 12px; color: #55513f; }
+  .navigation button { min-width: 44px; min-height: 44px; padding: 0; font-size: 1.5rem; }
+}
+@media (prefers-reduced-motion: reduce) { .hand .card, .face { transition: none; } }

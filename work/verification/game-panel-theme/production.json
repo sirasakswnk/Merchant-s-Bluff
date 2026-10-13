@@ -1,0 +1,334 @@
+{
+  "checks": [
+    {
+      "width": 390,
+      "role": "merchant",
+      "scene": "prepare",
+      "styles": [
+        {
+          "title": "เตรียมสินค้า",
+          "border": "7px",
+          "stitch": "dashed"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "role": "merchant",
+      "scene": "pack",
+      "styles": [
+        {
+          "title": "จัดกระเป๋าและแจ้งสินค้า",
+          "border": "7px",
+          "stitch": "dashed"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "role": "merchant",
+      "scene": "negotiate",
+      "styles": [
+        {
+          "title": "เจรจาและข้อเสนอ",
+          "border": "7px",
+          "stitch": "dashed"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "role": "merchant",
+      "scene": "pass-contraband",
+      "styles": [
+        {
+          "title": "รอผลและรอบถัดไป",
+          "border": "7px",
+          "stitch": "dashed"
+        },
+        {
+          "title": "ผลของ เมย์ตลาดเช้า",
+          "border": "7px",
+          "stitch": "dashed"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "role": "merchant",
+      "scene": "inspect-contraband",
+      "styles": [
+        {
+          "title": "รอผลและรอบถัดไป",
+          "border": "7px",
+          "stitch": "dashed"
+        },
+        {
+          "title": "ผลของ เมย์ตลาดเช้า",
+          "border": "7px",
+          "stitch": "dashed"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "role": "merchant",
+      "scene": "summary",
+      "styles": [
+        {
+          "title": "รอผลและรอบถัดไป",
+          "border": "7px",
+          "stitch": "dashed"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "role": "sheriff",
+      "scene": "prepare",
+      "styles": [
+        {
+          "title": "คุณเป็นนายด่าน",
+          "border": "7px",
+          "stitch": "dashed"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "role": "sheriff",
+      "scene": "pack",
+      "styles": [
+        {
+          "title": "คุณเป็นนายด่าน",
+          "border": "7px",
+          "stitch": "dashed"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "role": "sheriff",
+      "scene": "negotiate",
+      "styles": [
+        {
+          "title": "เลือกพ่อค้าและตัดสิน",
+          "border": "7px",
+          "stitch": "dashed"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "role": "sheriff",
+      "scene": "pass-contraband",
+      "styles": [
+        {
+          "title": "ผลตัดสินแล้ว",
+          "border": "7px",
+          "stitch": "dashed"
+        },
+        {
+          "title": "ผลของ เมย์ตลาดเช้า",
+          "border": "7px",
+          "stitch": "dashed"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "role": "sheriff",
+      "scene": "inspect-contraband",
+      "styles": [
+        {
+          "title": "ผลตัดสินแล้ว",
+          "border": "7px",
+          "stitch": "dashed"
+        },
+        {
+          "title": "ผลของ เมย์ตลาดเช้า",
+          "border": "7px",
+          "stitch": "dashed"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "role": "sheriff",
+      "scene": "summary",
+      "styles": [
+        {
+          "title": "จบรอบ",
+          "border": "7px",
+          "stitch": "dashed"
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "role": "merchant",
+      "scene": "prepare",
+      "styles": [
+        {
+          "title": "เตรียมสินค้า",
+          "border": "7px",
+          "stitch": "dashed"
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "role": "merchant",
+      "scene": "pack",
+      "styles": [
+        {
+          "title": "จัดกระเป๋าและแจ้งสินค้า",
+          "border": "7px",
+          "stitch": "dashed"
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "role": "merchant",
+      "scene": "negotiate",
+      "styles": [
+        {
+          "title": "เจรจาและข้อเสนอ",
+          "border": "7px",
+          "stitch": "dashed"
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "role": "merchant",
+      "scene": "pass-contraband",
+      "styles": [
+        {
+          "title": "รอผลและรอบถัดไป",
+          "border": "7px",
+          "stitch": "dashed"
+        },
+        {
+          "title": "ผลของ เมย์ตลาดเช้า",
+          "border": "7px",
+          "stitch": "dashed"
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "role": "merchant",
+      "scene": "inspect-contraband",
+      "styles": [
+        {
+          "title": "รอผลและรอบถัดไป",
+          "border": "7px",
+          "stitch": "dashed"
+        },
+        {
+          "title": "ผลของ เมย์ตลาดเช้า",
+          "border": "7px",
+          "stitch": "dashed"
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "role": "merchant",
+      "scene": "summary",
+      "styles": [
+        {
+          "title": "รอผลและรอบถัดไป",
+          "border": "7px",
+          "stitch": "dashed"
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "role": "sheriff",
+      "scene": "prepare",
+      "styles": [
+        {
+          "title": "คุณเป็นนายด่าน",
+          "border": "7px",
+          "stitch": "dashed"
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "role": "sheriff",
+      "scene": "pack",
+      "styles": [
+        {
+          "title": "คุณเป็นนายด่าน",
+          "border": "7px",
+          "stitch": "dashed"
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "role": "sheriff",
+      "scene": "negotiate",
+      "styles": [
+        {
+          "title": "เลือกพ่อค้าและตัดสิน",
+          "border": "7px",
+          "stitch": "dashed"
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "role": "sheriff",
+      "scene": "pass-contraband",
+      "styles": [
+        {
+          "title": "ผลตัดสินแล้ว",
+          "border": "7px",
+          "stitch": "dashed"
+        },
+        {
+          "title": "ผลของ เมย์ตลาดเช้า",
+          "border": "7px",
+          "stitch": "dashed"
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "role": "sheriff",
+      "scene": "inspect-contraband",
+      "styles": [
+        {
+          "title": "ผลตัดสินแล้ว",
+          "border": "7px",
+          "stitch": "dashed"
+        },
+        {
+          "title": "ผลของ เมย์ตลาดเช้า",
+          "border": "7px",
+          "stitch": "dashed"
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "role": "sheriff",
+      "scene": "summary",
+      "styles": [
+        {
+          "title": "จบรอบ",
+          "border": "7px",
+          "stitch": "dashed"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "apiOrFirebaseRequests": []
+}

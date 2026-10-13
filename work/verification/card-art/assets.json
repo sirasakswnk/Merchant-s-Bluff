@@ -1,0 +1,93 @@
+[
+  {
+    "sourceIndex": 1,
+    "productId": "bread",
+    "asset": "/art/cards/bread.webp",
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "originalBytes": 1862449,
+    "assetBytes": 1255686,
+    "pixelsUnchanged": true,
+    "sha256": "df4f9db124052a44127b7b47d6f869dfbdfa679e774f219fc61018144156aa11"
+  },
+  {
+    "sourceIndex": 2,
+    "productId": "cheese",
+    "asset": "/art/cards/cheese.webp",
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "originalBytes": 1848650,
+    "assetBytes": 1228676,
+    "pixelsUnchanged": true,
+    "sha256": "0a99d8df8a7c173250f0d831899fd6895c8618e56d4880acc17904d58a53e97c"
+  },
+  {
+    "sourceIndex": 3,
+    "productId": "cloth",
+    "asset": "/art/cards/cloth.webp",
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "originalBytes": 2057228,
+    "assetBytes": 1332314,
+    "pixelsUnchanged": true,
+    "sha256": "d4d9f341625c9c32cd227da5a20e6212e62f8fbeef3931d8ce8507a1449d6ea9"
+  },
+  {
+    "sourceIndex": 4,
+    "productId": "crossbow",
+    "asset": "/art/cards/crossbow.webp",
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "originalBytes": 1915603,
+    "assetBytes": 1282522,
+    "pixelsUnchanged": true,
+    "sha256": "e5bc27c72241c089032362edecf55e38c5b75e8093251d666509df0676545299"
+  },
+  {
+    "sourceIndex": 5,
+    "productId": "moonshine",
+    "asset": "/art/cards/moonshine.webp",
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "originalBytes": 1857660,
+    "assetBytes": 1240422,
+    "pixelsUnchanged": true,
+    "sha256": "9dd565dead3dfe72da33679dab6bf7e8dad29f9347f1734750d40683a21bcd40"
+  },
+  {
+    "sourceIndex": 6,
+    "productId": "apple",
+    "asset": "/art/cards/apple.webp",
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "originalBytes": 1878033,
+    "assetBytes": 1229328,
+    "pixelsUnchanged": true,
+    "sha256": "a13eff04672e2a735d2ad915b0a2151333177dcd4f945a26b06be74312ad2b5b"
+  },
+  {
+    "sourceIndex": 7,
+    "productId": "cannabis_leaf",
+    "asset": "/art/cards/cannabis_leaf.webp",
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "originalBytes": 1937542,
+    "assetBytes": 1310414,
+    "pixelsUnchanged": true,
+    "sha256": "096ad59e6af916f1372699fcfb016e82b4d735e953fa26f8c57536879153be54"
+  }
+]

@@ -1,0 +1,11 @@
+.selectionCount { font-weight: 600; }
+.actions {
+  max-width: 45rem;
+  margin: 18px auto 0;
+  padding: 14px 12px 12px;
+  background: #f3ead5e6;
+  border-top: 1px dashed #9d8052;
+  border-radius: 6px;
+}
+.actions > label { margin-top: 0; }
+.actions > button { width: 100%; border-radius: 8px; }

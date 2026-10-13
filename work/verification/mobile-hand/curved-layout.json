@@ -1,0 +1,33 @@
+{
+  "checks": [
+    {
+      "width": 320,
+      "content": 760,
+      "height": 336,
+      "contentHeight": 336,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "content": 760,
+      "height": 336,
+      "contentHeight": 336,
+      "overflow": false
+    },
+    {
+      "width": 430,
+      "content": 760,
+      "height": 336,
+      "contentHeight": 336,
+      "overflow": false
+    },
+    {
+      "width": 1026,
+      "content": 1026,
+      "height": 296,
+      "contentHeight": 302,
+      "overflow": false
+    }
+  ],
+  "desktopUnchanged": true
+}

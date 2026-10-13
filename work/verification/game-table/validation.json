@@ -1,0 +1,159 @@
+{
+  "checkedAt": "2026-10-12T17:48:52.306Z",
+  "typecheck": "passed",
+  "lint": "passed",
+  "productionBuild": "passed",
+  "cases": [
+    {
+      "title": "game table pins self and sheriff, swaps only the top occupant, and stays usable across scenes and sizes",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 51034
+        }
+      ]
+    },
+    {
+      "title": "four real players exchange three, pack five, inspect and pass; the next sheriff swaps on screen without changing the game",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 15395
+        }
+      ]
+    },
+    {
+      "title": "lobby preview keeps the viewer below a round table across 4/5/6 players, roles and mobile widths",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 8353
+        }
+      ]
+    },
+    {
+      "title": "six real emulator players keep their avatars and own seats, toggle ready, reload and start the game",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 11890
+        }
+      ]
+    },
+    {
+      "title": "home supports keyboard, touch sizes, high contrast, readable reflow, reduced motion and HTTP-safe IDs",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 11421
+        }
+      ]
+    },
+    {
+      "title": "5 browser players finish 10 rounds; retry, offline and tab controls preserve the game",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 61686
+        }
+      ]
+    },
+    {
+      "title": "6 browser players finish 12 rounds; retry, offline and tab controls preserve the game",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 92460
+        }
+      ]
+    },
+    {
+      "title": "preview controls use shared room screens without Firebase, API commands or player-storage writes",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1466
+        }
+      ]
+    },
+    {
+      "title": "preview renders all scenes and viewpoints, 4/5/6 players, state presets and actual iframe widths",
+      "passed": true,
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6145
+        }
+      ]
+    }
+  ],
+  "layoutCases": 30,
+  "sceneCases": 40,
+  "sheriffTransitions": 60,
+  "axeScreens": 20,
+  "axeViolations": 0,
+  "previewApiAndFirebaseRequests": 0,
+  "liveFour": {
+    "players": 4,
+    "exchange": 3,
+    "bagSize": 5,
+    "checkpoints": 7,
+    "conservation360": true,
+    "abortDuringResolution": true,
+    "rematch": true,
+    "cleanup": {
+      "rooms": 1,
+      "users": 4
+    }
+  },
+  "fullGames": [
+    {
+      "players": 5,
+      "rounds": 10,
+      "retrySameCommand": true,
+      "sheriffTurns": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "pageErrors": []
+    },
+    {
+      "players": 6,
+      "rounds": 12,
+      "retrySameCommand": true,
+      "sheriffTurns": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "pageErrors": []
+    }
+  ],
+  "initialExecution": {
+    "passed": 8,
+    "failed": 1,
+    "correctedReadyHarness": true
+  },
+  "coreSourcesChanged": false,
+  "secretAudit": {
+    "files": 95,
+    "matches": 0
+  },
+  "physicalDevicesTested": false,
+  "liveFirebaseWrites": false,
+  "deployed": false
+}

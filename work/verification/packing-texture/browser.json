@@ -1,0 +1,189 @@
+{
+  "checks": [
+    {
+      "width": 320,
+      "border": "7px",
+      "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+      "weave": "repeating-linear-gradient(0deg, rgba(101, 71, 38, 0.667) 0px, rgba(101, 71, 38, 0.667) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 3px), repeating-linear-gradient(90deg, rgba(101, 71, 38, 0.667) 0px, rgba(101, 71, 38, 0.667) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 3px)",
+      "stitch": "dashed",
+      "decorationsIgnorePointer": true,
+      "overflow": false,
+      "handLeft": 0,
+      "handRight": 320,
+      "targets": [
+        {
+          "width": 44,
+          "height": 44,
+          "left": 33,
+          "right": 77
+        },
+        {
+          "width": 44,
+          "height": 44,
+          "left": 243,
+          "right": 287
+        },
+        {
+          "width": 230,
+          "height": 44,
+          "left": 45,
+          "right": 275
+        },
+        {
+          "width": 230,
+          "height": 48.390625,
+          "left": 45,
+          "right": 275
+        }
+      ],
+      "axeViolations": 0
+    },
+    {
+      "width": 360,
+      "border": "7px",
+      "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+      "weave": "repeating-linear-gradient(0deg, rgba(101, 71, 38, 0.667) 0px, rgba(101, 71, 38, 0.667) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 3px), repeating-linear-gradient(90deg, rgba(101, 71, 38, 0.667) 0px, rgba(101, 71, 38, 0.667) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 3px)",
+      "stitch": "dashed",
+      "decorationsIgnorePointer": true,
+      "overflow": false,
+      "handLeft": 0,
+      "handRight": 360,
+      "targets": [
+        {
+          "width": 44,
+          "height": 44,
+          "left": 33,
+          "right": 77
+        },
+        {
+          "width": 44,
+          "height": 44,
+          "left": 283,
+          "right": 327
+        },
+        {
+          "width": 270,
+          "height": 44,
+          "left": 45,
+          "right": 315
+        },
+        {
+          "width": 270,
+          "height": 48.390625,
+          "left": 45,
+          "right": 315
+        }
+      ],
+      "axeViolations": 0
+    },
+    {
+      "width": 390,
+      "border": "7px",
+      "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+      "weave": "repeating-linear-gradient(0deg, rgba(101, 71, 38, 0.667) 0px, rgba(101, 71, 38, 0.667) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 3px), repeating-linear-gradient(90deg, rgba(101, 71, 38, 0.667) 0px, rgba(101, 71, 38, 0.667) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 3px)",
+      "stitch": "dashed",
+      "decorationsIgnorePointer": true,
+      "overflow": false,
+      "handLeft": 0,
+      "handRight": 390,
+      "targets": [
+        {
+          "width": 44,
+          "height": 44,
+          "left": 33,
+          "right": 77
+        },
+        {
+          "width": 44,
+          "height": 44,
+          "left": 313,
+          "right": 357
+        },
+        {
+          "width": 300,
+          "height": 44,
+          "left": 45,
+          "right": 345
+        },
+        {
+          "width": 300,
+          "height": 48.390625,
+          "left": 45,
+          "right": 345
+        }
+      ],
+      "axeViolations": 0
+    },
+    {
+      "width": 430,
+      "border": "7px",
+      "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+      "weave": "repeating-linear-gradient(0deg, rgba(101, 71, 38, 0.667) 0px, rgba(101, 71, 38, 0.667) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 3px), repeating-linear-gradient(90deg, rgba(101, 71, 38, 0.667) 0px, rgba(101, 71, 38, 0.667) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 3px)",
+      "stitch": "dashed",
+      "decorationsIgnorePointer": true,
+      "overflow": false,
+      "handLeft": 0,
+      "handRight": 430,
+      "targets": [
+        {
+          "width": 44,
+          "height": 44,
+          "left": 33,
+          "right": 77
+        },
+        {
+          "width": 44,
+          "height": 44,
+          "left": 353,
+          "right": 397
+        },
+        {
+          "width": 340,
+          "height": 44,
+          "left": 45,
+          "right": 385
+        },
+        {
+          "width": 340,
+          "height": 48.390625,
+          "left": 45,
+          "right": 385
+        }
+      ],
+      "axeViolations": 0
+    },
+    {
+      "width": 1280,
+      "border": "7px",
+      "background": "radial-gradient(at 50% 38%, rgb(241, 231, 206), rgb(213, 196, 156))",
+      "weave": "repeating-linear-gradient(0deg, rgba(101, 71, 38, 0.667) 0px, rgba(101, 71, 38, 0.667) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 3px), repeating-linear-gradient(90deg, rgba(101, 71, 38, 0.667) 0px, rgba(101, 71, 38, 0.667) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 3px)",
+      "stitch": "dashed",
+      "decorationsIgnorePointer": true,
+      "overflow": false,
+      "handLeft": 131,
+      "handRight": 1149,
+      "targets": [
+        {
+          "width": 696,
+          "height": 44,
+          "left": 292,
+          "right": 988
+        },
+        {
+          "width": 696,
+          "height": 48.390625,
+          "left": 292,
+          "right": 988
+        }
+      ],
+      "axeViolations": 0
+    }
+  ],
+  "keyboardFocus": {
+    "outline": "solid",
+    "visible": true
+  },
+  "largeText": "passed",
+  "scope": "packing only",
+  "errors": []
+}

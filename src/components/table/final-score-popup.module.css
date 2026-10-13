@@ -1,0 +1,36 @@
+.dialog {
+  width: min(32rem, calc(100% - 24px));
+  max-width: calc(100% - 24px);
+  max-height: calc(100dvh - 24px);
+  margin: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  color: #29241b;
+  overflow: auto;
+  overscroll-behavior: contain;
+  box-shadow: 0 20px 60px #0008;
+}
+.dialog::backdrop { background: #101b17d9; backdrop-filter: blur(3px); }
+/* Preview frames expand to the whole room; keep the result visible at their top. */
+:global(.preview-frame-page) .dialog { margin-block: 12px auto; }
+:global(html):has(.dialog[open]) { overflow: hidden; }
+.content { margin: 0; }
+.heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-bottom: 12px; border-bottom: 1px solid #947b4c66; }
+.heading h2 { margin: 0; font-size: 1.4rem; line-height: 1.4; }
+.closeButton { flex: none; width: 44px; height: 44px; padding: 0; font-size: 1.6rem; line-height: 1; }
+.rankingList:global(.scores) { display: grid; grid-template-columns: minmax(0, 1fr); gap: 9px; padding: 0; margin: 16px 0 0; list-style: none; }
+.rankRow:global(.player) { display: grid; grid-template-columns: 1.75rem 44px minmax(0, 1fr) auto; align-items: center; gap: 8px; padding: 11px 10px; background: #fff9e8; border: 1px solid #cdb98c; border-radius: 8px; }
+.rankRow[data-rank='1'] { background: linear-gradient(100deg, #fff0c6, #f5da91); border-color: #a17b3a; }
+.rank { font-size: 1.25rem; font-weight: 700; text-align: center; font-variant-numeric: tabular-nums; }
+.portrait { width: 44px; height: 44px; padding: 2px; border: 1px solid #8b774e; border-radius: 50%; background: #24332f; }
+.avatar, .avatar svg { display: block; width: 100%; height: 100%; border-radius: 50%; }
+.name { min-width: 0; font-weight: 600; line-height: 1.4; overflow-wrap: anywhere; }
+.money { display: grid; grid-template-columns: 16px auto; align-items: center; justify-content: end; gap: 0 4px; text-align: right; font-variant-numeric: tabular-nums; }
+.money strong { font-size: 1.1rem; white-space: nowrap; }
+.money small { grid-column: 1 / -1; font-size: .7rem; }
+.coin { width: 16px; height: 16px; border-radius: 50%; border: 1px solid #765018; background: radial-gradient(circle at 35% 25%, #ffedb6, #e1aa39 75%); box-shadow: inset 0 0 0 2px #f5d481, 0 2px #8e5e21; }
+.rematchButton { width: 100%; margin-top: 16px; }
+.openButton { min-width: min(100%, 200px); }
+.srOnly { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
