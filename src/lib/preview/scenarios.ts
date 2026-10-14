@@ -21,7 +21,7 @@ export type PreviewScene = typeof PREVIEW_SCENES[number]['id'];
 export type PreviewState = typeof PREVIEW_STATES[number]['id'];
 export interface PreviewOptions {
   readonly scene:PreviewScene; readonly role:'merchant'|'sheriff'; readonly players:PlayerCount; readonly state:PreviewState;
-  readonly width:'auto'|'360'|'390'|'430'|'1280';
+  readonly width:'auto'|'360'|'390'|'430'|'1280'|'1440';
 }
 export function parsePreviewOptions(values:Record<string,string|string[]|undefined>):PreviewOptions {
   return {
@@ -29,7 +29,7 @@ export function parsePreviewOptions(values:Record<string,string|string[]|undefin
     state:PREVIEW_STATES.find(item=>item.id===values.state)?.id ?? 'online',
     role:values.role==='sheriff'?'sheriff':'merchant',
     players:values.players==='5'?5:values.players==='6'?6:4,
-    width:values.width==='360'||values.width==='390'||values.width==='430'||values.width==='1280'?values.width:'auto',
+    width:values.width==='360'||values.width==='390'||values.width==='430'||values.width==='1280'||values.width==='1440'?values.width:'auto',
   };
 }
 export function previewQuery(options:PreviewOptions,frame=false) {
@@ -52,6 +52,29 @@ export function makePreviewModel(options:PreviewOptions,decision?:{merchantId?:s
   const names=['ฟิลด์ผู้ซื่อสัตย์','เมย์ตลาดเช้า','ต้นนักต่อรอง','ข้าวพ่อค้าผ้า','ฟ้าขนของ','นนท์ริมประตู'];
   let cardId=0;const cards=(products:readonly ProductId[]):CardInstance[]=>products.map(productId=>({instanceId:`preview-card-${++cardId}`,productId}));
   let finances=createFinancialState(ids,RULES.startingCash);let result:PublicDecision|null=null;
+  // Earlier rounds for the desktop ledger: every merchant decided, amounts come from the same pure resolveBag.
+  // They use their own ledger so the sample money of the current scene stays as before.
+  const earlier:PublicDecision[]=[];let pastFinances=createFinancialState(ids,RULES.startingCash);
+  const playing=!lobby&&!aborted;const sheriffSeat=ids.indexOf(sheriffId);
+  const pastBags:readonly {cards:readonly ProductId[];action:'PASS'|'INSPECT';offer:number}[]=[
+    {cards:['bread','bread'],action:'PASS',offer:2},{cards:['cheese','moonshine'],action:'INSPECT',offer:0},
+    {cards:['apple','apple','apple'],action:'INSPECT',offer:0},{cards:['cloth','crossbow'],action:'PASS',offer:5},
+    {cards:['apple','cheese','cloth'],action:'PASS',offer:0}];
+  const currentRound=finished?options.players*rules.sheriffTurnsPerPlayer+1:roundIndex;
+  for(let round=Math.max(1,currentRound-2);playing&&round<currentRound;round++) {
+    const roundsAgo=currentRound-round;
+    const pastSheriff=ids[((sheriffSeat-roundsAgo)%ids.length+ids.length)%ids.length];
+    ids.filter(id=>id!==pastSheriff).forEach((id,index)=>{
+      const bag=pastBags[(index+round)%pastBags.length];
+      const resolved=resolveBag({cards:cards(bag.cards),declaredProductId:'apple',action:bag.action,merchantId:id,sheriffId:pastSheriff,
+        offer:{submitted:true,amount:bag.offer,version:1},finances:pastFinances,rules});
+      pastFinances=resolved.finances;
+      earlier.push({id:`preview-history-${round}-${id}`,roundIndex:round,merchantId:id,sheriffId:pastSheriff,action:bag.action,bagCount:resolved.bagCount,
+        paymentKind:resolved.paymentKind,paymentAmount:resolved.paymentAmount,contrabandPassed:resolved.contrabandPassed,
+        revealed:resolved.revealed?.map(card=>card.productId)??null,passed:bag.action==='INSPECT'?resolved.passed.map(card=>card.productId):null,
+        confiscated:bag.action==='INSPECT'?resolved.confiscated.map(card=>card.productId):null});
+    });
+  }
   const offerAmount=decision?.offerAmount??4;
   if(resolving||options.scene==='summary') {
     const contraband=options.scene.endsWith('contraband');const action=options.scene.startsWith('inspect-')?'INSPECT':'PASS';
@@ -71,7 +94,7 @@ export function makePreviewModel(options:PreviewOptions,decision?:{merchantId?:s
     lifecycle:lobby?'LOBBY':finished?'FINISHED':aborted?'ABORTED':'PLAYING',phase,
     gameId:lobby||aborted?null:'00000000-0000-4000-8000-000000000001',roundIndex:lobby||aborted?0:finished?options.players*rules.sheriffTurnsPerPlayer:roundIndex,
     totalRounds:options.players*rules.sheriffTurnsPerPlayer,sheriffId:lobby||aborted?null:sheriffId,
-    selectedMerchantId:declared?merchantId:null,result:resolving?result:null,history:result?[result]:[],debts:finances.debts,
+    selectedMerchantId:declared?merchantId:null,result:resolving?result:null,history:result?[...earlier,result]:earlier,debts:finances.debts,
     scores:finished?scoreGame(stashes,finances,rules):null,
     players:ids.map((id,index)=>({id,displayName:names[index],avatarId:index,ready:lobby?id!==playerId:true,
       prepared:phase!=='PREPARE'&&phase!=='LOBBY',bagLocked:declared,

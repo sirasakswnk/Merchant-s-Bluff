@@ -1,6 +1,14 @@
-# Progress — 13 ตุลาคม 2026
+# Progress — 14 ตุลาคม 2026
 
-## ขั้นตอนล่าสุด — จัด Popup นายด่านให้อยู่กลางหน้าจอ
+## ขั้นตอนล่าสุด — แผงข้างโต๊ะสำหรับ desktop
+
+ผู้ใช้เห็นว่าหน้าเกมบน desktop โล่งเกินไป มือถือดีแล้ว และอนุมัติชุดที่เสนอ จอกว้างตั้งแต่1180pxเมื่อมีเกมแล้วจัดเป็น3คอลัมน์ ซ้ายเป็นรอบ/ขั้นตอนและสมุดบันทึกด่านจากpublic history ใหม่สุดก่อน กลางเป็นโต๊ะที่ขยายเป็นmin(64cqw,520px)กับพื้นที่ของเรา ขวาเป็นการ์ดช่วยจำราคา/ชดเชย/ปรับจากrules snapshot โกดังของฉันจากprivate viewของตัวเอง และบัญชีหนี้จากpublic debts แผงข้างsticky และเลื่อนในตัวด้วยคีย์บอร์ดได้ details3ชุดที่ซ้ำกันซ่อนเฉพาะdesktop จอแคบกว่าคงcolumnเดิมทุกอย่าง PASSยังไม่เผยชนิดไพ่ ไม่แตะengine/backend/Rules/คำสั่ง/ราคา/360ใบ/rulesVersion
+
+Previewเพิ่มประวัติรอบก่อนหน้า (สูงสุด2รอบ พ่อค้าทุกคนผ่านresolveBag) ใช้ledgerตัวอย่างแยกเพื่อไม่เปลี่ยนเงินตัวอย่างเดิม และเพิ่มขนาด1440px
+
+typecheck/lint/unit89ผ่าน Preview E2E12/12ผ่าน axe WCAG84กรณีdesktop0 violation ไม่มีoverflow ชุดreal-player/integrationต้องใช้Firebase Emulatorsซึ่งรันในcloud sessionนี้ไม่ได้ (firebase-toolsส่งคำขอemulatorผ่านproxy) จึงยังไม่ได้รัน หลักฐาน [verification/desk-rails/report.md](verification/desk-rails/report.md)
+
+## ประวัติ — จัด Popup นายด่านให้อยู่กลางหน้าจอ
 
 ผู้ใช้ให้popupล่าสุดอยู่ตรงกลาง สาเหตุอยู่ที่CSSเฉพาะPreviewตั้งmarginด้านบน12pxเพื่อชดเชยiframeที่สูงทั้งหน้า ลบoverrideและให้PreviewStudioใช้ความสูงหน้าจอผู้ชมเมื่อมีpopupนายด่าน (เปิดหรือปิดชั่วคราว) พร้อมปรับเมื่อresize/cleanup listener เฟสอื่นยังfitตามเนื้อหา โต๊ะ/ข้อมูลเกม/คำสั่ง/confirmationเดิมไม่เปลี่ยน
 
