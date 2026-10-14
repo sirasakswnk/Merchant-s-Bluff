@@ -1,0 +1,54 @@
+/* Phase sign on the table and the sticky task bar. Each phase gets one accent colour shared by both. */
+.plaque, .taskBar { --phase-accent: #7a5413; }
+:global([data-phase='PREPARE']) .plaque, :global([data-phase='PREPARE']) .taskBar { --phase-accent: #3f6b4a; }
+:global([data-phase='PACK_AND_DECLARE']) .plaque, :global([data-phase='PACK_AND_DECLARE']) .taskBar { --phase-accent: #8a5a2b; }
+:global([data-phase='NEGOTIATE']) .plaque, :global([data-phase='NEGOTIATE']) .taskBar { --phase-accent: #b07d1f; }
+:global([data-phase='RESOLUTION']) .plaque, :global([data-phase='RESOLUTION']) .taskBar { --phase-accent: #8f1f17; }
+:global([data-phase='ROUND_SUMMARY']) .plaque, :global([data-phase='ROUND_SUMMARY']) .taskBar { --phase-accent: #2f4f6e; }
+
+.plaque { display: grid; justify-items: center; gap: 4px; width: 100%; padding: 10px 12px 12px; color: #24170d; text-align: center; border: 3px solid #6b472b; border-top: 7px solid var(--phase-accent); border-radius: 10px; background: radial-gradient(ellipse at 50% 30%, #fbf4e1, #e8d9b4); box-shadow: inset 0 0 0 1px #c9b489, 0 4px 0 #3f2716, 0 10px 18px #0006; }
+.plaque p { margin: 0; }
+.plaque .step { font-size: .75rem; font-weight: 700; color: #5c4328; letter-spacing: .02em; }
+.plaque .title { font-family: var(--lobby-font-display), serif; font-size: 1.35rem; line-height: 1.3; color: #24170d; }
+.plaque .task { font-size: .9rem; line-height: 1.45; color: #2d2115; }
+.plaque .task strong { color: var(--phase-accent); }
+.plaque .pips { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px; font-size: .75rem; color: #594835; font-variant-numeric: tabular-nums; }
+.dots { display: inline-flex; gap: 4px; }
+.dots i { width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid #8b774e; background: #fffaf0; }
+.dots i[data-filled='true'] { background: var(--phase-accent); border-color: var(--phase-accent); }
+.plaque .cta { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 44px; margin-top: 4px; padding: 0 18px; border-radius: 8px; border: 1px solid #7a5413; background: linear-gradient(#f0c36c, #d4a24c); color: #24170d; font-weight: 700; text-decoration: none; box-shadow: 0 3px #3f2716; }
+.plaque .cta:hover { background: #f7d794; }
+.plaque .shortStatus { display: none; }
+.plaque[data-your-move='true'] { box-shadow: inset 0 0 0 1px #c9b489, 0 0 0 3px #f0c36c, 0 4px 0 #3f2716, 0 10px 18px #0006; }
+
+.taskBar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 6; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 6px 14px; margin: 12px 0 0; padding: 8px 12px; color: #efe7d2; border: 1px solid #3e544e; border-left: 6px solid var(--phase-accent); border-radius: 8px; background: #1f2d2aee; box-shadow: 0 6px 14px #0006; backdrop-filter: blur(4px); }
+.taskBar[data-your-move='true'] { border-color: #d4a24c; border-left-color: var(--phase-accent); background: #2b2a1cee; }
+.taskBar p { margin: 0; }
+.barPhase { font-family: var(--lobby-font-display), serif; font-size: 1rem; color: #fff1d2; }
+.barStep { font-family: var(--lobby-font-body), sans-serif; font-size: .75rem; color: #bdb6a0; }
+.barTask { font-size: .9rem; line-height: 1.4; }
+.barTask strong { color: #f0c36c; }
+.barCount { color: #bdb6a0; font-variant-numeric: tabular-nums; }
+.barCta { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 44px; padding: 0 14px; border-radius: 8px; border: 1px solid #7a5413; background: linear-gradient(#f0c36c, #d4a24c); color: #24170d; font-weight: 700; text-decoration: none; text-align: center; box-shadow: 0 2px #121b19; }
+.barCta:hover { background: #f7d794; }
+.plaque .cta:focus-visible, .barCta:focus-visible { outline: 3px solid #7cc4ff; outline-offset: 3px; }
+
+@media (max-width: 600px) {
+  .plaque { gap: 3px; padding: 8px 8px 10px; border-width: 2px; border-top-width: 5px; }
+  .plaque .step { font-size: .68rem; }
+  .plaque .title { font-size: .95rem; }
+  .plaque .task { font-size: .78rem; line-height: 1.4; }
+  .plaque .pips { font-size: .68rem; gap: 4px; }
+  .dots i { width: 8px; height: 8px; }
+  /* Phones keep the sign inside the gap between side seats: the sticky task bar above carries the full task and jump button. */
+  .plaque .cta { display: none; }
+  .plaque .task { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
+  .plaque .shortStatus { display: block; font-size: .78rem; font-weight: 700; color: #594835; }
+  .plaque[data-your-move='true'] .shortStatus { color: var(--phase-accent); }
+  .pipsLabel { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
+  .taskBar { grid-template-columns: minmax(0, 1fr) auto; gap: 2px 10px; padding: 6px 10px; }
+  .barPhase { grid-column: 1; font-size: .9rem; }
+  .barTask { grid-column: 1; font-size: .8rem; }
+  .barCta { grid-column: 2; grid-row: 1 / span 2; padding: 0 10px; font-size: .85rem; }
+}
+@media (prefers-reduced-transparency: reduce) { .taskBar { background: #1f2d2a; backdrop-filter: none; } }

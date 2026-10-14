@@ -18,10 +18,11 @@ import { gameSeatOrder, gameSeatPositions, topSeatIndex } from './game-seats';
 import { GamePanel } from './game-panel';
 import { FinalScorePopup } from './final-score-popup';
 import { LedgerTray, MyWarehouse, PriceBoard, SupplyTray } from './board-wings';
+import { GUIDE_STEPS, phaseGuide, seatStatus } from './phase-guide';
+import { PhasePlaque, TaskBar } from './phase-plaque';
 import styles from './game-table.module.css';
 
 const PHASE_LABELS = { LOBBY: 'ยุติเกม', PREPARE: 'เตรียมสินค้า', PACK_AND_DECLARE: 'จัดกระเป๋าและแจ้งสินค้า', NEGOTIATE: 'เจรจา', RESOLUTION: 'ผลการตัดสิน', ROUND_SUMMARY: 'สรุปรอบ', GAME_OVER: 'จบเกม' } as const;
-const ROUND_STEPS = ['PREPARE', 'PACK_AND_DECLARE', 'NEGOTIATE', 'RESOLUTION', 'ROUND_SUMMARY'] as const;
 function names(ids: readonly string[], room: PublicRoomView) { return ids.map(id => room.players.find(player => player.id === id)?.displayName ?? 'ผู้เล่น').join(', '); }
 function goodsList(goods: readonly string[], rules: RulesSnapshot) { return Object.values(rules.products).flatMap(product => { const count = goods.filter(id => id === product.id).length; return count ? [`${product.name} ${count} ใบ`] : []; }).join(', ') || 'ไม่มีสินค้า'; }
 function playerProgress(player: PublicPlayer, room: PublicRoomView) {
@@ -54,6 +55,7 @@ export function GameTableView({ room, own, playerId, onlinePlayers, animateResul
   const showOffers = room.lifecycle === 'PLAYING' && (room.phase === 'NEGOTIATE' || room.phase === 'RESOLUTION');
   // Wide screens flank the table with price/supply wings and warehouse/ledger wings; narrow screens keep one column.
   const desk = room.gameId !== null && room.lifecycle !== 'ABORTED';
+  const guide = phaseGuide(room, playerId), stepIndex = GUIDE_STEPS.findIndex(step => step.phase === room.phase);
   const resultContent = result ? <>
     <p>{result.action === 'PASS' ? `ให้ผ่าน กระเป๋า ${result.bagCount} ใบเข้าคลัง จ่ายข้อเสนอ ${result.paymentAmount} เหรียญ` : `ตรวจสินค้า: ${goodsList(result.revealed!, room.rules)}`}</p>
     {result.action === 'INSPECT' ? <><p>ผ่าน: {goodsList(result.passed!, room.rules)} · ยึด: {goodsList(result.confiscated!, room.rules)}</p><p>{result.paymentKind === 'FINE' ? 'ค่าปรับ' : 'ค่าชดเชย'} {result.paymentAmount} เหรียญ · ไม่โอนเงินข้อเสนอ</p></> : null}
@@ -63,23 +65,24 @@ export function GameTableView({ room, own, playerId, onlinePlayers, animateResul
     <header className={lobby.header}><div className={lobby.brand}><GateSeal /><div><p>{GAME_NAME}</p><h1 className={styles.roomTitle}>ห้อง <span data-testid="room-code">{room.code}</span></h1></div></div><Link className={`button secondary ${lobby.homeLink}`} href={homeHref}>หน้าแรก <span aria-hidden="true">↗</span></Link></header>
     <div className={lobby.connection}><RoomStatus room={room} state={state} dispatch={dispatch} /></div>
     <section className={styles.phaseHeading} aria-labelledby="phase-title"><div><p className={lobby.eyebrow}>{room.gameId ? `รอบ ${room.roundIndex}/${room.totalRounds}` : 'โต๊ะพ่อค้า'}</p><h2 id="phase-title">{room.lifecycle === 'ABORTED' ? 'ยุติเกม' : PHASE_LABELS[room.phase]}</h2><p className={styles.roleLine}>{room.sheriffId && room.lifecycle !== 'ABORTED' ? <>นายด่าน: <strong>{names([room.sheriffId], room)}</strong> · คุณเป็น{isSheriff ? 'นายด่าน' : 'พ่อค้า'}</> : 'เกมนี้ไม่มีผู้ชนะ'}</p></div><a className={`button secondary ${styles.jumpLink}`} href="#your-turn">ไพ่และปุ่มของฉัน <span aria-hidden="true">↓</span></a></section>
-    {room.lifecycle === 'PLAYING' ? <ol className={styles.phaseTrack} aria-label="ขั้นตอนของรอบ">{ROUND_STEPS.map((phase, index) => <li key={phase} aria-current={room.phase === phase ? 'step' : undefined}><span aria-hidden="true">{index + 1}</span>{PHASE_LABELS[phase]}</li>)}</ol> : null}
+    {room.lifecycle === 'PLAYING' ? <ol className={styles.phaseTrack} aria-label="ขั้นตอนของรอบ">{GUIDE_STEPS.map((step, index) => <li key={step.phase} aria-current={room.phase === step.phase ? 'step' : undefined} data-step-state={index < stepIndex ? 'done' : index === stepIndex ? 'current' : 'next'}><span aria-hidden="true">{index < stepIndex ? '✓' : step.icon}</span>{step.label}{index < stepIndex ? <span className={lobby.srOnly}> (ผ่านแล้ว)</span> : null}</li>)}</ol> : null}
+    {guide ? <TaskBar guide={guide} /> : null}
     <div className={styles.boardRow}>
     <section id="table-top" className={styles.boardSection} aria-label="โต๊ะเล่นเกม">
       <div className={`${lobby.stage} ${styles.stage} ${showOffers ? styles.offerStage : ''}`} data-game-stage>
         <TableSurface game />
-        <div className={`${styles.tableCenter} ${room.phase === 'NEGOTIATE' ? styles.negotiationCenter : ''}`} data-table-center>
+        <div className={`${styles.tableCenter} ${room.phase === 'NEGOTIATE' ? styles.negotiationCenter : ''} ${guide && !(target && (room.phase === 'NEGOTIATE' || room.phase === 'RESOLUTION')) ? styles.plaqueCenter : ''}`} data-table-center>
           {room.lifecycle === 'PLAYING' && target && (room.phase === 'NEGOTIATE' || room.phase === 'RESOLUTION') ? <>
-            <p className={styles.centerTag}>{result ? result.action === 'PASS' ? 'ให้ผ่าน' : 'เปิดตรวจ' : 'กระเป๋าที่กำลังเจรจา'}</p><h3>{target.displayName}</h3>
+            <p className={`${styles.centerTag} ${styles.centerRibbon}`}><span aria-hidden="true">{guide?.icon} </span>{result ? result.action === 'PASS' ? 'ให้ผ่าน' : 'เปิดตรวจ' : 'กำลังเจรจา'}</p><h3>{target.displayName}</h3>
             <div key={`${result?.id ?? 'sealed'}:${resultReplayKey ?? ''}`} className={`result-bag ${styles.bag} ${result?.contrabandPassed && animateResult ? 'glow' : ''}`} aria-hidden="true"><Image unoptimized src="/art/bag.svg" alt="" width={64} height={64} /></div>
             {result ? <><p>{result.paymentKind === 'FINE' ? 'ค่าปรับ' : result.paymentKind === 'COMPENSATION' ? 'ค่าชดเชย' : 'ข้อเสนอ'} {result.paymentAmount} เหรียญ</p>{result.contrabandPassed ? <p className={styles.contrabandMark}>มีของต้องห้ามผ่านด่าน!</p> : null}<a className={styles.resultLink} href="#result-title">ดูผลตัดสิน ↓</a></> : <><p>{target.declaration ? `แจ้ง${PRODUCTS[target.declaration.productId].name} · ${target.declaration.count} ใบ` : 'ยังไม่ได้แจ้งสินค้า'}</p><OfferDisplay key={target.id} offer={target.offer} variant="tray" /></>}
-          </> : <><GateSeal className={lobby.seal} /><p className={styles.centerTag}>{room.lifecycle === 'ABORTED' ? 'ยุติเกมแล้ว' : room.lifecycle === 'FINISHED' ? 'ปิดตลาด' : PHASE_LABELS[room.phase]}</p><p>{room.lifecycle !== 'PLAYING' ? 'ดูรายละเอียดด้านล่าง' : room.phase === 'PREPARE' || room.phase === 'PACK_AND_DECLARE' ? `${roundProgress}/${room.players.length - 1} พ่อค้าพร้อม` : room.phase === 'NEGOTIATE' ? 'รอนายด่านเลือกพ่อค้า' : room.phase === 'ROUND_SUMMARY' ? 'รอนายด่านส่งต่อรอบ' : 'ดูรายละเอียดด้านล่าง'}</p></>}
+          </> : guide ? <PhasePlaque guide={guide} /> : <><GateSeal className={lobby.seal} /><p className={styles.centerTag}>{room.lifecycle === 'ABORTED' ? 'ยุติเกมแล้ว' : room.lifecycle === 'FINISHED' ? 'ปิดตลาด' : PHASE_LABELS[room.phase]}</p><p>{room.lifecycle !== 'PLAYING' ? 'ดูรายละเอียดด้านล่าง' : room.phase === 'PREPARE' || room.phase === 'PACK_AND_DECLARE' ? `${roundProgress}/${room.players.length - 1} พ่อค้าพร้อม` : room.phase === 'NEGOTIATE' ? 'รอนายด่านเลือกพ่อค้า' : room.phase === 'ROUND_SUMMARY' ? 'รอนายด่านส่งต่อรอบ' : 'ดูรายละเอียดด้านล่าง'}</p></>}
         </div>
         <div className={`players ${lobby.seats}`} role="group" aria-label="ผู้เล่นรอบโต๊ะ">{room.players.map(player => {
           const index = currentLayout.order.indexOf(player.id), position = positions[index];
-          const selected = player.id === room.selectedMerchantId;
+          const selected = player.id === room.selectedMerchantId, seat = seatStatus(player, room);
           return <article key={player.id} className={`player ${lobby.seat} ${styles.seat} ${player.id === playerId ? lobby.ownSeat : ''} ${selected ? styles.selected : ''}`} style={{ '--seat-x': position.x, '--seat-y': position.y } as CSSProperties} data-player-id={player.id} data-seat-index={index} data-own-seat={player.id === playerId} data-sheriff-seat={player.id === room.sheriffId} data-top-seat={index === topSeatIndex(room.players.length)}>
-            <div className={`${lobby.portrait} ${selected ? styles.selectedPortrait : ''}`}><CharacterAvatar avatarId={player.avatarId} className={lobby.avatar} />{player.id === room.sheriffId ? <span className={styles.sheriffBadge}>นายด่าน</span> : null}<span className={`${lobby.presence} ${onlinePlayers.has(player.id) ? lobby.isOnline : ''}`} data-online={onlinePlayers.has(player.id)} title={onlinePlayers.has(player.id) ? 'เชื่อมต่อ' : 'ไม่ได้เชื่อมต่อ'}><span aria-hidden="true">{onlinePlayers.has(player.id) ? '' : '−'}</span><span className={lobby.srOnly}>{onlinePlayers.has(player.id) ? 'เชื่อมต่อ' : 'ไม่ได้เชื่อมต่อ'}</span></span></div>
+            <div className={`${lobby.portrait} ${selected ? styles.selectedPortrait : ''}`}><CharacterAvatar avatarId={player.avatarId} className={lobby.avatar} />{player.id === room.sheriffId ? <span className={styles.sheriffBadge}>นายด่าน</span> : null}{seat ? <span className={styles.seatStatus} data-seat-status={seat} aria-hidden="true">{seat === 'done' ? '✓' : seat === 'waiting' ? '⌛' : '★'}</span> : null}<span className={`${lobby.presence} ${onlinePlayers.has(player.id) ? lobby.isOnline : ''}`} data-online={onlinePlayers.has(player.id)} title={onlinePlayers.has(player.id) ? 'เชื่อมต่อ' : 'ไม่ได้เชื่อมต่อ'}><span aria-hidden="true">{onlinePlayers.has(player.id) ? '' : '−'}</span><span className={lobby.srOnly}>{onlinePlayers.has(player.id) ? 'เชื่อมต่อ' : 'ไม่ได้เชื่อมต่อ'}</span></span></div>
             <h3>{player.displayName}{player.id === playerId ? <span className={lobby.you}>คุณ</span> : null}</h3>
             <p className={styles.cash} data-player-cash={player.cash ?? 0}>
               <span className={lobby.srOnly}>เงินคงเหลือ </span><span className={styles.cashCoin} aria-hidden="true" />
@@ -94,7 +97,7 @@ export function GameTableView({ room, own, playerId, onlinePlayers, animateResul
     {desk ? <><aside className={styles.wing} data-wing="left" aria-label="ราคาตลาดและกองไพ่"><PriceBoard rules={room.rules} /><SupplyTray room={room} /></aside>
       <aside className={styles.wing} data-wing="right" aria-label="คลังของฉันและบันทึกหน้าด่าน"><MyWarehouse own={own} rules={room.rules} /><LedgerTray room={room} playerId={playerId} /></aside></> : null}
     </div>
-    <div id="your-turn" tabIndex={-1} className={styles.yourTurn}><p className={styles.ownLabel}>พื้นที่ของคุณ · {isSheriff ? 'นายด่าน' : 'พ่อค้า'}</p>
+    <div id="your-turn" tabIndex={-1} className={styles.yourTurn}><p className={styles.ownLabel} data-your-move={guide?.yourMove ?? false}>{guide?.yourMove ? <>ถึงตาคุณ · {guide.label}</> : <>พื้นที่ของคุณ · {isSheriff ? 'นายด่าน' : 'พ่อค้า'}{guide ? ' · รอคนอื่น' : ''}</>}</p>
       {room.lifecycle === 'ABORTED' ? <section className="panel"><h2>ยุติเกมแล้ว</h2><p>เกมนี้ไม่มีผู้ชนะ ผู้จัดห้องสามารถเปิดให้ทุกคนพร้อมใหม่ได้</p>{isHost ? <button disabled={state.disabled} onClick={() => void dispatch({ type: 'requestRematch' })}>กลับล็อบบี้เพื่อเล่นใหม่</button> : null}</section>
         : room.lifecycle === 'FINISHED' ? <FinalScorePopup key={room.gameId} scores={room.scores!} players={room.players} isHost={isHost} disabled={state.disabled} onRematch={() => dispatch({ type: 'requestRematch' })} />
           : isSheriff ? <SheriffControls key={draftKey} room={room} disabled={state.disabled} send={dispatch}

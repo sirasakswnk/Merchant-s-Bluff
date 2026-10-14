@@ -1,0 +1,36 @@
+{
+  "tool": "axe-core WCAG A/AA tags + geometry checks on /preview?frame=1",
+  "matrix": {
+    "viewports": [
+      "320x740",
+      "360x740",
+      "390x844",
+      "740x360",
+      "1280x900",
+      "1440x900"
+    ],
+    "scenes": [
+      "prepare",
+      "pack",
+      "negotiate",
+      "pass-contraband",
+      "inspect-legal",
+      "summary"
+    ],
+    "roles": [
+      "merchant",
+      "sheriff"
+    ],
+    "players": [
+      4,
+      6
+    ],
+    "count": 144
+  },
+  "taskBarPresent": 144,
+  "tablePlaquePresent": 72,
+  "wcagViolations": {},
+  "plaqueSeatOverlaps": 0,
+  "guideLinksUnder44px": 0,
+  "maxHorizontalOverflowPx": 0
+}

@@ -4,7 +4,7 @@
 .phaseHeading h2 { font-size: 1.4rem; margin: 4px 0 6px; }.roleLine { margin: 0; color: #e8dbb9; font-size: .9rem; }
 .jumpLink { font-size: .9rem; color: #efe7d2; background: #24332f; border-color: #3e544e; gap: 8px; }
 .phaseTrack { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; list-style: none; font-size: .8rem; color: #bdb6a0; }
-.phaseTrack li { display: flex; align-items: center; gap: 6px; padding: 6px 10px; background: #24332f; border: 1px solid #3e544e; border-radius: 6px; }.phaseTrack li[aria-current] { color: #f0c36c; border-color: #d4a24c; }.phaseTrack li span { font-weight: 700; }
+.phaseTrack li { display: flex; align-items: center; gap: 6px; padding: 6px 10px; background: #24332f; border: 1px solid #3e544e; border-radius: 6px; }.phaseTrack li[aria-current] { color: #24170d; background: #f0c36c; border-color: #d4a24c; font-weight: 700; }.phaseTrack li[data-step-state='done'] { color: #96ba86; border-color: #3f6b4a; }.phaseTrack li span { font-weight: 700; }
 .boardSection { container: game-board / inline-size; margin: 8px 0 0; }
 .stage { --table-size: min(70cqw, 480px); --table-center-y: 50%; --seat-radius: calc(var(--table-size) / 2 + 85px); height: calc(var(--table-size) + 490px); }
 .stage .seat { top: calc(var(--table-center-y) + var(--seat-radius) * var(--seat-y)); transform: translate(-50%, -50%); transition: top 380ms ease, left 380ms ease; }
@@ -13,6 +13,12 @@
 .tableCenter { position: absolute; top: var(--table-center-y); left: 50%; transform: translate(-50%, -50%); width: 176px; text-align: center; display: grid; justify-items: center; gap: 5px; z-index: 1; color: #fff1d2; }
 .tableCenter h3 { font-size: .95rem; line-height: 1.35; overflow-wrap: anywhere; }.tableCenter p { font-size: .85rem; margin: 0; }.centerTag { color: #fff1d2; font-family: var(--lobby-font-display), serif; }
 .negotiationCenter { top: var(--table-center-y); }
+.tableCenter.plaqueCenter { width: min(calc(var(--table-size) * .8), 320px); }
+.tableCenter .centerRibbon { display: inline-flex; align-items: center; gap: 4px; padding: 3px 12px; border-radius: 999px; border: 1px solid #fff1d270; background: #24170dcc; color: #fff1d2; font-size: 1rem; box-shadow: 0 2px #24170d; }
+.seatStatus { position: absolute; bottom: -2px; left: -4px; display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; border: 2px solid #24332f; font-size: .75rem; font-weight: 700; line-height: 1; box-shadow: 0 2px #121b19; }
+.seatStatus[data-seat-status='done'] { background: #3f6b4a; color: #fff; }
+.seatStatus[data-seat-status='waiting'] { background: #f3ead3; color: #7a5413; }
+.seatStatus[data-seat-status='acting'] { background: #f0c36c; color: #24170d; }
 .tableCenter .bag { width: 80px; height: 80px; border-radius: 50%; background: #3f271645; }.bag img { width: 64px; height: 64px; }
 .tableCenter .contrabandMark { color: #fff; background: #8f1f17; border: 1px solid #f6d9d3; border-radius: 4px; padding: 3px 5px; font-size: .75rem; }
 .resultLink { display: grid; align-items: center; min-height: 44px; color: #fff1d2; font-size: .8rem; text-decoration: underline; text-underline-offset: 3px; }
@@ -26,7 +32,7 @@
 .seat .declaration { color: #efe7d2; font-size: .7rem; line-height: 1.4; margin: 2px 0; padding-inline: 3px; }
 .seat .progress { font-size: .75rem; padding: 2px 6px; margin-top: 2px; }
 .selectedPortrait { outline: 3px solid #7cc4ff; outline-offset: 3px; }.selected h3 { color: #bce1ff; }
-.yourTurn { scroll-margin-top: 16px; padding-top: 12px; }.ownLabel { color: #f0c36c; text-align: center; margin: 0 0 12px; font-size: .9rem; font-weight: 700; }
+.yourTurn { scroll-margin-top: 88px; padding-top: 12px; }.ownLabel[data-your-move='true'] { display: table; margin-inline: auto; padding: 4px 14px; border-radius: 999px; color: #24170d; background: #f0c36c; box-shadow: 0 2px #3f2716; }.ownLabel { color: #f0c36c; text-align: center; margin: 0 0 12px; font-size: .9rem; font-weight: 700; }
 .yourTurn > :global(.panel) { margin-top: 0; border: 3px double #8b774e; padding: 20px; box-shadow: 0 3px #b9a378, 0 8px 16px #0003; }
 .yourTurn :global(h2), .result h2 { font-size: 1.2rem; }
 .yourTurn :focus-visible, .result :focus-visible { outline-color: #1f5fbf; }
@@ -42,13 +48,13 @@
   .stage { --seat-radius: calc(var(--table-size) / 2 + 125px); height: calc(var(--table-size) + 570px); }
   .offerStage { --seat-radius: calc(var(--table-size) / 2 + 145px); height: calc(var(--table-size) + 680px); }
   .phaseHeading { margin-top: 18px; }.phaseHeading h2 { font-size: 1.15rem; }.roleLine { font-size: .8rem; }.jumpLink { width: 100%; justify-content: center; font-size: .85rem; }.phaseTrack { gap: 5px; font-size: .7rem; }.phaseTrack li { padding: 5px 7px; }
-  .tableCenter { width: 124px; gap: 3px; }.tableCenter h3 { font-size: .8rem; }.tableCenter p { font-size: .75rem; }.tableCenter .bag { width: 58px; height: 58px; }.bag img { width: 48px; height: 48px; }.tableCenter .contrabandMark { font-size: .65rem; }.cash strong { font-size: 1.125rem; }.seat .progress { font-size: .7rem; padding: 2px 4px; }
+  .tableCenter { width: 124px; gap: 3px; }.tableCenter h3 { font-size: .8rem; }.tableCenter p { font-size: .75rem; }.tableCenter .bag { width: 58px; height: 58px; }.bag img { width: 48px; height: 48px; }.tableCenter .contrabandMark { font-size: .65rem; }.tableCenter .centerRibbon { font-size: .8rem; padding: 2px 8px; }.tableCenter.plaqueCenter { width: 128px; }.seatStatus { width: 20px; height: 20px; font-size: .65rem; }.cash strong { font-size: 1.125rem; }.seat .progress { font-size: .7rem; padding: 2px 4px; }
   /* Extend only the mobile hand across panel padding, border and room gutter. */
   .yourTurn > :global(.panel) { padding: 14px; --hand-bleed: 29px; }
 }
 @container game-board (max-width: 20rem) {
   .stage, .offerStage { display: flex; flex-direction: column; gap: 20px; align-items: center; height: auto; padding: 20px 0; }.stage [data-game-table] { width: 220px; top: 110px; }
-  .tableCenter { position: relative; top: auto; left: auto; transform: none; min-height: 220px; width: 170px; align-content: center; }
+  .tableCenter { position: relative; top: auto; left: auto; transform: none; min-height: 220px; width: 170px; align-content: center; }.tableCenter.plaqueCenter { width: min(100%, 280px); }
   .stage > :global(.players) { display: flex; flex-wrap: wrap; width: 100%; justify-content: center; gap: 18px 8px; }.stage .seat, .offerStage .seat { position: relative; left: auto; top: auto; transform: none; width: calc(50% - 8px); }.stage [data-own-seat='true'] { order: 1; width: 100%; }
 }
 /* Wings join the board only on wide screens; narrower screens keep the single column unchanged. */
