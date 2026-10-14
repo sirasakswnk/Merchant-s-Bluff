@@ -24,6 +24,7 @@
 .metrics { display: inline-flex; align-items: center; gap: 5px; flex: none; font-variant-numeric: tabular-nums; }
 .valuePill { padding: 1px 5px; border-radius: 4px; background: #e3eedd; border: 1px solid #78926b; color: #1c3b23; font-size: .7rem; font-weight: 700; }
 .valuePill[data-contraband] { background: #f9dedc; border-color: #b85d55; color: #69140e; }
+.parchment .boardNote { margin-top: 8px; padding-top: 6px; border-top: 1px dashed #6b472b59; font-size: .7rem; line-height: 1.45; color: #4a3823; }
 .metricNote { color: #4a3823; font-size: .7rem; font-weight: 600; }
 .fineNote { color: #7d1912; font-size: .7rem; font-weight: 700; }
 

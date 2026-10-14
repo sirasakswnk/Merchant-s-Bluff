@@ -42,6 +42,15 @@ describe('final scoring, legal bonuses and ties', () => {
     expect(result.standings.reduce((total, row) => total + row.bonus, 0)).toBe(leaders * Math.floor(8 / leaders));
   });
 
+  it('ranks by total score, so a merchant with fewer coins but more goods beats a richer one', () => {
+    const seats = players([['cloth', 'cloth', 'cannabis_leaf', 'crossbow', 'crossbow', 'cannabis_leaf'], [], [], []]);
+    const finances = pay(createFinancialState(seats.map(player => player.id), 50), 'p0', 'p1', 30, 'BRIBE').state;
+    const result = scoreGame(seats, finances, RULES);
+    expect(result.standings[0]).toMatchObject({ playerId: 'p0', rank: 1, cash: 20, goodsValue: 54, bonus: 8, total: 82 });
+    expect(result.standings[1]).toMatchObject({ playerId: 'p1', rank: 2, cash: 80, goodsValue: 0, bonus: 0, total: 80 });
+    expect(result.winners).toEqual(['p0']);
+  });
+
   it('calculates each legal majority separately', () => {
     const result = score([['apple', 'apple'], ['apple', 'bread'], ['bread'], []]);
     const byId = Object.fromEntries(result.standings.map(row => [row.playerId, row]));

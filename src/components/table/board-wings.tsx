@@ -28,6 +28,7 @@ export function PriceBoard({ rules }: { rules: RulesSnapshot }) {
       <p className={styles.groupHeading}><span className={styles.contrabandTag}>ของต้องห้าม (ยึดเมื่อตรวจพบ)</span></p>
       <ul className={styles.tariffList}>{products.filter(product => product.category === 'contraband').map(row)}</ul>
     </div>
+    <p className={styles.boardNote}>มูลค่าสินค้าในคลัง = คะแนนตอนจบเกม รวมกับเงินสดและโบนัสเจ้าตลาด</p>
   </section>;
 }
 
@@ -57,7 +58,7 @@ export function MyWarehouse({ own, rules }: { own: PrivateRoomView; rules: Rules
     <header className={styles.boardHeader}><BrassPin /><div><p className={styles.kicker}>แผงร้านค้าหน้าตัก · เห็นเฉพาะคุณ</p><h2 id="warehouse-title">คลังสินค้าของฉัน</h2></div><BrassPin /></header>
     <div className={styles.stashSummary}>
       <p><span>สินค้าผ่านด่านแล้ว</span><strong>{own.stash.length} ใบ</strong></p>
-      <p data-score><span>มูลค่าในคลัง</span><strong>{own.goodsValue} คะแนน</strong></p>
+      <p data-score><span>คะแนนจากสินค้า</span><strong>{own.goodsValue} คะแนน</strong></p>
     </div>
     <ul className={styles.stashGrid}>{Object.values(rules.products).map(product => { const count = own.stash.filter(card => card.productId === product.id).length; return <li key={product.id} className={styles.stashSlot} data-active={count > 0} data-category={product.category}>
       <span className={styles.stashThumb} aria-hidden="true"><Image src={`/art/cards/${product.id}.webp`} alt="" width={1024} height={1536} sizes="3.5rem" draggable={false} /><span className={styles.countBadge}>×{count}</span></span>

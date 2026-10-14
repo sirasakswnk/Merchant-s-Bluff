@@ -87,7 +87,8 @@ export function makePreviewModel(options:PreviewOptions,decision?:{merchantId?:s
       confiscated:action==='INSPECT'?resolved.confiscated.map(card=>card.productId):null};
   }
   const stashes=ids.map((id,index)=>({id,stash:cards(Array.from({length:8+index},(_,i)=>PRODUCT_IDS[(i+index)%PRODUCT_IDS.length]))}));
-  if(finished)finances={...finances,cash:{...finances.cash,[ids[0]]:RULES.startingCash*2,[ids[1]]:0},
+  // Coins alone would rank the first seat on top; goods and bonuses decide the real standings.
+  if(finished)finances={...finances,cash:{...finances.cash,[ids[0]]:RULES.startingCash+30,[ids[1]]:0,[ids[2]]:RULES.startingCash+20},
     debts:[{id:'preview-debt',debtor:ids[1],creditor:ids[0],outstanding:rules.products.crossbow.fine,createdOrder:1}],nextOrder:2};
   const declared=phase==='NEGOTIATE'||phase==='RESOLUTION'||phase==='ROUND_SUMMARY';
   const room:PublicRoomView={rules,revision:1,roomId:'preview-only-room',code:'K7QM',hostId:ids[0],

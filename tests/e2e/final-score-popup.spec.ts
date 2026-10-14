@@ -10,7 +10,7 @@ import { activeCards, assertApprovedInventory } from '../fixtures/inventory';
 
 const output = 'work/verification/final-score-popup';
 
-test('final ranking opens automatically and shows only rank, avatar, name and cash at all sizes', async ({ page, context }) => {
+test('final ranking opens automatically and shows rank, avatar, name, total score and its breakdown at all sizes', async ({ page, context }) => {
   test.setTimeout(120000);
   const errors: string[] = [], forbidden: string[] = [], views: unknown[] = [];
   page.on('pageerror', error => errors.push(error.message));
@@ -21,11 +21,13 @@ test('final ranking opens automatically and shows only rank, avatar, name and ca
     const popup = page.getByRole('dialog', { name: 'คะแนนสุดท้าย', exact: true });
     await expect(popup).toBeVisible(); await expect(popup).toHaveAttribute('open', '');
     const model = makePreviewModel({ scene: 'game-over', players, role, state: 'online', width: 'auto' });
-    const rendered = await popup.locator('[data-score-player]').evaluateAll(nodes => nodes.map(node => ({ id: node.getAttribute('data-score-player'), rank: Number(node.getAttribute('data-rank')), cash: Number(node.getAttribute('data-cash')), avatar: Number(node.querySelector('[data-avatar-id]')!.getAttribute('data-avatar-id')), text: node.textContent })));
-    expect(rendered.map(row => ({ id: row.id, rank: row.rank, cash: row.cash }))).toEqual(model.room.scores!.standings.map(row => ({ id: row.playerId, rank: row.rank, cash: row.cash })));
-    for (const row of rendered) { const profile = model.room.players.find(player => player.id === row.id)!; expect(row.avatar).toBe(profile.avatarId); expect(row.text).toContain(profile.displayName); }
+    const rendered = await popup.locator('[data-score-player]').evaluateAll(nodes => nodes.map(node => ({ id: node.getAttribute('data-score-player'), rank: Number(node.getAttribute('data-rank')), cash: Number(node.getAttribute('data-cash')), total: Number(node.getAttribute('data-total')), avatar: Number(node.querySelector('[data-avatar-id]')!.getAttribute('data-avatar-id')), text: node.textContent })));
+    expect(rendered.map(row => ({ id: row.id, rank: row.rank, cash: row.cash, total: row.total }))).toEqual(model.room.scores!.standings.map(row => ({ id: row.playerId, rank: row.rank, cash: row.cash, total: row.total })));
+    // The sample is built so coins alone would crown someone else: ranking must follow total score.
+    expect(Math.max(...rendered.map(row => row.cash))).toBeGreaterThan(rendered[0].cash);
+    for (const row of rendered) { const profile = model.room.players.find(player => player.id === row.id)!; const score = model.room.scores!.standings.find(item => item.playerId === row.id)!; expect(row.avatar).toBe(profile.avatarId); expect(row.text).toContain(profile.displayName); expect(row.text).toContain(`${score.total}คะแนน`); expect(row.text).toContain(`เงินสด ${score.cash} · สินค้า ${score.goodsValue} · โบนัส ${score.bonus}`); }
     await expect(popup.locator('dl')).toHaveCount(0); await expect(page.locator('main .scores')).toHaveCount(1);
-    expect(await popup.innerText()).not.toMatch(/มูลค่าสินค้า|โบนัสการค้า|ลูกหนี้|หนี้คงค้าง|สินค้าถูกกฎหมาย/);
+    await expect(popup.getByRole('heading', { name: /เจ้าตลาด/ })).toBeVisible(); await expect(popup.getByText('คะแนน = เงินสด + มูลค่าสินค้าในคลัง + โบนัสเจ้าตลาด + ลูกหนี้ − หนี้', { exact: true })).toBeVisible();
     const box = (await popup.boundingBox())!; expect(box.x).toBeGreaterThanOrEqual(0); expect(box.x + box.width).toBeLessThanOrEqual(width + .5); expect(box.y).toBeGreaterThanOrEqual(0); expect(box.y + box.height).toBeLessThanOrEqual(height + .5);
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
     await expect(page.getByRole('button', { name: 'ปิดสรุปอันดับ', exact: true })).toBeFocused();

@@ -1,5 +1,5 @@
 .dialog {
-  width: min(32rem, calc(100% - 24px));
+  width: min(36rem, calc(100% - 24px));
   max-width: calc(100% - 24px);
   max-height: calc(100dvh - 24px);
   margin: auto;
@@ -26,11 +26,22 @@
 .rank { font-size: 1.25rem; font-weight: 700; text-align: center; font-variant-numeric: tabular-nums; }
 .portrait { width: 44px; height: 44px; padding: 2px; border: 1px solid #8b774e; border-radius: 50%; background: #24332f; }
 .avatar, .avatar svg { display: block; width: 100%; height: 100%; border-radius: 50%; }
+.identity { display: grid; gap: 2px; min-width: 0; }
 .name { min-width: 0; font-weight: 600; line-height: 1.4; overflow-wrap: anywhere; }
-.money { display: grid; grid-template-columns: 16px auto; align-items: center; justify-content: end; gap: 0 4px; text-align: right; font-variant-numeric: tabular-nums; }
-.money strong { font-size: 1.1rem; white-space: nowrap; }
-.money small { grid-column: 1 / -1; font-size: .7rem; }
-.coin { width: 16px; height: 16px; border-radius: 50%; border: 1px solid #765018; background: radial-gradient(circle at 35% 25%, #ffedb6, #e1aa39 75%); box-shadow: inset 0 0 0 2px #f5d481, 0 2px #8e5e21; }
+.breakdown { font-size: .75rem; line-height: 1.4; color: #594835; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.total { display: grid; justify-items: end; text-align: right; font-variant-numeric: tabular-nums; }
+.total strong { font-size: 1.45rem; line-height: 1.1; color: #24170d; white-space: nowrap; }
+.total small { font-size: .7rem; color: #594835; }
+.rankRow[data-rank='1'] .total strong { color: #6b440b; }
+.tieNote { margin: 10px 0 0; font-size: .8rem; color: #594835; }
+.leaders { margin: 14px 0 0; padding: 10px 12px; border: 1px dashed #947b4c; border-radius: 8px; background: #fffaf0b3; }
+.leaders h3 { margin: 0 0 6px; font-size: .95rem; }
+.leaders h3 span { font-size: .72rem; font-weight: 400; color: #594835; }
+.leaders ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.leaders li { display: grid; grid-template-columns: 20px 4.5rem minmax(0, 1fr); align-items: center; gap: 6px; font-size: .8rem; }
+.leaderProduct { font-weight: 700; }
+.leaderNames { min-width: 0; overflow-wrap: anywhere; color: #2d2115; }
+.formula { margin: 10px 0 0; font-size: .75rem; color: #594835; text-align: center; }
 .rematchButton { width: 100%; margin-top: 16px; }
 .openButton { min-width: min(100%, 200px); }
 .srOnly { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
