@@ -17,7 +17,7 @@ import { tableFonts } from './fonts';
 import { gameSeatOrder, gameSeatPositions, topSeatIndex } from './game-seats';
 import { GamePanel } from './game-panel';
 import { FinalScorePopup } from './final-score-popup';
-import { DebtNotes, MyWarehouse, PlayerAid, TableLedger } from './desk-rails';
+import { LedgerTray, MyWarehouse, PriceBoard, SupplyTray } from './board-wings';
 import styles from './game-table.module.css';
 
 const PHASE_LABELS = { LOBBY: 'ยุติเกม', PREPARE: 'เตรียมสินค้า', PACK_AND_DECLARE: 'จัดกระเป๋าและแจ้งสินค้า', NEGOTIATE: 'เจรจา', RESOLUTION: 'ผลการตัดสิน', ROUND_SUMMARY: 'สรุปรอบ', GAME_OVER: 'จบเกม' } as const;
@@ -52,7 +52,7 @@ export function GameTableView({ room, own, playerId, onlinePlayers, animateResul
   const draftKey = `${room.gameId}:${room.roundIndex}:${room.phase}`;
   const roundProgress = room.phase === 'PREPARE' ? room.players.filter(player => player.id !== room.sheriffId && player.prepared).length : room.players.filter(player => player.id !== room.sheriffId && player.bagLocked).length;
   const showOffers = room.lifecycle === 'PLAYING' && (room.phase === 'NEGOTIATE' || room.phase === 'RESOLUTION');
-  // Wide screens move the round info, ledger and player aid into rails beside the table; narrow screens keep one column.
+  // Wide screens flank the table with price/supply wings and warehouse/ledger wings; narrow screens keep one column.
   const desk = room.gameId !== null && room.lifecycle !== 'ABORTED';
   const resultContent = result ? <>
     <p>{result.action === 'PASS' ? `ให้ผ่าน กระเป๋า ${result.bagCount} ใบเข้าคลัง จ่ายข้อเสนอ ${result.paymentAmount} เหรียญ` : `ตรวจสินค้า: ${goodsList(result.revealed!, room.rules)}`}</p>
@@ -62,12 +62,9 @@ export function GameTableView({ room, own, playerId, onlinePlayers, animateResul
   return <main id="main" tabIndex={-1} className={`room-table ${lobby.room} ${styles.room} ${desk ? styles.desk : ''} ${tableFonts}`} data-phase={room.phase} data-round={room.roundIndex} data-revision={room.revision} data-own-role={isSheriff ? 'sheriff' : 'merchant'} data-game-viewer={playerId}>
     <header className={lobby.header}><div className={lobby.brand}><GateSeal /><div><p>{GAME_NAME}</p><h1 className={styles.roomTitle}>ห้อง <span data-testid="room-code">{room.code}</span></h1></div></div><Link className={`button secondary ${lobby.homeLink}`} href={homeHref}>หน้าแรก <span aria-hidden="true">↗</span></Link></header>
     <div className={lobby.connection}><RoomStatus room={room} state={state} dispatch={dispatch} /></div>
-    <div className={styles.leftRail}>
     <section className={styles.phaseHeading} aria-labelledby="phase-title"><div><p className={lobby.eyebrow}>{room.gameId ? `รอบ ${room.roundIndex}/${room.totalRounds}` : 'โต๊ะพ่อค้า'}</p><h2 id="phase-title">{room.lifecycle === 'ABORTED' ? 'ยุติเกม' : PHASE_LABELS[room.phase]}</h2><p className={styles.roleLine}>{room.sheriffId && room.lifecycle !== 'ABORTED' ? <>นายด่าน: <strong>{names([room.sheriffId], room)}</strong> · คุณเป็น{isSheriff ? 'นายด่าน' : 'พ่อค้า'}</> : 'เกมนี้ไม่มีผู้ชนะ'}</p></div><a className={`button secondary ${styles.jumpLink}`} href="#your-turn">ไพ่และปุ่มของฉัน <span aria-hidden="true">↓</span></a></section>
     {room.lifecycle === 'PLAYING' ? <ol className={styles.phaseTrack} aria-label="ขั้นตอนของรอบ">{ROUND_STEPS.map((phase, index) => <li key={phase} aria-current={room.phase === phase ? 'step' : undefined}><span aria-hidden="true">{index + 1}</span>{PHASE_LABELS[phase]}</li>)}</ol> : null}
-    {desk ? <TableLedger room={room} /> : null}
-    </div>
-    <div className={styles.centerColumn}>
+    <div className={styles.boardRow}>
     <section id="table-top" className={styles.boardSection} aria-label="โต๊ะเล่นเกม">
       <div className={`${lobby.stage} ${styles.stage} ${showOffers ? styles.offerStage : ''}`} data-game-stage>
         <TableSurface game />
@@ -94,6 +91,9 @@ export function GameTableView({ room, own, playerId, onlinePlayers, animateResul
         })}</div>
       </div>
     </section>
+    {desk ? <><aside className={styles.wing} data-wing="left" aria-label="ราคาตลาดและกองไพ่"><PriceBoard rules={room.rules} /><SupplyTray room={room} /></aside>
+      <aside className={styles.wing} data-wing="right" aria-label="คลังของฉันและบันทึกหน้าด่าน"><MyWarehouse own={own} rules={room.rules} /><LedgerTray room={room} playerId={playerId} /></aside></> : null}
+    </div>
     <div id="your-turn" tabIndex={-1} className={styles.yourTurn}><p className={styles.ownLabel}>พื้นที่ของคุณ · {isSheriff ? 'นายด่าน' : 'พ่อค้า'}</p>
       {room.lifecycle === 'ABORTED' ? <section className="panel"><h2>ยุติเกมแล้ว</h2><p>เกมนี้ไม่มีผู้ชนะ ผู้จัดห้องสามารถเปิดให้ทุกคนพร้อมใหม่ได้</p>{isHost ? <button disabled={state.disabled} onClick={() => void dispatch({ type: 'requestRematch' })}>กลับล็อบบี้เพื่อเล่นใหม่</button> : null}</section>
         : room.lifecycle === 'FINISHED' ? <FinalScorePopup key={room.gameId} scores={room.scores!} players={room.players} isHost={isHost} disabled={state.disabled} onRematch={() => dispatch({ type: 'requestRematch' })} />
@@ -106,7 +106,5 @@ export function GameTableView({ room, own, playerId, onlinePlayers, animateResul
     <details className={`panel ${styles.narrowOnly}`}><summary>ข้อมูลที่เปิดเผยของพ่อค้าทุกคน</summary><div className={styles.publicDetails}>{room.players.map(player => <article key={player.id}><h3>{player.displayName}{player.id === room.hostId ? ' · ผู้จัดห้อง' : ''}</h3>{player.offer ? <p>{player.offer.submitted ? player.offer.amount === 0 ? 'ไม่เสนอเงิน' : `เสนอ ${player.offer.amount} เหรียญ` : 'ยังไม่เลือกข้อเสนอ'}{player.decisionId ? ' · ตัดสินแล้ว' : ''}</p> : null}</article>)}</div>{room.debts.length > 0 ? <><h3>หนี้คงค้าง</h3><ul>{room.debts.map(debt => <li key={debt.id}>{names([debt.debtor], room)} → {names([debt.creditor], room)}: {debt.outstanding} เหรียญ</li>)}</ul></> : null}</details>
     {room.history.length > 0 ? <details className={`panel ${styles.narrowOnly}`}><summary>ประวัติผลที่เปิดเผย</summary><ol>{room.history.map(event => <li key={event.id}>รอบ {event.roundIndex} · {names([event.merchantId], room)} · {event.action === 'PASS' ? 'ให้ผ่าน' : 'ตรวจ'}{event.action === 'INSPECT' ? ` · ${goodsList(event.revealed!, room.rules)}` : event.contrabandPassed ? ' · มีของต้องห้ามผ่านด่าน!' : ''} · {event.paymentAmount} เหรียญ</li>)}</ol></details> : null}
     <RulesSummary rules={room.rules} />{isHost && room.lifecycle === 'PLAYING' ? <footer><button className="secondary" disabled={state.disabled} onClick={abortGame}>ยุติเกมนี้</button></footer> : null}
-    </div>
-    {desk ? <aside className={styles.rightRail} aria-label="ข้อมูลช่วยเล่น" tabIndex={0}><PlayerAid rules={room.rules} /><MyWarehouse own={own} rules={room.rules} /><DebtNotes room={room} playerId={playerId} /></aside> : null}
   </main>;
 }

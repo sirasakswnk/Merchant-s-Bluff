@@ -48,7 +48,7 @@ room-service.ts เป็น application service รับ UID จาก HTTP ad
 
 Snapshot และ view ใช้ JSON string เพื่อให้ RTDB ไม่ลบ empty arrays/nulls callbacks เป็น pure transformations อ่าน room snapshot ล่าสุด ทดสอบ callback retry กับ Admin SDK สอง instances Command receipt มีเพียง commandId/roomId/code/revision/gameId ไม่คืน engine state/ไพ่
 
-Public PASS event ไม่ส่ง card IDs/product IDs/stash breakdown/score delta มีเพียงจำนวนรวมที่ประกาศไว้แล้ว เงินข้อเสนอ และ boolean glow Public view มี rules snapshot เป็น catalogue ที่ทุกคนรู้ ไม่ใช่ distribution ของไพ่ Public INSPECT เปิดชนิดสินค้าที่ตรวจและผลที่อนุญาต คะแนนทุกคนเผยเฉพาะ FINISHED private ผูก UID/สมาชิก แสดงมือ/กระเป๋า/คลังของตัวเอง
+Public PASS event ไม่ส่ง card IDs/product IDs/stash breakdown/score delta มีเพียงจำนวนรวมที่ประกาศไว้แล้ว เงินข้อเสนอ และ boolean glow Public view มี rules snapshot เป็น catalogue ที่ทุกคนรู้ ไม่ใช่ distribution ของไพ่ Public INSPECT เปิดชนิดสินค้าที่ตรวจและผลที่อนุญาต Public view มี supplyCount = กองจั่ว+กองทิ้งเป็นตัวเลขเดียว (supplyCount ใน engine) เพราะการแลกไพ่ลับจั่วแล้วทิ้งจำนวนเท่ากัน ยอดรวมจึงไม่ขยับและไม่เผยว่าใครแลกกี่ใบ แต่ขนาดกองแยกจะเผย จึงไม่ส่งขนาดกองแยก view ที่เก็บก่อนมี field นี้ไม่มีค่า UI จึงซ่อนบรรทัดนั้น คะแนนทุกคนเผยเฉพาะ FINISHED private ผูก UID/สมาชิก แสดงมือ/กระเป๋า/คลังของตัวเอง
 
 Code reservation pending/ready ผูก deterministic room ID จาก UID+creation commandId และ request fingerprint Join หรือ create retry repair room จาก server-authored reservation ได้ Commands ผูก fingerprint/UID, generation/clientId, gameId และ round/offer/result versions Dedup ตรวจและคืน receipt เดิมก่อนเขียนผลซ้ำ
 

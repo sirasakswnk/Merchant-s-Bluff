@@ -1,0 +1,85 @@
+/* Desktop wings beside the round table: pinned parchment boards and dark wood trays, after the approved desktop mockup. */
+.parchment, .woodTray { position: relative; margin: 0; padding: 13px; border-radius: 12px; }
+.parchment h2, .woodTray h2 { margin: 0; font-family: var(--lobby-font-display), serif; font-weight: 400; line-height: 1.35; }
+.parchment p, .woodTray p { margin: 0; }
+
+.parchment { isolation: isolate; color: #24170d; border: 5px solid #6b472b; background: radial-gradient(ellipse at 50% 35%, #f7efe0, #dfd0ae); box-shadow: inset 0 0 0 1px #b89f72, inset 0 0 14px #6b472b40, 0 4px 0 #2e1d10, 0 10px 22px #0006; }
+.parchment::after { content: ''; position: absolute; inset: 3px; border: 1px dashed #7a541373; border-radius: 6px; pointer-events: none; }
+.boardHeader { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding-bottom: 7px; margin-bottom: 9px; border-bottom: 2px solid #6b472b59; text-align: center; }
+.boardHeader h2 { font-size: .9rem; color: #24170d; }
+.brassPin { width: 10px; height: 10px; flex: none; border-radius: 50%; border: 1px solid #593b10; background: radial-gradient(circle at 35% 30%, #fff2c2, #d4a24c 70%, #7a5413); box-shadow: 0 1px 2px #0007; }
+.kicker { font-size: .68rem; font-weight: 700; color: #5c4328; }
+
+/* Price board */
+.tariffGroup + .tariffGroup { margin-top: 9px; padding-top: 8px; border-top: 1px dashed #6b472b59; }
+.parchment .groupHeading { display: flex; align-items: center; justify-content: space-between; gap: 6px; margin-bottom: 5px; font-size: .72rem; font-weight: 700; }
+.legalTag { color: #1f4d2b; }
+.contrabandTag { color: #7d1912; }
+.bonusNote { flex: none; padding: 1px 6px; border-radius: 999px; background: #24332f; color: #f0c36c; font-size: .66rem; }
+.tariffList { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
+.tariffRow { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 4px 7px; border-radius: 6px; background: #fffcf2d1; border: 1px solid #c9b489; font-size: .78rem; }
+.tariffRow[data-category='contraband'] { background: #fdf3f0; border-color: #d69c95; }
+.goodIdentity { display: inline-flex; align-items: center; gap: 6px; min-width: 0; color: #24170d; font-weight: 700; white-space: nowrap; }
+.goodIdentity img { width: 19px; height: 19px; flex: none; }
+.metrics { display: inline-flex; align-items: center; gap: 5px; flex: none; font-variant-numeric: tabular-nums; }
+.valuePill { padding: 1px 5px; border-radius: 4px; background: #e3eedd; border: 1px solid #78926b; color: #1c3b23; font-size: .7rem; font-weight: 700; }
+.valuePill[data-contraband] { background: #f9dedc; border-color: #b85d55; color: #69140e; }
+.metricNote { color: #4a3823; font-size: .7rem; font-weight: 600; }
+.fineNote { color: #7d1912; font-size: .7rem; font-weight: 700; }
+
+/* Wood trays */
+.woodTray { color: #efe7d2; background: var(--merchant-texture-wood), linear-gradient(180deg, #3c2817, #27190e); border: 3px solid #6b472b; box-shadow: inset 0 0 0 1px #d4a24c59, 0 4px 0 #160e08, 0 10px 20px #0005; }
+.trayHeader { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding-bottom: 7px; margin-bottom: 9px; border-bottom: 1px solid #d4a24c59; }
+.trayHeader h2 { font-size: .86rem; color: #f7e4b5; }
+.trayBadge { flex: none; white-space: nowrap; padding: 2px 7px; border-radius: 999px; background: #24332f; border: 1px solid #59726b; color: #f0c36c; font-size: .68rem; font-weight: 700; }
+.trayEmpty { font-size: .74rem; color: #d8ccb0; }
+.woodTray .trayNote { margin-top: 6px; font-size: .68rem; color: #d8ccb0; }
+.propsRow { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 10px; }
+.deckProp { display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 8px 6px 6px; border-radius: 8px; background: #140d0873; border: 1px solid #d4a24c47; }
+.deckProp small { font-size: .68rem; color: #e8dbb9; }
+.deckPile, .discardPile { position: relative; width: 38px; height: 52px; }
+.deckPile span, .discardPile span { position: absolute; inset: 0; border-radius: 5px; border: 2px solid #d4a24c; background: radial-gradient(circle at 50% 40%, #354d46, #1d2a27); box-shadow: 0 2px 0 #121b19; }
+.deckPile span:nth-child(2) { transform: translate(-3px, -3px) rotate(-4deg); }
+.deckPile span:nth-child(3) { transform: translate(3px, -5px) rotate(5deg); }
+.discardPile span { border-color: #b98b56; background: radial-gradient(circle at 50% 40%, #5c3b24, #331f12); }
+.discardPile span:nth-child(2) { transform: translate(4px, -2px) rotate(9deg); }
+.rotationMeta { margin: 0; display: grid; gap: 5px; font-size: .76rem; }
+.rotationMeta > div { display: flex; justify-content: space-between; gap: 8px; padding: 4px 8px; border-radius: 6px; background: #24332fa6; border: 1px solid #96ba8640; }
+.rotationMeta dt { color: #d8ccb0; }
+.rotationMeta dd { margin: 0; color: #fff1d2; font-weight: 700; text-align: right; }
+
+/* Warehouse */
+.stashSummary { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 9px; }
+.stashSummary p { display: grid; padding: 5px 7px; border-radius: 8px; background: #fffcf2d9; border: 1px solid #c9b489; text-align: center; }
+.stashSummary p[data-score] { background: #fff6dc; border-color: #b58938; }
+.stashSummary span { font-size: .66rem; color: #594835; }
+.stashSummary strong { font-size: .92rem; color: #24170d; font-variant-numeric: tabular-nums; }
+.stashSummary p[data-score] strong { color: #6b440b; }
+.stashGrid { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 5px; }
+.stashSlot { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 3px; border-radius: 6px; background: #fffcf299; border: 1px dashed #b89f72; opacity: .62; }
+.stashSlot[data-active='true'] { opacity: 1; background: #fffdf5; border: 1px solid #7a5413; }
+.stashSlot[data-active='true'][data-category='contraband'] { border-color: #8f1f17; background: #fff5f3; }
+.stashThumb { position: relative; width: 100%; aspect-ratio: 2 / 3; border-radius: 4px; overflow: hidden; background: #24332f; }
+.stashThumb img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.countBadge { position: absolute; right: 2px; bottom: 2px; padding: 0 4px; border-radius: 4px; background: #24170d; color: #fff1d2; border: 1px solid #d4a24c; font-size: .64rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.stashName { font-size: .62rem; font-weight: 700; line-height: 1.25; color: #24170d; text-align: center; overflow-wrap: anywhere; }
+.parchment .bagFootnote { margin-top: 8px; padding: 5px 7px; border-radius: 6px; background: #24332f1a; border: 1px solid #6b472b47; font-size: .72rem; color: #2d2115; }
+
+/* Ledger and IOUs */
+.ledgerSection { display: flex; flex-direction: column; min-height: 0; }
+.ledgerSection + .ledgerSection { margin-top: 9px; padding-top: 9px; border-top: 1px dashed #d4a24c4d; }
+.ledgerSection h3 { margin: 0 0 5px; font-family: var(--lobby-font-body), sans-serif; font-size: .72rem; color: #f0c36c; font-weight: 700; }
+.iouList, .historyList { list-style: none; padding: 0; margin: 0; display: grid; gap: 5px; }
+.iouTicket { display: flex; justify-content: space-between; gap: 8px; padding: 4px 7px; border-radius: 6px; background: #fff6dc; border: 1px solid #b58938; color: #24170d; font-size: .74rem; }
+.iouTicket[data-mine='true'] { box-shadow: 0 0 0 2px #f0c36c; }
+.iouTicket strong { flex: none; color: #7d1912; font-variant-numeric: tabular-nums; }
+.historyList { max-height: 216px; overflow-y: auto; padding-right: 3px; scrollbar-width: thin; scrollbar-color: #59726b transparent; }
+.historyList:focus-visible { outline: 3px solid #7cc4ff; outline-offset: 2px; }
+.historyItem { padding: 5px 7px; border-radius: 6px; background: #24332fbf; border: 1px solid #4c665f; font-size: .72rem; }
+.historyTop { display: flex; justify-content: space-between; align-items: center; gap: 6px; color: #fff1d2; }
+.stamp { flex: none; padding: 1px 5px; border-radius: 4px; font-size: .64rem; font-weight: 700; }
+.stamp[data-stamp='pass'] { background: #2f5a2c; color: #eef7e8; border: 1px solid #96ba86; }
+.stamp[data-stamp='inspect'] { background: #7d1912; color: #fff1ed; border: 1px solid #e6a19b; }
+.woodTray .historyDetail { margin-top: 3px; color: #e8dbb9; font-size: .7rem; }
+.smuggled { color: #ffb3a8; font-weight: 700; }
+.srOnly { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }

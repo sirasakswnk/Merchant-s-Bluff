@@ -86,6 +86,11 @@ export function assertGameState(state: GameState): void {
   requireRule(state.phase !== 'RESOLUTION' || state.currentResolution !== null, 'INVALID_PHASE', 'เฟสผลต้องมีผลที่ตัดสินแล้ว');
 }
 
+/**
+ * Cards in the shared supply (draw pile + discard). Secret exchanges draw then discard the same number,
+ * so this total never reveals how many cards one merchant exchanged; separate pile sizes would.
+ */
+export function supplyCount(state: GameState): number { return state.deck.length + state.discard.length; }
 export function startGame(gameId: string, seatOrder: readonly string[], entropy: readonly number[], rules: RulesSnapshot = createRulesSnapshot()): GameState {
   requireRule(gameId.length > 0 && seatOrder.length >= rules.minPlayers && seatOrder.length <= rules.maxPlayers
     && new Set(seatOrder).size === seatOrder.length && seatOrder.every(id => id.length > 0), 'INVALID_PLAYERS', 'เริ่มเกมต้องมีผู้เล่น 4–6 คนไม่ซ้ำ');

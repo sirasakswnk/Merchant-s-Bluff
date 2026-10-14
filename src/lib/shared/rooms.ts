@@ -54,6 +54,8 @@ export interface PublicRoomView {
   readonly players: readonly PublicPlayer[]; readonly debts: readonly Debt[];
   readonly selectedMerchantId: string | null; readonly result: PublicDecision | null;
   readonly history: readonly PublicDecision[]; readonly scores: GameScores | null;
+  /** Draw pile + discard as one number (see supplyCount). Views stored before this field existed omit it. */
+  readonly supplyCount?: number | null;
 }
 export interface PrivateRoomView {
   readonly revision: number; readonly playerId: string; readonly controlClientId: string; readonly sessionGeneration: number;

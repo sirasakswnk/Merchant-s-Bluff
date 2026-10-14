@@ -3,6 +3,7 @@ import type { DecisionRecord } from '../game/types';
 import type { PrivateRoomView, PublicDecision, PublicRoomView } from '../shared/rooms';
 import type { RoomCore, StoredRoom } from './room-model';
 import { createRulesSnapshot } from '../game/config';
+import { supplyCount } from '../game/engine';
 
 export function projectDecision(record: DecisionRecord): PublicDecision {
   const result = record.result;
@@ -34,6 +35,7 @@ export function publicView(room: RoomCore): PublicRoomView {
     debts: game?.finances.debts ?? [], selectedMerchantId: game?.selectedMerchantId ?? null,
     result: game?.currentResolution ? projectDecision(game.currentResolution) : null,
     history: game?.history.map(projectDecision) ?? [], scores: room.lifecycle === 'FINISHED' ? game?.scores ?? null : null,
+    supplyCount: game ? supplyCount(game) : null,
   };
 }
 export function privateView(room: RoomCore, uid: string): PrivateRoomView {

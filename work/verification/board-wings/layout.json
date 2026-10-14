@@ -1,0 +1,60 @@
+{
+  "tool": "axe-core WCAG 2.0/2.1/2.2 A+AA tags via @axe-core/playwright on /preview?frame=1",
+  "desktopCombos": {
+    "widths": [
+      1440,
+      1280,
+      1180
+    ],
+    "scenes": [
+      "prepare",
+      "pack",
+      "negotiate",
+      "pass-contraband",
+      "inspect-contraband",
+      "summary",
+      "game-over"
+    ],
+    "roles": [
+      "merchant",
+      "sheriff"
+    ],
+    "players": [
+      4,
+      6
+    ],
+    "count": 84
+  },
+  "desktopWcagViolations": {},
+  "desktopWingsAllVisible": true,
+  "desktopHorizontalOverflowPx": 0,
+  "narrow": {
+    "1179/narrow": {
+      "anyRailVisible": false,
+      "detailsVisible": [
+        "มือและคลังสินค้าของฉัน",
+        "ข้อมูลที่เปิดเผยของพ่อค้าทุกคน",
+        "ประวัติผลที่เปิดเผย",
+        "กติกาย่อ · สำรับ 360 ใบ"
+      ]
+    },
+    "900/narrow": {
+      "anyRailVisible": false,
+      "detailsVisible": [
+        "มือและคลังสินค้าของฉัน",
+        "ข้อมูลที่เปิดเผยของพ่อค้าทุกคน",
+        "ประวัติผลที่เปิดเผย",
+        "กติกาย่อ · สำรับ 360 ใบ"
+      ]
+    },
+    "390/narrow": {
+      "anyRailVisible": false,
+      "detailsVisible": [
+        "มือและคลังสินค้าของฉัน",
+        "ข้อมูลที่เปิดเผยของพ่อค้าทุกคน",
+        "ประวัติผลที่เปิดเผย",
+        "กติกาย่อ · สำรับ 360 ใบ"
+      ]
+    }
+  }
+}

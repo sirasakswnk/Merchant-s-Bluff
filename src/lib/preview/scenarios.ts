@@ -96,6 +96,8 @@ export function makePreviewModel(options:PreviewOptions,decision?:{merchantId?:s
     totalRounds:options.players*rules.sheriffTurnsPerPlayer,sheriffId:lobby||aborted?null:sheriffId,
     selectedMerchantId:declared?merchantId:null,result:resolving?result:null,history:result?[...earlier,result]:earlier,debts:finances.debts,
     scores:finished?scoreGame(stashes,finances,rules):null,
+    // Sample supply: every card not shown in a sample hand or stash.
+    supplyCount:lobby||aborted?null:rules.totalCards-ids.length*rules.handSize-stashes.reduce((sum,player)=>sum+player.stash.length,0),
     players:ids.map((id,index)=>({id,displayName:names[index],avatarId:index,ready:lobby?id!==playerId:true,
       prepared:phase!=='PREPARE'&&phase!=='LOBBY',bagLocked:declared,
       declaration:declared&&id!==sheriffId?{productId:'apple',count:3}:null,
